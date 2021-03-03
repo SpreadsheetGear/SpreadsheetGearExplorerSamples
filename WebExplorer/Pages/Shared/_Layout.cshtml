@@ -1,0 +1,43 @@
+﻿@*
+  Copyright © SpreadsheetGear LLC. All Rights Reserved.
+
+  SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@ViewData["Title"] - SpreadsheetGear Web Explorer</title>
+  <link rel="stylesheet" href="~/lib/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.2-web/css/all.css" />
+  <link rel="stylesheet" href="~/lib/prism.js/prism.css" />
+  <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+  <div class="h-100">
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" asp-page="/Index">
+            <img src="~/images/logo-txt-wht.svg" class="d-inline-block align-middle" style="height: 40px;" />
+            <span class="pl-3 mt-4">Web Explorer</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main role="main">
+      @RenderBody()
+    </main>
+  </div>
+
+  <div id="page-overlay"></div>
+
+  <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  <script src="~/lib/bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+  <script src="~/lib/prism.js/prism.js"></script>
+  <script src="~/js/site.js" asp-append-version="true"></script>
+  @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

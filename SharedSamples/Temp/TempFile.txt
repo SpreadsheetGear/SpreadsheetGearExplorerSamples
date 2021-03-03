@@ -1,0 +1,1 @@
+﻿This file is here so that the Temp folder is created (when using the "Copy to Output Directory" option, a given folder won't be created unless it contains one or more files that are outputted).

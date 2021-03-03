@@ -1,0 +1,310 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>SpreadsheetGearLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Shapes.xlsx" />
+    <None Remove="Files\SpiceOrder.xlsx" />
+    <None Remove="Images\Event_16x.png" />
+    <None Remove="Images\FolderClosed_16x.png" />
+    <None Remove="Images\Run_16x.png" />
+    <None Remove="Images\Undo_16x.png" />
+    <None Remove="SpreadsheetGearLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.790-prerelease" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedSamples\SharedSamples.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SpreadsheetGear">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Windows">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Windows.Forms">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Windows.Forms.Integration">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.Forms.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Windows.Wpf">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Event_16x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FolderClosed_16x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Run_16x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Undo_16x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="SpreadsheetGearLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Samples\Advanced\PerformanceSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Advanced\ThreadingSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Calculations\AmortizationCalculatorSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Calculations\CustomFunctionsSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Calculations\FormulaEvaluationSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Calculations\SimpleLoanCalculatorSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Charting\ChartGallerySample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Printing\AdvancedPrintingSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Printing\BasicPrintingSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Printing\PageBreaksSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Printing\PageSetupSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\ActiveWorkbookSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\ActiveWorksheetSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\CommandManager\CommandRangeSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\CommandManager\SimpleCommandSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\DataGrid\SpreadsheetToDataGridSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\DataGrid\SpreadsheetToDataGridFormattedSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\CultureInfoSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\DesignerAndExplorerDialogsSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\DisplayOptions\DisplayReferenceSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\DisplayOptions\DisplayReference.xaml.init.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\DisplayOptions\WorkbookWindowInfoSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\DisplayOptions\WorksheetWindowInfoSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\ActiveTabChangedSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\CalculateSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\CellBeginEditSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\CellEndEditSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\RangeChangedSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\RangeSelectionChangedSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\ShapeActionSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\ShapeSelectionChangedSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Events\ShowErrorSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\LocationToRangeSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\Reporting\WorkbookConsolidationSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Styling\ColumnHeaderSortSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Styling\ExcelThemeSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\Styling\SimpleStyleSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Update="Samples\WorkbookView\UIManager\CustomControlSample.xaml.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Files\WPF\PrintingAdvanced.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Files\FolderClosed_16x.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Files\Run_16x.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Advanced\PerformanceSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Advanced\ThreadingSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Calculations\AmortizationCalculatorSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Calculations\CustomFunctionsSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Calculations\FormulaEvaluationSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Calculations\SimpleLoanCalculatorSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Charting\ChartGallerySample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Printing\AdvancedPrintingSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Printing\BasicPrintingSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Printing\PageBreaksSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Printing\PageSetupSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\ActiveWorkbookSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\ActiveWorksheetSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\CommandManager\CommandRangeSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\CommandManager\SimpleCommandSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\DataGrid\SpreadsheetToDataGridSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\DataGrid\SpreadsheetToDataGridFormattedSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\CultureInfoSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\DesignerAndExplorerDialogsSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\DisplayOptions\DisplayReferenceSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\DisplayOptions\WorkbookWindowInfoSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\DisplayOptions\WorksheetWindowInfoSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\ActiveTabChangedSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\CalculateSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\CellBeginEditSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\CellEndEditSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\RangeChangedSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\RangeSelectionChangedSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\ShapeActionSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\ShapeSelectionChangedSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Events\ShowErrorSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\LocationToRangeSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\Reporting\WorkbookConsolidationSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Styling\ColumnHeaderSortSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Styling\ExcelThemeSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\Styling\SimpleStyleSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Update="Samples\WorkbookView\UIManager\CustomControlSample.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(ProjectDir)Samples\&quot; &quot;$(TargetDir)Samples\&quot; /S /Y" />
+  </Target>
+
+</Project>

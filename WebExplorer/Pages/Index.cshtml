@@ -1,0 +1,199 @@
+﻿@*
+  Copyright © SpreadsheetGear LLC. All Rights Reserved.
+
+  SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+*@
+
+@page
+@model IndexModel
+@using Microsoft.AspNetCore.Html
+
+@{ 
+  Func<CategoryDTO, IHtmlContent> RenderCategory = null;
+  RenderCategory =
+    @<li>
+      <span class="fa-li"><i class="fas fa-folder-open"></i></span>
+      <a href="javascript:void(0);" class="category-link font-weight-bold" data-category-name="@item.Name">@item.Name</a>
+      @if (item.SampleNames.Any())
+      {
+        <ul class="fa-ul">
+          @foreach (var name in item.SampleNames)
+          {
+            <li>
+              <span class="fa-li text-success"><i class="fas fa-play-circle"></i></span> 
+              <a href="javascript:void(0);" class="sample-link" data-sample-name="@name">@name</a>
+            </li>
+          }
+        </ul>
+      }
+      @if (item.ChildCategories.Any())
+      {
+        <ul class="fa-ul">
+          @foreach (var childCategory in item.ChildCategories)
+          {
+            @RenderCategory(childCategory)
+          }
+        </ul>
+      }
+    </li>;
+}
+
+<div class="d-flex align-items-stretch h-100">
+
+  @* Samples Tree View *@
+  <div class="pl-2 pt-2 flex-fill overflow-auto" style="min-width: 350px; max-width: 350px; background-color: #eee;">
+    <ul class="fa-ul samples-tree">
+      @foreach (CategoryDTO category in Model.CategoryRoot.ChildCategories)
+      {
+        @RenderCategory(category)
+      }
+    </ul>
+  </div>
+
+  @* Sample / Summary Container *@
+  <div class="d-flex flex-fill flex-column p-2" style="background-color: #ddd;">
+    @* Sample Container *@
+    <div id="sample-container" class="h-100 flex-column flex-fill d-none">
+      <div class="row justify-content-between">
+        <div class="col-auto">
+          <h4 id="sample-name"></h4>
+        </div>
+        <div class="col-auto text-right">
+          <i class="fas fa-play-circle"></i> <b>Run Sample:</b>
+          <a href="javascript:void(0);" id="button-run-sample-render" class="sg-btn sg-btn-small sg-btn-blue"><i class="fas fa-camera"></i> Render Image</a>
+          <a href="javascript:void(0);" id="button-run-sample-download" class="sg-btn sg-btn-small sg-btn-red"><i class="fas fa-file-download"></i> Download Excel File</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <p id="sample-description"></p>
+        </div>
+      </div>
+
+      <div id="source-code-tabs" class="pb-3 h-100 d-flex flex-column" style="min-height: 0;">
+        <ul class="nav nav-tabs" role="tablist"></ul>
+        <div class="tab-content flex-fill overflow-auto"></div>
+      </div>
+    </div>
+
+    @* Summary Container *@
+    <div id="summary-container" class="d-flex flex-fill overflow-auto d-none"></div>
+  </div>
+</div>
+
+
+@section Scripts {
+<script>
+  var currentSampleInfo = null;
+  function loadSample(sampleName) {
+    let url = "@Html.Raw(Url.Page(null, "LoadSample", new { sampleName = "SAMPLENAMEPLACEHOLDER" }))";
+    url = url.replace("SAMPLENAMEPLACEHOLDER", sampleName);
+    $.ajax({
+      url: url,
+      success: function (sampleInfo) {
+        currentSampleInfo = sampleInfo;
+        document.title = "SpreadsheetGear Web Explorer - " + currentSampleInfo.name;
+        $("#sample-name").html(sampleInfo.name);
+        $("#sample-description").html(sampleInfo.description);
+        $("#button-run-sample-download").toggle(sampleInfo.canDownloadFile);
+        $("#button-run-sample-render").toggle(sampleInfo.canRenderImage);
+
+
+        clearTabs();
+        for (var i = 0; i < sampleInfo.sourceCodes.length; i++) {
+          let sourceCodeItem = sampleInfo.sourceCodes[i];
+          addSourceCodeTab(sourceCodeItem);
+          Prism.highlightAll();
+        }
+        $("#summary-container").addClass("d-none");
+        $("#summary-container").removeClass("d-flex");
+        $("#sample-container").removeClass("d-none");
+        $("#sample-container").addClass("d-flex");
+      },
+      error: function (data) {
+        window.alert("Error loading sample. ('" + data.responseText + "')");
+      }
+    });
+  }
+
+  function runCurrentSample() {
+    if (currentSampleInfo != null) {
+      let url = "@Html.Raw(Url.Page(null, "RunSampleDownloadFile", new { sampleName = "SAMPLENAMEPLACEHOLDER" }))";
+      url = url.replace("SAMPLENAMEPLACEHOLDER", currentSampleInfo.name);
+      let link = document.createElement("a");
+      link.href = url;
+      link.click();
+    }
+  }
+
+  function clearTabs() {
+    $("#source-code-tabs ul.nav-tabs").children().remove();
+    $("#source-code-tabs div.tab-content").children().remove();
+  }
+
+  function addSourceCodeTab(sourceCodeItem) {
+    let $navTabs = $("#source-code-tabs ul.nav-tabs");
+    let $navContent = $("#source-code-tabs div.tab-content");
+    var id = $navTabs.children().length;
+    $navTabs.append("<li class='nav-item'><a id='navTab_" + id + "' class='nav-link' href='#navContent_" + id + "'>" + sourceCodeItem.fileName + "</a></li>");
+    $navContent.append("<div id='navContent_" + id + "' class='tab-pane fade flex-fill' role='tabpanel' aria-labelledby='navTab_" + id + "'><pre style='margin-bottom: 0;'><code class='line-numbers language-" + sourceCodeItem.language + "'>" + sourceCodeItem.sourceCode + "</code></pre></div>");
+    $("#source-code-tabs ul.nav-tabs li:last-child a").click();
+
+    $navTabs.find("a.nav-link").click(function (e) {
+      e.preventDefault();
+      $(this).tab("show");
+    }).first().click();
+  }
+
+  function loadCategorySummary(categoryName) {
+    let url = "@Html.Raw(Url.Page(null, "CategorySummary", new { categoryName = "CATEGORYNAMEPLACEHODER" }))";
+    url = url.replace("CATEGORYNAMEPLACEHODER", categoryName);
+    $.ajax({
+      url: url,
+      success: function (summary) {
+        $("#summary-container").html(summary);
+        $("#summary-container").removeClass("d-none");
+        $("#summary-container").addClass("d-flex");
+        $("#sample-container").removeClass("d-flex");
+        $("#sample-container").addClass("d-none");
+      },
+      error: function (data) {
+        window.alert("Error loading category summary. ('" + data.responseText + "')");
+      }
+    });
+  }
+
+  $(function () {
+    $(".category-link").click(function () {
+      let categoryName = $(this).data("categoryName");
+      loadCategorySummary(categoryName);
+    });
+
+    $(".sample-link").click(function () {
+      let sampleName = $(this).data("sampleName");
+      loadSample(sampleName);
+    });
+
+    $("#button-run-sample-render").click(function () {
+      let url = "@Html.Raw(Url.Page(null, "RunSample", new { sampleName = "SAMPLENAMEPLACEHODER", runSampleType = RunSampleType.RenderImage }))";
+      url = url.replace("SAMPLENAMEPLACEHODER", currentSampleInfo.name);
+      url = appendQueryString(url, "r", performance.now());
+      showPageOverlay("<div class='content loading text-center'><img src='" + url + "' class='scaled50' /></div>");
+    });
+
+    $("#button-run-sample-download").click(function () {
+        if (currentSampleInfo != null) {
+          let url = "@Html.Raw(Url.Page(null, "RunSample", new { sampleName = "SAMPLENAMEPLACEHOLDER", runSampleType = RunSampleType.DownloadFile }))";
+          url = url.replace("SAMPLENAMEPLACEHOLDER", currentSampleInfo.name);
+          let link = document.createElement("a");
+          link.href = url;
+          link.download = "";
+          link.click();
+        }
+    });
+
+    loadCategorySummary("SpreadsheetGear Explorer Samples");
+  });
+</script>
+}

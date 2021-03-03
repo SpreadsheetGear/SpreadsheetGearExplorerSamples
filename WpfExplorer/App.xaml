@@ -1,0 +1,13 @@
+﻿<!--
+    Copyright © SpreadsheetGear LLC. All Rights Reserved.
+    SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+-->
+<Application x:Class="WPFExplorer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFExplorer"
+             StartupUri="MainWindow.xaml" DispatcherUnhandledException="Application_DispatcherUnhandledException">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

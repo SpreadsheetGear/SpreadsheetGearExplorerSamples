@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedSamples\SharedSamples.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SpreadsheetGear">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Drawing">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetGear.Windows">
+      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

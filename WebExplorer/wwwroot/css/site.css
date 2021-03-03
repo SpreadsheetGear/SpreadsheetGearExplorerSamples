@@ -1,0 +1,173 @@
+﻿
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav {
+  height: 60px;
+  background-color: #3c4757;
+}
+
+main {
+  height: calc(100% - 60px);
+  margin-top: -16px;
+}
+
+.indent {
+  margin-left: 50px;
+}
+
+ul.samples-tree {
+  font-size: 10pt;
+}
+
+.fa-folder-open {
+  color: #e8c156;
+}
+
+ul.fa-ul {
+  margin-left: 1.5em;
+}
+
+div.tab-pane {
+  background-color: white;
+}
+
+#source-code-tabs li.nav-item {
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+#source-code-tabs ul.nav-tabs {
+  padding-left: 10px;
+}
+
+
+/* Prism.js */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: 9pt;
+  margin-top: 0;
+}
+
+
+
+/* Page oerlay styles */
+#page-overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2000;
+  cursor: pointer;
+}
+
+  #page-overlay .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    min-width: 32px;
+    min-height: 32px;
+    transform: translate(-50%,-50%);
+  }
+
+.loading {
+  background: transparent url('/images/loading.svg') center no-repeat;
+}
+
+/* Scale image 50% of its native size. */
+img.scaled50 {
+  -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+  -moz-transform: scale(0.5); /* FF3.5+ */
+  -ms-transform: scale(0.5); /* IE9 */
+  -o-transform: scale(0.5); /* Opera 10.5+ */
+  transform: scale(0.5);
+  /* IE6–IE9 */
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+}
+
+
+/* SpreadsheetGear button styles */
+button.sg-btn,
+a.sg-btn {
+  display: inline-block;
+  padding: 3px 20px 3px 20px;
+  /*margin: 3px;*/
+  font-size: 12pt;
+  background-color: #656565;
+  border-bottom-color: #505050;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  text-align: center;
+  cursor: pointer;
+  color: #eee !important;
+  text-decoration: none;
+  border-radius: 3px 3px;
+}
+
+button.sg-btn.disabled, a.sg-btn.disabled,
+button.sg-btn[disabled], a.sg-btn[disabled] {
+  background-color: #adadad !important;
+  border-bottom-color: #979797 !important;
+  cursor: default;
+}
+
+button.sg-btn:visited, a.sg-btn:visited {
+  color: #eeeeee !important;
+}
+
+button.sg-btn:hover, a.sg-btn:hover {
+  background-color: #7d7d7d;
+  border-bottom-color: #c0c0c0;
+  color: #fff !important;
+}
+
+button.sg-btn:active, a.sg-btn:active {
+  color: #fdffd4 !important;
+  position: relative;
+  top: 1px;
+}
+
+button.sg-btn.sg-btn-small, a.sg-btn.sg-btn-small {
+  font-size: 9pt;
+  padding: 2px 15px 2px 15px;
+  margin: 2px;
+  border-bottom-width: 2px;
+}
+
+button.sg-btn.sg-btn-large, a.sg-btn.sg-btn-large {
+  font-size: 18pt;
+  padding: 12px 20px 10px 20px;
+  border-bottom-width: 4px;
+}
+
+button.sg-btn.sg-btn-blue, a.sg-btn.sg-btn-blue {
+  background-color: #4c607c;
+  border-bottom-color: #3c4757;
+}
+
+  button.sg-btn.sg-btn-blue:hover, a.sg-btn.sg-btn-blue:hover {
+    background-color: #4c607c;
+    border-bottom-color: #5192f3;
+  }
+
+button.sg-btn.sg-btn-red, a.sg-btn.sg-btn-red {
+  background-color: #9c1818;
+  border-bottom-color: #791313;
+}
+
+  button.sg-btn.sg-btn-red:hover, a.sg-btn.sg-btn-red:hover {
+    background-color: #ac2121;
+    border-bottom-color: #ce0808;
+  }

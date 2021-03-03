@@ -1,0 +1,149 @@
+﻿<src:SGUserControl x:Class="WPFExplorer.Samples.WorkbookView.Styling.CustomHeadersSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFExplorer.Samples.WorkbookView.Styling"
+             xmlns:sg="clr-namespace:SpreadsheetGear.Windows.Controls;assembly=SpreadsheetGear.Windows.Wpf"
+             xmlns:src="clr-namespace:WPFExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Resources>
+            <local:ColumnHeaderTextConverter x:Key="ColumnHeaderTextConverter" />
+            <Style TargetType="local:CustomRowHeaderContent">
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="IsTabStop" Value="False" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="local:CustomRowHeaderContent">
+                            <Grid Name="Root">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="DataStates">
+                                        <VisualState Name="None" />
+                                        <VisualState Name="Positive">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="UpIcon" Storyboard.TargetProperty="Opacity" To="1" />
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="DownIcon" Storyboard.TargetProperty="Opacity" To="0" />
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState Name="Negative">
+                                            <Storyboard>
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="UpIcon" Storyboard.TargetProperty="Opacity" To="0" />
+                                                <DoubleAnimation Duration="0" Storyboard.TargetName="DownIcon" Storyboard.TargetProperty="Opacity" To="1" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Path Name="UpIcon" Fill="Green" Data="M 0 6 L 12 6 L 6 0 Z" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" />
+                                <Path Name="DownIcon" Fill="Red" Data="M 0 0 L 6 6 L 12 0 Z" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="MyCustomColumnHeaderStyle" TargetType="sg:ColumnHeader">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="sg:ColumnHeader">
+                            <Grid x:Name="Root">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal" />
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimation Duration="0" To="#FF448DCA" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle" />
+                                                <ColorAnimation Duration="0" To="#D8FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[0].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#C6FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#8CFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#3FFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" Storyboard.TargetName="BackgroundGradient" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup x:Name="SelectionStates">
+                                        <VisualState x:Name="Unselected" />
+                                        <VisualState x:Name="Selected">
+                                            <Storyboard>
+                                                <ColorAnimation Duration="0" To="#FF448DCA" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle" />
+                                                <ColorAnimation Duration="0" To="#D8FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[0].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#C6FFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[1].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#8CFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[2].Color" Storyboard.TargetName="BackgroundGradient" />
+                                                <ColorAnimation Duration="0" To="#3FFFFFFF" Storyboard.TargetProperty="(Fill).(GradientStops)[3].Color" Storyboard.TargetName="BackgroundGradient" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Rectangle x:Name="BackgroundRectangle" Fill="#FF1F3B53" Stretch="Fill" />
+                                <Rectangle x:Name="BackgroundGradient" Stretch="Fill">
+                                    <Rectangle.Fill>
+                                        <LinearGradientBrush EndPoint=".7,1" StartPoint=".7,0">
+                                            <GradientStop Color="#FCFFFFFF" Offset="0.015" />
+                                            <GradientStop Color="#F7FFFFFF" Offset="0.375" />
+                                            <GradientStop Color="#E5FFFFFF" Offset="0.6" />
+                                            <GradientStop Color="#D1FFFFFF" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Text="{Binding ColumnIndex, RelativeSource={RelativeSource AncestorType=sg:ColumnHeader, AncestorLevel=1}, Converter={StaticResource ColumnHeaderTextConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Rectangle x:Name="HorizontalSeparator" Fill="#FF99AABB" Height="1" VerticalAlignment="Bottom" Width="Auto" />
+                                <Rectangle x:Name="VerticalSeparator" Fill="#FF99AABB" HorizontalAlignment="Right" Height="Auto" Width="1" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="MyCustomRowHeaderStyle" TargetType="sg:RowHeader">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="sg:RowHeader">
+                            <Grid x:Name="Root">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal" />
+                                        <VisualState x:Name="MouseOver">
+                                            <Storyboard>
+                                                <ColorAnimation Duration="0" To="#FFA9CBE6" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                    <VisualStateGroup x:Name="SelectionStates">
+                                        <VisualState x:Name="Unselected" />
+                                        <VisualState x:Name="Selected">
+                                            <Storyboard>
+                                                <ColorAnimation Duration="0" To="#FFA9CBE6" Storyboard.TargetProperty="(Fill).Color" Storyboard.TargetName="BackgroundRectangle" />
+                                            </Storyboard>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <Rectangle x:Name="BackgroundRectangle" Fill="#FFF0F0F0" Stretch="Fill" />
+                                <local:CustomRowHeaderContent RowIndex="{Binding RowIndex, RelativeSource={RelativeSource AncestorType=sg:RowHeader, AncestorLevel=1}}" WorkbookView="{Binding WorkbookView, RelativeSource={RelativeSource AncestorType=sg:RowHeader, AncestorLevel=1}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Rectangle x:Name="HorizontalSeparator" Fill="#FF99AABB" Height="1" VerticalAlignment="Bottom" Width="Auto" />
+                                <Rectangle x:Name="VerticalSeparator" Fill="#FF99AABB" HorizontalAlignment="Right" Height="Auto" Width="1" />
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Width="220" Margin="5" Grid.Column="0">
+            <TextBlock TextWrapping="Wrap" FontSize="12">
+                Put your own content in the ColumnHeader and RowHeader using a custom control template.
+                <LineBreak /><LineBreak />
+                In this sample the RowHeader has an up or down arrow depending on if current year sales are greater than last year sales.
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <sg:FormulaBar Grid.Row="0" />
+            <src:WpfWorkbookView Grid.Row="1" x:Name="workbookView" ColumnHeaderStyle="{StaticResource MyCustomColumnHeaderStyle}" RowHeaderStyle="{StaticResource MyCustomRowHeaderStyle}" />
+        </Grid>
+    </Grid>
+</src:SGUserControl>

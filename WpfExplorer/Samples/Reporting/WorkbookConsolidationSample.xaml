@@ -1,0 +1,23 @@
+﻿<src:SGUserControl x:Class="WPFExplorer.Samples.WorkbookView.Reporting.WorkbookConsolidationSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFExplorer.Samples.WorkbookView.Reporting"
+             xmlns:sg="clr-namespace:SpreadsheetGear.Windows.Controls;assembly=SpreadsheetGear.Windows.Wpf"
+             xmlns:src="clr-namespace:WPFExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10" Grid.Column="0">
+            <RadioButton GroupName="RegionsGroup" Tag="East" Content="East" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton GroupName="RegionsGroup" Tag="West" Content="West" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton GroupName="RegionsGroup" Tag="Both" Content="Both" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+        </StackPanel>
+        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
+    </Grid>
+</src:SGUserControl>

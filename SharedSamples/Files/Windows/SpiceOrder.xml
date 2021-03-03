@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<SpiceOrder>
+  <OrderItems>
+    <Product_x0020_ID>10001</Product_x0020_ID>
+    <Description>Basil</Description>
+    <Units>275</Units>
+    <Unit_x0020_Cost>1.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10002</Product_x0020_ID>
+    <Description>Black Pepper - Fine</Description>
+    <Units>325</Units>
+    <Unit_x0020_Cost>2.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10003</Product_x0020_ID>
+    <Description>Cayenne Pepper</Description>
+    <Units>150</Units>
+    <Unit_x0020_Cost>3.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10201</Product_x0020_ID>
+    <Description>Chili Powder</Description>
+    <Units>500</Units>
+    <Unit_x0020_Cost>2.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10202</Product_x0020_ID>
+    <Description>Cumin - Ground</Description>
+    <Units>75</Units>
+    <Unit_x0020_Cost>2.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10203</Product_x0020_ID>
+    <Description>Garlic Powder</Description>
+    <Units>600</Units>
+    <Unit_x0020_Cost>1.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10401</Product_x0020_ID>
+    <Description>Marjoram</Description>
+    <Units>250</Units>
+    <Unit_x0020_Cost>3.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10402</Product_x0020_ID>
+    <Description>Onion Powder</Description>
+    <Units>300</Units>
+    <Unit_x0020_Cost>1.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10403</Product_x0020_ID>
+    <Description>Oregano</Description>
+    <Units>425</Units>
+    <Unit_x0020_Cost>2.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10801</Product_x0020_ID>
+    <Description>Red Pepper - Crushed</Description>
+    <Units>250</Units>
+    <Unit_x0020_Cost>2.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10802</Product_x0020_ID>
+    <Description>Rosemary</Description>
+    <Units>175</Units>
+    <Unit_x0020_Cost>3.99</Unit_x0020_Cost>
+  </OrderItems>
+  <OrderItems>
+    <Product_x0020_ID>10803</Product_x0020_ID>
+    <Description>Thyme</Description>
+    <Units>225</Units>
+    <Unit_x0020_Cost>3.99</Unit_x0020_Cost>
+  </OrderItems>
+</SpiceOrder>

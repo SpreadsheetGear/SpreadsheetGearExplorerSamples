@@ -1,0 +1,54 @@
+﻿<src:SGUserControl x:Class="WPFExplorer.Samples.Calculations.AmortizationCalculatorSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFExplorer.Samples.Calculations"
+             xmlns:sg="clr-namespace:SpreadsheetGear.Windows.Controls;assembly=SpreadsheetGear.Windows.Wpf"
+             xmlns:src="clr-namespace:WPFExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFEFEFEF" Offset="0" />
+                <GradientStop Color="#FFA0A0A0" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Label Content="Loan Calculator" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" />
+            <Grid Margin="10,10,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Loan Amount (pv)" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                <Label Content="Interest Rate (rate)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" />
+                <Label Content="Total # of Periods (Nper)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
+                <Button Content="Calculate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="3" Click="buttonCalculate_Click" />
+                <TextBox Text="150000" x:Name="textBoxAmount" Margin="10,0,10,0" Grid.Column="1" />
+                <TextBox Text="0.0625" x:Name="textBoxRate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="1" />
+                <TextBox Text="360" x:Name="textBoxPeriods" Margin="10,5,10,0" Grid.Column="1" Grid.Row="2" />
+                <Label Content="Payment:" FontSize="12" FontWeight="Bold" Grid.Column="2" />
+                <Label x:Name="labelPayment" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" Grid.Column="3" />
+                <Label Content="Last Payment:" FontSize="12" FontWeight="Bold" Grid.Column="2" Grid.Row="1" />
+                <Label x:Name="labelLastPayment" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" Grid.Column="3" Grid.Row="1" />
+                <Label Content="Total Interest:" FontSize="12" FontWeight="Bold" Grid.Column="2" Grid.Row="2" />
+                <Label x:Name="labelTotalInterest" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" Grid.Column="3" Grid.Row="2" />
+            </Grid>
+        </StackPanel>
+        <src:WpfWorkbookView x:Name="workbookView" Grid.Row="1" Margin="0,10,0,0" />
+    </Grid>
+</src:SGUserControl>

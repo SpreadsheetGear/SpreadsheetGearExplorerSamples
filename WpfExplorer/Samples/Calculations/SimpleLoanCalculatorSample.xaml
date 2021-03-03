@@ -1,0 +1,51 @@
+﻿<src:SGUserControl x:Class="WPFExplorer.Samples.Calculations.SimpleLoanCalculatorSample"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFExplorer.Samples.Calculations"
+             xmlns:src="clr-namespace:WPFExplorer"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#DCEFEFEF" Offset="0" />
+                <GradientStop Color="#DCA0A0A0" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackPanel>
+            <Label Content="Loan Calculator" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" />
+            <Grid Margin="10,10,10,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Content="Loan Amount (pv)" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                <Label Content="Interest Rate (rate)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" />
+                <Label Content="Total # of Periods (Nper)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
+                <Button Content="Calculate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="3" Click="buttonCalculate_Click" />
+                <TextBox Text="150000" x:Name="textBoxAmount" Margin="10,0,10,0" Grid.Column="1" />
+                <TextBox Text="0.0625" x:Name="textBoxRate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="1" />
+                <TextBox Text="360" x:Name="textBoxPeriods" Margin="10,5,10,0" Grid.Column="1" Grid.Row="2" />
+                <Label Content="Payment:" FontSize="12" FontWeight="Bold" Grid.Column="2" />
+                <Label x:Name="labelPayment" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" Grid.Column="3" />
+            </Grid>
+            <Label Content="Notice these features:" Margin="10,10,10,0" FontWeight="Bold" />
+            <StackPanel Margin="10,10,10,0">
+                <TextBlock Text="•  Parses inputs, including currency, percent, date, time, and fractions." Margin="5,0,5,0" />
+                <TextBlock Text="•  Returns nicely formatted results, including all Excel custom formatting options." Margin="5,5,5,0" />
+                <TextBlock Text="•  Uses defined names to access cells (see the source code and workbook)." Margin="5,5,5,0" />
+                <TextBlock Text="•  Allows simple or complex formulas - Enter &quot;=1% * 12&quot; for Interest Rate (don't include the quotes)." Margin="5,5,5,0" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</src:SGUserControl>

@@ -1,0 +1,31 @@
+﻿<h2>SpreadsheetGear Explorer Samples</h2>
+<div class="indent mb-4">
+  <p>
+    The samples in <b>Windows Forms Explorer</b>, <b>WPF Explorer</b> and <b>Web Explorer</b> demonstrate a wide variety of APIs and features offered by the following SpreadsheetGear products:
+  </p>
+
+  <ul>
+    <li class="normal"><b>SpreadsheetGear Engine for .NET</b> - the primary SpreadsheetGear library that provides a core set of APIs to read, write, manipulate and calculate workbooks, build charts, format worksheets and cells, and more.</li>
+    <li class="normal"><b>SpreadsheetGear for Windows</b> - builds on the <b>SpreadsheetGear Engine for .NET</b> to add powerful Excel-compatible viewing, editing, formatting, calculating, filtering, sorting, charting, printing and more to your Windows Forms and WPF applications with the easy-to-use WorkbookView and FormulaBar controls.</li>
+  </ul>
+
+  <p>Learn more about these products on our <a href="https://www.spreadsheetgear.com/products/spreadsheetgear.net.aspx" target="_blank">Features Page</a> and more details on their diffences on our <a href="https://www.spreadsheetgear.com/products/compare.aspx" target="_blank">Comparison Page</a>.</p>
+</div>
+
+<h2>Running the Samples</h2>
+<div class="indent mb-4">
+  <p>Click on any sample to the left to display in this pane.  Further actions to run the sample will be provided, and any relevant source code for the sample will also be displayed.</p>
+</div>
+
+<h2>SpreadsheetGearExplorer Visual Studio Solution Description</h2>
+<div class="indent mb-4">
+  <p>The three executable Visual Studio projects (<b>WindowsFormsExplorer</b>, <b>WPFExplorer</b> and <b>WebExplorer</b>) utilize a set of samples that are defined primarily in the <b>SharedSamples</b> Visual Studio library project.  This <b>SharedSamples</b> library utilizes two primary sample types, derived from the following base class / interface:
+
+  <ul>
+    <li class="normal"><b><code>SharedEngineSample</code></b> - samples deriving from this class demonstrate features that depend only on API available from the <b>SpreadsheetGear Engine for .NET</b> product, thereby showing how such routines can be solely executed in-memory / programmatically (i.e, no UI needs to be involved in the <i>execution</i> of these samples.  This is demonstrated most clearly when running the <b>Web Explorer</b> to execute these samples in the context of an ASP.NET Core Web App.  For the <b>Windows Forms Explorer</b> and <b>WPF Explorer</b>, the workbook in which a given sample is executed is displayed on a WorkbookView UI control to more easily observe the results..</li>
+    <li class="normal"><b><code>ISharedWindowsSample</code></b> - samples derived from this interface will demonstrate features that more directly involves a UI of some sort, such as the <code>WorkbookView</code> control.  Much of the source code for these samples is still defined within the <b>SharedSamples</b> Visual Studio project, but supporting UI framework-specifc code is also required in the individual <b>WindowsFormsExplorer</b> and <b>WPFExplorer</b> projects.  In a few cases, sample source code is not shared at all and instead entirely defined from within the <b>WindowsFormsExplorer</b> and <b>WPFExplorer</b> projects because they depend on specific features only available to their particular UI framework (such as Control Templates in XAML to stylize a WPF WorkbookView).</li>
+  </ul>
+</div>
+
+<h2>Category and Sample Descriptions</h2>
+<p>See below for more details on the categories and samples provided in the TreeView to the left.</p>
