@@ -304,7 +304,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="XCOPY &quot;$(ProjectDir)Samples\&quot; &quot;$(TargetDir)Samples\&quot; /S /Y" />
+    <Exec Command="XCOPY &quot;$(ProjectDir)Samples&quot; &quot;$(TargetDir)Samples&quot; /S /Y" />
   </Target>
 
 </Project>
