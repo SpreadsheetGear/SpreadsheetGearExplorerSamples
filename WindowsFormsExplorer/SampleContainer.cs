@@ -4,6 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
+using Microsoft.Web.WebView2.Core;
 using SharedSamples;
 using System;
 using System.Linq;
@@ -27,7 +28,13 @@ namespace WindowsFormsExplorer
 
         private async void SampleContainer_Load(object sender, EventArgs e)
         {
-            await webView2.EnsureCoreWebView2Async();
+            // Have observed web control running by default in a folder that lacks proper permissions.  Explicitly setup a user
+            // data folder in the right place so as to avoid this problem.
+            var userDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), 
+                "SpreadsheetGearWindowsFormsExplorerSamples");
+            var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+            await webView2.EnsureCoreWebView2Async(env);
+            
             if (webView2.CoreWebView2 == null)
             {
                 var errorTextBox = new TextBox();
