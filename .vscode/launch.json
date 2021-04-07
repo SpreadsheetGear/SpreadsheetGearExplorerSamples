@@ -1,0 +1,60 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Windows Forms Explorer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-winforms-explorer",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/WindowsFormsExplorer/bin/Debug/netcoreapp3.1/WindowsFormsExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WindowsFormsExplorer",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch WPF Explorer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-wpf-explorer",
+            "program": "${workspaceFolder}/WpfExplorer/bin/Debug/netcoreapp3.1/WpfExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WpfExplorer",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch Web Explorer",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-web-explorer",
+            "program": "${workspaceFolder}/WebExplorer/bin/Debug/netcoreapp3.1/WebExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WebExplorer",
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Pages": "${workspaceFolder}/Pages"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
