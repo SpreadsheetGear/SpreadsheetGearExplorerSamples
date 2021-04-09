@@ -23,7 +23,8 @@ namespace WindowsFormsExplorer
         {
             var controller = typeof(WebView2).GetField("_coreWebView2Controller", BindingFlags.Instance | 
                 BindingFlags.NonPublic).GetValue(this) as CoreWebView2Controller;
-            controller.IsVisible = false;
+            if (controller != null)
+                controller.IsVisible = false;
             base.OnHandleDestroyed(e);
         }
     }
