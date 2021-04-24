@@ -1,0 +1,6 @@
+\WindowsFormsExplorer\obj
+\WindowsFormsExplorer\bin
+\WPFExplorer\obj
+\WPFExplorer\bin
+\WebExplorer\obj
+\WebExplorer\bin

@@ -1,0 +1,11 @@
+ReadMe.md
+SpreadsheetGearExplorerSamples.sln
+SpreadsheetGearExplorerSamples_Web.sln
+SpreadsheetGearExplorerSamples_Windows.sln
+\SharedSamples\bin
+\SharedSamples\obj
+\CopyToSmallRepos
+\WebExplorer
+\WindowsFormsExplorer
+\WPFExplorer
+\.vs
