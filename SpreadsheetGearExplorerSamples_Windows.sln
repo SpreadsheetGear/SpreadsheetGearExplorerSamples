@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedSamples", "SharedSamples\SharedSamples.csproj", "{6AEE52EF-9B89-4F29-90C4-889DBE1DA905}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsExplorer", "WindowsFormsExplorer\WindowsFormsExplorer.csproj", "{46378E99-B3CA-4995-B873-F439CFE76631}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFExplorer", "WpfExplorer\WPFExplorer.csproj", "{E3673781-7F77-4093-B104-0F2C0138A9D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedSamples", "SharedSamples\SharedSamples.csproj", "{6AEE52EF-9B89-4F29-90C4-889DBE1DA905}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
