@@ -16,7 +16,8 @@
     <None Remove="Images\Event_16x.png" />
     <None Remove="Images\folder-regular-32.png" />
     <None Remove="Images\folder-solid-32.png" />
-    <None Remove="Images\FolderClosed_16x.png" />
+    <None Remove="Images\FolderClosed-32.png" />
+    <None Remove="Images\FolderOpened-32.png" />
     <None Remove="Images\play-32.png" />
     <None Remove="Images\play-circle-32.png" />
     <None Remove="Images\play-regular-32.png" />
@@ -64,13 +65,16 @@
     <Resource Include="Images\Event_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\FolderClosed_16x.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\folder-regular-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\folder-solid-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FolderClosed-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\FolderOpened-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\play-32.png">
