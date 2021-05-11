@@ -21,7 +21,9 @@ namespace WPFExplorer
     /// </summary>
     public partial class SampleContainer : UserControl
     {
-        public SGUserControl CurrentSample { get; private set; }
+        private SGUserControl _currentSampleUserControl;
+        private WebView2State _webView2State = WebView2State.NotInitialized;
+        private RenderedContent _pendingRenderedContent;
 
         public SampleContainer()
         {
@@ -40,22 +42,21 @@ namespace WPFExplorer
                 var userDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), 
                     "SpreadsheetGearWindowsFormsExplorerSamples");
                 var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
+
+                _webView2State = WebView2State.Initializing;
+                //throw new Exception();    // Uncomment to simulate failure to locate WebView2 control
                 await webView2.EnsureCoreWebView2Async(env);
+                _webView2State = WebView2State.Initialized;
             }
             catch { }
             
             if (webView2.CoreWebView2 == null)
             {
-                var errorTextBox = new TextBox();
-                errorTextBox.Text = "ERROR: Could not load WebView2 control to display sample's source code.  Ensure you " +
-                    "have installed the WebView2 Runtime on this machine, which at the time of this writing was available " +
-                    "from the following link:\r\n\r\n" +
-                    "https://developer.microsoft.com/en-us/microsoft-edge/webview2/";
-                webView2.Visibility = Visibility.Hidden;
-                webView2HostGrid.Children.Add(errorTextBox);
+                _webView2State = WebView2State.NotAvailable;
             }
-            else if (!string.IsNullOrEmpty(_pendingHtml))
-                SetWebViewContent(_pendingHtml);
+           
+            if (_pendingRenderedContent != null)
+                SetWebViewContent(_pendingRenderedContent);
         }
 
 
@@ -65,36 +66,38 @@ namespace WPFExplorer
 
             // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
             // and run the sample.
-            if (typeof(SharedEngineSample).IsAssignableFrom(sampleInfo.SampleType))
+            if (sampleInfo.IsSharedEngineSample)
             {
                 var engineSample  = sampleInfo.CreateInstance<SharedEngineSample>();
-                CurrentSample = new EngineSampleControl(engineSample);
-                windowsSampleLabel.Visibility = Visibility.Hidden;
+                _currentSampleUserControl = new EngineSampleControl(engineSample);
+                sampleTypeTextBlock.Text = "SpreadsheetGear Engine Sample";
             }
             else 
             {
                 // SharedWindowSamples can still be shared between WPF, WinForms, etc., as a common IWorkbookView
                 // interface is used to work across UI frameworks.  A concrete XAML SGUserControl still needs to be
                 // available to work alongside the SharedWindowSample, however.
-                if (typeof(SharedWindowsSample).IsAssignableFrom(sampleInfo.SampleType))
+                if (sampleInfo.IsSharedWindowsSample)
                 {
-                    CurrentSample = FindSGUserControlSample(sampleInfo.SampleType);
+                    _currentSampleUserControl = FindSGUserControlSample(sampleInfo.SampleType);
                 }
                 // SGUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
                 // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
                 else if (typeof(SGUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
-                    CurrentSample = sampleInfo.CreateInstance<SGUserControl>();
+                    _currentSampleUserControl = sampleInfo.CreateInstance<SGUserControl>();
                 }
                 else
                 {
                     throw new Exception("Invalid sample type provided.");
                 }
-                windowsSampleLabel.Visibility = Visibility.Visible;
+                sampleTypeTextBlock.Text = "SpreadsheetGear Windows WPF Sample";
             }
+            sampleNameRun.Text = sampleInfo.Name;
+            sampleDescriptionRun.Text = sampleInfo.Description;
 
             grid_sampleControlContainer.Children.Clear();
-            grid_sampleControlContainer.Children.Add(CurrentSample);
+            grid_sampleControlContainer.Children.Add(_currentSampleUserControl);
 
             ResizeSplitterToShowSample();
             UpdateSourceCodeTabs(sampleInfo);
@@ -136,7 +139,7 @@ namespace WPFExplorer
 
         public void DisposeCurrentSample()
         {
-            CurrentSample?.Dispose();
+            _currentSampleUserControl?.Dispose();
         }
 
 
@@ -150,7 +153,10 @@ namespace WPFExplorer
                     Header = sourceCode.FileName,
                     ToolTip = sourceCode.FullPath,
                     IsSelected = i == 0,
-                    Tag = sourceCode.SourceCodeHtml
+                    Tag = new RenderedContent() { 
+                        HtmlContent = sourceCode.GetSourceCode(SourceCodeFormat.Html),
+                        PlaintextContent = sourceCode.GetSourceCode(SourceCodeFormat.Plaintext)
+                    }
                 };
                 tabControl.Items.Add(tab);
             }
@@ -165,7 +171,10 @@ namespace WPFExplorer
                 Header = "Description",
                 ToolTip = "",
                 IsSelected = true,
-                Tag = category.GetCategorySummary()
+                Tag = new RenderedContent() { 
+                    HtmlContent = category.GetCategorySummaryHtml(),
+                    PlaintextContent = category.GetCategorySummaryPlaintext()
+                }
             };
             tabControl.Items.Add(tab);
 
@@ -178,12 +187,9 @@ namespace WPFExplorer
         {
             var tabItem = tabControl.SelectedItem as TabItem;
             if (tabItem != null)
-            {
-                var sourceCodeHtml = (string)tabItem.Tag;
-                SetWebViewContent(sourceCodeHtml);
-            }
+                SetWebViewContent((RenderedContent)tabItem.Tag);
             else
-                SetWebViewContent("");
+                ClearWebViewContent();
         }
 
 
@@ -198,20 +204,73 @@ namespace WPFExplorer
         }
 
 
-        private string _pendingHtml = null;
-        private void SetWebViewContent(string html)
+        private void SetWebViewContent(RenderedContent content)
         {
-            // WebView2 either isn't available or has not yet been initialized.
-            if (webView2.CoreWebView2 != null)
+            // WebView2 is available and initialized
+            if (_webView2State == WebView2State.Initialized)
             {
-                webView2.NavigateToString(html);
-                _pendingHtml = null;
+                webView2.Visibility = Visibility.Visible;
+                webView2FallbackContainer.Visibility = Visibility.Collapsed;
+                webView2.NavigateToString(content.HtmlContent);
+                _pendingRenderedContent = null;
             }
-            // WebView2 must be initialized asynchronously, which is done in the Load event.  Calls to set
-            // the controls HTML contents could get called before initialization so we should store off any
-            // HTML that can be checked on to render should initialization complete later on.
-            else
-                _pendingHtml = html;
+            // WebView2 must be initialized asynchronously, which is done in the async void Load event.  Calls to set
+            // the TabItems's contents could get called while WebView2 is awaiting syncing, in such case this task
+            // should be attempted later on, after initialization of the WebView2 has completed.
+            else if (_webView2State == WebView2State.Initializing || _webView2State == WebView2State.NotInitialized)
+            {
+                _pendingRenderedContent = content;
+            }
+            // WebView2 is not available, likely Runtime not installed.  Fallback to simple plaintext TextBox and add note
+            // prompting user to download WebView2 Runtime.
+            else if (_webView2State == WebView2State.NotAvailable)
+            {
+                webView2.Visibility = Visibility.Collapsed;
+                webView2FallbackContainer.Visibility = Visibility.Visible;
+                webView2FallbackTextBox.Text = content.PlaintextContent;
+            }
         }
+
+
+        private void ClearWebViewContent()
+        {
+            SetWebViewContent(new RenderedContent("", ""));
+        }
+
+
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            var processStartInfo = new System.Diagnostics.ProcessStartInfo(e.Uri.ToString());
+            processStartInfo.UseShellExecute = true;
+            System.Diagnostics.Process.Start(processStartInfo);
+        }
+    }
+
+
+    /// <summary>
+    /// Provides HTML and Plaintext-based contents to display for the selected Sample source code file tab / Category node.
+    /// </summary>
+    public class RenderedContent
+    {
+        public RenderedContent(string html, string plaintext)
+        {
+            HtmlContent = html;
+            PlaintextContent = plaintext;
+        }
+
+        public RenderedContent() { }
+
+        public string HtmlContent { get; set; }
+
+        public string PlaintextContent { get; set; }
+    }
+
+
+    public enum WebView2State
+    {
+        NotInitialized,
+        Initializing,
+        Initialized,
+        NotAvailable
     }
 }

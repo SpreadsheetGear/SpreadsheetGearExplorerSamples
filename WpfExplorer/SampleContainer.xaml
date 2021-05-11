@@ -21,29 +21,87 @@
         <Grid x:Name="grid" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*" />
-                <RowDefinition Height="5" />
+                <RowDefinition Height="8" />
                 <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0" x:Name="grid_wpfSample">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="35" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Label Grid.Row="0" x:Name="windowsSampleLabel" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center" FontWeight="Bold">Windows Sample</Label>
+                <Label Grid.Row="0" x:Name="windowsSampleLabel" Visibility="Hidden" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center" FontWeight="Bold">Windows Sample</Label>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Background="#3c4757" Orientation="Horizontal">
+                        <TextBlock x:Name="sampleTypeTextBlock" Foreground="White" Padding="10,5,10,10" FontSize="20" FontWeight="Bold"></TextBlock>
+                        <TextBlock ToolTipService.ShowDuration="100000" FontFamily="Segoe MDL2 Assets" FontSize="20" FontWeight="Bold" Text="&#xE946;" Foreground="White" VerticalAlignment="Center">
+                            <TextBlock.Resources>
+                                <Style TargetType="ToolTip">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ToolTip">
+                                                <ContentPresenter />
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </TextBlock.Resources>
+                            <TextBlock.ToolTip>
+                                <RichTextBox Width="500" FontSize="16" Background="#3c4757" Foreground="White" Padding="10,10,18,18" SelectionBrush="{x:Null}">
+                                    <FlowDocument>
+                                        <Paragraph>
+                                            Samples in this application consist of two primary types:
+                                        </Paragraph>
+                                        <List MarkerStyle="Decimal">
+                                            <ListItem>
+                                                <Paragraph>
+                                                    <Bold>SpreadsheetGear Engine Samples</Bold> - demonstrate features that are executed using only APIs from the
+                                                    <Bold>SpreadsheetGear Engine for .NET</Bold> NuGet Package.  Meaning, these samples are executed independent of any UI such as the WPF WorkbookView (i.e., they could be executed from a Console application, the back-end of an ASP.NET Core app, etc.), although the results of the samples are displayed on a WorkbookView for demonstration purposes.
+                                                    <LineBreak/>
+                                                </Paragraph>
+                                            </ListItem>
+                                            <ListItem>
+                                                <Paragraph>
+                                                    <Bold>SpreadsheetGear Windows WPF Samples</Bold> - these samples either more directly depend on a WorkbookView (provided by the <Bold>SpreadsheetGear for Windows</Bold> NuGet Package) to execute such as user-initiated events like selecting or editing cells; or the samples demonstrate a particular feature that is better suited using a UI in general (such as the Chart Gallery sample).
+                                                </Paragraph>
+                                            </ListItem>
+                                        </List>
+                                    </FlowDocument>
+                                </RichTextBox>
+                            </TextBlock.ToolTip>
+                        </TextBlock>
+                    </StackPanel>
+
+                    <RichTextBox Grid.Row="1" Background="#FF525E71" IsReadOnly="True" IsReadOnlyCaretVisible="False" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Arrow">
+                        <FlowDocument>
+                            <Paragraph Padding="10,5,10,10" FontWeight="Bold" Foreground="White">
+                                <Run x:Name="sampleNameRun" FontSize="18"></Run>
+                                <Run FontSize="18">-</Run>
+                                <Run x:Name="sampleDescriptionRun" FontSize="14"></Run>
+                            </Paragraph>
+                        </FlowDocument>
+                    </RichTextBox>
+                </Grid>
+
                 <Grid Grid.Row="1" x:Name="grid_sampleControlContainer"></Grid>
             </Grid>
 
-            <GridSplitter Grid.Row="1" x:Name="gridSplitter" HorizontalAlignment="Stretch"></GridSplitter>
+            <GridSplitter Style="{DynamicResource GridSplitterStyleHorizontal}" Grid.Row="1" x:Name="gridSplitter" HorizontalAlignment="Stretch" BorderBrush="#FFBBBBBB" BorderThickness="1" />
 
             <Grid Grid.Row="2">
+                <Grid.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                </Grid.Background>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <!--Style="{DynamicResource TabControlStyleNoContent}"-->
-                <TabControl Grid.Row="0" x:Name="tabControl" SelectionChanged="tabControl_SelectionChanged">
+                <TabControl Grid.Row="0" x:Name="tabControl" SelectionChanged="tabControl_SelectionChanged" Height="23" Margin="0,1,0,0">
                     <TabControl.ContentTemplate>
                         <DataTemplate/>
                     </TabControl.ContentTemplate>
@@ -51,6 +109,23 @@
 
                 <Grid Grid.Row="1" x:Name="webView2HostGrid">
                     <web:WebView2 x:Name="webView2" />
+                    <Grid x:Name="webView2FallbackContainer">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <RichTextBox IsReadOnly="True" IsDocumentEnabled="True" IsReadOnlyCaretVisible="False" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Arrow" Background="#FFFFF5D9">
+                            <FlowDocument>
+                                <Paragraph FontSize="14" Padding="7,5,5,5">
+                                    <Run FontFamily="Segoe MDL2 Assets" Text="&#xE946;"></Run>
+                                    The below content is presented in plaintext because the <Bold>WebView2 Runtime</Bold>, which provides an Edge-Based WPF Browser Control, could not be found on your machine.  To view this as richly-formatted content, download and install the WebView2 Runtime, available at:
+                                    <LineBreak/>
+                                    <Hyperlink NavigateUri="https://developer.microsoft.com/en-us/microsoft-edge/webview2" RequestNavigate="Hyperlink_RequestNavigate">https://developer.microsoft.com/en-us/microsoft-edge/webview2</Hyperlink>
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                        <TextBox Grid.Row="1" x:Name="webView2FallbackTextBox" IsReadOnly="True" FontFamily="Consolas" FontSize="11" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Padding="5,5,5,5"></TextBox>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

@@ -43,7 +43,7 @@ namespace WebExplorer
         {
             Category category = _categoryRoot.GetCategory(categoryName, true);
             if (category != null)
-                return category.GetCategorySummary(false);
+                return category.GetCategorySummaryHtml(false);
             else
                 return "";
         }

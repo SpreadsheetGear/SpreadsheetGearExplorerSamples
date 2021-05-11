@@ -63,7 +63,7 @@ namespace WindowsFormsExplorer
 
             // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
             // and run the sample.
-            if (typeof(SharedEngineSample).IsAssignableFrom(sampleInfo.SampleType))
+            if (sampleInfo.IsSharedEngineSample)
             {
                 var engineSample = sampleInfo.CreateInstance<SharedEngineSample>();
                 CurrentSample = new EngineSampleControl(engineSample);
@@ -74,7 +74,7 @@ namespace WindowsFormsExplorer
                 // SharedWindowSamples can still be shared between WPF, WinForms, etc., as a common IWorkbookView
                 // interface is used to work across UI frameworks.  A concrete XAML SGUserControl still needs to be
                 // available to work alongside the SharedWindowSample, however.
-                if (typeof(SharedWindowsSample).IsAssignableFrom(sampleInfo.SampleType))
+                if (sampleInfo.IsSharedWindowsSample)
                 {
                     CurrentSample = FindSGUserControlSample(sampleInfo.SampleType);
                 }
@@ -142,11 +142,11 @@ namespace WindowsFormsExplorer
             {
                 var sourceCode = sampleInfo.SourceCodes[i];
                 if (i == 0)
-                    SetWebViewContent(sourceCode.SourceCodeHtml);
+                    SetWebViewContent(sourceCode.GetSourceCode(SourceCodeFormat.Html));
                 var tab = new TabPage();
                 tab.Text = sourceCode.FileName;
                 tab.ToolTipText = sourceCode.FullPath;
-                tab.Tag = sourceCode.SourceCodeHtml;
+                tab.Tag = sourceCode.GetSourceCode(SourceCodeFormat.Html);
                 tabControl.TabPages.Add(tab);
             }
             tabControl.SelectTab(0);
@@ -158,7 +158,7 @@ namespace WindowsFormsExplorer
             DisposeCurrentSample();
             RemoveTabs();
 
-            var html = category.GetCategorySummary();
+            var html = category.GetCategorySummaryHtml();
             SetWebViewContent(html);
 
             var tab = new TabPage("Description");

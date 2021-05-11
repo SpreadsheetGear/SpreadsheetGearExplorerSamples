@@ -80,37 +80,5 @@ namespace WPFExplorer
                 sampleContainer.SetSample((SampleInfo)selectedItem);
             }
         }
-
-
-        private void button_launchWinFormsExplorer_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (string build in new List<string>() { "Release", "Debug" })
-            {
-                try
-                {
-                    var file = new FileInfo($@"..\..\..\..\WindowsFormsExplorer\bin\{build}\netcoreapp3.1\WindowsFormsExplorer.exe");
-                    if (file.Exists)
-                    {
-                        string processName = file.Name.Replace(".exe", "", System.StringComparison.InvariantCultureIgnoreCase);
-                        Process[] existingProcesses = Process.GetProcessesByName(processName);
-                        if (existingProcesses.Length == 0)
-                        {
-                            var processInfo = new ProcessStartInfo(file.FullName);
-                            processInfo.WorkingDirectory = file.DirectoryName;
-                            var process = Process.Start(processInfo);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"Windows Forms Explorer is already running.");
-                        }
-                        return;
-                    }
-                }
-                catch { }
-            }
-
-            MessageBox.Show("Could not locate the Windows Forms Explorer.  Ensure that this project has been built and that a WindowsFormsExplorer.exe is availabe in either the 'Release' or 'Debug' folder and 'netcoreapp3.1' target framework subfolder of that project.", "SpreadsheetGear Explorer",
-                MessageBoxButton.OK, MessageBoxImage.Error);
-        }
     }
 }

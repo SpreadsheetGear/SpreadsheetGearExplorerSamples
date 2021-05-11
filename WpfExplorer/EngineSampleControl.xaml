@@ -20,6 +20,9 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
+            <Grid.Background>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
@@ -38,8 +41,6 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            
-            <Label Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,0" VerticalAlignment="Center" FontWeight="Bold">SpreadsheetGear Engine for .NET Sample</Label>
         </Grid>
 
         <sg:FormulaBar x:Name="formulaBar" Grid.Row="1" />

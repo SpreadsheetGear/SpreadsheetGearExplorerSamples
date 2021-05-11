@@ -16,44 +16,44 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300" />
-            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="8"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <TreeView x:Name="samplesTreeView" Grid.Row="0" SelectedItemChanged="samplesTreeView_SelectedItemChanged">
-                <TreeView.Resources>
-                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
-                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}"/>
-                    <HierarchicalDataTemplate DataType="{x:Type shared:Category}" ItemsSource="{Binding Path=CategoriesAndSampleInfos}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/WpfExplorer;component/Images/FolderClosed_16x.png" Width="16" Height="16" />
-                            <TextBlock Text="{Binding Path=Name}" />
-                        </StackPanel>
-                    </HierarchicalDataTemplate>
-                    <DataTemplate DataType="{x:Type shared:SampleInfo}">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/WpfExplorer;component/Images/Run_16x.png" Width="16" Height="16" />
-                            <TextBlock Text="{Binding Path=Name}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </TreeView.Resources>
-                <TreeView.ItemContainerStyle>
-                    <Style TargetType="TreeViewItem">
-                        <Setter Property="TreeViewItem.IsExpanded" Value="True"/>
-                    </Style>
-                </TreeView.ItemContainerStyle>
-            </TreeView>
+        <TreeView x:Name="samplesTreeView" Grid.Column="0" SelectedItemChanged="samplesTreeView_SelectedItemChanged">
+            <TreeView.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}"/>
+                <HierarchicalDataTemplate DataType="{x:Type shared:Category}" ItemsSource="{Binding Path=CategoriesAndSampleInfos}">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                        <!--<Image Source="/WpfExplorer;component/Images/folder-regular-32.png" Width="16" Height="16"/>-->
+                        <Image Source="/WpfExplorer;component/Images/folder-solid-32.png" Width="16" Height="16"/>
+                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0" FontWeight="SemiBold" />
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+                <DataTemplate DataType="{x:Type shared:SampleInfo}">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
+                        <Image Source="/WpfExplorer;component/Images/play-circle-32.png" Width="16" Height="16"/>
+                        <!--<Image Source="/WpfExplorer;component/Images/brackets-curly-32.png" Width="16" Height="16"/>-->
+                        <!--<Image Source="/WpfExplorer;component/Images/window-alt-32.png" Width="16" Height="16"/>-->
+                        <!--<Image Source="/WpfExplorer;component/Images/table-32.png" Width="16" Height="16"/>-->
+                        <!--<Image Source="/WpfExplorer;component/Images/project-diagram-32.png" Width="16" Height="16"/>-->
+                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0" />
+                    </StackPanel>
+                </DataTemplate>
+            </TreeView.Resources>
+            <TreeView.Background>
+                <SolidColorBrush Color="#FFFAFAFA"/>
+            </TreeView.Background>
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="TreeViewItem">
+                    <Setter Property="TreeViewItem.IsExpanded" Value="True"/>
+                </Style>
+            </TreeView.ItemContainerStyle>
+        </TreeView>
 
-            <Button x:Name="button_launchWinFormsExplorer" Grid.Row="1" Width="Auto" Margin="5" Click="button_launchWinFormsExplorer_Click" Padding="10,5,10,5" HorizontalAlignment="Center">Launch Windows Forms Explorer</Button>
-        </Grid>
-        
-        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></GridSplitter>
-        
+        <GridSplitter Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Style="{StaticResource GridSplitterStyleVertical}" BorderBrush="#FFBBBBBB" BorderThickness="1" />
+
         <local:SampleContainer Grid.Column="2" x:Name="sampleContainer"></local:SampleContainer>
     </Grid>
 </Window>

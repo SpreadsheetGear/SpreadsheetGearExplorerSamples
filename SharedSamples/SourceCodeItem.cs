@@ -16,40 +16,66 @@ namespace SharedSamples
     /// </summary>
     public class SourceCodeItem
     {
+        private string _sampleName, _sampleDescription;
+
         public SourceCodeItem(string filePath, string sampleName, string sampleDescription)
         {
             var file = new System.IO.FileInfo(filePath);
             FullPath = file.FullName;
             FileName = file.Name;
-            SourceCode = System.IO.File.ReadAllText(filePath);
+            Extension = file.Extension.ToLower();
+            OriginalSourceCode = System.IO.File.ReadAllText(filePath);
             if (!_extensionsMapper.TryGetValue(file.Extension, out var language))
                 language = "cs";
             Language = language;
 
-            var htmlTemplate = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\SourceCodeTemplate.html"));
-            SourceCodeHtml = htmlTemplate
-                .Replace("[[TITLE]]", sampleName)
-                .Replace("[[DESCRIPTION]]", sampleDescription)
-                .Replace("[[BODY]]", System.Web.HttpUtility.HtmlEncode(SourceCode))
-                .Replace("[[LANGUAGE]]", Language);
+            _sampleName = sampleName;
+            _sampleDescription = sampleDescription;
         }
 
 
         /// <summary>
-        /// Returns <see cref="SourceCode"/> but using the specified amount of spaces per tab (default is 4).
+        /// Returns <see cref="OriginalSourceCode"/> in a form that is better presentable in the 
+        /// Explorers, optionally converting to HTML and modifying the tab size.
         /// </summary>
-        public string GetSourceCode(int tabSize = 4)
+        public string GetSourceCode(SourceCodeFormat format, int tabSize = 4)
         {
-            if (tabSize == 4)
-                return SourceCode;
-            else
+            string sourceCode = OriginalSourceCode;
+
+            // Detect and remove namespace if present
+            if (Extension == ".cs")
+            {
+                var regex = new Regex(@"^namespace .*\n{", RegexOptions.Multiline);
+                if (regex.IsMatch(sourceCode))
+                {
+                    sourceCode = regex.Replace(sourceCode, "");
+                    sourceCode = sourceCode.Substring(0, sourceCode.LastIndexOf("}")).Trim();
+
+                    // Trim off first indentation
+                    sourceCode = Regex.Replace(sourceCode, @"( {4})(.*)", "$2");
+                }
+            }
+
+            // Modfiy tab size from default of 4 if needed.
+            if (tabSize != 4)
             {
                 var regex = new Regex(@"(^|\G) {4}", RegexOptions.Multiline);
-                var newSourceCode = regex.Replace(SourceCode, new string(' ', tabSize));
-                return newSourceCode;
+                sourceCode = regex.Replace(sourceCode, new string(' ', tabSize));
             }
-        }
 
+            // Format code as HTML if needed.
+            if (format == SourceCodeFormat.Html)
+            {
+                var htmlTemplate = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\SourceCodeTemplate.html"));
+                sourceCode = htmlTemplate
+                    .Replace("[[TITLE]]", _sampleName)
+                    .Replace("[[DESCRIPTION]]", _sampleDescription)
+                    .Replace("[[BODY]]", System.Web.HttpUtility.HtmlEncode(sourceCode))
+                    .Replace("[[LANGUAGE]]", Language);
+            }
+
+            return sourceCode;
+        }
 
         /// <summary>
         /// Full path to source code file, including the file name.
@@ -62,14 +88,14 @@ namespace SharedSamples
         public string FileName { get; set; }
 
         /// <summary>
-        /// Original source code.
+        /// Extension of the source code file.
         /// </summary>
-        public string SourceCode { get; set; }
+        public string Extension { get; set; }
 
         /// <summary>
-        /// HTML-formatted source code
+        /// Code file's original source code.  Use <see cref="GetSourceCode(bool, int)"/> to get the source code in a form that is presentable in the Explorer samples.
         /// </summary>
-        public string SourceCodeHtml { get; set; }
+        public string OriginalSourceCode { get; set; }
 
         /// <summary>
         /// Returns the language class used by Prism.js syntax highlighter, excluding the "language-" 
@@ -86,5 +112,12 @@ namespace SharedSamples
             { ".cs", "cs" },
             { ".xaml", "xml" }
         };
+    }
+
+
+    public enum SourceCodeFormat
+    {
+        Plaintext,
+        Html
     }
 }

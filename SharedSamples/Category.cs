@@ -6,6 +6,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using HtmlAgilityPack;
 
 namespace SharedSamples
 {
@@ -41,6 +42,7 @@ namespace SharedSamples
         public string FolderName { get; set; }
         public int SortIndex { get; set; }
         public bool IsExpanded { get; set; }
+        public bool IsRoot => Name == "[ROOT]";
 
         /// <summary>
         /// When displayed as a summary, normally the Name of the Category will included at the top of the bullet item.  Set this to false to hide this name.  Primarily used for the topmost "SpreadsheetGear Explorer" category (not needed on Root, as this should not be displayed to begin with).
@@ -148,9 +150,9 @@ namespace SharedSamples
         /// Construct a summary of this category and all contained samples and sub-categories.
         /// </summary>
         /// <param name="renderFullWebPage">Specifying true will return a fully-contained HTML web page, &lt;html&gt; tag and all, will be included with the summary.  Specifying false will return just a &lt;ul&gt; tag containing the summary for the category, sub-categories, samples, etc.</param>
-        public string GetCategorySummary(bool renderFullWebPage = true)
+        public string GetCategorySummaryHtml(bool renderFullWebPage = true)
         {
-            string html = $"<ul class='fa-ul'>{GetCategorySummaryInternal(this)}</ul>";
+            string html = $"<ul class='fa-ul'>{GetCategorySummaryHtmlInternal(this)}</ul>";
             if (renderFullWebPage)
             {
                 var htmlTemplate = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\SummaryTemplate.html"));
@@ -160,7 +162,14 @@ namespace SharedSamples
         }
 
 
-        private string GetCategorySummaryInternal(Category currentCategory)
+        public string GetCategorySummaryPlaintext()
+        {
+            var plaintext = GetCategorySummaryPlaintextInternal(this, 0);
+            return plaintext;
+        }
+
+
+        private string GetCategorySummaryHtmlInternal(Category currentCategory)
         {
             var html = "";
             html += $"<li class='folder'><span class='fa-li'><i class='fas fa-folder-open'></i></span>";
@@ -173,7 +182,7 @@ namespace SharedSamples
                 html += $"  <ul class='fa-ul'>";
                 foreach (var childCategory in currentCategory.ChildCategories)
                 {
-                    html += childCategory.GetCategorySummaryInternal(childCategory);
+                    html += childCategory.GetCategorySummaryHtmlInternal(childCategory);
                 }
                 html += $"  </ul>";
             }
@@ -187,6 +196,42 @@ namespace SharedSamples
                 html += $"  </ul>";
             }
             return html;
+        }
+
+
+        private string GetCategorySummaryPlaintextInternal(Category currentCategory, int numIndents)
+        {
+            var indents = new string(' ', numIndents * 2);
+            var text = "";
+            if (!HideNameFromCategorySummary)
+                text += $"{indents}- [Category - {currentCategory.Name}]";
+            if (!string.IsNullOrWhiteSpace(currentCategory.Description))
+            {
+                var desc = currentCategory.Description;
+                // Level beyond Root is the Explorer summary, which is formatted using HTML and needs to be stripped out.
+                if (currentCategory.Parent.IsRoot)
+                {
+                    var doc = new HtmlDocument();
+                    doc.LoadHtml(desc);
+                    desc = doc.DocumentNode.InnerText;
+                }
+                text += $"{(!HideNameFromCategorySummary ? " - " : "")}{desc}\r\n";
+            }
+            if (currentCategory.ChildCategories.Count() > 0)
+            {
+                foreach (var childCategory in currentCategory.ChildCategories)
+                {
+                    text += childCategory.GetCategorySummaryPlaintextInternal(childCategory, numIndents + 1);
+                }
+            }
+            if (currentCategory.SampleInfos.Count > 0)
+            {
+                foreach (var sample in currentCategory.SampleInfos)
+                {
+                    text += $"{indents}  - [Sample - {sample.Name}] - {sample.Description}\r\n";
+                }
+            }
+            return text;
         }
 
 

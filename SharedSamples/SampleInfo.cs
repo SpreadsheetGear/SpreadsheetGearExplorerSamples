@@ -27,23 +27,22 @@ namespace SharedSamples
                 throw new ArgumentException($"{nameof(sampleType)} must implement {nameof(ISample)}", nameof(sampleType));
 
             Category = category ?? throw new ArgumentNullException(nameof(category));
-            EngineSampleType = sampleType;
             SampleType = sampleType;
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Description = description ?? "";
         }
 
         /// <summary>
-        /// Should be a type that implements <see cref="ISample"/>.  Current implemenations are SharedEngineSample, 
-        /// SharedWindowsSample, IWpfSample and IWinFormsSample.
-        /// </summary>
-        private Type EngineSampleType { get; set; }
-
-        /// <summary>
-        /// The <see cref="Type"/> of the sample, which is used to activate an instance of
-        /// the sample using the <see cref="CreateInstance{T}"/> method.
+        /// The <see cref="Type"/> of the sample, which is used to activate an instance of the sample using 
+        /// the <see cref="CreateInstance{T}"/> method.  Should be a type that implements <see cref="ISample"/>,  
+        /// which includes <see cref="SharedEngineSample"/>, <see cref="SharedWindowsSample"/> and other types 
+        /// that are UI-platform specific (see SGUserControl in WinForms and WPF projects, for instance).
         /// </summary>
         public Type SampleType { get; set; }
+
+        public bool IsSharedEngineSample => typeof(SharedEngineSample).IsAssignableFrom(SampleType);
+
+        public bool IsSharedWindowsSample => typeof(SharedWindowsSample).IsAssignableFrom(SampleType);
 
         /// <summary>
         /// Name of the sample.

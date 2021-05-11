@@ -16,10 +16,10 @@ namespace WebExplorer
         {
             CreateMap<Category, CategoryDTO>()
                 .ForMember(dst => dst.SampleNames, opt => opt.MapFrom(src => src.SampleInfos.Select(si => si.Name)))
-                .ForMember(dst => dst.Summary, opt => opt.MapFrom(src => src.GetCategorySummary(false)));
+                .ForMember(dst => dst.Summary, opt => opt.MapFrom(src => src.GetCategorySummaryHtml(false)));
             CreateMap<SampleInfo, SampleInfoDTO>();
             CreateMap<SourceCodeItem, SourceCodeItemDTO>()
-                .ForMember(dst => dst.SourceCode, opt => opt.MapFrom(src => src.GetSourceCode(3)));
+                .ForMember(dst => dst.SourceCode, opt => opt.MapFrom(src => src.GetSourceCode(SourceCodeFormat.Plaintext, 3)));
         }
     }
 }

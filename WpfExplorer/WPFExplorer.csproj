@@ -11,10 +11,20 @@
   <ItemGroup>
     <None Remove="Files\Shapes.xlsx" />
     <None Remove="Files\SpiceOrder.xlsx" />
+    <None Remove="Images\brackets-curly-32.png" />
+    <None Remove="Images\code-branch-32.png" />
     <None Remove="Images\Event_16x.png" />
+    <None Remove="Images\folder-regular-32.png" />
+    <None Remove="Images\folder-solid-32.png" />
     <None Remove="Images\FolderClosed_16x.png" />
+    <None Remove="Images\play-32.png" />
+    <None Remove="Images\play-circle-32.png" />
+    <None Remove="Images\play-regular-32.png" />
+    <None Remove="Images\project-diagram-32.png" />
     <None Remove="Images\Run_16x.png" />
+    <None Remove="Images\table-32.png" />
     <None Remove="Images\Undo_16x.png" />
+    <None Remove="Images\window-alt-32.png" />
     <None Remove="SpreadsheetGearLogo.ico" />
   </ItemGroup>
 
@@ -45,16 +55,46 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\brackets-curly-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\code-branch-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Event_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\FolderClosed_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\folder-regular-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\folder-solid-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\play-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\play-circle-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\play-regular-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\project-diagram-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Run_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\table-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Undo_16x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\window-alt-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="SpreadsheetGearLogo.ico" />
