@@ -22,23 +22,31 @@
 
         <TreeView x:Name="samplesTreeView" Grid.Column="0" SelectedItemChanged="samplesTreeView_SelectedItemChanged">
             <TreeView.Resources>
+                <Style x:Key="TreeViewItemStyle" TargetType="TreeViewItem">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                </Style>
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}" />
                 <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{DynamicResource {x:Static SystemColors.HighlightTextColorKey}}"/>
                 <HierarchicalDataTemplate DataType="{x:Type shared:Category}" ItemsSource="{Binding Path=CategoriesAndSampleInfos}">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
-                        <!--<Image Source="/WpfExplorer;component/Images/folder-regular-32.png" Width="16" Height="16"/>-->
-                        <Image Source="/WpfExplorer;component/Images/folder-solid-32.png" Width="16" Height="16"/>
-                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0" FontWeight="SemiBold" />
+                        <Image Name="img" Source="{Binding Converter={x:Static local:CategoryImageConverter.Instance}}" 
+                               Width="20" Height="20"/>
+                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0" FontWeight="SemiBold"/>
                     </StackPanel>
+                    <HierarchicalDataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+                            <Setter TargetName="img" Property="Source" Value="{Binding Converter={x:Static local:CategoryImageConverter.Instance}}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="False">
+                            <Setter TargetName="img" Property="Source" Value="{Binding Converter={x:Static local:CategoryImageConverter.Instance}}"/>
+                        </DataTrigger>
+                    </HierarchicalDataTemplate.Triggers>
                 </HierarchicalDataTemplate>
                 <DataTemplate DataType="{x:Type shared:SampleInfo}">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,2">
-                        <Image Source="/WpfExplorer;component/Images/play-circle-32.png" Width="16" Height="16"/>
-                        <!--<Image Source="/WpfExplorer;component/Images/brackets-curly-32.png" Width="16" Height="16"/>-->
-                        <!--<Image Source="/WpfExplorer;component/Images/window-alt-32.png" Width="16" Height="16"/>-->
-                        <!--<Image Source="/WpfExplorer;component/Images/table-32.png" Width="16" Height="16"/>-->
-                        <!--<Image Source="/WpfExplorer;component/Images/project-diagram-32.png" Width="16" Height="16"/>-->
-                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0" />
+                        <Image Name="img2" Source="{Binding Converter={x:Static local:SampleInfoImageConverter.Instance}}" 
+                               Width="20" Height="20"/>
+                        <TextBlock Text="{Binding Path=Name}" Margin="3,0,0,0"/>
                     </StackPanel>
                 </DataTemplate>
             </TreeView.Resources>
@@ -47,7 +55,7 @@
             </TreeView.Background>
             <TreeView.ItemContainerStyle>
                 <Style TargetType="TreeViewItem">
-                    <Setter Property="TreeViewItem.IsExpanded" Value="True"/>
+                    <Setter Property="TreeViewItem.IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}"/>
                 </Style>
             </TreeView.ItemContainerStyle>
         </TreeView>
