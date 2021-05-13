@@ -98,5 +98,7 @@ namespace SharedSamples
         /// Specify the A1-reference style range to render.  Specify null to render from A1 to the bottom-right end of the used range.
         /// </summary>
         public string RenderImageRange { get; set; } = null;
+
+        public bool IsExpanded { get; set; }
     }
 }
