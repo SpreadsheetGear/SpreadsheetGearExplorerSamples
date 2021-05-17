@@ -88,7 +88,7 @@ namespace SharedSamples
         public string FileName { get; set; }
 
         /// <summary>
-        /// Extension of the source code file.
+        /// Extension of the source code file (includes period).
         /// </summary>
         public string Extension { get; set; }
 

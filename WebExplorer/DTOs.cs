@@ -31,7 +31,6 @@ namespace WebExplorer
         public bool HideNameFromCategorySummary { get; set; }
         public IEnumerable<CategoryDTO> ChildCategories { get; set; }
         public IEnumerable<string> SampleNames { get; set; }
-        public string Summary { get; set; }
     }
 
     public class SourceCodeItemDTO

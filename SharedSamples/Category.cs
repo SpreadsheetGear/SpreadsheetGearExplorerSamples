@@ -169,6 +169,13 @@ namespace SharedSamples
         }
 
 
+        public string GetCategorySummaryMarkdown(string categoryIcon = "", string sampleIcon = "")
+        {
+            var markdown = GetCategorySummaryMarkdownInternal(this, 0, categoryIcon, sampleIcon);
+            return markdown;
+        }
+
+
         private string GetCategorySummaryHtmlInternal(Category currentCategory)
         {
             var html = "";
@@ -215,8 +222,9 @@ namespace SharedSamples
                     doc.LoadHtml(desc);
                     desc = doc.DocumentNode.InnerText;
                 }
-                text += $"{(!HideNameFromCategorySummary ? " - " : "")}{desc}\r\n";
+                text += $"{(!HideNameFromCategorySummary ? " - " : "")}{desc}";
             }
+            text += "\r\n";
             if (currentCategory.ChildCategories.Count() > 0)
             {
                 foreach (var childCategory in currentCategory.ChildCategories)
@@ -229,6 +237,41 @@ namespace SharedSamples
                 foreach (var sample in currentCategory.SampleInfos)
                 {
                     text += $"{indents}  - [Sample - {sample.Name}] - {sample.Description}\r\n";
+                }
+            }
+            return text;
+        }
+
+
+        private string GetCategorySummaryMarkdownInternal(Category currentCategory, int depth, string categoryIcon, string sampleIcon)
+        {
+            if (currentCategory.Parent.IsRoot)
+                depth--;
+
+            string tabs = "";
+            if (depth > 0)
+                tabs = new string('\t', depth);
+
+            var text = "";
+            if (!HideNameFromCategorySummary)
+                text += $"{tabs}*   **{categoryIcon} {currentCategory.Name}**";
+            if (!string.IsNullOrWhiteSpace(currentCategory.Description))
+            {
+                text += $"{(!HideNameFromCategorySummary ? " - " : "")}{currentCategory.Description}";
+            }
+            text += "\r\n";
+            if (currentCategory.SampleInfos.Count > 0)
+            {
+                foreach (var sample in currentCategory.SampleInfos)
+                {
+                    text += $"{tabs}\t*   **{sampleIcon} {sample.Name}** - {sample.Description}\r\n"; // Play Icon: 
+                }
+            }
+            if (currentCategory.ChildCategories.Count() > 0)
+            {
+                foreach (var childCategory in currentCategory.ChildCategories)
+                {
+                    text += childCategory.GetCategorySummaryMarkdownInternal(childCategory, depth + 1, categoryIcon, sampleIcon);
                 }
             }
             return text;

@@ -54,10 +54,10 @@ namespace WindowsFormsExplorer
         /// <param name="category"></param>
         public static void AddWinFormsSourceCodeFiles(Category category)
         {
-            var targetType1 = typeof(SharedWindowsSample);
-            var targetType2 = typeof(SGUserControl);
-            foreach (var sample in category.SampleInfos.Where(i => targetType1.IsAssignableFrom(i.SampleType) ||
-                targetType2.IsAssignableFrom(i.SampleType)))
+            var targetTypeSharedWinSample = typeof(SharedWindowsSample);
+            var targetTypeSGUserControl = typeof(SGUserControl);
+            foreach (var sample in category.SampleInfos.Where(i =>
+                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSGUserControl.IsAssignableFrom(i.SampleType)))
             {
                 sample.AddSourceCode($"{sample.SampleType.Name}.cs");
             }
@@ -78,7 +78,6 @@ namespace WindowsFormsExplorer
             where T : SGUserControl
         {
             var sampleInfo = category.AddSample<T>(sampleName, description);
-            sampleInfo.AddSourceCode($"{typeof(T).Name}.cs");
             return sampleInfo;
         }
     }

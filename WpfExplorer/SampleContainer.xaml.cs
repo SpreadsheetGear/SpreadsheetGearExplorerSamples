@@ -4,59 +4,49 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using Microsoft.Web.WebView2.Core;
 using SharedSamples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using ICSharpCode.AvalonEdit;
+using ICSharpCode.AvalonEdit.Document;
+using ICSharpCode.AvalonEdit.Highlighting.Xshd;
+using ICSharpCode.AvalonEdit.Highlighting;
+using System.Xml;
+using System.IO;
+using System.Windows.Media;
+using System.Reflection;
 
 namespace WPFExplorer
 {
     /// <summary>
     /// Hosts all samples, displaying the sample itself on a top pane and the sample's various source code files on the bottom.
-    /// In the case where a Category is selected, a summary of that Category and any of its containing sub-categories and samples
-    ///  is displayed.
     /// </summary>
     public partial class SampleContainer : UserControl
     {
-        private SGUserControl _currentSampleUserControl;
-        private WebView2State _webView2State = WebView2State.NotInitialized;
-        private RenderedContent _pendingRenderedContent;
+        private Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
 
         public SampleContainer()
         {
             InitializeComponent();
-        }
 
-
-        private async void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Initializing WebView2 when the WebView2 Runtime is not installed on the local machine may throw an exception.  See
-            // below TextBox note for more details on downloading and installing the Runtime.
-            try
+            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control.
+            _syntaxHighlightingDefinitions = new Dictionary<string, IHighlightingDefinition>();
+            var customHighlightItems = new Dictionary<string, string>() {
+                { ".cs", "CSharp-Custom.xshd" },
+                { ".xaml", "XML-Custom.xshd" }
+            };
+            var baseDir = System.AppDomain.CurrentDomain.BaseDirectory;
+            foreach (var item in customHighlightItems)
             {
-                // Have observed web control running by default in a folder that lacks proper permissions.  Explicitly setup a user
-                // data folder in the right place so as to avoid this problem.
-                var userDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), 
-                    "SpreadsheetGearWindowsFormsExplorerSamples");
-                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
-
-                _webView2State = WebView2State.Initializing;
-                //throw new Exception();    // Uncomment to simulate failure to locate WebView2 control
-                await webView2.EnsureCoreWebView2Async(env);
-                _webView2State = WebView2State.Initialized;
+                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}"))
+                using (var reader = new XmlTextReader(stream))
+                {
+                    _syntaxHighlightingDefinitions.Add(item.Key, HighlightingLoader.Load(reader, HighlightingManager.Instance));
+                }
             }
-            catch { }
-            
-            if (webView2.CoreWebView2 == null)
-            {
-                _webView2State = WebView2State.NotAvailable;
-            }
-           
-            if (_pendingRenderedContent != null)
-                SetWebViewContent(_pendingRenderedContent);
         }
 
 
@@ -66,10 +56,11 @@ namespace WPFExplorer
 
             // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
             // and run the sample.
+            SGUserControl sampleUserControl;
             if (sampleInfo.IsSharedEngineSample)
             {
                 var engineSample  = sampleInfo.CreateInstance<SharedEngineSample>();
-                _currentSampleUserControl = new EngineSampleControl(engineSample);
+                sampleUserControl = new EngineSampleControl(engineSample);
                 sampleTypeTextBlock.Text = "SpreadsheetGear Engine Sample";
             }
             else 
@@ -79,13 +70,13 @@ namespace WPFExplorer
                 // available to work alongside the SharedWindowSample, however.
                 if (sampleInfo.IsSharedWindowsSample)
                 {
-                    _currentSampleUserControl = FindSGUserControlSample(sampleInfo.SampleType);
+                    sampleUserControl = FindSGUserControlSample(sampleInfo.SampleType);
                 }
                 // SGUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
                 // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
                 else if (typeof(SGUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
-                    _currentSampleUserControl = sampleInfo.CreateInstance<SGUserControl>();
+                    sampleUserControl = sampleInfo.CreateInstance<SGUserControl>();
                 }
                 else
                 {
@@ -97,7 +88,7 @@ namespace WPFExplorer
             sampleDescriptionRun.Text = sampleInfo.Description;
 
             grid_sampleControlContainer.Children.Clear();
-            grid_sampleControlContainer.Children.Add(_currentSampleUserControl);
+            grid_sampleControlContainer.Children.Add(sampleUserControl);
 
             ResizeSplitterToShowSample();
             UpdateSourceCodeTabs(sampleInfo);
@@ -139,7 +130,10 @@ namespace WPFExplorer
 
         public void DisposeCurrentSample()
         {
-            _currentSampleUserControl?.Dispose();
+            if (grid_sampleControlContainer.Children.Count == 1)
+                ((SGUserControl)grid_sampleControlContainer.Children[0]).Dispose();
+            grid_sampleControlContainer.Children.Clear();
+            System.Diagnostics.Debug.Assert(grid_sampleControlContainer.Children.Count == 0);
         }
 
 
@@ -148,48 +142,39 @@ namespace WPFExplorer
             ClearTabs();
             for (int i = 0; i < sampleInfo.SourceCodes.Count; i++)
             {
-                var sourceCode = sampleInfo.SourceCodes[i];
+                var sourceCodeItem = sampleInfo.SourceCodes[i];
                 var tab = new TabItem() {
-                    Header = sourceCode.FileName,
-                    ToolTip = sourceCode.FullPath,
-                    IsSelected = i == 0,
-                    Tag = new RenderedContent() { 
-                        HtmlContent = sourceCode.GetSourceCode(SourceCodeFormat.Html),
-                        PlaintextContent = sourceCode.GetSourceCode(SourceCodeFormat.Plaintext)
-                    }
+                    Header = sourceCodeItem.FileName,
+                    ToolTip = sourceCodeItem.FullPath,
+                    IsSelected = i == 0
                 };
+                var editor = CreateSourceCodeEditor(sourceCodeItem);
+                tab.Content = editor;
                 tabControl.Items.Add(tab);
             }
         }
 
 
-        public void SetSummaryTab(Category category)
+        private TextEditor CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
-            ClearTabs();
-            var tab = new TabItem()
-            {
-                Header = "Description",
-                ToolTip = "",
-                IsSelected = true,
-                Tag = new RenderedContent() { 
-                    HtmlContent = category.GetCategorySummaryHtml(),
-                    PlaintextContent = category.GetCategorySummaryPlaintext()
-                }
-            };
-            tabControl.Items.Add(tab);
+            var document = new TextDocument();
+            document.Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext);
+            document.FileName = sourceCodeItem.FileName;
 
-            // Maximize tab / web view area since there is no sample to demo.
-            grid.RowDefinitions[0].Height = new GridLength(0, GridUnitType.Pixel);
-        }
+            var editor = new TextEditor();
+            editor.FontFamily = new FontFamily("Consolas");
+            editor.FontSize = 14;
+            editor.IsReadOnly = true;
+            editor.Padding = new Thickness(10, 10, 0, 0);
+            if (sourceCodeItem.Extension == ".cs")
+                editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
+            else if (sourceCodeItem.Extension == ".xaml")
+                editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("XML");
+            if (_syntaxHighlightingDefinitions.ContainsKey(sourceCodeItem.Extension))
+                editor.SyntaxHighlighting = _syntaxHighlightingDefinitions[sourceCodeItem.Extension];
+            editor.Document = document;
 
-
-        private void tabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var tabItem = tabControl.SelectedItem as TabItem;
-            if (tabItem != null)
-                SetWebViewContent((RenderedContent)tabItem.Tag);
-            else
-                ClearWebViewContent();
+            return editor;
         }
 
 
@@ -202,75 +187,5 @@ namespace WPFExplorer
                 tabControl.Items.Remove(tabItem);
             }
         }
-
-
-        private void SetWebViewContent(RenderedContent content)
-        {
-            // WebView2 is available and initialized
-            if (_webView2State == WebView2State.Initialized)
-            {
-                webView2.Visibility = Visibility.Visible;
-                webView2FallbackContainer.Visibility = Visibility.Collapsed;
-                webView2.NavigateToString(content.HtmlContent);
-                _pendingRenderedContent = null;
-            }
-            // WebView2 must be initialized asynchronously, which is done in the async void Load event.  Calls to set
-            // the TabItems's contents could get called while WebView2 is awaiting syncing, in such case this task
-            // should be attempted later on, after initialization of the WebView2 has completed.
-            else if (_webView2State == WebView2State.Initializing || _webView2State == WebView2State.NotInitialized)
-            {
-                _pendingRenderedContent = content;
-            }
-            // WebView2 is not available, likely Runtime not installed.  Fallback to simple plaintext TextBox and add note
-            // prompting user to download WebView2 Runtime.
-            else if (_webView2State == WebView2State.NotAvailable)
-            {
-                webView2.Visibility = Visibility.Collapsed;
-                webView2FallbackContainer.Visibility = Visibility.Visible;
-                webView2FallbackTextBox.Text = content.PlaintextContent;
-            }
-        }
-
-
-        private void ClearWebViewContent()
-        {
-            SetWebViewContent(new RenderedContent("", ""));
-        }
-
-
-        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
-        {
-            var processStartInfo = new System.Diagnostics.ProcessStartInfo(e.Uri.ToString());
-            processStartInfo.UseShellExecute = true;
-            System.Diagnostics.Process.Start(processStartInfo);
-        }
-    }
-
-
-    /// <summary>
-    /// Provides HTML and Plaintext-based contents to display for the selected Sample source code file tab / Category node.
-    /// </summary>
-    public class RenderedContent
-    {
-        public RenderedContent(string html, string plaintext)
-        {
-            HtmlContent = html;
-            PlaintextContent = plaintext;
-        }
-
-        public RenderedContent() { }
-
-        public string HtmlContent { get; set; }
-
-        public string PlaintextContent { get; set; }
-    }
-
-
-    public enum WebView2State
-    {
-        NotInitialized,
-        Initializing,
-        Initialized,
-        NotAvailable
     }
 }

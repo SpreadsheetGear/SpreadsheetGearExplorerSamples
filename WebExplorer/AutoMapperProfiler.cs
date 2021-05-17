@@ -15,8 +15,7 @@ namespace WebExplorer
         public AutoMapperProfiler()
         {
             CreateMap<Category, CategoryDTO>()
-                .ForMember(dst => dst.SampleNames, opt => opt.MapFrom(src => src.SampleInfos.Select(si => si.Name)))
-                .ForMember(dst => dst.Summary, opt => opt.MapFrom(src => src.GetCategorySummaryHtml(false)));
+                .ForMember(dst => dst.SampleNames, opt => opt.MapFrom(src => src.SampleInfos.Select(si => si.Name)));
             CreateMap<SampleInfo, SampleInfoDTO>();
             CreateMap<SourceCodeItem, SourceCodeItemDTO>()
                 .ForMember(dst => dst.SourceCode, opt => opt.MapFrom(src => src.GetSourceCode(SourceCodeFormat.Plaintext, 3)));

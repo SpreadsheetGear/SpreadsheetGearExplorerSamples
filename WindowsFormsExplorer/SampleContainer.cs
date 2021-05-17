@@ -4,56 +4,51 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using Microsoft.Web.WebView2.Core;
 using SharedSamples;
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using ICSharpCode.AvalonEdit;
+using ICSharpCode.AvalonEdit.Document;
+using ICSharpCode.AvalonEdit.Highlighting.Xshd;
+using ICSharpCode.AvalonEdit.Highlighting;
+using System.Windows;
+using System.Collections.Generic;
+using System.IO;
+using System.Xml;
+using System.Windows.Forms.Integration;
+using System.Drawing;
 
 namespace WindowsFormsExplorer
 {
     /// <summary>
     /// Hosts all samples, displaying the sample itself on a top pane and the sample's various source code files on the bottom.
-    /// In the case where a Category is selected, a summary of that Category and any of its containing sub-categories and samples
-    ///  is displayed.
     /// </summary>
     public partial class SampleContainer : UserControl
     {
-        public SGUserControl CurrentSample { get; private set; }
+        private Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
 
         public SampleContainer()
         {
             InitializeComponent();
-        }
 
-        private async void SampleContainer_Load(object sender, EventArgs e)
-        {
-            // Initializing WebView2 when the WebView2 Runtime is not installed on the local machine may throw an exception.  See
-            // below TextBox note for more details on downloading and installing the Runtime.
-            try
+            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control.
+            _syntaxHighlightingDefinitions = new Dictionary<string, IHighlightingDefinition>();
+            var customHighlightItems = new Dictionary<string, string>() {
+                { ".cs", "CSharp-Custom.xshd" }
+            };
+            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            foreach (var item in customHighlightItems)
             {
-                // Have observed web control running by default in a folder that lacks proper permissions.  Explicitly setup a user
-                // data folder in the right place so as to avoid this problem.
-                var userDataFolder = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), 
-                    "SpreadsheetGearWindowsFormsExplorerSamples");
-                var env = await CoreWebView2Environment.CreateAsync(null, userDataFolder);
-                await webView2.EnsureCoreWebView2Async(env);
+                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}"))
+                using (var reader = new XmlTextReader(stream))
+                {
+                    _syntaxHighlightingDefinitions.Add(item.Key, HighlightingLoader.Load(reader, HighlightingManager.Instance));
+                }
             }
-            catch { }
-            
-            if (webView2.CoreWebView2 == null)
-            {
-                var errorTextBox = new TextBox();
-                errorTextBox.Text = "ERROR: Could not load WebView2 control to display sample's source code.  Ensure you " +
-                    "have installed the WebView2 Runtime on this machine, which at the time of this writing was available " +
-                    "from the following link:\r\n\r\n" +
-                    "https://developer.microsoft.com/en-us/microsoft-edge/webview2/";
-                errorTextBox.Multiline = true;
-                errorTextBox.Dock = DockStyle.Fill; var webView2Parent = webView2.Parent;
-                webView2Parent.Controls.Clear(); webView2Parent.Controls.Add(errorTextBox);
-            }
-            else if (!string.IsNullOrEmpty(_pendingHtml))
-                SetWebViewContent(_pendingHtml);
+
+            pictureBox1.Image = SystemIcons.Information.ToBitmap();
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
 
@@ -63,11 +58,12 @@ namespace WindowsFormsExplorer
 
             // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
             // and run the sample.
+            SGUserControl sampleUserControl;
             if (sampleInfo.IsSharedEngineSample)
             {
                 var engineSample = sampleInfo.CreateInstance<SharedEngineSample>();
-                CurrentSample = new EngineSampleControl(engineSample);
-                windowsSampleLabelPanel.Visible = false;
+                sampleUserControl = new EngineSampleControl(engineSample);
+                labelSampleType.Text = "SpreadsheetGear Engine Sample";
             }
             else
             {
@@ -76,24 +72,31 @@ namespace WindowsFormsExplorer
                 // available to work alongside the SharedWindowSample, however.
                 if (sampleInfo.IsSharedWindowsSample)
                 {
-                    CurrentSample = FindSGUserControlSample(sampleInfo.SampleType);
+                    sampleUserControl = FindSGUserControlSample(sampleInfo.SampleType);
                 }
                 // SGUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
                 // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
                 else if (typeof(SGUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
-                    CurrentSample = sampleInfo.CreateInstance<SGUserControl>();
+                    sampleUserControl = sampleInfo.CreateInstance<SGUserControl>();
                 }
                 else
                 {
                     throw new Exception("Invalid sample type provided.");
                 }
-                windowsSampleLabelPanel.Visible = true;
+
+                labelSampleType.Text = "SpreadsheetGear Windows Forms Sample";
             }
-            CurrentSample.Dock = DockStyle.Fill;
-            
-            panelSampleContainer.Controls.Clear();
-            panelSampleContainer.Controls.Add(CurrentSample);
+            sampleUserControl.Dock = DockStyle.Fill;
+            panelSampleContainer.Controls.Add(sampleUserControl);
+
+            richTextBoxNameDescription.Clear();
+            string boldText = sampleInfo.Name + " - ";
+            richTextBoxNameDescription.AppendText(boldText + sampleInfo.Description);
+            richTextBoxNameDescription.SelectionStart = 0;
+            richTextBoxNameDescription.SelectionLength = boldText.Length;
+            richTextBoxNameDescription.SelectionFont = new Font(richTextBoxNameDescription.Font.Name, richTextBoxNameDescription.Font.Size, System.Drawing.FontStyle.Bold);
+            richTextBoxNameDescription.ReadOnly = true;
 
             ResizeSplitterToShowSample();
             UpdateSourceCodeTabs(sampleInfo);
@@ -130,84 +133,62 @@ namespace WindowsFormsExplorer
 
         public void DisposeCurrentSample()
         {
-            CurrentSample?.Dispose();
+            if (panelSampleContainer.Controls.Count == 1)
+            {
+                var sgUserControl = (SGUserControl)panelSampleContainer.Controls[0];
+                panelSampleContainer.Controls.Remove(sgUserControl);
+                sgUserControl.Dispose();
+            }
+            System.Diagnostics.Debug.Assert(panelSampleContainer.Controls.Count == 0);
         }
 
 
         public void UpdateSourceCodeTabs(SampleInfo sampleInfo)
         {
-            RemoveTabs();
+            ClearTabs();
 
             for (int i = 0; i < sampleInfo.SourceCodes.Count; i++)
             {
-                var sourceCode = sampleInfo.SourceCodes[i];
-                if (i == 0)
-                    SetWebViewContent(sourceCode.GetSourceCode(SourceCodeFormat.Html));
+                var sourceCodeItem = sampleInfo.SourceCodes[i];
                 var tab = new TabPage();
-                tab.Text = sourceCode.FileName;
-                tab.ToolTipText = sourceCode.FullPath;
-                tab.Tag = sourceCode.GetSourceCode(SourceCodeFormat.Html);
+                tab.Text = sourceCodeItem.FileName;
+                tab.ToolTipText = sourceCodeItem.FullPath;
+                tab.Controls.Add(CreateSourceCodeEditor(sourceCodeItem));
                 tabControl.TabPages.Add(tab);
             }
             tabControl.SelectTab(0);
         }
 
 
-        public void SetSummaryTab(Category category)
+        private ElementHost CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
-            DisposeCurrentSample();
-            RemoveTabs();
+            var document = new TextDocument();
+            document.Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext);
+            document.FileName = sourceCodeItem.FileName;
 
-            var html = category.GetCategorySummaryHtml();
-            SetWebViewContent(html);
+            var editor = new TextEditor();
+            editor.FontFamily = new System.Windows.Media.FontFamily("Consolas");
+            editor.FontSize = 14;
+            editor.IsReadOnly = true;
+            editor.Padding = new Thickness(10, 10, 0, 0);
+            if (sourceCodeItem.Extension == ".cs")
+                editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
+            if (_syntaxHighlightingDefinitions.ContainsKey(sourceCodeItem.Extension))
+                editor.SyntaxHighlighting = _syntaxHighlightingDefinitions[sourceCodeItem.Extension];
+            editor.Document = document;
 
-            var tab = new TabPage("Description");
-            tab.Tag = html;
-            tabControl.TabPages.Add(tab);
-            tabControl.SelectTab(0);
+            ElementHost elementHost = new ElementHost();
+            elementHost.Dock = DockStyle.Fill;
+            elementHost.Child = editor;
 
-            // Maximize tab / web view area since there is no sample to demo.
-            splitContainer1.SplitterDistance = 0;
+            return elementHost;
         }
 
 
-        private void RemoveTabs()
+        private void ClearTabs()
         {
-            tabControl.Selected -= tabControl_Selected;
             while (tabControl.TabPages.Count > 0)
                 tabControl.TabPages[0].Dispose();
-            tabControl.Selected += tabControl_Selected;
-            SetWebViewContent("");
-        }
-
-
-        private string _pendingHtml = null;
-        private void SetWebViewContent(string html)
-        {
-            // WebView2 either isn't available or has not yet been initialized.
-            if (webView2.CoreWebView2 != null)
-            {
-                webView2.NavigateToString(html);
-                _pendingHtml = null;
-            }
-            // WebView2 must be initialized asynchronously, which is done in the Load event.  Calls to set
-            // the controls HTML contents could get called before initialization so we should store off any
-            // HTML that can be checked on to render should initialization complete later on.
-            else
-                _pendingHtml = html;
-        }
-
-
-        private void tabControl_Selected(object sender, TabControlEventArgs e)
-        {
-            var tabPage = tabControl.SelectedTab;
-            if (tabPage != null)
-            {
-                var sourceCodeHtml = (string)tabPage.Tag;
-                SetWebViewContent(sourceCodeHtml);
-            }
-            else
-                SetWebViewContent("");
         }
     }
 }

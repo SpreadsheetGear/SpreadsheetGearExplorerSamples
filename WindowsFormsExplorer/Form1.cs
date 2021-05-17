@@ -4,9 +4,6 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Windows.Forms;
 using SharedSamples;
 
@@ -71,49 +68,33 @@ namespace WindowsFormsExplorer
             {
                 if (selectedNode.Tag is Category)
                 {
-                    var category = (Category)selectedNode.Tag;
-                    sampleContainer.SetSummaryTab(category);
+                    categorySummaryPane.SetCategory((Category)selectedNode.Tag);
+                    categorySummaryPane.Visible = true;
+                    sampleContainer.Visible = false;
+                    sampleContainer.DisposeCurrentSample();
 
                 }
                 else if (selectedNode.Tag is SampleInfo)
                 {
                     var sampleInfo = (SampleInfo)selectedNode.Tag;
                     sampleContainer.SetSample(sampleInfo);
+                    categorySummaryPane.Visible = false;
+                    sampleContainer.Visible = true;
                 }
             }
         }
 
 
-        private void button_launchWPFExplorer_Click(object sender, System.EventArgs e)
+        private void button_expand_Click(object sender, System.EventArgs e)
         {
-            string targetFramework = "netcoreapp3.1";
-            foreach (string build in new List<string>() { "Release", "Debug" })
-            {
-                try
-                {
-                    var file = new FileInfo($@"..\..\..\..\WpfExplorer\bin\{build}\{targetFramework}\WPFExplorer.exe");
-                    if (file.Exists)
-                    {
-                        string processName = file.Name.Replace(".exe", "", System.StringComparison.InvariantCultureIgnoreCase);
-                        Process[] existingProcesses = Process.GetProcessesByName(processName);
-                        if (existingProcesses.Length == 0)
-                        {
-                            var processInfo = new ProcessStartInfo(file.FullName);
-                            processInfo.WorkingDirectory = file.DirectoryName;
-                            var process = Process.Start(processInfo);
-                        }
-                        else
-                        {
-                            MessageBox.Show($"WPF Explorer is already running.");
-                        }
-                        return;
-                    }
-                }
-                catch { }
-            }
+            samplesTreeView.ExpandAll();
+        }
 
-            MessageBox.Show($"Could not locate the WPF Explorer.  Ensure that this project has been built and that a WPFExplorer.exe is availabe in either the 'Release' or 'Debug' folder and '{targetFramework}' target framework subfolder of that project.", "SpreadsheetGear Explorer",
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        private void button_collapse_Click(object sender, System.EventArgs e)
+        {
+            samplesTreeView.CollapseAll();
+            samplesTreeView.Nodes[0].Expand();
         }
     }
 }

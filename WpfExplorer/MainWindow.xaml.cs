@@ -4,9 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using SharedSamples;
@@ -72,13 +70,71 @@ namespace WPFExplorer
             // Display summary of this category and any contained samples or sub-categories.
             if (selectedItem is Category)
             {
-                sampleContainer.SetSummaryTab((Category)selectedItem);
+                categorySummaryPane.SetCategory((Category)selectedItem);
+                sampleContainer.Visibility = Visibility.Collapsed;
+                categorySummaryPane.Visibility = Visibility.Visible;
             }
             // Display the selected sample.
             else if (selectedItem is SampleInfo)
             {
                 sampleContainer.SetSample((SampleInfo)selectedItem);
+                sampleContainer.Visibility = Visibility.Visible;
+                categorySummaryPane.Visibility = Visibility.Collapsed;
             }
         }
+
+
+        private void button_collapseCategories_Click(object sender, RoutedEventArgs e)
+        {
+            SetSamplesTreeViewExpansion(samplesTreeView, false);
+        }
+
+
+        private void button_expandCategories_Click(object sender, RoutedEventArgs e)
+        {
+            SetSamplesTreeViewExpansion(samplesTreeView, true);
+        }
+
+
+        private void SetSamplesTreeViewExpansion(ItemsControl parent, bool expand)
+        {
+            if (parent is TreeViewItem tvi)
+            {
+                // Always expand but don't collapse the top-level Category
+                if (expand || (!expand && tvi.Header is Category cat && !cat.Parent.IsRoot))
+                {
+                    tvi.IsExpanded = expand;
+                }
+            }
+
+            if (parent.HasItems)
+            {
+                var items = parent.Items
+                    .Cast<object>()
+                    .Select(i => GetTreeViewItem(parent, i, expand));
+                foreach (var item in items)
+                {
+                    SetSamplesTreeViewExpansion(item, expand);
+                }
+            }
+        }
+
+
+        private TreeViewItem GetTreeViewItem(ItemsControl parent, object item, bool expand)
+        {
+            if (item is TreeViewItem tvi)
+                return tvi;
+
+            var result = ContainerFromItem(parent, item);
+            if (result == null && expand)
+            {
+                parent.UpdateLayout();
+                result = ContainerFromItem(parent, item);
+            }
+            return result;
+        }
+
+
+        private TreeViewItem ContainerFromItem(ItemsControl parent, object item) => (TreeViewItem)parent.ItemContainerGenerator.ContainerFromItem(item);
     }
 }

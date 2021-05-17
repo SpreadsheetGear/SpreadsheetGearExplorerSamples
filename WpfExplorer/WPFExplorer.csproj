@@ -12,6 +12,8 @@
     <None Remove="Files\Shapes.xlsx" />
     <None Remove="Files\SpiceOrder.xlsx" />
     <None Remove="Images\brackets-curly-32.png" />
+    <None Remove="Images\chevron-double-down-32.png" />
+    <None Remove="Images\chevron-double-up-32.png" />
     <None Remove="Images\code-branch-32.png" />
     <None Remove="Images\Event_16x.png" />
     <None Remove="Images\folder-regular-32.png" />
@@ -30,7 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.790-prerelease" />
+    <PackageReference Include="AvalonEdit" Version="6.1.1" />
+    <PackageReference Include="MdXaml" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +60,12 @@
 
   <ItemGroup>
     <Resource Include="Images\brackets-curly-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\chevron-double-down-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\chevron-double-up-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\code-branch-32.png">

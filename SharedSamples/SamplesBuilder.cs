@@ -38,8 +38,8 @@ namespace SharedSamples
             var categoryRoot = Category.CreateRoot();
 
             // Main folder that contains all samples
-            string introHtml = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\ExplorerIntro.html"));
-            var explorerCategory = categoryRoot.AddCategory("SpreadsheetGear Explorer Samples", "Samples", introHtml);
+            string introMd = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\ExplorerIntro.md"));
+            var explorerCategory = categoryRoot.AddCategory("SpreadsheetGear Explorer Samples", "Samples", introMd);
             explorerCategory.HideNameFromCategorySummary = true;
 
             if (includeWindowsSamples)

@@ -8,16 +8,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFExplorer"
-             xmlns:sg="clr-namespace:SpreadsheetGear.Windows.Controls;assembly=SpreadsheetGear.Windows.Wpf" 
-             xmlns:web="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
+        <!-- Main Grid -->
         <Grid x:Name="grid" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*" />
@@ -25,6 +27,7 @@
                 <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
 
+            <!-- Running Sample Grid-->
             <Grid Grid.Row="0" x:Name="grid_wpfSample">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -37,7 +40,7 @@
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <StackPanel Grid.Row="0" Background="#3c4757" Orientation="Horizontal">
+                    <StackPanel Grid.Row="0" Background="#ff3c4757" Orientation="Horizontal">
                         <TextBlock x:Name="sampleTypeTextBlock" Foreground="White" Padding="10,5,10,10" FontSize="20" FontWeight="Bold"></TextBlock>
                         <TextBlock ToolTipService.ShowDuration="100000" FontFamily="Segoe MDL2 Assets" FontSize="20" FontWeight="Bold" Text="&#xE946;" Foreground="White" VerticalAlignment="Center">
                             <TextBlock.Resources>
@@ -67,7 +70,8 @@
                                             </ListItem>
                                             <ListItem>
                                                 <Paragraph>
-                                                    <Bold>SpreadsheetGear Windows WPF Samples</Bold> - these samples either more directly depend on a WorkbookView (provided by the <Bold>SpreadsheetGear for Windows</Bold> NuGet Package) to execute such as user-initiated events like selecting or editing cells; or the samples demonstrate a particular feature that is better suited using a UI in general (such as the Chart Gallery sample).
+                                                    <Bold>SpreadsheetGear Windows WPF Samples</Bold> - these samples either more directly depend on a WorkbookView (provided by the
+                                                    <Bold>SpreadsheetGear for Windows</Bold> NuGet Package) to execute such as user-initiated events like selecting or editing cells; or the samples demonstrate a particular feature that is better suited using a UI in general (such as the Chart Gallery sample).
                                                 </Paragraph>
                                             </ListItem>
                                         </List>
@@ -93,41 +97,12 @@
 
             <GridSplitter Style="{DynamicResource GridSplitterStyleHorizontal}" Grid.Row="1" x:Name="gridSplitter" HorizontalAlignment="Stretch" BorderBrush="#FFBBBBBB" BorderThickness="1" />
 
-            <Grid Grid.Row="2">
-                <Grid.Background>
+            <!-- Source Code TabControl -->
+            <TabControl Grid.Row="2" x:Name="tabControl">
+                <TabControl.Background>
                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
-                </Grid.Background>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <TabControl Grid.Row="0" x:Name="tabControl" SelectionChanged="tabControl_SelectionChanged" Height="23" Margin="0,1,0,0">
-                    <TabControl.ContentTemplate>
-                        <DataTemplate/>
-                    </TabControl.ContentTemplate>
-                </TabControl>
-
-                <Grid Grid.Row="1" x:Name="webView2HostGrid">
-                    <web:WebView2 x:Name="webView2" />
-                    <Grid x:Name="webView2FallbackContainer">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <RichTextBox IsReadOnly="True" IsDocumentEnabled="True" IsReadOnlyCaretVisible="False" SelectionBrush="{x:Null}" BorderThickness="0" BorderBrush="{x:Null}" Cursor="Arrow" Background="#FFFFF5D9">
-                            <FlowDocument>
-                                <Paragraph FontSize="14" Padding="7,5,5,5">
-                                    <Run FontFamily="Segoe MDL2 Assets" Text="&#xE946;"></Run>
-                                    The below content is presented in plaintext because the <Bold>WebView2 Runtime</Bold>, which provides an Edge-Based WPF Browser Control, could not be found on your machine.  To view this as richly-formatted content, download and install the WebView2 Runtime, available at:
-                                    <LineBreak/>
-                                    <Hyperlink NavigateUri="https://developer.microsoft.com/en-us/microsoft-edge/webview2" RequestNavigate="Hyperlink_RequestNavigate">https://developer.microsoft.com/en-us/microsoft-edge/webview2</Hyperlink>
-                                </Paragraph>
-                            </FlowDocument>
-                        </RichTextBox>
-                        <TextBox Grid.Row="1" x:Name="webView2FallbackTextBox" IsReadOnly="True" FontFamily="Consolas" FontSize="11" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible" Padding="5,5,5,5"></TextBox>
-                    </Grid>
-                </Grid>
-            </Grid>
+                </TabControl.Background>
+            </TabControl>
         </Grid>
     </Grid>
 </UserControl>

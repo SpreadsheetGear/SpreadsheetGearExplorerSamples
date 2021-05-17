@@ -43,7 +43,11 @@ namespace WebExplorer
         {
             Category category = _categoryRoot.GetCategory(categoryName, true);
             if (category != null)
-                return category.GetCategorySummaryHtml(false);
+            {
+                var markdown = category.GetCategorySummaryMarkdown("<i class='fas fa-folder-open'></i>", "<i class='fas fa-play-circle text-success'></i>");
+                var html = Markdig.Markdown.ToHtml(markdown);
+                return html;
+            }
             else
                 return "";
         }

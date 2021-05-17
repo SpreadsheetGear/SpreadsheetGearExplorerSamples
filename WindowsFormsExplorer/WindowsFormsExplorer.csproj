@@ -13,7 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.web.webview2" Version="1.0.790-prerelease" />
+    <PackageReference Include="AvalonEdit" Version="6.1.1" />
+    <PackageReference Include="MdXaml" Version="1.10.0" />
   </ItemGroup>
 
   <ItemGroup>

@@ -57,17 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="pictureBox1.ToolTip" xml:space="preserve">
-    <value>
-SpreadsheetGear Engine Samples - demonstrate features that are executed using only APIs from the 
-SpreadsheetGear Engine for .NET NuGet Package.  Meaning, these samples are executed independent of any 
-UI such as the WPF WorkbookView (i.e., they could be executed from a Console application, the back-end of 
-an ASP.NET Core app, etc.), although the results of the samples are displayed on a WorkbookView for 
-demonstration purposes.
-
-SpreadsheetGear Windows WPF Samples - these samples either more directly depend on a WorkbookView 
-(provided by the SpreadsheetGear for Windows NuGet Package) to execute such as user-initiated events like 
-selecting or editing cells; or the samples demonstrate a particular feature that is better suited using a UI in 
-general (such as the Chart Gallery sample).</value>
-  </data>
 </root>

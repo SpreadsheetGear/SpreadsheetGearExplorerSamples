@@ -56,7 +56,8 @@ namespace WindowsFormsExplorer
                 }
                 else
                     throw;
-            }            
+            }
+            catch { }
         }
     }
 }

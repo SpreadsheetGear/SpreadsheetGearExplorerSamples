@@ -12,36 +12,45 @@
   Func<CategoryDTO, IHtmlContent> RenderCategory = null;
   RenderCategory =
     @<li>
-      <span class="fa-li"><i class="fas fa-folder-open"></i></span>
-      <a href="javascript:void(0);" class="category-link font-weight-bold" data-category-name="@item.Name">@item.Name</a>
-      @if (item.SampleNames.Any())
-      {
-        <ul class="fa-ul">
-          @foreach (var name in item.SampleNames)
-          {
-            <li>
-              <span class="fa-li text-success"><i class="fas fa-play-circle"></i></span> 
-              <a href="javascript:void(0);" class="sample-link" data-sample-name="@name">@name</a>
-            </li>
-          }
-        </ul>
-      }
-      @if (item.ChildCategories.Any())
-      {
-        <ul class="fa-ul">
-          @foreach (var childCategory in item.ChildCategories)
-          {
-            @RenderCategory(childCategory)
-          }
-        </ul>
-      }
+      <span class="fa-li text-nowrap">
+        <span class="expansion-icon" style="cursor: pointer;"><i class="fas fa-caret-down ml-2"></i></span>
+        <i class="fas fa-folder-open"></i>
+      </span>
+      <a href="javascript:void(0);" class="ml-3 category-link font-weight-bold" data-category-name="@item.Name">@item.Name</a>
+      <div class="children">
+        @if (item.SampleNames.Any())
+        {
+          <ul class="fa-ul">
+            @foreach (var name in item.SampleNames)
+            {
+              <li>
+                <span class="fa-li text-success"><i class="fas fa-play-circle"></i></span> 
+                <a href="javascript:void(0);" class="sample-link" data-sample-name="@name">@name</a>
+              </li>
+            }
+          </ul>
+        }
+        @if (item.ChildCategories.Any())
+        {
+          <ul class="fa-ul">
+            @foreach (var childCategory in item.ChildCategories)
+            {
+              @RenderCategory(childCategory)
+            }
+          </ul>
+        }
+      </div>
     </li>;
 }
 
 <div class="d-flex align-items-stretch h-100">
 
   @* Samples Tree View *@
-  <div class="pl-2 pt-2 flex-fill overflow-auto" style="min-width: 350px; max-width: 350px; background-color: #eee;">
+  <div id="samples-tree-container" class="pl-2 pt-2 flex-fill overflow-auto" style="min-width: 350px; max-width: 350px; background-color: #eee;">
+    <div class="text-right">
+      <button class="link-expand sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-down"></i> Expand All</button>
+      <button class="link-collapse sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-up"></i> Collapse All</button>
+    </div>
     <ul class="fa-ul samples-tree">
       @foreach (CategoryDTO category in Model.CategoryRoot.ChildCategories)
       {
@@ -78,7 +87,7 @@
     </div>
 
     @* Summary Container *@
-    <div id="summary-container" class="d-flex flex-fill overflow-auto d-none"></div>
+    <div id="summary-container" class="flex-fill overflow-auto d-none"></div>
   </div>
 </div>
 
@@ -107,7 +116,6 @@
           Prism.highlightAll();
         }
         $("#summary-container").addClass("d-none");
-        $("#summary-container").removeClass("d-flex");
         $("#sample-container").removeClass("d-none");
         $("#sample-container").addClass("d-flex");
       },
@@ -151,10 +159,11 @@
     url = url.replace("CATEGORYNAMEPLACEHODER", categoryName);
     $.ajax({
       url: url,
-      success: function (summary) {
-        $("#summary-container").html(summary);
+      success: function (summaryMarkup) {
+        $summary = $(summaryMarkup);
+        $summary.find("ul").addBack().attr("style", "list-style-type: none;");
+        $("#summary-container").empty().append($summary);
         $("#summary-container").removeClass("d-none");
-        $("#summary-container").addClass("d-flex");
         $("#sample-container").removeClass("d-flex");
         $("#sample-container").addClass("d-none");
       },
@@ -165,6 +174,19 @@
   }
 
   $(function () {
+    $(".expansion-icon").click(function () {
+      $(this).parent().siblings("div.children").toggle();
+    });
+
+    $(".link-expand").click(function () {
+      $("#samples-tree-container div.children").show();
+    });
+
+    $(".link-collapse").click(function () {      
+      $("#samples-tree-container div.children").hide();
+      $("#samples-tree-container>ul.samples-tree>li>div.children").show();
+    });
+
     $(".category-link").click(function () {
       let categoryName = $(this).data("categoryName");
       loadCategorySummary(categoryName);
