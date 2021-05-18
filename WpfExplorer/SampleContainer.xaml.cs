@@ -32,16 +32,28 @@ namespace WPFExplorer
         {
             InitializeComponent();
 
-            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control.
+            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control, taking into account
+            // other definition files for high-contrast (black or white) modes.
             _syntaxHighlightingDefinitions = new Dictionary<string, IHighlightingDefinition>();
             var customHighlightItems = new Dictionary<string, string>() {
-                { ".cs", "CSharp-Custom.xshd" },
-                { ".xaml", "XML-Custom.xshd" }
+                { ".cs",    "Syntax-Highlight-Def-CSharp" },
+                { ".xaml",  "Syntax-Highlight-Def-XML" }
             };
+            string highContrastMode = "";
+            if (SystemParameters.HighContrast)
+            {
+                // High Contrast White
+                if (Color.AreClose(SystemColors.WindowTextBrush.Color, Colors.Black))
+                    highContrastMode = "-HCW";
+                // High Contrast Black
+                else
+                    highContrastMode = "-HCB";
+            }
+            
             var baseDir = System.AppDomain.CurrentDomain.BaseDirectory;
             foreach (var item in customHighlightItems)
             {
-                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}"))
+                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}{highContrastMode}.xshd"))
                 using (var reader = new XmlTextReader(stream))
                 {
                     _syntaxHighlightingDefinitions.Add(item.Key, HighlightingLoader.Load(reader, HighlightingManager.Instance));
@@ -144,8 +156,10 @@ namespace WPFExplorer
             {
                 var sourceCodeItem = sampleInfo.SourceCodes[i];
                 var tab = new TabItem() {
-                    Header = sourceCodeItem.FileName,
-                    ToolTip = sourceCodeItem.FullPath,
+                    Header = new TextBlock() { 
+                        Text = sourceCodeItem.FileName,
+                        ToolTip = sourceCodeItem.FullPath
+                    },
                     IsSelected = i == 0
                 };
                 var editor = CreateSourceCodeEditor(sourceCodeItem);

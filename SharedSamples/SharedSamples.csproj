@@ -8,6 +8,7 @@
   <ItemGroup>
     <None Remove="Files\Engine\NFL.xml" />
     <None Remove="Files\Engine\SpiceOrder.xml" />
+    <None Remove="Files\Markdown.Style.xaml" />
     <None Remove="Files\Windows\SpiceOrder.xml" />
   </ItemGroup>
 
@@ -26,6 +27,14 @@
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.33" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Files\Markdown.Style.xaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -332,7 +341,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Files\CSharp-Custom.xshd">
+    <None Update="Files\Syntax-Highlight-Def-CSharp-HCW.xshd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Syntax-Highlight-Def-CSharp-HCB.xshd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Syntax-Highlight-Def-CSharp.xshd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Files\Engine\AlternatingRowColorSampleData.xlsx">
@@ -452,13 +467,13 @@
     <None Update="Files\Windows\SpiceWest.xls">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Files\XML-Custom.xshd">
+    <None Update="Files\Syntax-Highlight-Def-XML-HCW.xshd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Files\CSharp-Custom_old1.xshd">
+    <None Update="Files\Syntax-Highlight-Def-XML-HCB.xshd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Files\CSharp-Custom_old2.xshd">
+    <None Update="Files\Syntax-Highlight-Def-XML.xshd">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Temp\TempFile.txt">

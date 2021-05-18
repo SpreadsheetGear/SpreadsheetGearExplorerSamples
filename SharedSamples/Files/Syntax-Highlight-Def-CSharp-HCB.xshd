@@ -1,44 +1,42 @@
 ﻿<?xml version="1.0"?>
-<!-- 
-     From: https://raw.githubusercontent.com/3F/vsCommandEvent/756aa984dcc19c6d9b1063ad6909b5af532d6eee/vsCommandEvent/xshd/CSharpLang.xshd
-  -->
-
 <SyntaxDefinition name="C#" extensions=".cs" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
   <!-- The named colors 'Comment' and 'String' are used in SharpDevelop to detect if a line is inside a multiline string/comment -->
-  <Color name="Comment" foreground="Green" exampleText="// comment" />
-  <Color name="String" foreground="#FFA31515" exampleText="string text = &quot;Hello, World!&quot;"/>
-  <Color name="Char" foreground="Magenta" exampleText="char linefeed = '\n';"/>
-  <Color name="Preprocessor" foreground="Green" exampleText="#region Title" />
+  <Color name="Comment" foreground="White" exampleText="// comment" />
+  <Color name="String" foreground="White" exampleText="string text = &quot;Hello, World!&quot;"/>
+  <Color name="StringInterpolation" foreground="White" exampleText="string text = $&quot;Hello, {name}!&quot;"/>
+  <Color name="Char" foreground="White" exampleText="char linefeed = '\n';"/>
+  <Color name="Preprocessor" foreground="White" exampleText="#region Title" />
   <Color name="Punctuation" exampleText="a(b.c);" />
-  <Color name="ValueTypeKeywords" foreground="#D00000FF" exampleText="bool b = true;" />
-  <Color name="ReferenceTypeKeywords" foreground="#EE0000FF" exampleText="object o;" />
-  <Color name="MethodCall" foreground="MidnightBlue" exampleText="o.ToString();"/>
-  <Color name="NumberLiteral" foreground="DarkBlue" exampleText="3.1415f"/>
-  <Color name="ThisOrBaseReference" exampleText="this.Do(); base.Do();"/>
-  <Color name="NullOrValueKeywords" exampleText="if (value == null)"/>
-  <Color name="Keywords" foreground="Blue" exampleText="if (a) {} else {}"/>
-  <Color name="GotoKeywords" foreground="Navy" exampleText="continue; return null;"/>
-  <Color name="ContextKeywords" foreground="Navy" exampleText="var a = from x in y select z;"/>
-  <Color name="ExceptionKeywords" foreground="Teal" exampleText="try {} catch {} finally {}"/>
-  <Color name="CheckedKeyword" foreground="DarkGray" exampleText="checked {}"/>
-  <Color name="UnsafeKeywords" foreground="Olive" exampleText="unsafe { fixed (..) {} }"/>
-  <Color name="OperatorKeywords" foreground="Pink" exampleText="public static implicit operator..."/>
-  <Color name="ParameterModifiers" foreground="DeepPink" exampleText="(ref int a, params int[] b)"/>
-  <Color name="Modifiers" foreground="#F00000FF" exampleText="static readonly int a;"/>
-  <Color name="Visibility" foreground="Blue" exampleText="public override void ToString();"/>
-  <Color name="NamespaceKeywords" foreground="Green" exampleText="namespace A.B { using System; }"/>
-  <Color name="GetSetAddRemove" foreground="#FF26648C" exampleText="int Prop { get; set; }"/>
-  <Color name="TrueFalse" foreground="DarkCyan" exampleText="b = false; a = true;" />
-  <Color name="TypeKeywords" foreground="DarkCyan" exampleText="if (x is int) { a = x as int; type = typeof(int); size = sizeof(int); c = new object(); }"/>
+  <Color name="ValueTypeKeywords" fontWeight="bold" foreground="White" exampleText="bool b = true;" />
+  <Color name="ReferenceTypeKeywords" foreground="White" exampleText="object o;" />
+  <Color name="MethodCall" foreground="White" fontWeight="bold" exampleText="o.ToString();"/>
+  <Color name="NumberLiteral" foreground="White" exampleText="3.1415f"/>
+  <Color name="ThisOrBaseReference" fontWeight="bold" exampleText="this.Do(); base.Do();"/>
+  <Color name="NullOrValueKeywords" fontWeight="bold" exampleText="if (value == null)"/>
+  <Color name="Keywords" fontWeight="bold" foreground="White" exampleText="if (a) {} else {}"/>
+  <Color name="GotoKeywords" foreground="White" exampleText="continue; return null;"/>
+  <Color name="ContextKeywords" foreground="White" exampleText="var a = from x in y select z;"/>
+  <Color name="ExceptionKeywords" fontWeight="bold" foreground="White" exampleText="try {} catch {} finally {}"/>
+  <Color name="CheckedKeyword" fontWeight="bold" foreground="White" exampleText="checked {}"/>
+  <Color name="UnsafeKeywords" foreground="White" exampleText="unsafe { fixed (..) {} }"/>
+  <Color name="OperatorKeywords" fontWeight="bold" foreground="White" exampleText="public static implicit operator..."/>
+  <Color name="ParameterModifiers" fontWeight="bold" foreground="White" exampleText="(ref int a, params int[] b)"/>
+  <Color name="Modifiers" foreground="White" exampleText="static readonly int a;"/>
+  <Color name="Visibility" fontWeight="bold" foreground="White" exampleText="public override void ToString();"/>
+  <Color name="NamespaceKeywords" fontWeight="bold" foreground="White" exampleText="namespace A.B { using System; }"/>
+  <Color name="GetSetAddRemove" foreground="White" exampleText="int Prop { get; set; }"/>
+  <Color name="TrueFalse" fontWeight="bold" foreground="White" exampleText="b = false; a = true;" />
+  <Color name="TypeKeywords" fontWeight="bold" foreground="White" exampleText="if (x is int) { a = x as int; type = typeof(int); size = sizeof(int); c = new object(); }"/>
+  <Color name="SemanticKeywords" fontWeight="bold" foreground="White" exampleText="if (args == null) throw new ArgumentNullException(nameof(args));" />
 
   <Property name="DocCommentMarker" value="///" />
 
   <RuleSet name="CommentMarkerSet">
-    <Keywords foreground="#E034383A">
+    <Keywords fontWeight="bold" foreground="White">
       <Word>TODO</Word>
       <Word>FIXME</Word>
     </Keywords>
-    <Keywords foreground="#E0E000">
+    <Keywords fontWeight="bold" foreground="White">
       <Word>HACK</Word>
       <Word>UNDONE</Word>
     </Keywords>
@@ -51,7 +49,7 @@
       <RuleSet name="PreprocessorSet">
         <Span>
           <!-- preprocessor directives that allows comments -->
-          <Begin>
+          <Begin fontWeight="bold">
             (define|undef|if|elif|else|endif|line)\b
           </Begin>
           <RuleSet>
@@ -62,7 +60,7 @@
         </Span>
         <Span>
           <!-- preprocessor directives that don't allow comments -->
-          <Begin>
+          <Begin fontWeight="bold">
             (region|endregion|error|warning|pragma)\b
           </Begin>
         </Span>
@@ -110,6 +108,18 @@
       <RuleSet>
         <!-- span for escape sequences -->
         <Span begin='""' end=""/>
+      </RuleSet>
+    </Span>
+
+    <Span color="String">
+      <Begin>\$"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <!-- span for escape sequences -->
+        <Span begin="\\" end="."/>
+        <Span begin="\{\{" end=""/>
+        <!-- string interpolation -->
+        <Span begin="{" end="}" color="StringInterpolation" ruleSet=""/>
       </RuleSet>
     </Span>
 
@@ -272,6 +282,10 @@
     <Keywords color="NullOrValueKeywords">
       <Word>null</Word>
       <Word>value</Word>
+    </Keywords>
+
+    <Keywords color="SemanticKeywords">
+      <Word>nameof</Word>
     </Keywords>
 
     <!-- Mark previous rule-->

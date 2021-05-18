@@ -1,21 +1,15 @@
-﻿using MdXaml;
-using SharedSamples;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-/*
+﻿/*
 * Copyright © SpreadsheetGear LLC. All Rights Reserved.
 * 
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
+using SharedSamples;
+using System;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Collections;
 
 namespace WPFExplorer
 {
@@ -37,6 +31,12 @@ namespace WPFExplorer
                     proc.StartInfo.FileName = (string)e.Parameter;
                     proc.Start();
                 }));
+
+            // Load style more accommodating to high-contrast modes.
+            var styleUri = new Uri($"/{nameof(SharedSamples)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var resourceDict = (ResourceDictionary)Application.LoadComponent(styleUri);
+            var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
+            markdownScrollViewer.MarkdownStyle = standardStyle;
         }
 
 

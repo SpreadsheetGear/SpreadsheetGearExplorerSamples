@@ -32,15 +32,28 @@ namespace WindowsFormsExplorer
         {
             InitializeComponent();
 
-            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control.
+            // Preload any syntax highlighting definitions to be supplied to the AvalonEdit control, taking into account
+            // other definition files for high-contrast (black or white) modes.
             _syntaxHighlightingDefinitions = new Dictionary<string, IHighlightingDefinition>();
             var customHighlightItems = new Dictionary<string, string>() {
-                { ".cs", "CSharp-Custom.xshd" }
+                { ".cs",    "Syntax-Highlight-Def-CSharp" },
+                { ".xaml",  "Syntax-Highlight-Def-XML" }
             };
-            var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+            string highContrastMode = "";
+            if (SystemParameters.HighContrast)
+            {
+                // High Contrast White
+                if (System.Drawing.SystemColors.WindowText.ToArgb() == Color.Black.ToArgb())
+                    highContrastMode = "-HCW";
+                // High Contrast Black
+                else
+                    highContrastMode = "-HCB";
+            }
+
+            var baseDir = System.AppDomain.CurrentDomain.BaseDirectory;
             foreach (var item in customHighlightItems)
             {
-                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}"))
+                using (var stream = new StreamReader($@"{baseDir}Files\{item.Value}{highContrastMode}.xshd"))
                 using (var reader = new XmlTextReader(stream))
                 {
                     _syntaxHighlightingDefinitions.Add(item.Key, HighlightingLoader.Load(reader, HighlightingManager.Instance));

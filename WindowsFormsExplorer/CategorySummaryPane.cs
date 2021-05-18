@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Text;
+﻿/*
+* Copyright © SpreadsheetGear LLC. All Rights Reserved.
+* 
+* SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+*/
+
+using System;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-using ICSharpCode.AvalonEdit;
-using ICSharpCode.AvalonEdit.Document;
-using ICSharpCode.AvalonEdit.Highlighting.Xshd;
-using ICSharpCode.AvalonEdit.Highlighting;
-using System.Xml;
-using System.IO;
 using SharedSamples;
 using MdXaml;
 using System.Windows.Input;
@@ -34,6 +30,12 @@ namespace WindowsFormsExplorer
 
             _markdownScrollViewer = new MarkdownScrollViewer();
 
+            // Load style more accommodating to high-contrast modes.
+            var styleUri = new Uri($"/{nameof(SharedSamples)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var resourceDict = (ResourceDictionary)System.Windows.Application.LoadComponent(styleUri);
+            var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
+            _markdownScrollViewer.MarkdownStyle = standardStyle;
+
             // Used to launch browser when a hyperlink is clicked.
             _markdownScrollViewer.CommandBindings.Add(new CommandBinding(
                 NavigationCommands.GoToPage,
@@ -54,8 +56,6 @@ namespace WindowsFormsExplorer
             _markdownScrollViewer.Markdown = markdown;
             var doc = _markdownScrollViewer.Document;
             doc.PagePadding = new Thickness(10);
-            //doc.FontFamily = new System.Windows.Media.FontFamily("Calibri");
-            //doc.FontSize = 18;
         }
     }
 }
