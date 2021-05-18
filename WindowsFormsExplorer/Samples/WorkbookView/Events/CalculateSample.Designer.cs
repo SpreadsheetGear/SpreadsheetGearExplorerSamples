@@ -30,7 +30,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculateSample));
-            this.workbookView = new WinFormsWorkbookView();
+            this.workbookView = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonCalculate = new System.Windows.Forms.Button();
@@ -44,10 +44,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             // 
             this.workbookView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.workbookView.FormulaBar = null;
-            this.workbookView.Location = new System.Drawing.Point(135, 3);
-            this.workbookView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.workbookView.Location = new System.Drawing.Point(296, 6);
+            this.workbookView.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.workbookView.Name = "workbookView";
-            this.workbookView.Size = new System.Drawing.Size(315, 317);
+            this.workbookView.Size = new System.Drawing.Size(471, 634);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
             this.workbookView.Calculate += new SpreadsheetGear.Windows.Forms.CalculateEventHandler(this.workbookView_Calculate);
@@ -63,12 +63,12 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.tableLayoutPanel1.Controls.Add(this.workbookView, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 323);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(774, 646);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -80,15 +80,15 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.tableLayoutPanel2.Controls.Add(this.buttonCalculate, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(127, 91);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(283, 160);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // buttonCalculate
@@ -97,10 +97,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCalculate.AutoSize = true;
             this.buttonCalculate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonCalculate.Location = new System.Drawing.Point(4, 3);
-            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCalculate.Location = new System.Drawing.Point(7, 6);
+            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(119, 25);
+            this.buttonCalculate.Size = new System.Drawing.Size(269, 40);
             this.buttonCalculate.TabIndex = 0;
             this.buttonCalculate.Text = "Calculate Time";
             this.buttonCalculate.UseVisualStyleBackColor = true;
@@ -112,32 +112,31 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(2, 66);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 122);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(123, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(277, 34);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(2, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 15);
+            this.label1.Size = new System.Drawing.Size(138, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "Current Time:";
             // 
-            // Calculate
+            // CalculateSample
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Calculate";
-            this.Size = new System.Drawing.Size(454, 323);
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.Name = "CalculateSample";
+            this.Size = new System.Drawing.Size(774, 646);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
