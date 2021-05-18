@@ -1,6 +1,5 @@
 ﻿@*
   Copyright © SpreadsheetGear LLC. All Rights Reserved.
-
   SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 *@
 
@@ -12,9 +11,9 @@
   Func<CategoryDTO, IHtmlContent> RenderCategory = null;
   RenderCategory =
     @<li>
-      <span class="fa-li text-nowrap">
-        <span class="expansion-icon" style="cursor: pointer;"><i class="fas fa-caret-down ml-2"></i></span>
-        <i class="fas fa-folder-open"></i>
+      <span class="category-info fa-li text-nowrap">
+        <span class="folder-status-icon" style="cursor: pointer; user-select: none;"><i class="fa-fw fas fa-caret-down"></i></span>
+        <span class="folder-icon"><i class="fa-fw fas fa-folder-open"></i></span>
       </span>
       <a href="javascript:void(0);" class="ml-3 category-link font-weight-bold" data-category-name="@item.Name">@item.Name</a>
       <div class="children">
@@ -46,40 +45,41 @@
 <div class="d-flex align-items-stretch h-100">
 
   @* Samples Tree View *@
-  <div id="samples-tree-container" class="pl-2 pt-2 flex-fill overflow-auto" style="min-width: 350px; max-width: 350px; background-color: #eee;">
-    <div class="text-right">
-      <button class="link-expand sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-down"></i> Expand All</button>
-      <button class="link-collapse sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-up"></i> Collapse All</button>
+  <div class="p-1 flex-fill d-flex flex-column" style="min-width: 350px; max-width: 350px; background-color: #eee;">
+    <div class="py-1 text-right">
+      <button class="link-expand-all sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-down"></i> Expand All</button>
+      <button class="link-collapse-all sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-up"></i> Collapse All</button>
     </div>
-    <ul class="fa-ul samples-tree">
-      @foreach (CategoryDTO category in Model.CategoryRoot.ChildCategories)
-      {
-        @RenderCategory(category)
-      }
-    </ul>
+    <div id="samples-tree-container" class="flex-fill overflow-auto">
+      <ul class="fa-ul ml-4 samples-tree">
+        @foreach (CategoryDTO category in Model.CategoryRoot.ChildCategories)
+        {
+          @RenderCategory(category)
+        }
+      </ul>
+    </div>
   </div>
 
   @* Sample / Summary Container *@
   <div class="d-flex flex-fill flex-column p-2" style="background-color: #ddd;">
     @* Sample Container *@
     <div id="sample-container" class="h-100 flex-column flex-fill d-none">
-      <div class="row justify-content-between">
-        <div class="col-auto">
-          <h4 id="sample-name"></h4>
+      <div class="row">
+        <div class="col">
+          <span class="sample-title-container"><span id="sample-name"></span> - </span>
+          <span id="sample-description"></span>
         </div>
-        <div class="col-auto text-right">
-          <i class="fas fa-play-circle"></i> <b>Run Sample:</b>
+      </div>
+
+      @* Buttons *@
+      <div class="row">
+        <div class="col pl-4 py-2">
           <a href="javascript:void(0);" id="button-run-sample-render" class="sg-btn sg-btn-small sg-btn-blue"><i class="fas fa-camera"></i> Render Image</a>
           <a href="javascript:void(0);" id="button-run-sample-download" class="sg-btn sg-btn-small sg-btn-red"><i class="fas fa-file-download"></i> Download Excel File</a>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col">
-          <p id="sample-description"></p>
-        </div>
-      </div>
-
+      @* Source Code Tabs *@
       <div id="source-code-tabs" class="pb-3 h-100 d-flex flex-column" style="min-height: 0;">
         <ul class="nav nav-tabs" role="tablist"></ul>
         <div class="tab-content flex-fill overflow-auto"></div>
@@ -174,17 +174,35 @@
   }
 
   $(function () {
-    $(".expansion-icon").click(function () {
-      $(this).parent().siblings("div.children").toggle();
+    let iconCaretDown = '<i class="fa-fw fas fa-caret-down"></i>';
+    let iconCaretRight = '<i class="fa-fw fas fa-caret-right"></i>';
+    let iconFolderClosed = '<i class="fa-fw fas fa-folder"></i>';
+    let iconFolderOpen = '<i class="fa-fw fas fa-folder-open"></i>';
+
+    $(".folder-status-icon").click(function () {
+      let $this = $(this);
+      $this.parent().siblings("div.children").toggle();
+      if ($this.closest("li").children("div.children").is(":visible")) {
+        $this.empty().append(iconCaretDown);
+        $this.next().empty().append(iconFolderOpen);
+      }
+      else {
+        $this.empty().append(iconCaretRight);
+        $this.next().empty().append(iconFolderClosed);
+      }
     });
 
-    $(".link-expand").click(function () {
+    $(".link-expand-all").click(function () {
       $("#samples-tree-container div.children").show();
+      $("#samples-tree-container span.folder-status-icon").empty().append(iconCaretDown);
+      $("#samples-tree-container span.folder-icon").empty().append(iconFolderOpen);
     });
 
-    $(".link-collapse").click(function () {      
+    $(".link-collapse-all").click(function () {      
       $("#samples-tree-container div.children").hide();
       $("#samples-tree-container>ul.samples-tree>li>div.children").show();
+      $("#samples-tree-container span.folder-status-icon").empty().append(iconCaretRight);
+      $("#samples-tree-container span.folder-icon").empty().append(iconFolderClosed);
     });
 
     $(".category-link").click(function () {

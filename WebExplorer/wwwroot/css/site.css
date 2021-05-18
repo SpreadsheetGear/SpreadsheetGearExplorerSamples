@@ -23,7 +23,8 @@ ul.samples-tree {
   font-size: 10pt;
 }
 
-.fa-folder-open {
+i.fa-folder,
+i.fa-folder-open {
   color: #e8c156;
 }
 
@@ -34,6 +35,13 @@ ul.fa-ul {
 div.tab-pane {
   background-color: white;
 }
+
+span.sample-title-container {
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+span.sample-description {}
 
 #source-code-tabs li.nav-item {
   font-size: 12pt;
