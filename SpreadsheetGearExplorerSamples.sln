@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedSamples", "SharedSamples\SharedSamples.csproj", "{F042BC5B-D2C0-4416-B058-464AE47FBE88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFExplorer", "WpfExplorer\WPFExplorer.csproj", "{7156529D-EE02-40EF-ACE9-69DFE7978547}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsExplorer", "WindowsFormsExplorer\WindowsFormsExplorer.csproj", "{CB71ED10-099E-4A71-A1E5-0F6560CBC2DE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFExplorer", "WpfExplorer\WPFExplorer.csproj", "{7156529D-EE02-40EF-ACE9-69DFE7978547}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExplorer", "WebExplorer\WebExplorer.csproj", "{8C87A857-4C23-4577-933F-A3A31BECA0F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedSamples", "SharedSamples\SharedSamples.csproj", "{F042BC5B-D2C0-4416-B058-464AE47FBE88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
