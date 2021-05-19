@@ -15,13 +15,16 @@ namespace SharedSamples
     /// sample such as a description, its parent category and the source code file(s) for the sample.
     /// </summary>
     public class SampleInfo
-    { 
-        public static SampleInfo Create<T>(Category category, string name, string description)
+    {
+        /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
+        /// information can be used by the samples app UI to display different icons representing the sample.</param>
+        /// <returns></returns>
+        public static SampleInfo Create<T>(Category category, string name, string description, bool usesWorkbookView)
         {
-            return new SampleInfo(category, typeof(T), name, description);
+            return new SampleInfo(category, typeof(T), name, description, usesWorkbookView);
         }
 
-        protected SampleInfo(Category category, Type sampleType, string name, string description)
+        protected SampleInfo(Category category, Type sampleType, string name, string description, bool usesWorkbookView)
         {
             if (sampleType.IsAssignableFrom(typeof(ISample)))
                 throw new ArgumentException($"{nameof(sampleType)} must implement {nameof(ISample)}", nameof(sampleType));
@@ -30,6 +33,7 @@ namespace SharedSamples
             SampleType = sampleType;
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Description = description ?? "";
+            UsesWorkbookView = usesWorkbookView;
         }
 
         /// <summary>
@@ -53,6 +57,12 @@ namespace SharedSamples
         /// Description of the sample.
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
+        /// information can be used by the samples app UI to display different icons representing the sample.
+        /// </summary>
+        public bool UsesWorkbookView { get; set; }
 
         /// <summary>
         /// The parent <see cref="Category"/> for this sample.

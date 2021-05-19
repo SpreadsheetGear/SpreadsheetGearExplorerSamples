@@ -46,23 +46,23 @@ namespace SharedSamples
             {
                 var categoryWbvSamples = explorerCategory.AddCategory("WorkbookView", "WorkbookView", "WorkbookView properties, methods, designer, explorers, display options, and events.");
                 {
-                    categoryWbvSamples.AddWindowsSample<ActiveWorkbookSample>("Active Workbook", "Create or open workbooks from a variety of locations (Disk, Uri, memory stream, byte array).");
-                    categoryWbvSamples.AddWindowsSample<ActiveWorksheetSample>("Active Worksheet", "Add multiple worksheets to a workbook and display a new worksheet.");
-                    categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.");
-                    categoryWbvSamples.AddWindowsSample<DesignerAndExplorerDialogsSample>("Designer and Explorer Dialogs", "Show the Workbook Designer, Workbook Explorer, Range Explorer, Chart Explorer, and Shape Explorer.");
-                    categoryWbvSamples.AddWindowsSample<LocationToRangeSample>("Location To Range", "Use the LocationToRange method from a mouse event.");
+                    categoryWbvSamples.AddWindowsSample<ActiveWorkbookSample>("Active Workbook", "Create or open workbooks from a variety of locations (Disk, Uri, memory stream, byte array).", true);
+                    categoryWbvSamples.AddWindowsSample<ActiveWorksheetSample>("Active Worksheet", "Add multiple worksheets to a workbook and display a new worksheet.", true);
+                    categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.", true);
+                    categoryWbvSamples.AddWindowsSample<DesignerAndExplorerDialogsSample>("Designer and Explorer Dialogs", "Show the Workbook Designer, Workbook Explorer, Range Explorer, Chart Explorer, and Shape Explorer.", true);
+                    categoryWbvSamples.AddWindowsSample<LocationToRangeSample>("Location To Range", "Use the LocationToRange method from a mouse event.", true);
 
                     var categoryDisplayOptions = categoryWbvSamples.AddCategory("Display Options", "DisplayOptions", "Use display properties to customize the presentation of workbooks.");
                     {
-                        categoryDisplayOptions.AddWindowsSample<DisplayReferenceSample>("DisplayReference", "Use the DisplayReference property to set the viewable area of a workbook.");
-                        categoryDisplayOptions.AddWindowsSample<WorkbookWindowInfoSample>("WorkbookWindowInfo", "Show and hide scroll bars and workbook tabs.");
-                        categoryDisplayOptions.AddWindowsSample<WorksheetWindowInfoSample>("WorksheetWindowInfo", "Freeze panes, set gridline color, show and hide headings, and zoom.");
+                        categoryDisplayOptions.AddWindowsSample<DisplayReferenceSample>("DisplayReference", "Use the DisplayReference property to set the viewable area of a workbook.", true);
+                        categoryDisplayOptions.AddWindowsSample<WorkbookWindowInfoSample>("WorkbookWindowInfo", "Show and hide scroll bars and workbook tabs.", true);
+                        categoryDisplayOptions.AddWindowsSample<WorksheetWindowInfoSample>("WorksheetWindowInfo", "Freeze panes, set gridline color, show and hide headings, and zoom.", true);
                     }
 
                     var categoryCommandManager = categoryWbvSamples.AddCategory("CommandManager", "CommandManager", "Extensions to the default command framework.");
                     {
-                        categoryCommandManager.AddWindowsSample<SimpleCommandSample>("Simple Command", "Create and execute a simple undoable command.");
-                        categoryCommandManager.AddWindowsSample<CommandRangeSample>("Command Range", "Create and execute a CommandRange that sets a range interior color and provides built-in undoable capabilities to restore the interior color without the need for your command to keep track of its own state.");
+                        categoryCommandManager.AddWindowsSample<SimpleCommandSample>("Simple Command", "Create and execute a simple undoable command.", true);
+                        categoryCommandManager.AddWindowsSample<CommandRangeSample>("Command Range", "Create and execute a CommandRange that sets a range interior color and provides built-in undoable capabilities to restore the interior color without the need for your command to keep track of its own state.", true);
                     }
                 }
             }
@@ -137,7 +137,7 @@ namespace SharedSamples
             {
                 if (includeWindowsSamples)
                 {
-                    categoryCharting.AddWindowsSample<ChartGallerySample>("Chart Gallery", "Dynamically create a chart gallery which demonstrates common chart types and formatting features.");
+                    categoryCharting.AddWindowsSample<ChartGallerySample>("Chart Gallery", "Dynamically create a chart gallery which demonstrates common chart types and formatting features.", false);
                 }
                 categoryCharting.AddEngineSample<ScatterChartSample>("Scatter Chart", "Demonstrates generating a Scatter Chart where x and y data sets are plotted on a single set of axes.");
                 categoryCharting.AddEngineSample<BubbleChartSample>("Bubble Chart", "Create a bubble chart representing three sets of data values.", renderImageRange: "A1:J14");
@@ -192,23 +192,23 @@ namespace SharedSamples
             {
                 var categoryCalculations = explorerCategory.AddCategory("Calculations", "Calculations", "The true power of SpreadsheetGear is realized when using its superior Microsoft Excel compatible calculation engine. Its unmatched performance and accuracy provide a competitive advantage to data-critical .NET applications. The following samples show various ways to utilize the spreadsheet calculation engine to manipulate data in a WPF project. These examples are easily adaptable to many Microsoft .NET project types.");
                 {
-                    categoryCalculations.AddWindowsSample<FormulaEvaluationSample>("Formula Evaluation", "Demonstrates evaluating a single Excel compatible formula entered into a WPF app.");
-                    categoryCalculations.AddWindowsSample<SimpleLoanCalculatorSample>("Simple Loan Calculator", "Demonstrates calculating a loan payment based on input from a WPF app. By using this design pattern, you can easily deploy complex numeric, financial and statistics calculators which call on the full power of SpreadsheetGear's Microsoft Excel compatible calculation capabilities.");
-                    categoryCalculations.AddWindowsSample<AmortizationCalculatorSample>("Amortization Calculator", "Extends the Simple Loan Calculator with an amortization table which is displayed in a WorkbookView control. Of particular interest is the use of the defined name, AmortizationTableForNPer, which uses the OFFSET() worksheet function to return a dynamically sized range.");
-                    categoryCalculations.AddWindowsSample<CustomFunctionsSample>("Custom Functions", "Demonstrates creating your own custom functions in .NET and adding them to a workbook set. The worksheet formulas which utilize these custom functions are compatible with Microsoft Excel worksheet formulas which utilize VBA or XLL custom functions.");
+                    categoryCalculations.AddWindowsSample<FormulaEvaluationSample>("Formula Evaluation", "Demonstrates evaluating a single Excel compatible formula entered into a WPF app.", false);
+                    categoryCalculations.AddWindowsSample<SimpleLoanCalculatorSample>("Simple Loan Calculator", "Demonstrates calculating a loan payment based on input from a WPF app. By using this design pattern, you can easily deploy complex numeric, financial and statistics calculators which call on the full power of SpreadsheetGear's Microsoft Excel compatible calculation capabilities.", false);
+                    categoryCalculations.AddWindowsSample<AmortizationCalculatorSample>("Amortization Calculator", "Extends the Simple Loan Calculator with an amortization table which is displayed in a WorkbookView control. Of particular interest is the use of the defined name, AmortizationTableForNPer, which uses the OFFSET() worksheet function to return a dynamically sized range.", true);
+                    categoryCalculations.AddWindowsSample<CustomFunctionsSample>("Custom Functions", "Demonstrates creating your own custom functions in .NET and adding them to a workbook set. The worksheet formulas which utilize these custom functions are compatible with Microsoft Excel worksheet formulas which utilize VBA or XLL custom functions.", false);
                 }
 
                 var categoryPerformance = explorerCategory.AddCategory("Advanced", "Advanced", "Use advanced APIs and techniques for performance and scalability.");
                 {
-                    categoryPerformance.AddWindowsSample<PerformanceSample>("Performance", "Demonstrates a 1,773% performance improvement which is possible by using advanced API's and features for a typical case of filling and formatting rows of data.");
-                    categoryPerformance.AddWindowsSample<ThreadingSample>("Threading", "Load data from background threads to simulate live data feeds.");
+                    categoryPerformance.AddWindowsSample<PerformanceSample>("Performance", "Demonstrates a 1,773% performance improvement which is possible by using advanced API's and features for a typical case of filling and formatting rows of data.", true);
+                    categoryPerformance.AddWindowsSample<ThreadingSample>("Threading", "Load data from background threads to simulate live data feeds.", true);
                 }
 
                 var categoryPrinting = explorerCategory.AddCategory("Printing", "Printing", "Print the contents of a workbook using basic and advanced options.");
                 {
-                    categoryPrinting.AddWindowsSample<BasicPrintingSample>("Basic", "Easily print and print preview selections, sheets, and entire workbooks.");
-                    categoryPrinting.AddWindowsSample<PageSetupSample>("Page Setup", "Use page setup options to customize the printing of a worksheet.");
-                    categoryPrinting.AddWindowsSample<PageBreaksSample>("Page Breaks", "Add or remove manual page breaks to customize printed page layouts.");
+                    categoryPrinting.AddWindowsSample<BasicPrintingSample>("Basic", "Easily print and print preview selections, sheets, and entire workbooks.", true);
+                    categoryPrinting.AddWindowsSample<PageSetupSample>("Page Setup", "Use page setup options to customize the printing of a worksheet.", true);
+                    categoryPrinting.AddWindowsSample<PageBreaksSample>("Page Breaks", "Add or remove manual page breaks to customize printed page layouts.", true);
                 }
             }
 
@@ -220,7 +220,7 @@ namespace SharedSamples
                 categoryReporting.AddEngineSample<FormulasAndFormattingSample>("Formulas and Formatting", "Add values, formulas, defined names and formatting.");
                 if (includeWindowsSamples)
                 {
-                    categoryReporting.AddWindowsSample<WorkbookConsolidationSample>("Workbook Consolidation", "Utilize the IRange.Copy method to dynamically copy and consolidate data from multiple workbooks.");
+                    categoryReporting.AddWindowsSample<WorkbookConsolidationSample>("Workbook Consolidation", "Utilize the IRange.Copy method to dynamically copy and consolidate data from multiple workbooks.", true);
                 }
             }
 
@@ -228,8 +228,8 @@ namespace SharedSamples
             {
                 var categoryDataGrid = explorerCategory.AddCategory("Data Grid", "DataGrid", "Workbooks are an excellent source of data for the built-in DataGrid, DataSet and DataTable components included into .NET, as well as the many third party charting and other controls which accept a DataSet or DataTable. SpreadsheetGear makes it easy to populate a DataSet or DataTable from a workbook or worksheet range, as demonstrated by these samples.");
                 {
-                    categoryDataGrid.AddWindowsSample<SpreadsheetToDataGridSample>("Spreadsheet To DataGrid", "Retrieve data from a workbook and display it in a DataGridView control.");
-                    categoryDataGrid.AddWindowsSample<SpreadsheetToDataGridFormattedSample>("Spreadsheet To DataGrid (Formatted)", "Insert data from a DataTable into a workbook, merging the data with formatting and formulas. The results are displayed in a DataGridView control.");
+                    categoryDataGrid.AddWindowsSample<SpreadsheetToDataGridSample>("Spreadsheet To DataGrid", "Retrieve data from a workbook and display it in a DataGridView control.", false);
+                    categoryDataGrid.AddWindowsSample<SpreadsheetToDataGridFormattedSample>("Spreadsheet To DataGrid (Formatted)", "Insert data from a DataTable into a workbook, merging the data with formatting and formulas. The results are displayed in a DataGridView control.", false);
                 }
             }
 
@@ -246,7 +246,7 @@ namespace SharedSamples
         public static void AddEngineSample<T>(this Category category, string sampleName, string description, bool canRenderImage = true, bool canDownloadFile = true, string renderImageRange = null)
             where T : SharedEngineSample
         {
-            var sampleInfo = category.AddSample<T>(sampleName, description);
+            var sampleInfo = category.AddSample<T>(sampleName, description, false);
             sampleInfo.CanRenderImage = canRenderImage;
             sampleInfo.CanDownloadFile = canDownloadFile;
             sampleInfo.RenderImageRange = renderImageRange;
@@ -256,10 +256,12 @@ namespace SharedSamples
         /// <summary>
         /// Just adds simple type checking through generics to ensure expected type for sample is used.
         /// </summary>
-        public static void AddWindowsSample<T>(this Category category, string sampleName, string description)
+        /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
+        /// information can be used by the samples app UI to display different icons representing the sample.</param>
+        public static void AddWindowsSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
             where T : SharedWindowsSample
         {
-            var sampleInfo = category.AddSample<T>(sampleName, description);
+            var sampleInfo = category.AddSample<T>(sampleName, description, usesWorkbookView);
             sampleInfo.AddSourceCode($"{typeof(T).Name}.code.cs");
         }
     }

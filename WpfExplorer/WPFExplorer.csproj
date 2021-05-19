@@ -11,10 +11,14 @@
   <ItemGroup>
     <None Remove="Files\Shapes.xlsx" />
     <None Remove="Files\SpiceOrder.xlsx" />
+    <None Remove="Images\Application-32.png" />
     <None Remove="Images\brackets-curly-32.png" />
     <None Remove="Images\chevron-double-down-32.png" />
     <None Remove="Images\chevron-double-up-32.png" />
     <None Remove="Images\code-branch-32.png" />
+    <None Remove="Images\cog-32.png" />
+    <None Remove="Images\cogs-32.png" />
+    <None Remove="Images\CSFile-32.png" />
     <None Remove="Images\Event_16x.png" />
     <None Remove="Images\folder-regular-32.png" />
     <None Remove="Images\folder-solid-32.png" />
@@ -23,11 +27,15 @@
     <None Remove="Images\play-32.png" />
     <None Remove="Images\play-circle-32.png" />
     <None Remove="Images\play-regular-32.png" />
+    <None Remove="Images\Process-32.png" />
     <None Remove="Images\project-diagram-32.png" />
     <None Remove="Images\Run_16x.png" />
     <None Remove="Images\table-32.png" />
     <None Remove="Images\Undo_16x.png" />
+    <None Remove="Images\UserControl-32.png" />
     <None Remove="Images\window-alt-32.png" />
+    <None Remove="Images\WPFApplication-32.png" />
+    <None Remove="Images\WPFUserControl-32.png" />
     <None Remove="SpreadsheetGearLogo.ico" />
   </ItemGroup>
 
@@ -59,6 +67,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Application-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\brackets-curly-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -69,6 +80,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\code-branch-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\cog-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\cogs-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\CSFile-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Event_16x.png">
@@ -95,19 +115,31 @@
     <Resource Include="Images\play-regular-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Process-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\project-diagram-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Run_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\table-32.png">
+    <Resource Include="Images\Table-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Undo_16x.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\UserControl-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\window-alt-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WPFApplication-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WPFUserControl-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="SpreadsheetGearLogo.ico" />

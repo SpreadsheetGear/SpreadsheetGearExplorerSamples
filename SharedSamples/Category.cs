@@ -116,9 +116,11 @@ namespace SharedSamples
         /// <summary>
         /// Add a sample to this category.
         /// </summary>
-        public SampleInfo AddSample<T>(string name, string description) where T : ISample
+        /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
+        /// information can be used by the samples app UI to display different icons representing the sample.</param>
+        public SampleInfo AddSample<T>(string name, string description, bool usesWorkbookView) where T : ISample
         {
-            var sampleInfo = SampleInfo.Create<T>(this, name, description);
+            var sampleInfo = SampleInfo.Create<T>(this, name, description, usesWorkbookView);
             SampleInfos.Add(sampleInfo);
             return sampleInfo;
         }
