@@ -35,6 +35,7 @@ namespace WindowsFormsExplorer
         private void InitializeTreeviewImages()
         {
             _samplesImageList = new ImageList();
+            _samplesImageList.ColorDepth = ColorDepth.Depth24Bit;
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderOpened_32));
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderClosed_32));
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.brackets_curly_32));
