@@ -155,6 +155,8 @@ namespace SharedSamples
         public string GetCategorySummaryHtml(bool renderFullWebPage = true)
         {
             string html = $"<ul class='fa-ul'>{GetCategorySummaryHtmlInternal(this)}</ul>";
+            if (!this.Parent.IsRoot)
+                html = "<h2>Category and Sample Descriptions</h2>" + html;
             if (renderFullWebPage)
             {
                 var htmlTemplate = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\SummaryTemplate.html"));
@@ -167,6 +169,8 @@ namespace SharedSamples
         public string GetCategorySummaryPlaintext()
         {
             var plaintext = GetCategorySummaryPlaintextInternal(this, 0);
+            if (!this.Parent.IsRoot)
+                plaintext = "Category and Sample Descriptions\r\n\r\n" + plaintext;
             return plaintext;
         }
 
@@ -174,6 +178,9 @@ namespace SharedSamples
         public string GetCategorySummaryMarkdown(string categoryIcon = "", string sampleIcon = "")
         {
             var markdown = GetCategorySummaryMarkdownInternal(this, 0, categoryIcon, sampleIcon);
+            if (!this.Parent.IsRoot)
+                markdown = "## Category and Sample Descriptions\r\n" + markdown;
+
             return markdown;
         }
 
@@ -247,6 +254,7 @@ namespace SharedSamples
 
         private string GetCategorySummaryMarkdownInternal(Category currentCategory, int depth, string categoryIcon, string sampleIcon)
         {
+            var text = "";
             if (currentCategory.Parent.IsRoot)
                 depth--;
 
@@ -254,7 +262,6 @@ namespace SharedSamples
             if (depth > 0)
                 tabs = new string('\t', depth);
 
-            var text = "";
             if (!HideNameFromCategorySummary)
                 text += $"{tabs}*   **{categoryIcon} {currentCategory.Name}**";
             if (!string.IsNullOrWhiteSpace(currentCategory.Description))
