@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Formatting
 {
-    public class NumberFormatsSample : SharedEngineSample
+    public class NumberFormatsSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active sheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

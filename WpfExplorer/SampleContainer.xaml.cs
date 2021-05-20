@@ -71,7 +71,7 @@ namespace WPFExplorer
             SGUserControl sampleUserControl;
             if (sampleInfo.IsSharedEngineSample)
             {
-                var engineSample  = sampleInfo.CreateInstance<SharedEngineSample>();
+                var engineSample  = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
                 sampleUserControl = new EngineSampleControl(engineSample);
                 sampleTypeTextBlock.Text = "SpreadsheetGear Engine Sample";
             }

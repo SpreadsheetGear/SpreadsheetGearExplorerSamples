@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.ConditionalFormats
 {
-    public class CustomExpressionSample : SharedEngineSample
+    public class CustomExpressionSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook template file with a data range that will be formatted with a 
             // conditional format. 
@@ -12,7 +14,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create a local variable to the active worksheet.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

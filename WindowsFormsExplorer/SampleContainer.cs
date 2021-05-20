@@ -74,7 +74,7 @@ namespace WindowsFormsExplorer
             SGUserControl sampleUserControl;
             if (sampleInfo.IsSharedEngineSample)
             {
-                var engineSample = sampleInfo.CreateInstance<SharedEngineSample>();
+                var engineSample = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
                 sampleUserControl = new EngineSampleControl(engineSample);
                 labelSampleType.Text = "SpreadsheetGear Engine Sample";
             }

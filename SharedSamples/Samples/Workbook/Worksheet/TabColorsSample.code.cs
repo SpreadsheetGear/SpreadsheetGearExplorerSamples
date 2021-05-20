@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet
 {
-    class TabColorsSample : SharedEngineSample
+    class TabColorsSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook with 4 worksheets.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
@@ -11,7 +13,7 @@
             Workbook.Worksheets.Add();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Set tab color with pre-defined color.
             SpreadsheetGear.ITab sheet1Tab = Workbook.Sheets["Sheet1"].Tab;

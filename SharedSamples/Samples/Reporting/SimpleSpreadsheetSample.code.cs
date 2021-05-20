@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Reporting
 {
-    public class SimpleSpreadsheetSample : SharedEngineSample
+    public class SimpleSpreadsheetSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Obtain CultureInfo object used on this machine.
             System.Globalization.CultureInfo culture = System.Globalization.CultureInfo.CurrentCulture;
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(culture);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get culture being used by the workbook.
             System.Globalization.CultureInfo culture = Workbook.WorkbookSet.Culture;

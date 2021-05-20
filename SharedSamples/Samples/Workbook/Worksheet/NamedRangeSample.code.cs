@@ -1,15 +1,17 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet
 {
-    public class NamedRangeSample : SharedEngineSample
+    public class NamedRangeSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook with 2 worksheets.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
             Workbook.Worksheets.Add();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to each worksheet.
             SpreadsheetGear.IWorksheet sheet1 = Workbook.Worksheets["Sheet1"];

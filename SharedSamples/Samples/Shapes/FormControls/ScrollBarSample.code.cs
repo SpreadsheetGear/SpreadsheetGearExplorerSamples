@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Shapes.FormControls
 {
-    public partial class ScrollBarSample : SharedEngineSample
+    public partial class ScrollBarSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook file that will help demonstrate using a ScrollBar.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\ScrollBarSampleFile.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet and its window info
             // and cells.

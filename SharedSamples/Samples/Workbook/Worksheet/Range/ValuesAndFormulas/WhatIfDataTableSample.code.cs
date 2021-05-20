@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
-    class WhatIfDataTableSample : SharedEngineSample
+    class WhatIfDataTableSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with sample data that will help demonstrate What-If 
             // Data Tables.
@@ -12,7 +14,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

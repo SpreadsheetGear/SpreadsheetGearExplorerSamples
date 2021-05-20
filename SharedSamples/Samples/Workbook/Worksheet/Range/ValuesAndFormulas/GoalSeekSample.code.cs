@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
-    class GoalSeekSample : SharedEngineSample
+    class GoalSeekSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data that helps demonstrate Goal Seek.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\GoalSeek.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active sheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

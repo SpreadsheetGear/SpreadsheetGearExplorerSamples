@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Charting.Basic
 {
-    public class ColumnChartSample : SharedEngineSample
+    public class ColumnChartSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data for the chart.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\ChartData.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get a reference to the active sheet, the worksheet window info and shapes 
             // collection.

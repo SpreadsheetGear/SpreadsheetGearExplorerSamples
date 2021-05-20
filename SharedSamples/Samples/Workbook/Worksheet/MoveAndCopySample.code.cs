@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet
 {
-    public class MoveAndCopySample : SharedEngineSample
+    public class MoveAndCopySample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get the workbook set that 'Workbook' belongs to.
             SpreadsheetGear.IWorkbookSet workbookSet = Workbook.WorkbookSet;

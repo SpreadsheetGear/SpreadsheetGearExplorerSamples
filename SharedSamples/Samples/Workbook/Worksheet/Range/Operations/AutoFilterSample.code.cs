@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Operations
 {
-    class AutoFilterSample : SharedEngineSample
+    class AutoFilterSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data that we can apply AutoFilters to. The workbook 
             // contains 10 different sheets--each will be AutoFiltered using different criteria.
@@ -12,7 +14,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // EXAMPLE 1: Single Product Filter
             {

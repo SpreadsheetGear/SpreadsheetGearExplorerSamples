@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
-    class ArrayFormulaSample : SharedEngineSample
+    class ArrayFormulaSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with sample data that helps demonstrate usage of array formulas.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\ArrayFormulaData.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

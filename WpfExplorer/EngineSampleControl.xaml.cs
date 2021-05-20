@@ -14,12 +14,12 @@ namespace WPFExplorer
     /// </summary>
     public partial class EngineSampleControl : SGUserControl
     {
-        public SharedEngineSample EngineSample { get; private set; }
+        public ISpreadsheetGearEngineSample SpreadsheetGearEngineSample { get; private set; }
 
-        public EngineSampleControl(SharedEngineSample engineSample) : this()
+        public EngineSampleControl(ISpreadsheetGearEngineSample engineSample) : this()
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
-            EngineSample = engineSample;
+            SpreadsheetGearEngineSample = engineSample;
             InitializeSample();
         }
 
@@ -33,8 +33,8 @@ namespace WPFExplorer
         private void InitializeSample()
         {
             DisposalManager.ResetWorkbookView(workbookView, false);
-            EngineSample.PreLoadWorkbook();
-            workbookView.ActiveWorkbook = EngineSample.Workbook;
+            SpreadsheetGearEngineSample.PreLoadWorkbook();
+            workbookView.ActiveWorkbook = SpreadsheetGearEngineSample.Workbook;
             button_runSample.IsEnabled = true;
         }
 
@@ -44,7 +44,7 @@ namespace WPFExplorer
             workbookView.GetLock();
             try
             {
-                EngineSample.RunSample();
+                SpreadsheetGearEngineSample.RunSample();
             }
             finally
             {

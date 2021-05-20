@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Charting.Stock
 {
-    public class OHLCStockChartSample : SharedEngineSample
+    public class OHLCStockChartSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data for the chart.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\ChartData-Stock-O-H-L-C.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

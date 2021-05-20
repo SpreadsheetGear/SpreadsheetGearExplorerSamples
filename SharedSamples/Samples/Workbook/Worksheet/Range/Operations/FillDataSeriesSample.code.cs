@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Operations
 {
-    class FillDataSeriesSample : SharedEngineSample
+    class FillDataSeriesSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data that we can apply a Data Series Fill.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\DataSeries.xlsx");
@@ -12,7 +14,7 @@
         }
 
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

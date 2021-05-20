@@ -13,7 +13,7 @@ namespace SharedSamples
     /// See <see cref="SharedWindowsSample"/> for samples that might also demonstrate features involving UI,
     /// such as the WorkbookView or FormulaBar controls.
     /// </summary>
-    public abstract class SharedEngineSample : ISample
+    public interface ISpreadsheetGearEngineSample : ISample
     {
         /// <summary>
         /// The results of the sample are stored in this property, which can be attached to a WorkbookView
@@ -25,11 +25,11 @@ namespace SharedSamples
         /// Provides an opportunity to setup <see cref="Workbook"/> with the desired workbook before the
         /// <see cref="RunSample"/> method is called.
         /// </summary>
-        public virtual void PreLoadWorkbook() { }
+        public void PreLoadWorkbook() { }
 
         /// <summary>
         /// Call this to execute the sample.  Results should be stored in the <see cref="Workbook"/> property.
         /// </summary>
-        public virtual void RunSample() { }
+        public void RunSample() { }
     }
 }

@@ -1,11 +1,13 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Operations
 {
-    class SortingSample : SharedEngineSample
+    class SortingSample : ISpreadsheetGearEngineSample
     {
         // Store the range that will be sorted in Range.
         public SpreadsheetGear.IRange Range { get; set; }
 
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook and create some local variables to the active worksheet and its cells.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
@@ -37,7 +39,7 @@
             Range.Columns.AutoFit();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Set up the first sort key with a key index of one representing the second
             // column (random $ amounts) in the range, descending sort order, and the

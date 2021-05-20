@@ -4,15 +4,17 @@ using System.Text;
 
 namespace SharedSamples.Samples.Shapes
 {
-    public class PictureSample : SharedEngineSample
+    public class PictureSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet, cells and  window info.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;

@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet
 {
-    public class SheetVisibilitySample : SharedEngineSample
+    public class SheetVisibilitySample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook with 3 worksheets.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
@@ -10,7 +12,7 @@
             Workbook.Worksheets.Add();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // A Hidden state will exclude this sheet from the tab bar, but will still make this 
             // entry visible in Excel's "Unhide Sheet..." dialog and SpreadsheetGear's WorkbookExplorer, 

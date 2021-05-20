@@ -44,7 +44,7 @@ namespace SharedSamples
         /// </summary>
         public Type SampleType { get; set; }
 
-        public bool IsSharedEngineSample => typeof(SharedEngineSample).IsAssignableFrom(SampleType);
+        public bool IsSharedEngineSample => typeof(ISpreadsheetGearEngineSample).IsAssignableFrom(SampleType);
 
         public bool IsSharedWindowsSample => typeof(SharedWindowsSample).IsAssignableFrom(SampleType);
 

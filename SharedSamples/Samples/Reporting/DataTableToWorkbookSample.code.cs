@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Reporting
 {
-    public class DataTableToWorkbookSample : SharedEngineSample
+    public class DataTableToWorkbookSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook that will hold the final report.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get the full path to an XML file.
             string xmlPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\SpiceOrder.xml");

@@ -14,9 +14,9 @@ namespace WindowsFormsExplorer
     /// </summary>
     public partial class EngineSampleControl : SGUserControl
     {
-        public SharedEngineSample EngineSample { get; private set; }
+        public ISpreadsheetGearEngineSample EngineSample { get; private set; }
 
-        public EngineSampleControl(SharedEngineSample engineSample) : this()
+        public EngineSampleControl(ISpreadsheetGearEngineSample engineSample) : this()
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
             EngineSample = engineSample;

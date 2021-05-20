@@ -244,7 +244,7 @@ namespace SharedSamples
         /// Just adds simple type checking through generics to ensure expected type for sample  is used.
         /// </summary>
         public static void AddEngineSample<T>(this Category category, string sampleName, string description, bool canRenderImage = true, bool canDownloadFile = true, string renderImageRange = null)
-            where T : SharedEngineSample
+            where T : ISpreadsheetGearEngineSample
         {
             var sampleInfo = category.AddSample<T>(sampleName, description, false);
             sampleInfo.CanRenderImage = canRenderImage;

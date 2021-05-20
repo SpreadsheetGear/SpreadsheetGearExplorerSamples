@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Charting
 {
-    class CombinationChartSample : SharedEngineSample
+    class CombinationChartSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet, its window info
             // and its cells.

@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Workbook
 {
-    public class DocumentPropertiesSample : SharedEngineSample
+    public class DocumentPropertiesSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Set some of the Built-In Properties.
             SpreadsheetGear.IBuiltinDocumentProperties builtInProps =

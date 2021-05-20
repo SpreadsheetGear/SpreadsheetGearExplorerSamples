@@ -1,14 +1,16 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Operations
 {
-    class LockAndProtectCellsSample : SharedEngineSample
+    class LockAndProtectCellsSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // SAMPLE 1: Protect Sheet1 without a password.
             {

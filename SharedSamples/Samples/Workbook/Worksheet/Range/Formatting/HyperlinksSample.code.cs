@@ -1,15 +1,17 @@
 ﻿namespace SharedSamples.Samples.Workbook.Worksheet.Range.Formatting
 {
-    public class HyperlinksSample : SharedEngineSample
+    public class HyperlinksSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new workbook and add a second worksheet ("Sheet2").
             Workbook = SpreadsheetGear.Factory.GetWorkbook();
             Workbook.Worksheets.Add();
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get a reference to "Sheet1".
             SpreadsheetGear.IWorksheet worksheet = Workbook.Worksheets["Sheet1"];

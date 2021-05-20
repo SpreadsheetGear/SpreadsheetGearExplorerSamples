@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Workbook
 {
-    public class SavingAndOpeningSample : SharedEngineSample
+    public class SavingAndOpeningSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Create a new file and add a bit of data to it and a message indicating running the sample
             // doesn't visually do anything.
@@ -18,7 +20,7 @@
                 "under the executing folder to confirm that files are being saved.";
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Get path to the Output (under "bin") folder, as this is where the "Temp" directory is located and where the
             // workbook files will be saved and opened.

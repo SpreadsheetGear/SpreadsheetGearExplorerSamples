@@ -1,8 +1,10 @@
 ﻿namespace SharedSamples.Samples.Charting
 {
-    public partial class BubbleChartSample : SharedEngineSample
+    public partial class BubbleChartSample : ISpreadsheetGearEngineSample
     {
-        public override void PreLoadWorkbook()
+        public SpreadsheetGear.IWorkbook Workbook { get; set; }
+
+        public void PreLoadWorkbook()
         {
             // Get the full path to a workbook with some data for the chart>
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\ChartData-Bubble.xlsx");
@@ -11,7 +13,7 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-        public override void RunSample()
+        public void RunSample()
         {
             // Create some local variables to the active worksheet, its window info, 
             // and cells.
