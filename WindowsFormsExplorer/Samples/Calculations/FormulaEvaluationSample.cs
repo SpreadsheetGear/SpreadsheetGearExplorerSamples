@@ -2,9 +2,9 @@ namespace WindowsFormsExplorer.Samples.Calculations
 {
     public partial class FormulaEvaluationSample : SGUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Calculations.FormulaEvaluationSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Calculations.FormulaEvaluationSample Sample { get; private set; }
 
         private void EvaluateFormula()
         {
@@ -42,7 +42,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.Calculations.FormulaEvaluationSample();
+            Sample = new SamplesLibrary.Samples.Calculations.FormulaEvaluationSample();
         }
         #endregion
     }

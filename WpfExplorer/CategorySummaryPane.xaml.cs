@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -33,7 +33,7 @@ namespace WPFExplorer
                 }));
 
             // Load style more accommodating to high-contrast modes.
-            var styleUri = new Uri($"/{nameof(SharedSamples)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var styleUri = new Uri($"/{nameof(SamplesLibrary)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
             var resourceDict = (ResourceDictionary)Application.LoadComponent(styleUri);
             var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
             markdownScrollViewer.MarkdownStyle = standardStyle;

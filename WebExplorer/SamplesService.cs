@@ -5,7 +5,7 @@
 */
 
 using Microsoft.AspNetCore.Mvc;
-using SharedSamples;
+using SamplesLibrary;
 using SpreadsheetGear;
 using System;
 using System.Drawing;

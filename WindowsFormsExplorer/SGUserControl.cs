@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System;
 using System.Windows.Forms;
 

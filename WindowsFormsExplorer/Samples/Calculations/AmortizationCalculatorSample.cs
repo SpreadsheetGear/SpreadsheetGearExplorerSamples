@@ -2,9 +2,9 @@ namespace WindowsFormsExplorer.Samples.Calculations
 {
     public partial class AmortizationCalculatorSample : SGUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Calculations.AmortizationCalculatorSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Calculations.AmortizationCalculatorSample Sample { get; private set; }
 
         private void buttonCalculate_Click(object sender, System.EventArgs e)
         {
@@ -16,7 +16,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             string numPeriods = textBoxPeriods.Text;
 
             // Run sample and get results back.
-            SharedSamples.Samples.Calculations.AmortizationCalculatorResults results = Sample.Calculate(loanAmount, interestRate, numPeriods);
+            SamplesLibrary.Samples.Calculations.AmortizationCalculatorResults results = Sample.Calculate(loanAmount, interestRate, numPeriods);
 
             // Copy over the original user inputs.  Note that simple-inputted values are now more nicely 
             // formatted (such as a loan amount of "1000" formatted to "$1,000").
@@ -44,7 +44,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.Calculations.AmortizationCalculatorSample();
+            Sample = new SamplesLibrary.Samples.Calculations.AmortizationCalculatorSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

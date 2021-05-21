@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System.Linq;
 using WindowsFormsExplorer.Samples.Printing;
 using WindowsFormsExplorer.Samples.WorkbookView.Events;
@@ -13,7 +13,7 @@ using WindowsFormsExplorer.Samples.WorkbookView.UIManager;
 namespace WindowsFormsExplorer
 {
     /// <summary>
-    /// Adds a handful of samples that directly depend on the Windows Forms WorkbookView implementation and so cannot use shared code like the <see cref="SharedWindowsSample"/> samples.
+    /// Adds a handful of samples that directly depend on the Windows Forms WorkbookView implementation and so cannot use shared code like the <see cref="ISpreadsheetGearWindowsSample"/> samples.
     /// </summary>
     public class WinFormsSamplesBuilder
     {
@@ -54,7 +54,7 @@ namespace WindowsFormsExplorer
         /// <param name="category"></param>
         public static void AddWinFormsSourceCodeFiles(Category category)
         {
-            var targetTypeSharedWinSample = typeof(SharedWindowsSample);
+            var targetTypeSharedWinSample = typeof(ISpreadsheetGearWindowsSample);
             var targetTypeSGUserControl = typeof(SGUserControl);
             foreach (var sample in category.SampleInfos.Where(i =>
                 targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSGUserControl.IsAssignableFrom(i.SampleType)))

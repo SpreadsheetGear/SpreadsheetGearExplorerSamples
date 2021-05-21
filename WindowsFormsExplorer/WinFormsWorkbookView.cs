@@ -4,13 +4,13 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using SpreadsheetGear.Windows.Forms;
 
 namespace WindowsFormsExplorer
 {
     /// <summary>
-    /// Simple wrapper around the <see cref="WorkbookView"/> that implements <see cref="IWorkbookView"/> and is used by most <see cref="SharedWindowsSample"/> samples.
+    /// Simple wrapper around the <see cref="WorkbookView"/> that implements <see cref="IWorkbookView"/> and is used by most <see cref="ISpreadsheetGearWindowsSample"/> samples.
     /// </summary>
     public class WinFormsWorkbookView : WorkbookView, IWorkbookView { }
 }

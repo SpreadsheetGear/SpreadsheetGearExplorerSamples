@@ -2,9 +2,9 @@
 {
     public partial class SpreadsheetToDataGridSample : SGUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WpfExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
+        public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
 
         public SpreadsheetToDataGridSample()
         {
@@ -23,7 +23,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.DataGrid.SpreadsheetToDataGridSample();
+            Sample = new SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample();
         }
     }
 }

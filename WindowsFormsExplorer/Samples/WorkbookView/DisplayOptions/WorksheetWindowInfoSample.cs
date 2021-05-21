@@ -2,9 +2,9 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
 {
     public partial class WorksheetWindowInfoSample : SGUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
 
         private void buttonFreezePanes_Click(object sender, System.EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();

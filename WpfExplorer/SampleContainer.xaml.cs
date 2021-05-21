@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -120,21 +120,21 @@ namespace WPFExplorer
 
 
         /// <summary>
-        /// Any <see cref="SharedWindowsSample"/> must also have a corresponding <see cref="SGUserControl"/> that contains the Shared Windows Sample and both classes must have the same name.
+        /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SGUserControl"/> that contains the Shared Windows Sample and both classes must have the same name.
         /// </summary>
-        /// <param name="sampleType">A Type that inherits from <see cref="SharedWindowsSample"/></param>
-        /// <returns>The corresponding <see cref="SGUserControl"/> for the <see cref="SharedWindowsSample"/>.</returns>
+        /// <param name="sampleType">A Type that inherits from <see cref="ISpreadsheetGearWindowsSample"/></param>
+        /// <returns>The corresponding <see cref="SGUserControl"/> for the <see cref="ISpreadsheetGearWindowsSample"/>.</returns>
         public SGUserControl FindSGUserControlSample(Type sampleType)
         {
-            if (!typeof(SharedWindowsSample).IsAssignableFrom(sampleType))
-                throw new ArgumentException($"The provided type {sampleType.Name} does not inherit from {nameof(SharedWindowsSample)}.", nameof(sampleType));
+            if (!typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(sampleType))
+                throw new ArgumentException($"The provided type {sampleType.Name} does not inherit from {nameof(ISpreadsheetGearWindowsSample)}.", nameof(sampleType));
 
             var allSGUserControls = this.GetType().Assembly
                 .GetTypes()
                 .Where(t => typeof(SGUserControl).IsAssignableFrom(t));
             var userControlType = allSGUserControls.SingleOrDefault(t => t.Name == sampleType.Name);
             if (userControlType == null)
-                throw new InvalidOperationException($"Could not locate a corresponding {nameof(SGUserControl)} class for the provided {nameof(SharedWindowsSample)} ('{sampleType.Name}').");
+                throw new InvalidOperationException($"Could not locate a corresponding {nameof(SGUserControl)} class for the provided {nameof(ISpreadsheetGearWindowsSample)} ('{sampleType.Name}').");
 
             return (SGUserControl)Activator.CreateInstance(userControlType);
         }

@@ -7,7 +7,7 @@
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using SharedSamples;
+using SamplesLibrary;
 
 namespace WPFExplorer
 {

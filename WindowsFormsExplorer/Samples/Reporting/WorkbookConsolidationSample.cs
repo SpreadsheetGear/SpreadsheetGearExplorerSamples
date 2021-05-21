@@ -2,9 +2,9 @@ namespace WindowsFormsExplorer.Samples.Reporting
 {
     public partial class WorkbookConsolidationSample : SGUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Reporting.WorkbookConsolidationSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Reporting.WorkbookConsolidationSample Sample { get; private set; }
 
         private void radioButton_CheckedChanged(object sender, System.EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace WindowsFormsExplorer.Samples.Reporting
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.Reporting.WorkbookConsolidationSample();
+            Sample = new SamplesLibrary.Samples.Reporting.WorkbookConsolidationSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

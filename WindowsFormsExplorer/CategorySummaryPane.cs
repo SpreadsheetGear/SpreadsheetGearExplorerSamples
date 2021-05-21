@@ -8,7 +8,7 @@ using System;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-using SharedSamples;
+using SamplesLibrary;
 using MdXaml;
 using System.Windows.Input;
 using System.Diagnostics;
@@ -31,7 +31,7 @@ namespace WindowsFormsExplorer
             _markdownScrollViewer = new MarkdownScrollViewer();
 
             // Load style more accommodating to high-contrast modes.
-            var styleUri = new Uri($"/{nameof(SharedSamples)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var styleUri = new Uri($"/{nameof(SamplesLibrary)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
             var resourceDict = (ResourceDictionary)System.Windows.Application.LoadComponent(styleUri);
             var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
             _markdownScrollViewer.MarkdownStyle = standardStyle;

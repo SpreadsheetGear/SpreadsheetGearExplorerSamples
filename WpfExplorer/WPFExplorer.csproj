@@ -45,7 +45,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedSamples\SharedSamples.csproj" />
+    <ProjectReference Include="..\SamplesLibrary\SamplesLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
