@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Create a new workbook with 4 worksheets.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();

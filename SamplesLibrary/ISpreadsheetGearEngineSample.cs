@@ -25,7 +25,7 @@ namespace SamplesLibrary
         /// Provides an opportunity to setup <see cref="Workbook"/> with the desired workbook before the
         /// <see cref="RunSample"/> method is called.
         /// </summary>
-        public void PreLoadWorkbook() { }
+        public void InitializeWorkbook() { }
 
         /// <summary>
         /// Call this to execute the sample.  Results should be stored in the <see cref="Workbook"/> property.

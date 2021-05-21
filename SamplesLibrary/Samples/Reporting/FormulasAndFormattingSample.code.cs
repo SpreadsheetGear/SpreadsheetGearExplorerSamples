@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Obtain CultureInfo object used on this machine.
             System.Globalization.CultureInfo culture = System.Globalization.CultureInfo.CurrentCulture;

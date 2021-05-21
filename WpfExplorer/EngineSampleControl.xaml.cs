@@ -33,7 +33,7 @@ namespace WPFExplorer
         private void InitializeSample()
         {
             DisposalManager.ResetWorkbookView(workbookView, false);
-            SpreadsheetGearEngineSample.PreLoadWorkbook();
+            SpreadsheetGearEngineSample.InitializeWorkbook();
             workbookView.ActiveWorkbook = SpreadsheetGearEngineSample.Workbook;
             button_runSample.IsEnabled = true;
         }

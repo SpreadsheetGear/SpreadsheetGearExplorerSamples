@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Get the full path to a workbook with sample data that will help demonstrate What-If 
             // Data Tables.

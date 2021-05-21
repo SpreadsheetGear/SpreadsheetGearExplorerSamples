@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Get the full path to a workbook with some data that helps demonstrate Goal Seek.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\GoalSeek.xlsx");

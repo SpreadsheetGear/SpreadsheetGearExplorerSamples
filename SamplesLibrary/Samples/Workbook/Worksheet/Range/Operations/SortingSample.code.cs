@@ -7,7 +7,7 @@
 
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Create a new workbook and create some local variables to the active worksheet and its cells.
             Workbook = SpreadsheetGear.Factory.GetWorkbook();

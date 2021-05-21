@@ -31,7 +31,7 @@ namespace WindowsFormsExplorer
         private void InitializeSample()
         {
             DisposalManager.ResetWorkbookView(workbookView, false);
-            EngineSample.PreLoadWorkbook();
+            EngineSample.InitializeWorkbook();
             workbookView.ActiveWorkbook = EngineSample.Workbook;
             button_runSample.Enabled = true;
         }

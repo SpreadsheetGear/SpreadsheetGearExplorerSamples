@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Get the full path to a workbook that will demonstrate how certain aspects of a worksheet can
             // still be enabled when worksheet protection is enabled.

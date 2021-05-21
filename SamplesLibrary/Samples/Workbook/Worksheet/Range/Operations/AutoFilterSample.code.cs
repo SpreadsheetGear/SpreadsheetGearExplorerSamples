@@ -4,7 +4,7 @@
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
-        public void PreLoadWorkbook()
+        public void InitializeWorkbook()
         {
             // Get the full path to a workbook with some data that we can apply AutoFilters to. The workbook 
             // contains 10 different sheets--each will be AutoFiltered using different criteria.

@@ -152,7 +152,7 @@ namespace WebExplorer
         private ISpreadsheetGearEngineSample RunSample(SampleInfo sampleInfo)
         {
             ISpreadsheetGearEngineSample sample = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
-            sample.PreLoadWorkbook();
+            sample.InitializeWorkbook();
             sample.RunSample();
 
             return sample;
