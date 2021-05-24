@@ -19,11 +19,10 @@
       <div class="children">
         @if (item.SampleNames.Any())
         {
-          <ul class="fa-ul">
+          <ul class="samples-list">
             @foreach (var name in item.SampleNames)
             {
               <li>
-                <span class="fa-li text-success"><i class="fas fa-play-circle"></i></span> 
                 <a href="javascript:void(0);" class="sample-link" data-sample-name="@name">@name</a>
               </li>
             }
@@ -51,7 +50,7 @@
       <button class="link-collapse-all sg-btn sg-btn-small sg-btn-blue"><i class="fa-fw fas fa-chevron-up"></i> Collapse All</button>
     </div>
     <div id="samples-tree-container" class="flex-fill overflow-auto">
-      <ul class="fa-ul ml-4 samples-tree">
+      <ul class="fa-ul samples-tree">
         @foreach (CategoryDTO category in Model.CategoryRoot.ChildCategories)
         {
           @RenderCategory(category)

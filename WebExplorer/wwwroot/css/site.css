@@ -32,6 +32,24 @@ ul.fa-ul {
   margin-left: 1.5em;
 }
 
+ul.samples-tree, ul.samples-tree ul {
+  list-style-type: none;
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+  ul.samples-tree ul.samples-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  ul.samples-tree ul.samples-list > li {
+    padding-left: 28pt;
+    background: url("/images/logo.svg") no-repeat left top;
+    background-size: 30pt;
+
+  }
+
 div.tab-pane {
   background-color: white;
 }
@@ -51,7 +69,6 @@ span.sample-description {}
 #source-code-tabs ul.nav-tabs {
   padding-left: 10px;
 }
-
 
 /* Prism.js */
 code[class*="language-"],
