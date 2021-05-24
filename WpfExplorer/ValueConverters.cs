@@ -53,11 +53,11 @@ namespace WPFExplorer
                 SampleInfo sampleInfo = (SampleInfo)value;
                 Uri uri;
                 if (sampleInfo.IsSharedEngineSample)
-                    uri = new Uri("/images/cog-32.png", UriKind.Relative);
+                    uri = new Uri("/SpreadsheetGearLogo.ico", UriKind.Relative);
                 else
                 {
                     if (sampleInfo.UsesWorkbookView)
-                        uri = new Uri("/images/Table-32.png", UriKind.Relative);
+                        uri = new Uri("/images/WorkbookView-32.png", UriKind.Relative);
                     else
                         uri = new Uri("/images/UserControl-32.png", UriKind.Relative);
                 }

@@ -34,6 +34,8 @@
     <None Remove="Images\Undo_16x.png" />
     <None Remove="Images\UserControl-32.png" />
     <None Remove="Images\window-alt-32.png" />
+    <None Remove="Images\windows-32.png" />
+    <None Remove="Images\WorkbookView-32.png" />
     <None Remove="Images\WPFApplication-32.png" />
     <None Remove="Images\WPFUserControl-32.png" />
     <None Remove="SpreadsheetGearLogo.ico" />
@@ -136,13 +138,21 @@
     <Resource Include="Images\window-alt-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\windows-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WorkbookView-32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\WPFApplication-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\WPFUserControl-32.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="SpreadsheetGearLogo.ico" />
+    <Resource Include="SpreadsheetGearLogo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
