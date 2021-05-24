@@ -11,6 +11,7 @@
         xmlns:shared="clr-namespace:SharedSamples;assembly=SharedSamples"
         mc:Ignorable="d"
         Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" 
+        UseLayoutRounding="True"
         Title="SpreadsheetGear - WPF Explorer" 
         Icon="/SpreadsheetGearLogo.ico" Loaded="Window_Loaded">
     <Grid>
