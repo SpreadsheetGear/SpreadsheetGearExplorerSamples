@@ -19,6 +19,11 @@ namespace WindowsFormsExplorer
     {
         public SGDisposalManager DisposalManager { get; private set; } = new SGDisposalManager();
 
+        protected SampleUserControl()
+        {
+            ;
+        }
+
         private bool _disposed = false;
         protected override void Dispose(bool disposing)
         {
