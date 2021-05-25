@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace WindowsFormsExplorer.Samples.Charting
 {
-    public partial class ChartGallerySample : SGUserControl
+    public partial class ChartGallerySample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

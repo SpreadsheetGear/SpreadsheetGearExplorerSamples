@@ -15,7 +15,7 @@ namespace WindowsFormsExplorer
     /// help manage proper disposal of workbook sets and WorkbookViews that are used by the samples (proper disposal is needed 
     /// in order to avoid issues with the "free" mode of the products that has row / column / worksheet / workbook limiits).
     /// </summary>
-    public class SGUserControl : UserControl, ISample
+    public class SampleUserControl : UserControl, ISample
     {
         public SGDisposalManager DisposalManager { get; private set; } = new SGDisposalManager();
 

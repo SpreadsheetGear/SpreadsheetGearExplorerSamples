@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.Calculations
 {
-    public partial class CustomFunctionsSample : SGUserControl
+    public partial class CustomFunctionsSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

@@ -1,4 +1,4 @@
-﻿<src:SGUserControl x:Class="WPFExplorer.Samples.WorkbookView.Events.CalculateSample"
+﻿<src:SampleUserControl x:Class="WPFExplorer.Samples.WorkbookView.Events.CalculateSample"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -20,4 +20,4 @@
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" Calculate="workbookView_Calculate" />
     </Grid>
-</src:SGUserControl>
+</src:SampleUserControl>

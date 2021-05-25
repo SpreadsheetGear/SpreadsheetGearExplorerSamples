@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.Printing
 {
-    public partial class PageBreaksSample : SGUserControl
+    public partial class PageBreaksSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

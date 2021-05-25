@@ -40,7 +40,7 @@ namespace SamplesLibrary
         /// The <see cref="Type"/> of the sample, which is used to activate an instance of the sample using 
         /// the <see cref="CreateInstance{T}"/> method.  Should be a type that implements <see cref="ISample"/>,  
         /// which includes <see cref="SharedEngineSample"/>, <see cref="ISpreadsheetGearWindowsSample"/> and other types 
-        /// that are UI-platform specific (see SGUserControl in WinForms and WPF projects, for instance).
+        /// that are UI-platform specific (see SampleUserControl in WinForms and WPF projects, for instance).
         /// </summary>
         public Type SampleType { get; set; }
 

@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView
 {
-    public partial class ActiveWorksheetSample : SGUserControl
+    public partial class ActiveWorksheetSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

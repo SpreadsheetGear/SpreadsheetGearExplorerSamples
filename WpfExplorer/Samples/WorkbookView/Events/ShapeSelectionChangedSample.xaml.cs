@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Events
 {
-    public partial class ShapeSelectionChangedSample : SGUserControl
+    public partial class ShapeSelectionChangedSample : SampleUserControl
     {
         public SamplesLibrary.Samples.WorkboookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
 

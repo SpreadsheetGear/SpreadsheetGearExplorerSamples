@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WindowsFormsExplorer.Samples.WorkbookView
 {
-    public partial class CultureInfoSample : SGUserControl
+    public partial class CultureInfoSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

@@ -170,7 +170,7 @@
         }
     }
 
-    public partial class CustomHeadersSample : SGUserControl
+    public partial class CustomHeadersSample : SampleUserControl
     {
         #region Sample Initialization Code
         public CustomHeadersSample()

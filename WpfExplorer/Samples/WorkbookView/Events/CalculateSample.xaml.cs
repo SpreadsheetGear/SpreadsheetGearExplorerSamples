@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Events
 {
-    public partial class CalculateSample : SGUserControl
+    public partial class CalculateSample : SampleUserControl
     {
         private void workbookView_Calculate(
             object sender, SpreadsheetGear.Windows.Controls.CalculateEventArgs e)

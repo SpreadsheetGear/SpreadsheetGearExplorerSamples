@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.DataGrid
 {
-    public partial class SpreadsheetToDataGridFormattedSample : SGUserControl
+    public partial class SpreadsheetToDataGridFormattedSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

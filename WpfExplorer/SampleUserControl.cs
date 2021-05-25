@@ -17,7 +17,7 @@ namespace WPFExplorer
     /// of workbook sets and WorkbookViews that are used by the samples (proper disposal is needed in order to avoid issues with 
     /// the "free" mode of the products that has row / column / worksheet / workbook limits).
     /// </summary>
-    public abstract class SGUserControl : UserControl, ISample, IDisposable
+    public abstract class SampleUserControl : UserControl, ISample, IDisposable
     {
         public SGDisposalManager DisposalManager { get; private set; } = new SGDisposalManager();
 

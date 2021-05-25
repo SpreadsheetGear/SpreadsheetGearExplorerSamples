@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.CommandManager
 {
-    public partial class CommandRangeSample : SGUserControl
+    public partial class CommandRangeSample : SampleUserControl
     {
         public SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
 

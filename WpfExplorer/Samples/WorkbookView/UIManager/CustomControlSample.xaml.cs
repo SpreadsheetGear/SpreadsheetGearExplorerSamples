@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace WPFExplorer.Samples.WorkbookView.UIManager
 {
-    public partial class CustomControlSample : SGUserControl
+    public partial class CustomControlSample : SampleUserControl
     {
         public CustomControlSample()
         {

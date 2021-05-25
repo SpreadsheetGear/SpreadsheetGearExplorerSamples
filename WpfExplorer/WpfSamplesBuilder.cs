@@ -63,7 +63,7 @@ namespace WPFExplorer
         public static void AddWpfSourceCodeFiles(Category category)
         {
             var targetType1 = typeof(ISpreadsheetGearWindowsSample);
-            var targetType2 = typeof(SGUserControl);
+            var targetType2 = typeof(SampleUserControl);
             foreach (var sample in category.SampleInfos.Where(i => targetType1.IsAssignableFrom(i.SampleType) ||
                 targetType2.IsAssignableFrom(i.SampleType)))
             {
@@ -84,7 +84,7 @@ namespace WPFExplorer
         /// Just adds simple type checking through generics to ensure expected type for sample is used.
         /// </summary>
         public static void AddWpfSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
-            where T : SGUserControl
+            where T : SampleUserControl
         {
             category.AddSample<T>(sampleName, description, usesWorkbookView);
         }

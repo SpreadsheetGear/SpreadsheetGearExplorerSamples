@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.Printing
 {
-    public partial class AdvancedPrintingSample : SGUserControl
+    public partial class AdvancedPrintingSample : SampleUserControl
     {
         private void buttonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
         {

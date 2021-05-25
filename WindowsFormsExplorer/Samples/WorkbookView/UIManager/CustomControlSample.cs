@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsExplorer.Samples.WorkbookView.UIManager
 {
-    public partial class CustomControlSample : SGUserControl
+    public partial class CustomControlSample : SampleUserControl
     {
         public void InitializeSample()
         {

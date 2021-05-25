@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.Calculations
 {
-    public partial class SimpleLoanCalculatorSample : SGUserControl
+    public partial class SimpleLoanCalculatorSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

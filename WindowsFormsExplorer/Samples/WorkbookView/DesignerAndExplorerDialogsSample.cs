@@ -2,7 +2,7 @@ using System;
 
 namespace WindowsFormsExplorer.Samples.WorkbookView
 {
-    public partial class DesignerAndExplorerDialogsSample : SGUserControl
+    public partial class DesignerAndExplorerDialogsSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

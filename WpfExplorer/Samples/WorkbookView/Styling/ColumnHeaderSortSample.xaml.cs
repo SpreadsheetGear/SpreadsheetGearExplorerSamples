@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Styling
 {
-    public partial class ColumnHeaderSortSample : SGUserControl
+    public partial class ColumnHeaderSortSample : SampleUserControl
     {
         private void columnHeader_MouseLeftButtonDown(
             object sender, System.Windows.Input.MouseButtonEventArgs e)

@@ -2,7 +2,7 @@
 
 namespace WPFExplorer.Samples.WorkbookView
 {
-    public partial class CultureInfoSample : SGUserControl
+    public partial class CultureInfoSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

@@ -1,4 +1,4 @@
-﻿<src:SGUserControl x:Class="WPFExplorer.Samples.DataGrid.SpreadsheetToDataGridSample"
+﻿<src:SampleUserControl x:Class="WPFExplorer.Samples.DataGrid.SpreadsheetToDataGridSample"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -17,4 +17,4 @@
         </StackPanel>
         <DataGrid x:Name="dataGrid" Grid.Column="1" />
     </Grid>
-</src:SGUserControl>
+</src:SampleUserControl>

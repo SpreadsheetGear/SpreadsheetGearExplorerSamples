@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class ActiveTabChangedSample : SGUserControl
+    public partial class ActiveTabChangedSample : SampleUserControl
     {
         private void workbookView_ActiveTabChanged(
             object sender, SpreadsheetGear.Windows.Forms.ActiveTabChangedEventArgs e)

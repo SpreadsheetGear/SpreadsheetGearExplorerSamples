@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class CalculateSample : SGUserControl
+    public partial class CalculateSample : SampleUserControl
     {
         private void buttonCalculate_Click(object sender, System.EventArgs e)
         {

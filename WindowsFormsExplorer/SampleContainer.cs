@@ -71,7 +71,7 @@ namespace WindowsFormsExplorer
 
             // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
             // and run the sample.
-            SGUserControl sampleUserControl;
+            SampleUserControl sampleUserControl;
             if (sampleInfo.IsSharedEngineSample)
             {
                 var engineSample = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
@@ -81,17 +81,17 @@ namespace WindowsFormsExplorer
             else
             {
                 // SharedWindowSamples can still be shared between WPF, WinForms, etc., as a common IWorkbookView
-                // interface is used to work across UI frameworks.  A concrete XAML SGUserControl still needs to be
+                // interface is used to work across UI frameworks.  A concrete XAML SampleUserControl still needs to be
                 // available to work alongside the SharedWindowSample, however.
                 if (sampleInfo.IsSharedWindowsSample)
                 {
-                    sampleUserControl = FindSGUserControlSample(sampleInfo.SampleType);
+                    sampleUserControl = FindSampleUserControlSample(sampleInfo.SampleType);
                 }
-                // SGUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
+                // SampleUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
                 // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
-                else if (typeof(SGUserControl).IsAssignableFrom(sampleInfo.SampleType))
+                else if (typeof(SampleUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
-                    sampleUserControl = sampleInfo.CreateInstance<SGUserControl>();
+                    sampleUserControl = sampleInfo.CreateInstance<SampleUserControl>();
                 }
                 else
                 {
@@ -124,23 +124,23 @@ namespace WindowsFormsExplorer
 
 
         /// <summary>
-        /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SGUserControl"/> that contains the Shared Windows Sample and both classes must have the same name.
+        /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SampleUserControl"/> that contains the Shared Windows Sample and both classes must have the same name.
         /// </summary>
         /// <param name="sampleType">A Type that inherits from <see cref="ISpreadsheetGearWindowsSample"/></param>
-        /// <returns>The corresponding <see cref="SGUserControl"/> for the <see cref="ISpreadsheetGearWindowsSample"/>.</returns>
-        public SGUserControl FindSGUserControlSample(Type sampleType)
+        /// <returns>The corresponding <see cref="SampleUserControl"/> for the <see cref="ISpreadsheetGearWindowsSample"/>.</returns>
+        public SampleUserControl FindSampleUserControlSample(Type sampleType)
         {
             if (!typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(sampleType))
                 throw new ArgumentException($"The provided type {sampleType.Name} does not inherit from {nameof(ISpreadsheetGearWindowsSample)}.", nameof(sampleType));
 
-            var allSGUserControls = this.GetType().Assembly
+            var allSampleUserControls = this.GetType().Assembly
                 .GetTypes()
-                .Where(t => typeof(SGUserControl).IsAssignableFrom(t));
-            var userControlType = allSGUserControls.SingleOrDefault(t => t.Name == sampleType.Name);
+                .Where(t => typeof(SampleUserControl).IsAssignableFrom(t));
+            var userControlType = allSampleUserControls.SingleOrDefault(t => t.Name == sampleType.Name);
             if (userControlType == null)
-                throw new InvalidOperationException($"Could not locate a corresponding {nameof(SGUserControl)} class for the provided {nameof(ISpreadsheetGearWindowsSample)} ('{sampleType.Name}').");
+                throw new InvalidOperationException($"Could not locate a corresponding {nameof(SampleUserControl)} class for the provided {nameof(ISpreadsheetGearWindowsSample)} ('{sampleType.Name}').");
 
-            return (SGUserControl)Activator.CreateInstance(userControlType);
+            return (SampleUserControl)Activator.CreateInstance(userControlType);
         }
 
 
@@ -148,9 +148,9 @@ namespace WindowsFormsExplorer
         {
             if (panelSampleContainer.Controls.Count == 1)
             {
-                var sgUserControl = (SGUserControl)panelSampleContainer.Controls[0];
-                panelSampleContainer.Controls.Remove(sgUserControl);
-                sgUserControl.Dispose();
+                var SampleUserControl = (SampleUserControl)panelSampleContainer.Controls[0];
+                panelSampleContainer.Controls.Remove(SampleUserControl);
+                SampleUserControl.Dispose();
             }
             System.Diagnostics.Debug.Assert(panelSampleContainer.Controls.Count == 0);
         }

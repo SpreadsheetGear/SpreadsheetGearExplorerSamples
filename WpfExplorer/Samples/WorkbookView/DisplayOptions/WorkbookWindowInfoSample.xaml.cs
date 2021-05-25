@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
 {
-    public partial class WorkbookWindowInfoSample : SGUserControl
+    public partial class WorkbookWindowInfoSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

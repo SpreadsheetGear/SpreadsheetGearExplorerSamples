@@ -12,7 +12,7 @@ namespace WPFExplorer
     /// <summary>
     /// This UserControl is used to host and execute all samples that implement <see cref="SharedEngineSample"/>.
     /// </summary>
-    public partial class EngineSampleControl : SGUserControl
+    public partial class EngineSampleControl : SampleUserControl
     {
         public ISpreadsheetGearEngineSample SpreadsheetGearEngineSample { get; private set; }
 

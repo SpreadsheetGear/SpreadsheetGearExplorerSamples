@@ -2,7 +2,7 @@
     Copyright © SpreadsheetGear LLC. All Rights Reserved.
     SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 -->
-<src:SGUserControl x:Class="WPFExplorer.EngineSampleControl"
+<src:SampleUserControl x:Class="WPFExplorer.EngineSampleControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -42,4 +42,4 @@
         <sg:FormulaBar x:Name="formulaBar" Grid.Row="0" Grid.Column="1" />
         <src:WpfWorkbookView x:Name="workbookView" Grid.Row="1" Grid.Column="1"></src:WpfWorkbookView>
     </Grid>
-</src:SGUserControl>
+</src:SampleUserControl>

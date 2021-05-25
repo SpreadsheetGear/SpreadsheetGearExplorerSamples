@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class CellBeginEditSample : SGUserControl
+    public partial class CellBeginEditSample : SampleUserControl
     {
         private void workbookView_CellBeginEdit(
             object sender, SpreadsheetGear.Windows.Forms.CellBeginEditEventArgs e)

@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.Reporting
 {
-    public partial class WorkbookConsolidationSample : SGUserControl
+    public partial class WorkbookConsolidationSample : SampleUserControl
     {
         // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.

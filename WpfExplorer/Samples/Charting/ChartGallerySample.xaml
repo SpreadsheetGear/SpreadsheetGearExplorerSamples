@@ -1,4 +1,4 @@
-﻿<src:SGUserControl x:Class="WPFExplorer.Samples.Charting.ChartGallerySample"
+﻿<src:SampleUserControl x:Class="WPFExplorer.Samples.Charting.ChartGallerySample"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -30,4 +30,4 @@
         <ListBox Name="listBoxType" Width="160" Height="230" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionMode="Single" Margin="0,2,5,5" Grid.Row="1" Grid.Column="1" SelectionChanged="listBoxType_SelectionChanged" />
         <Image Name="imageControl" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,5,5" Grid.Row="1" Grid.Column="2" />
     </Grid>
-</src:SGUserControl>
+</src:SampleUserControl>

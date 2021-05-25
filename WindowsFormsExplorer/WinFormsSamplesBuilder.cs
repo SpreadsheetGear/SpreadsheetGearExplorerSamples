@@ -55,9 +55,9 @@ namespace WindowsFormsExplorer
         public static void AddWinFormsSourceCodeFiles(Category category)
         {
             var targetTypeSharedWinSample = typeof(ISpreadsheetGearWindowsSample);
-            var targetTypeSGUserControl = typeof(SGUserControl);
+            var targetTypeSampleUserControl = typeof(SampleUserControl);
             foreach (var sample in category.SampleInfos.Where(i =>
-                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSGUserControl.IsAssignableFrom(i.SampleType)))
+                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSampleUserControl.IsAssignableFrom(i.SampleType)))
             {
                 sample.AddSourceCode($"{sample.SampleType.Name}.cs");
             }
@@ -77,7 +77,7 @@ namespace WindowsFormsExplorer
         /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
         /// information can be used by the samples app UI to display different icons representing the sample.</param>
         public static SampleInfo AddWinFormsSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
-            where T : SGUserControl
+            where T : SampleUserControl
         {
             var sampleInfo = category.AddSample<T>(sampleName, description, usesWorkbookView);
             return sampleInfo;
