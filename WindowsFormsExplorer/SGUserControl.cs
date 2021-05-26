@@ -30,5 +30,28 @@ namespace WindowsFormsExplorer
                 DisposalManager.Dispose();
             }
         }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            WinFormsWorkbookView workbookView = this.Controls.Find("workbookView", true)[0] as WinFormsWorkbookView;
+            if (workbookView != null)
+            {
+                DisposalManager.RegisterWorkbookViews(workbookView);
+                //switch (this.GetType().Name)
+                //{
+                //    case "AdvancedPrintingSample":
+                //    case "BasicPrintingSample":
+                //    case "PageBreaksSample":
+                //    case "PageSetupSample":
+                //    case "DisplayReferenceSample":
+                //    case "ShapeSelectionChangedSample":
+                //        DisposalManager.ResetWorkbookView(workbookView, false);
+                //        break;
+                //    default:
+                //        break;
+                //}
+            }
+        }
     }
 }

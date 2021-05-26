@@ -18,7 +18,7 @@ namespace WPFExplorer
 
         public EngineSampleControl(SharedEngineSample engineSample) : this()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             EngineSample = engineSample;
             InitializeSample();
         }

@@ -25,7 +25,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public RangeSelectionChangedSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 
         private void InitializeSample()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

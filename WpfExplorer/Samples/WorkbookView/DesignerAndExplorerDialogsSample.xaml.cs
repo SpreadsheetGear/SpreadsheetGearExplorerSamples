@@ -114,7 +114,7 @@ namespace WPFExplorer.Samples.WorkbookView
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.DesignerAndExplorerDialogsSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

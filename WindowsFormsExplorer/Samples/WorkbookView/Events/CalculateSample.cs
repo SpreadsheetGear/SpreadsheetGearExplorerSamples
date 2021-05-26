@@ -55,7 +55,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public CalculateSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public ShapeSelectionChangedSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

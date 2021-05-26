@@ -35,6 +35,29 @@ namespace WPFExplorer
             }
         }
 
+        public override void EndInit()
+        {
+            base.EndInit();
+            WpfWorkbookView workbookView = this.FindName("workbookView") as WpfWorkbookView;
+            if (workbookView != null)
+            {
+                DisposalManager.RegisterWorkbookViews(workbookView);
+                //switch (this.GetType().Name)
+                //{
+                //    case "AdvancedPrintingSample":
+                //    case "BasicPrintingSample":
+                //    case "PageBreaksSample":
+                //    case "PageSetupSample":
+                //    case "DisplayReferenceSample":
+                //    case "ShapeSelectionChangedSample":
+                //        DisposalManager.ResetWorkbookView(workbookView, false);
+                //        break;
+                //    default:
+                //        break;
+                //}
+            }
+        }
+
         public Guid Id { get; } = Guid.NewGuid();
     }
 }

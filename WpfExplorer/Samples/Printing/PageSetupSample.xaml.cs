@@ -22,7 +22,7 @@
 
         private void InitializeSample()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
             Sample = new SharedSamples.Samples.Printing.PageSetupSample();
             Sample.InitializeSample(workbookView);

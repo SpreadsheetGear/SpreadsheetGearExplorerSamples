@@ -26,7 +26,7 @@ namespace WPFExplorer.Samples.WorkbookView.Reporting
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.Reporting.WorkbookConsolidationSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

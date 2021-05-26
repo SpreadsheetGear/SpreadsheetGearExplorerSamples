@@ -48,7 +48,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public CellEndEditSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

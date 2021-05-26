@@ -47,7 +47,7 @@
         public CustomControlSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             InitializeSample();
         }
         #endregion

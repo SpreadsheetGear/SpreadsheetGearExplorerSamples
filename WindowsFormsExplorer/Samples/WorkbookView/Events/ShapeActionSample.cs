@@ -38,7 +38,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public ShapeActionSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

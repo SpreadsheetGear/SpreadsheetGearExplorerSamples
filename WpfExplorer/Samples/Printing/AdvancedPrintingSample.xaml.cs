@@ -70,7 +70,7 @@
         public AdvancedPrintingSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Open workbook using the current culture.

@@ -22,7 +22,7 @@ namespace WindowsFormsExplorer.Samples.Printing
 
         private void InitializeSample()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
             Sample = new SharedSamples.Samples.Printing.PageBreaksSample();
             Sample.InitializeSample(workbookView);

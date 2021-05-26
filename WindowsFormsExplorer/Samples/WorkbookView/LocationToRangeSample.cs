@@ -24,7 +24,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.LocationToRangeSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             workbookView.GetLock();
             try
             {

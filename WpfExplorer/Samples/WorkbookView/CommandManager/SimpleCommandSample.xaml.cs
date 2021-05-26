@@ -28,7 +28,7 @@
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.CommandManager.SimpleCommandSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

@@ -52,7 +52,7 @@
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.CommandManager.CommandRangeSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
             trackBar_red.Value = panel_colorPreview.BackColor.R;
             trackBar_green.Value = panel_colorPreview.BackColor.G;
             trackBar_blue.Value = panel_colorPreview.BackColor.B;

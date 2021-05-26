@@ -57,7 +57,7 @@ namespace WPFExplorer.Samples.WorkbookView.UIManager
         #region Sample Initialization Code
         public void InitializeSample()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

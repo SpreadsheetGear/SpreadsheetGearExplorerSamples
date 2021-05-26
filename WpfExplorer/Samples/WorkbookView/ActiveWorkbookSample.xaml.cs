@@ -110,7 +110,7 @@
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.ActiveWorkbookSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

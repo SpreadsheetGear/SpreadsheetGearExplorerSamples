@@ -23,7 +23,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.ActiveWorksheetSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
     }

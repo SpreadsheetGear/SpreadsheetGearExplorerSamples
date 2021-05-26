@@ -181,7 +181,7 @@
 
         public void InitializeSample()
         {
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();
             try

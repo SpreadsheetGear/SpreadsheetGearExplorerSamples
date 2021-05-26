@@ -39,7 +39,7 @@
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();
             try

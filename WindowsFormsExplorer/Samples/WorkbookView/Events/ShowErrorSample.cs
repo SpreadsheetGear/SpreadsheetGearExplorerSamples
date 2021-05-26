@@ -29,7 +29,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         public ShowErrorSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
         }
     }
 }

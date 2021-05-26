@@ -36,7 +36,7 @@ namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
         private void InitializeSample()
         {
             Sample = new SharedSamples.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();
             try

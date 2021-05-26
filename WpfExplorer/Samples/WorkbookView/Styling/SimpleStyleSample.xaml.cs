@@ -5,7 +5,7 @@
         public SimpleStyleSample()
         {
             InitializeComponent();
-            DisposalManager.RegisterWorkbookViews(workbookView);
+            // DisposalManager.RegisterWorkbookViews(workbookView);
 
             // See SimpleStyle.xaml for the markup used to style the WorkbookView.
         }
