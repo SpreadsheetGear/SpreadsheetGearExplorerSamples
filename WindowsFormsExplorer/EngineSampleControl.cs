@@ -10,7 +10,7 @@ using System;
 namespace WindowsFormsExplorer
 {
     /// <summary>
-    /// This UserControl is used to host and execute all samples that implement <see cref="SharedEngineSample"/>.
+    /// This UserControl is used to host and execute all samples that implement <see cref="ISpreadsheetGearEngineSample"/>.
     /// </summary>
     public partial class EngineSampleControl : SampleUserControl
     {

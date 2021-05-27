@@ -4,8 +4,6 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using System;
-
 namespace SamplesLibrary
 {
     /// <summary>

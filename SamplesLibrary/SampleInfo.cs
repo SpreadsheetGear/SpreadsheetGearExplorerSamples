@@ -39,14 +39,15 @@ namespace SamplesLibrary
         /// <summary>
         /// The <see cref="Type"/> of the sample, which is used to activate an instance of the sample using 
         /// the <see cref="CreateInstance{T}"/> method.  Should be a type that implements <see cref="ISample"/>,  
-        /// which includes <see cref="SharedEngineSample"/>, <see cref="ISpreadsheetGearWindowsSample"/> and other types 
-        /// that are UI-platform specific (see SampleUserControl in WinForms and WPF projects, for instance).
+        /// which includes <see cref="ISpreadsheetGearEngineSample"/>, <see cref="ISpreadsheetGearWindowsSample"/> 
+        /// and other types that are UI-platform specific (see SampleUserControl in WinForms and WPF projects, 
+        /// for instance).
         /// </summary>
         public Type SampleType { get; set; }
 
-        public bool IsSharedEngineSample => typeof(ISpreadsheetGearEngineSample).IsAssignableFrom(SampleType);
+        public bool IsSpreadsheetGearEngineSample => typeof(ISpreadsheetGearEngineSample).IsAssignableFrom(SampleType);
 
-        public bool IsSharedWindowsSample => typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(SampleType);
+        public bool IsSpreadsheetGearWindowsSample => typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(SampleType);
 
         /// <summary>
         /// Name of the sample.

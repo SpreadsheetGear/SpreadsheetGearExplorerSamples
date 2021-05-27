@@ -52,7 +52,7 @@ namespace WPFExplorer
             {
                 SampleInfo sampleInfo = (SampleInfo)value;
                 Uri uri;
-                if (sampleInfo.IsSharedEngineSample)
+                if (sampleInfo.IsSpreadsheetGearEngineSample)
                     uri = new Uri("/SpreadsheetGearLogo.ico", UriKind.Relative);
                 else
                 {

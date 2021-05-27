@@ -46,7 +46,7 @@ namespace WPFExplorer
 
         private void PopulateSampleTree()
         {
-            // Build the shared categories and shared (Engine and Windows) samples.
+            // Build the shared categories and SpreadsheetGear Engine and Windows samples.
             var categoryRoot = SamplesBuilder.Build();
 
             // Intermix in the WPF-specific samples.

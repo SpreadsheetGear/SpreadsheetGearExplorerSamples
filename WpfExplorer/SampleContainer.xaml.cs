@@ -66,10 +66,10 @@ namespace WPFExplorer
         {
             DisposeCurrentSample();
 
-            // SharedEngineSamples are hosted in a EngineSampleControl and provide a common user interface to load
-            // and run the sample.
+            /// <see cref="ISpreadsheetGearEngineSample"/> are hosted in a <see cref="EngineSampleControl"/>and provide a 
+            /// common user interface to load and run the sample.
             SampleUserControl sampleUserControl;
-            if (sampleInfo.IsSharedEngineSample)
+            if (sampleInfo.IsSpreadsheetGearEngineSample)
             {
                 var engineSample  = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
                 sampleUserControl = new EngineSampleControl(engineSample);
@@ -77,14 +77,14 @@ namespace WPFExplorer
             }
             else 
             {
-                // SharedWindowSamples can still be shared between WPF, WinForms, etc., as a common IWorkbookView
-                // interface is used to work across UI frameworks.  A concrete XAML SampleUserControl still needs to be
-                // available to work alongside the SharedWindowSample, however.
-                if (sampleInfo.IsSharedWindowsSample)
+                /// <see cref="ISpreadsheetGearWindowsSample"/> sample types can still be shared between WPF, WinForms, etc., 
+                /// as a common IWorkbookView interface is used to work across UI frameworks.  A concrete XAML SampleUserControl 
+                /// still needs to be available to work alongside the <see cref="ISpreadsheetGearWindowsSample"/>, however.
+                if (sampleInfo.IsSpreadsheetGearWindowsSample)
                 {
                     sampleUserControl = FindSampleUserControlSample(sampleInfo.SampleType);
                 }
-                // SampleUserControls are used for purely WPF-centric samples whose code cannot be shared (for instance,
+                // SampleUserControls here are used for purely WPF-centric samples whose code cannot be shared (for instance,
                 // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
                 else if (typeof(SampleUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
@@ -120,7 +120,7 @@ namespace WPFExplorer
 
 
         /// <summary>
-        /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SampleUserControl"/> that contains the Shared Windows Sample and both classes must have the same name.
+        /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SampleUserControl"/> that contains the SpreadsheetGear Windows Sample, and both classes must have the same name.
         /// </summary>
         /// <param name="sampleType">A Type that inherits from <see cref="ISpreadsheetGearWindowsSample"/></param>
         /// <returns>The corresponding <see cref="SampleUserControl"/> for the <see cref="ISpreadsheetGearWindowsSample"/>.</returns>

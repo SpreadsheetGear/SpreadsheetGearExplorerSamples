@@ -28,7 +28,7 @@ using SamplesLibrary.Samples.Printing;
 namespace SamplesLibrary
 {
     /// <summary>
-    /// Builds up categories and Shared Engine / Windows Samples.
+    /// Builds up categories and SpreadsheetGear Engine / Windows Samples.
     /// </summary>
     public class SamplesBuilder
     {
@@ -48,7 +48,7 @@ namespace SamplesLibrary
                 {
                     categoryWbvSamples.AddWindowsSample<ActiveWorkbookSample>("Active Workbook", "Create or open workbooks from a variety of locations (Disk, Uri, memory stream, byte array).", true);
                     categoryWbvSamples.AddWindowsSample<ActiveWorksheetSample>("Active Worksheet", "Add multiple worksheets to a workbook and display a new worksheet.", true);
-                    categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.", true);
+                    categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.  This sample creates a workbook with the German ('de-DE') CultureInfo, saves the workbook to disk, and re-opens it in the selected CultureInfo to demonstrate changes in locale-senstive formats.", true);
                     categoryWbvSamples.AddWindowsSample<DesignerAndExplorerDialogsSample>("Designer and Explorer Dialogs", "Show the Workbook Designer, Workbook Explorer, Range Explorer, Chart Explorer, and Shape Explorer.", true);
                     categoryWbvSamples.AddWindowsSample<LocationToRangeSample>("Location To Range", "Use the LocationToRange method from a mouse event.", true);
 

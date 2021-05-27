@@ -48,7 +48,7 @@ namespace WindowsFormsExplorer
 
         private void PopulateSampleTree()
         {
-            // Build the shared categories and shared (Engine and Windows) samples.
+            // Build the shared categories and SpreadsheetGear Engine and Windows samples.
             var categoryRoot = SamplesBuilder.Build();
 
             // Add in the WinForms-specific samples.
@@ -73,7 +73,7 @@ namespace WindowsFormsExplorer
                 samplesTreeView.Nodes.Add(categoryNode);
             foreach (var sampleInfo in currentCategory.SampleInfos)
             {
-                int imageIndex = sampleInfo.IsSharedEngineSample ? EngineImageIndex : WindowsImageIndex;
+                int imageIndex = sampleInfo.IsSpreadsheetGearEngineSample ? EngineImageIndex : WindowsImageIndex;
                 int selectedImageIndex = imageIndex;
                 var sampleNode = new TreeNode(sampleInfo.Name, imageIndex, selectedImageIndex);
                 sampleNode.Tag = sampleInfo;

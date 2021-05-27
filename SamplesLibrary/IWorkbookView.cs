@@ -12,7 +12,9 @@ using SpreadsheetGear.Controls;
 namespace SamplesLibrary
 {
     /// <summary>
-    /// Abstracts away a common set of properties and methods from both the Windows Forms WorkbookView control and WPF WorkbookView control so that samples implementing <see cref="ISpreadsheetGearWindowsSample"/> can use this common interface.  Additional supporting code files will be present in either the WindowsFormsExplorer VS Project (i.e., UserControl classes) or WPFExplorer (i.e., *.xaml and *.xaml.cs) that provides the actual UI implementation, which could include a WorkbookView control that implements this interface.
+    /// Abstracts away a common set of properties and methods from both the Windows Forms WorkbookView control 
+    /// and WPF WorkbookView control so that samples implementing <see cref="ISpreadsheetGearWindowsSample"/> 
+    /// can use this common interface.
     /// </summary>
     public interface IWorkbookView
     {

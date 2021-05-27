@@ -54,10 +54,10 @@ namespace WindowsFormsExplorer
         /// <param name="category"></param>
         public static void AddWinFormsSourceCodeFiles(Category category)
         {
-            var targetTypeSharedWinSample = typeof(ISpreadsheetGearWindowsSample);
+            var targetTypeWinSample = typeof(ISpreadsheetGearWindowsSample);
             var targetTypeSampleUserControl = typeof(SampleUserControl);
             foreach (var sample in category.SampleInfos.Where(i =>
-                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSampleUserControl.IsAssignableFrom(i.SampleType)))
+                targetTypeWinSample.IsAssignableFrom(i.SampleType) || targetTypeSampleUserControl.IsAssignableFrom(i.SampleType)))
             {
                 sample.AddSourceCode($"{sample.SampleType.Name}.cs");
             }

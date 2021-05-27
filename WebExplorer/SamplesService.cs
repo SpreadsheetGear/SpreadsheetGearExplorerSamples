@@ -60,7 +60,8 @@ namespace WebExplorer
 
 
         /// <summary>
-        /// All samples run are of type <see cref="SharedEngineSample"/>, so can be run on their own (no UI involved) using <see cref="SharedEngineSample.RunSample"/>.
+        /// All samples run are of type <see cref="ISpreadsheetGearEngineSample"/>, so can be run on their own (no UI 
+        /// involved) using <see cref="ISpreadsheetGearEngineSample.RunSample"/>.
         /// </summary>
         /// <param name="sampleName">Name of the sample to run (<see cref="SampleInfo.Name"/>).
         public FileResult RunSampleDownload(string sampleName)
@@ -85,7 +86,8 @@ namespace WebExplorer
 
 
         /// <summary>
-        /// All samples run are of type <see cref="SharedEngineSample"/>, so can be run on their own (no UI involved) using <see cref="SharedEngineSample.RunSample"/>.
+        /// All samples run are of type <see cref="ISpreadsheetGearEngineSample"/>, so can be run on their own (no UI 
+        /// involved) using <see cref="ISpreadsheetGearEngineSample.RunSample"/>.
         /// </summary>
         /// <param name="sampleName">Name of the sample to run (<see cref="SampleInfo.Name"/>).
         /// <returns></returns>
