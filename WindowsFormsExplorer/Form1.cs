@@ -84,7 +84,7 @@ namespace WindowsFormsExplorer
                     imageIndex = EngineImageIndex;
                 else
                 {
-                    if (sampleInfo.IsSpreadsheetGearWindowsSample)
+                    if (sampleInfo.UsesWorkbookView)
                         imageIndex = WindowsWorkbookViewImageIndex;
                     else
                         imageIndex = WindowsImageIndex;
