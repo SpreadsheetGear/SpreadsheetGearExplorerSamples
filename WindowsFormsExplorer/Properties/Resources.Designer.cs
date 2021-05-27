@@ -93,9 +93,39 @@ namespace WindowsFormsExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SpreadsheetGearLogo_32 {
+            get {
+                object obj = ResourceManager.GetObject("SpreadsheetGearLogo_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserControl_32 {
+            get {
+                object obj = ResourceManager.GetObject("UserControl_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap window_alt_32 {
             get {
                 object obj = ResourceManager.GetObject("window_alt_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WorkbookView_32 {
+            get {
+                object obj = ResourceManager.GetObject("WorkbookView_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
