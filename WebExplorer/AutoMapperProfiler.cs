@@ -5,7 +5,7 @@
 */
 
 using AutoMapper;
-using SharedSamples;
+using SamplesLibrary;
 using System.Linq;
 
 namespace WebExplorer

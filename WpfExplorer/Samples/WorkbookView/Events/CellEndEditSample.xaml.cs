@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Events
 {
-    public partial class CellEndEditSample : SGUserControl
+    public partial class CellEndEditSample : SampleUserControl
     {
         private void workbookView_CellEndEdit(object sender, SpreadsheetGear.Windows.Controls.CellEndEditEventArgs e)
         {

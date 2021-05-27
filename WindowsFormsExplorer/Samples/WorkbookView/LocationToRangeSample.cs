@@ -1,10 +1,10 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView
 {
-    public partial class LocationToRangeSample : SGUserControl
+    public partial class LocationToRangeSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
 
         private void workbookView_MouseDown(
             object sender, System.Windows.Forms.MouseEventArgs e)
@@ -23,7 +23,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.LocationToRangeSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.LocationToRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             workbookView.GetLock();
             try

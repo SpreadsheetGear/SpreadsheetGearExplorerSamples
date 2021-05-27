@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System;
 
 namespace WindowsFormsExplorer
@@ -12,11 +12,11 @@ namespace WindowsFormsExplorer
     /// <summary>
     /// This UserControl is used to host and execute all samples that implement <see cref="SharedEngineSample"/>.
     /// </summary>
-    public partial class EngineSampleControl : SGUserControl
+    public partial class EngineSampleControl : SampleUserControl
     {
-        public SharedEngineSample EngineSample { get; private set; }
+        public ISpreadsheetGearEngineSample EngineSample { get; private set; }
 
-        public EngineSampleControl(SharedEngineSample engineSample) : this()
+        public EngineSampleControl(ISpreadsheetGearEngineSample engineSample) : this()
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
             EngineSample = engineSample;
@@ -31,7 +31,7 @@ namespace WindowsFormsExplorer
         private void InitializeSample()
         {
             DisposalManager.ResetWorkbookView(workbookView, false);
-            EngineSample.PreLoadWorkbook();
+            EngineSample.InitializeWorkbook();
             workbookView.ActiveWorkbook = EngineSample.Workbook;
             button_runSample.Enabled = true;
         }

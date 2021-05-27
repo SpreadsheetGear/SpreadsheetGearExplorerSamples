@@ -8,7 +8,7 @@ using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
-using SharedSamples;
+using SamplesLibrary;
 
 /// <summary>
 /// This file contains all the IValueConverter classes used by WPFExplorer
@@ -21,7 +21,7 @@ namespace WPFExplorer
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is SharedSamples.Category)
+            if (value is SamplesLibrary.Category)
             {
                 Category category = (Category)value;
                 Uri uri = null;

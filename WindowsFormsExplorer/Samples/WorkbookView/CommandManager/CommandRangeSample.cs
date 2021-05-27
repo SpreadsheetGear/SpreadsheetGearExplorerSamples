@@ -1,10 +1,10 @@
 ﻿namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
 {
-    public partial class CommandRangeSample : SGUserControl
+    public partial class CommandRangeSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
         private void button_execute_Click(object sender, System.EventArgs e)
         {
@@ -51,7 +51,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.CommandManager.CommandRangeSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             trackBar_red.Value = panel_colorPreview.BackColor.R;
             trackBar_green.Value = panel_colorPreview.BackColor.G;

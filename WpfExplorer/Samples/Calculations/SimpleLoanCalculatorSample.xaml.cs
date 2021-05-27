@@ -1,14 +1,14 @@
 ﻿namespace WPFExplorer.Samples.Calculations
 {
-    public partial class SimpleLoanCalculatorSample : SGUserControl
+    public partial class SimpleLoanCalculatorSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WpfExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Calculations.SimpleLoanCalculatorSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Calculations.SimpleLoanCalculatorSample Sample { get; private set; }
 
         private void buttonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            SharedSamples.Samples.Calculations.SimpleLoanCalculatorResults results = 
+            SamplesLibrary.Samples.Calculations.SimpleLoanCalculatorResults results = 
                 Sample.Calculate(textBoxAmount.Text, textBoxRate.Text, textBoxPeriods.Text);
 
             // Copy over the original user inputs.  Note that simple-inputted values are now more nicely 
@@ -31,7 +31,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.Calculations.SimpleLoanCalculatorSample();
+            Sample = new SamplesLibrary.Samples.Calculations.SimpleLoanCalculatorSample();
         }
         #endregion
     }

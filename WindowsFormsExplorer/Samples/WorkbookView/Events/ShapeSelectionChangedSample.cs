@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class ShapeSelectionChangedSample : SGUserControl
+    public partial class ShapeSelectionChangedSample : SampleUserControl
     {
         private void workbookView_ShapeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Forms.ShapeSelectionChangedEventArgs e)

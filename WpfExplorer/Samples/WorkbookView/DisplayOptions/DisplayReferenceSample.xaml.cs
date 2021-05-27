@@ -1,10 +1,10 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
 {
-    public partial class DisplayReferenceSample : SGUserControl
+    public partial class DisplayReferenceSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WpfExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
 
         private void RadioButton_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -21,7 +21,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
 

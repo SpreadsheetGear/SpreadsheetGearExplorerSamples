@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using WPFExplorer.Samples.Printing;
 using WPFExplorer.Samples.WorkbookView.Events;
 using WPFExplorer.Samples.WorkbookView.UIManager;
@@ -16,7 +16,7 @@ namespace WPFExplorer
     public class WpfSamplesBuilder
     {
         /// <summary>
-        ///  Adds a handful of samples that directly depend on the WPF WorkbookView implementation and so cannot use shared code like the <see cref="SharedWindowsSample"/> samples.
+        ///  Adds a handful of samples that directly depend on the WPF WorkbookView implementation and so cannot use shared code like the <see cref="ISpreadsheetGearWindowsSample"/> samples.
         /// </summary>
         public static void Build(Category rootCategory)
         {
@@ -62,8 +62,8 @@ namespace WPFExplorer
         /// <param name="category"></param>
         public static void AddWpfSourceCodeFiles(Category category)
         {
-            var targetType1 = typeof(SharedWindowsSample);
-            var targetType2 = typeof(SGUserControl);
+            var targetType1 = typeof(ISpreadsheetGearWindowsSample);
+            var targetType2 = typeof(SampleUserControl);
             foreach (var sample in category.SampleInfos.Where(i => targetType1.IsAssignableFrom(i.SampleType) ||
                 targetType2.IsAssignableFrom(i.SampleType)))
             {
@@ -84,7 +84,7 @@ namespace WPFExplorer
         /// Just adds simple type checking through generics to ensure expected type for sample is used.
         /// </summary>
         public static void AddWpfSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
-            where T : SGUserControl
+            where T : SampleUserControl
         {
             category.AddSample<T>(sampleName, description, usesWorkbookView);
         }

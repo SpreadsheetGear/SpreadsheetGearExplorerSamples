@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class RangeChangedSample : SGUserControl
+    public partial class RangeChangedSample : SampleUserControl
     {
         private void workbookView_RangeChanged(
             object sender, SpreadsheetGear.Windows.Forms.RangeChangedEventArgs e)

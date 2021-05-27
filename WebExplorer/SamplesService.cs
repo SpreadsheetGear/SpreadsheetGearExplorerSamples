@@ -5,7 +5,7 @@
 */
 
 using Microsoft.AspNetCore.Mvc;
-using SharedSamples;
+using SamplesLibrary;
 using SpreadsheetGear;
 using System;
 using System.Drawing;
@@ -67,7 +67,7 @@ namespace WebExplorer
         {
             // Get the sample and run it.
             SampleInfo sampleInfo = GetSampleInfo(sampleName);
-            SharedEngineSample sample = RunSample(sampleInfo);
+            ISpreadsheetGearEngineSample sample = RunSample(sampleInfo);
 
             // Save resultant workbook to a memory stream.
             var workbookStream = sample.Workbook.SaveToStream(FileFormat.OpenXMLWorkbook);
@@ -93,7 +93,7 @@ namespace WebExplorer
         {
             // Get the sample and run it.
             SampleInfo sampleInfo = GetSampleInfo(sampleName);
-            SharedEngineSample sample = RunSample(sampleInfo);
+            ISpreadsheetGearEngineSample sample = RunSample(sampleInfo);
 
             // Setup some local variables to the resultant workbook for convience.
             IWorkbook workbook = sample.Workbook;
@@ -149,10 +149,10 @@ namespace WebExplorer
         }
 
 
-        private SharedEngineSample RunSample(SampleInfo sampleInfo)
+        private ISpreadsheetGearEngineSample RunSample(SampleInfo sampleInfo)
         {
-            SharedEngineSample sample = sampleInfo.CreateInstance<SharedEngineSample>();
-            sample.PreLoadWorkbook();
+            ISpreadsheetGearEngineSample sample = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
+            sample.InitializeWorkbook();
             sample.RunSample();
 
             return sample;

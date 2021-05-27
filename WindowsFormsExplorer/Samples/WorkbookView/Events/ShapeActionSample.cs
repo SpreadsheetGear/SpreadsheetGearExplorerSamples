@@ -1,6 +1,6 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
-    public partial class ShapeActionSample : SGUserControl
+    public partial class ShapeActionSample : SampleUserControl
     {
         private void workbookView_ShapeAction(
             object sender, SpreadsheetGear.Windows.Forms.ShapeActionEventArgs e)

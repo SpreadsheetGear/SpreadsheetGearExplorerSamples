@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SharedSamples;
+using SamplesLibrary;
 using System.Linq;
 using WindowsFormsExplorer.Samples.Printing;
 using WindowsFormsExplorer.Samples.WorkbookView.Events;
@@ -13,7 +13,7 @@ using WindowsFormsExplorer.Samples.WorkbookView.UIManager;
 namespace WindowsFormsExplorer
 {
     /// <summary>
-    /// Adds a handful of samples that directly depend on the Windows Forms WorkbookView implementation and so cannot use shared code like the <see cref="SharedWindowsSample"/> samples.
+    /// Adds a handful of samples that directly depend on the Windows Forms WorkbookView implementation and so cannot use shared code like the <see cref="ISpreadsheetGearWindowsSample"/> samples.
     /// </summary>
     public class WinFormsSamplesBuilder
     {
@@ -54,10 +54,10 @@ namespace WindowsFormsExplorer
         /// <param name="category"></param>
         public static void AddWinFormsSourceCodeFiles(Category category)
         {
-            var targetTypeSharedWinSample = typeof(SharedWindowsSample);
-            var targetTypeSGUserControl = typeof(SGUserControl);
+            var targetTypeSharedWinSample = typeof(ISpreadsheetGearWindowsSample);
+            var targetTypeSampleUserControl = typeof(SampleUserControl);
             foreach (var sample in category.SampleInfos.Where(i =>
-                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSGUserControl.IsAssignableFrom(i.SampleType)))
+                targetTypeSharedWinSample.IsAssignableFrom(i.SampleType) || targetTypeSampleUserControl.IsAssignableFrom(i.SampleType)))
             {
                 sample.AddSourceCode($"{sample.SampleType.Name}.cs");
             }
@@ -77,7 +77,7 @@ namespace WindowsFormsExplorer
         /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
         /// information can be used by the samples app UI to display different icons representing the sample.</param>
         public static SampleInfo AddWinFormsSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
-            where T : SGUserControl
+            where T : SampleUserControl
         {
             var sampleInfo = category.AddSample<T>(sampleName, description, usesWorkbookView);
             return sampleInfo;

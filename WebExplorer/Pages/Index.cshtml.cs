@@ -7,7 +7,7 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SharedSamples;
+using SamplesLibrary;
 using System;
 
 namespace WebExplorer.Pages

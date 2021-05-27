@@ -1,10 +1,10 @@
 namespace WindowsFormsExplorer.Samples.Printing
 {
-    public partial class PageSetupSample : SGUserControl
+    public partial class PageSetupSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Printing.PageSetupSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Printing.PageSetupSample Sample { get; private set; }
 
         private void buttonRunSample_Click(object sender, System.EventArgs e)
         {
@@ -24,7 +24,7 @@ namespace WindowsFormsExplorer.Samples.Printing
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
-            Sample = new SharedSamples.Samples.Printing.PageSetupSample();
+            Sample = new SamplesLibrary.Samples.Printing.PageSetupSample();
             Sample.InitializeSample(workbookView);
         }
         #endregion

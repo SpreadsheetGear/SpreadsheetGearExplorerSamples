@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Styling
 {
-    public partial class SimpleStyleSample : SGUserControl
+    public partial class SimpleStyleSample : SampleUserControl
     {
         public SimpleStyleSample()
         {

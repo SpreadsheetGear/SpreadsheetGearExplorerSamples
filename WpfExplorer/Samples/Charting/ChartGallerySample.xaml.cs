@@ -3,11 +3,11 @@ using System.Windows.Media.Imaging;
 
 namespace WPFExplorer.Samples.Charting
 {
-    public partial class ChartGallerySample : SGUserControl
+    public partial class ChartGallerySample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WpfExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Charting.ChartGallerySample Sample { get; private set; }
+        public SamplesLibrary.Samples.Charting.ChartGallerySample Sample { get; private set; }
 
         public ChartGallerySample()
         {
@@ -57,7 +57,7 @@ namespace WPFExplorer.Samples.Charting
         public void InitializeSample()
         {
             // Initialize the sample
-            Sample = new SharedSamples.Samples.Charting.ChartGallerySample();
+            Sample = new SamplesLibrary.Samples.Charting.ChartGallerySample();
             Sample.InitializeSample();
             DisposalManager.RegisterIWorkbookSets(Sample.ChartWorkbook.WorkbookSet);
 

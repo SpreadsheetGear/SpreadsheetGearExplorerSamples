@@ -1,10 +1,10 @@
 namespace WindowsFormsExplorer.Samples.DataGrid
 {
-    public partial class SpreadsheetToDataGridSample : SGUserControl
+    public partial class SpreadsheetToDataGridSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
+        public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
 
         private void buttonRunSample_Click(object sender, System.EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace WindowsFormsExplorer.Samples.DataGrid
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.DataGrid.SpreadsheetToDataGridSample();
+            Sample = new SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample();
         }
         #endregion
     }

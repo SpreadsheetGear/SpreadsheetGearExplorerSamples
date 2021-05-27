@@ -1,8 +1,8 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Events
 {
-    public partial class ShapeSelectionChangedSample : SGUserControl
+    public partial class ShapeSelectionChangedSample : SampleUserControl
     {
-        public SharedSamples.Samples.WorkboookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
 
         private void workbookView_ShapeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Controls.ShapeSelectionChangedEventArgs e)
@@ -22,7 +22,7 @@
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
-            Sample = new SharedSamples.Samples.WorkboookView.Events.ShapeSelectionChangedSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.Events.ShapeSelectionChangedSample();
             Sample.InitializeSample(workbookView);
         }
         #endregion

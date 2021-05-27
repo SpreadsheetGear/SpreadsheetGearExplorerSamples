@@ -1,10 +1,10 @@
 namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
 {
-    public partial class SimpleCommandSample : SGUserControl
+    public partial class SimpleCommandSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.WorkboookView.CommandManager.SimpleCommandSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.CommandManager.SimpleCommandSample Sample { get; private set; }
 
         private void buttonExecute_Click(object sender, System.EventArgs e)
         {
@@ -33,7 +33,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.CommandManager.SimpleCommandSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.CommandManager.SimpleCommandSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

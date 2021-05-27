@@ -1,6 +1,6 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.Events
 {
-    public partial class ShowErrorSample : SGUserControl
+    public partial class ShowErrorSample : SampleUserControl
     {
         private void workbookView_ShowError(
             object sender, SpreadsheetGear.Windows.Controls.ShowErrorEventArgs e)

@@ -1,8 +1,8 @@
 ﻿namespace WPFExplorer.Samples.WorkbookView.CommandManager
 {
-    public partial class CommandRangeSample : SGUserControl
+    public partial class CommandRangeSample : SampleUserControl
     {
-        public SharedSamples.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
+        public SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
         private void buttonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -58,7 +58,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.WorkboookView.CommandManager.CommandRangeSample();
+            Sample = new SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();

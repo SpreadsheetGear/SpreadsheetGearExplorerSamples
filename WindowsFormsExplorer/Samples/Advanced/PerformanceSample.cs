@@ -2,11 +2,11 @@ using System;
 
 namespace WindowsFormsExplorer.Samples.Advanced
 {
-    public partial class PerformanceSample : SGUserControl
+    public partial class PerformanceSample : SampleUserControl
     {
-        // Most code for this Sample is in the SharedSamples project and can be run from either this WindowsFormsExplorer
+        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
         // project sample or a similar sample in the WindowsFormsExplorer project.
-        public SharedSamples.Samples.Advanced.PerformanceSample Sample { get; private set; }
+        public SamplesLibrary.Samples.Advanced.PerformanceSample Sample { get; private set; }
 
         private void buttonRunSample_Click(object sender, EventArgs e)
         {
@@ -23,7 +23,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
 
         private void InitializeSample()
         {
-            Sample = new SharedSamples.Samples.Advanced.PerformanceSample();
+            Sample = new SamplesLibrary.Samples.Advanced.PerformanceSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
