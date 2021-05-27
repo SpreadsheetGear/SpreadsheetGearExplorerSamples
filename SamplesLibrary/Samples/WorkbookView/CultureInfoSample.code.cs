@@ -21,16 +21,16 @@ namespace SamplesLibrary.Samples.WorkboookView
             // Set a number that uses an "de-DE" format.
             cells_deDE["A1"].Value = 12345;
             cells_deDE["A1"].NumberFormat = "#.##0,00";
-            cells_deDE["B1"].Value = "<-- Thousands & decimal Separators change based on the seleced culture.";
+            cells_deDE["B1"].Value = "<-- Thousands & decimal Separators change based on the selected culture.";
 
             // Setup a similar date format with "de-DE" conventions.
             cells_deDE["A2"].Value = System.DateTime.Today;
             cells_deDE["A2"].NumberFormat = "dd.mm.yyyy";
-            cells_deDE["B2"].Value = "<-- Date Format changes based on the seleced culture.";
+            cells_deDE["B2"].Value = "<-- Date Format changes based on the selected culture.";
 
             // Finally, add a formula that uses the "de-DE" list separator character (";").
             cells_deDE["A3"].Formula = "=SUM(1;2;3)";
-            cells_deDE["B3"].Value = "<-- Formula's List Separator changes based on the seleced culture.";
+            cells_deDE["B3"].Value = "<-- Formula's List Separator changes based on the selected culture.";
 
             // Expand column width (to avoid clipped cell content) and select A3 to show the above formula in the FormulaBar.
             cells_deDE.ColumnWidth = 12;

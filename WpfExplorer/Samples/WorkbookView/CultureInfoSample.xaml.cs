@@ -13,6 +13,7 @@ namespace WPFExplorer.Samples.WorkbookView
             DisposalManager.ResetWorkbookView(workbookView_deDE, false);
             DisposalManager.ResetWorkbookView(workbookView_selectedCulture, false);
             Sample.RunSample(workbookView_deDE, workbookView_selectedCulture, (string)listBox_cultures.SelectedItem);
+            label_selectedCulture.Content = $"Selected Culture ({listBox_cultures.SelectedItem})";
         }
 
 

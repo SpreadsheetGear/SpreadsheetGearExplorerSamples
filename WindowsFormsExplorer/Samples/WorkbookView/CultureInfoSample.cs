@@ -15,6 +15,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             DisposalManager.ResetWorkbookView(workbookView_selectedCulture, false);
 
             Sample.RunSample(workbookView_deDE, workbookView_selectedCulture, (string)listBox_cultures.SelectedItem);
+
+            label_selectedCulture.Text = $"Selected Culture ({listBox_cultures.SelectedItem})";
         }
 
 
