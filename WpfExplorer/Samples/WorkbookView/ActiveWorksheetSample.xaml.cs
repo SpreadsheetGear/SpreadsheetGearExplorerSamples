@@ -8,7 +8,7 @@
 
         private void buttonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, true);
+            // DisposalManager.ResetWorkbookView(workbookView, true);
 
             // Run the sample.
             Sample.SetActiveWorksheet(workbookView);
@@ -24,6 +24,7 @@
 
         private void InitializeSample()
         {
+            buttonRunSample.Click += buttonRunSample_Click;
             Sample = new SharedSamples.Samples.WorkboookView.ActiveWorksheetSample();
             // DisposalManager.RegisterWorkbookViews(workbookView);
         }

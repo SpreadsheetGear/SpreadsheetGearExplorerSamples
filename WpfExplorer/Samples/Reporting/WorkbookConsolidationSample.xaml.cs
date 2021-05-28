@@ -10,7 +10,7 @@ namespace WPFExplorer.Samples.WorkbookView.Reporting
 
         private void RadioButton_Checked(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
             string selectedRegion = (string)((RadioButton)e.Source).Tag;
             Sample.RunReport(workbookView, selectedRegion);
         }
@@ -25,9 +25,13 @@ namespace WPFExplorer.Samples.WorkbookView.Reporting
 
         private void InitializeSample()
         {
+            radioButton1.Checked += RadioButton_Checked;
+            radioButton2.Checked += RadioButton_Checked;
+            radioButton3.Checked += RadioButton_Checked;
             Sample = new SharedSamples.Samples.Reporting.WorkbookConsolidationSample();
             // DisposalManager.RegisterWorkbookViews(workbookView);
         }
+
         #endregion
     }
 }

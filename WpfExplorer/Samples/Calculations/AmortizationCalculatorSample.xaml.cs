@@ -44,6 +44,7 @@
 
         private void InitializeSample()
         {
+            buttonCalculate.Click += buttonCalculate_Click;
             Sample = new SharedSamples.Samples.Calculations.AmortizationCalculatorSample();
             // DisposalManager.RegisterWorkbookViews(workbookView);
         }

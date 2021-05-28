@@ -37,7 +37,7 @@
                 <Label Content="Loan Amount (pv)" HorizontalAlignment="Right" VerticalAlignment="Center" />
                 <Label Content="Interest Rate (rate)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" />
                 <Label Content="Total # of Periods (Nper)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
-                <Button Content="Calculate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="3" Click="buttonCalculate_Click" />
+                <Button x:Name="buttonCalculate" Content="Calculate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="3"/>
                 <TextBox Text="150000" x:Name="textBoxAmount" Margin="10,0,10,0" Grid.Column="1" />
                 <TextBox Text="0.0625" x:Name="textBoxRate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="1" />
                 <TextBox Text="360" x:Name="textBoxPeriods" Margin="10,5,10,0" Grid.Column="1" Grid.Row="2" />

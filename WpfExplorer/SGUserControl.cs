@@ -8,7 +8,9 @@ using SharedSamples;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 
 namespace WPFExplorer
 {
@@ -41,20 +43,75 @@ namespace WPFExplorer
             WpfWorkbookView workbookView = this.FindName("workbookView") as WpfWorkbookView;
             if (workbookView != null)
             {
+                // After initialization call DisposalManager.RegisterWorkbookViews
                 DisposalManager.RegisterWorkbookViews(workbookView);
-                //switch (this.GetType().Name)
-                //{
-                //    case "AdvancedPrintingSample":
-                //    case "BasicPrintingSample":
-                //    case "PageBreaksSample":
-                //    case "PageSetupSample":
-                //    case "DisplayReferenceSample":
-                //    case "ShapeSelectionChangedSample":
-                //        DisposalManager.ResetWorkbookView(workbookView, false);
-                //        break;
-                //    default:
-                //        break;
-                //}
+                // After initialization some samples must call DisposalManager.ResetWorkbookView
+                switch (this.GetType().Name)
+                {
+                    case "ActiveTabChangedSample":
+                    case "ShapeSelectionChangedSample":
+                    case "DisplayReferenceSample":
+                    case "AdvancedPrintingSample":
+                    case "BasicPrintingSample":
+                    case "PageBreaksSample":
+                    case "PageSetupSample":
+                        DisposalManager.ResetWorkbookView(workbookView, false);
+                        break;
+                    default:
+                        break;
+                }
+                // Add event handler for Button events where DisposalManager.ResetWorkbookView must be called
+                switch (this.GetType().Name)
+                {
+                    case "PerformanceSample":
+                        ResetWorkbookViewOnButtonEvent("buttonRunSample");
+                        break;
+                    case "AmortizationCalculatorSample":
+                        ResetWorkbookViewOnButtonEvent("buttonCalculate");
+                        break;
+                    case "WorkbookConsolidationSample":
+                        ResetWorkbookViewOnButtonEvent("radioButton1");
+                        ResetWorkbookViewOnButtonEvent("radioButton2");
+                        ResetWorkbookViewOnButtonEvent("radioButton3");
+                        break;
+                    case "ActiveWorkbookSample":
+                        ResetWorkbookViewOnButtonEvent("buttonNewWorkbook");
+                        ResetWorkbookViewOnButtonEvent("buttonLoadDisk");
+                        ResetWorkbookViewOnButtonEvent("buttonLoadUriASP");
+                        ResetWorkbookViewOnButtonEvent("buttonLoadUriASP");
+                        break;
+                    case "ActiveWorksheetSample":
+                        ResetWorkbookViewOnButtonEvent("buttonRunSample", true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private void ResetWorkbookViewOnButtonEvent(string buttonName, bool includeInitialWorkbook = false)
+        {
+            var button = this.FindName(buttonName);
+            if (button != null)
+            {
+                WpfWorkbookView workbookView = this.FindName("workbookView") as WpfWorkbookView;
+                if (workbookView != null)
+                {
+                    if (button is Button)
+                    {
+                        ((Button)button).Click += new RoutedEventHandler(delegate (Object o, RoutedEventArgs a)
+                        {
+                            DisposalManager.ResetWorkbookView(workbookView, includeInitialWorkbook);
+                        });
+                    }
+                    else if (button is RadioButton)
+                    {
+                        ((RadioButton)button).Checked += new RoutedEventHandler(delegate (Object o, RoutedEventArgs a)
+                        {
+                            DisposalManager.ResetWorkbookView(workbookView, includeInitialWorkbook);
+                        });
+                    }
+                }
             }
         }
 

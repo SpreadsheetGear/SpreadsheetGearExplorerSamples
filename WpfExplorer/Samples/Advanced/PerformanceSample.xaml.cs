@@ -23,6 +23,7 @@
 
         private void InitializeSample()
         {
+            buttonRunSample.Click += buttonRunSample_Click;
             Sample = new SharedSamples.Samples.Advanced.PerformanceSample();
             // DisposalManager.RegisterWorkbookViews(workbookView);
         }

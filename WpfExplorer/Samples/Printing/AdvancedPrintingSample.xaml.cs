@@ -71,7 +71,7 @@
         {
             InitializeComponent();
             // DisposalManager.RegisterWorkbookViews(workbookView);
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Open workbook using the current culture.
             SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook(@"Files\WPF\PrintingAdvanced.xlsx",

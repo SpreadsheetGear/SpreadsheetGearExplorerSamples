@@ -33,7 +33,7 @@
         public void InitializeSample()
         {
             // DisposalManager.RegisterWorkbookViews(workbookView);
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
             workbookView.GetLock();
             try
             {

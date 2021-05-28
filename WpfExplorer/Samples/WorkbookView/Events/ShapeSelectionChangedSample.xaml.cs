@@ -21,7 +21,7 @@
         public void InitializeSample()
         {
             // DisposalManager.RegisterWorkbookViews(workbookView);
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
             Sample = new SharedSamples.Samples.WorkboookView.Events.ShapeSelectionChangedSample();
             Sample.InitializeSample(workbookView);
         }

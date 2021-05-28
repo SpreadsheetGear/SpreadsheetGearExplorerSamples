@@ -14,9 +14,9 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel Margin="10" Grid.Column="0">
-            <RadioButton GroupName="RegionsGroup" Tag="East" Content="East" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
-            <RadioButton GroupName="RegionsGroup" Tag="West" Content="West" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
-            <RadioButton GroupName="RegionsGroup" Tag="Both" Content="Both" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton x:Name="radioButton1" GroupName="RegionsGroup" Tag="East" Content="East" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton x:Name="radioButton2" GroupName="RegionsGroup" Tag="West" Content="West" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
+            <RadioButton x:Name="radioButton3" GroupName="RegionsGroup" Tag="Both" Content="Both" Margin="0,0,0,5" Checked="RadioButton_Checked"></RadioButton>
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

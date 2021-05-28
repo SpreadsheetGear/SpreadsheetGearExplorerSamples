@@ -18,10 +18,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.RowSpan="2">
-            <Button Content="New Workbook" Margin="10,10,10,10" Click="buttonNewWorkbook_Click" />
-            <Button Content="Load from Disk..." Margin="10,5,10,0" Click="buttonLoadDisk_Click" />
-            <Button Content="Load from URI (ASP.NET Generated)" Margin="10,25,10,0" Click="buttonLoadUriASP_Click" />
-            <Button Content="Load from URI (File on Server)" Margin="10,5,10,0" Click="buttonLoadUriXSLX_Click" />
+            <Button x:Name="buttonNewWorkbook" Content="New Workbook" Margin="10,10,10,10"/>
+            <Button x:Name="buttonLoadDisk" Content="Load from Disk..." Margin="10,5,10,0"/>
+            <Button x:Name="buttonLoadUriASP" Content="Load from URI (ASP.NET Generated)" Margin="10,25,10,0"/>
+            <Button x:Name="buttonLoadUriXSLX" Content="Load from URI (File on Server)" Margin="10,5,10,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Column="1">
             <Label FontWeight="Bold">Current Workbook Source: </Label>

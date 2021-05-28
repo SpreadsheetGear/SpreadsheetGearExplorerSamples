@@ -8,7 +8,7 @@
 
         private void buttonNewWorkbook_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Call into sample to load a new workbook.
             Sample.NewWorkbook(workbookView);
@@ -19,7 +19,7 @@
 
         private void buttonLoadDisk_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Create an OpenFileDialog.
             Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
@@ -44,7 +44,7 @@
 
         private async void buttonLoadUriASP_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
             UriDownloadProgressIndicator.Visibility = System.Windows.Visibility.Visible;
 
             try
@@ -70,7 +70,7 @@
 
         private async void buttonLoadUriXSLX_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            DisposalManager.ResetWorkbookView(workbookView, false);
+            // DisposalManager.ResetWorkbookView(workbookView, false);
             UriDownloadProgressIndicator.Visibility = System.Windows.Visibility.Visible;
 
             try
@@ -109,9 +109,14 @@
 
         private void InitializeSample()
         {
+            buttonNewWorkbook.Click += buttonNewWorkbook_Click;
+            buttonLoadDisk.Click += buttonLoadDisk_Click;
+            buttonLoadUriASP.Click += buttonLoadUriASP_Click;
+            buttonLoadUriXSLX.Click += buttonLoadUriXSLX_Click;
             Sample = new SharedSamples.Samples.WorkboookView.ActiveWorkbookSample();
             // DisposalManager.RegisterWorkbookViews(workbookView);
         }
+
         #endregion
     }
 }

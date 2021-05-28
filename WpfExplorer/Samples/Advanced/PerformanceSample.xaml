@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Run Sample" Margin="10" Click="buttonRunSample_Click" />
+            <Button x:Name="buttonRunSample" Content="Run Sample" Margin="10"/>
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>
