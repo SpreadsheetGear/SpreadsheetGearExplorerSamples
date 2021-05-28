@@ -1,6 +1,6 @@
 ### SpreadsheetGearExplorerSamples
 
-#### This chrish_play branch contains a script to split up the SpreadsheetGearExplorerSamples repository into smaller targeted repositories. The thought is do maintenance in the larger private repository and then the split into smaller public repositories.
+#### This chrish_smallrepos branch contains a script to split up the SpreadsheetGearExplorerSamples repository into smaller targeted repositories. The thought is do maintenance in the larger private repository and then the split into smaller public repositories.
 
 SpreadsheetGearExplorerSamples is a large repository containing .Net Web and Windows solutions and a shared class library named SharedSamples. A script named copyToSmallRepos.bat copies the appropriate folders and files into smaller repositories named SpreadsheetGearExplorerSamples_Web and SpreadsheetGearExplorerSamples_Windows.
 
