@@ -27,6 +27,7 @@ namespace SamplesLibrary
         IRange RangeSelection { get; set; }
         public string DisplayReference { get; set; }
         public string DisplayReferenceName { get; set; }
+        public System.Windows.Forms.IWin32Window GetOwnerWindow();
         public void GetLock();
         public void ReleaseLock();
         public void Print(bool showPrintDialog);

@@ -16,7 +16,7 @@
                     new SpreadsheetGear.Windows.Forms.WorkbookDesigner(workbookSet);
 
                 // Display the Workbook Designer to the user.
-                designer.Show();
+                designer.Show(workbookView.GetOwnerWindow());
             }
             finally
             {
@@ -40,7 +40,7 @@
                     new SpreadsheetGear.Windows.Forms.WorkbookExplorer(workbookSet);
 
                 // Display the Workbook Explorer to the user.
-                explorer.Show();
+                explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
             {
@@ -70,7 +70,7 @@
                     new SpreadsheetGear.Windows.Forms.RangeExplorer(workbookSet, categoryFlags);
 
                 // Display the Range Explorer to the user.
-                explorer.Show();
+                explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
             {
@@ -122,7 +122,7 @@
                     new SpreadsheetGear.Windows.Forms.ChartExplorer(workbookSet, categoryFlags);
 
                 // Display the Chart Explorer to the user.
-                explorer.Show();
+                explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
             {
@@ -169,7 +169,7 @@
                     new SpreadsheetGear.Windows.Forms.ShapeExplorer(workbookSet, categoryFlags);
 
                 // Display the Shape Explorer to the user.
-                explorer.Show();
+                explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
             {
