@@ -96,6 +96,7 @@ namespace SamplesLibrary
                         wbs.Dispose();
                 }
             }
+            _disposed = true;
         }
     }
 }
