@@ -15,7 +15,9 @@
                 SpreadsheetGear.Windows.Forms.WorkbookDesigner designer =
                     new SpreadsheetGear.Windows.Forms.WorkbookDesigner(workbookSet);
 
-                // Display the Workbook Designer to the user.
+                // Display the Workbook Designer to the user.  GetOwnerWindow() retrieves the parent
+                // window of the WorkbookView control, which allows the dialog to stay on top even
+                // when a user clicks back onto the WorkbookView / parent window.
                 designer.Show(workbookView.GetOwnerWindow());
             }
             finally
@@ -39,7 +41,9 @@
                 SpreadsheetGear.Windows.Forms.WorkbookExplorer explorer =
                     new SpreadsheetGear.Windows.Forms.WorkbookExplorer(workbookSet);
 
-                // Display the Workbook Explorer to the user.
+                // Display the Workbook Explorer to the user.  GetOwnerWindow() retrieves the parent
+                // window of the WorkbookView control, which allows the dialog to stay on top even
+                // when a user clicks back onto the WorkbookView / parent window.
                 explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
@@ -69,7 +73,9 @@
                 SpreadsheetGear.Windows.Forms.RangeExplorer explorer =
                     new SpreadsheetGear.Windows.Forms.RangeExplorer(workbookSet, categoryFlags);
 
-                // Display the Range Explorer to the user.
+                // Display the Range Explorer to the user.  GetOwnerWindow() retrieves the parent
+                // window of the WorkbookView control, which allows the dialog to stay on top even
+                // when a user clicks back onto the WorkbookView / parent window.
                 explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
@@ -121,7 +127,9 @@
                 SpreadsheetGear.Windows.Forms.ChartExplorer explorer =
                     new SpreadsheetGear.Windows.Forms.ChartExplorer(workbookSet, categoryFlags);
 
-                // Display the Chart Explorer to the user.
+                // Display the Chart Explorer to the user.  GetOwnerWindow() retrieves the parent
+                // window of the WorkbookView control, which allows the dialog to stay on top even
+                // when a user clicks back onto the WorkbookView / parent window.
                 explorer.Show(workbookView.GetOwnerWindow());
             }
             finally
@@ -168,7 +176,9 @@
                 SpreadsheetGear.Windows.Forms.ShapeExplorer explorer =
                     new SpreadsheetGear.Windows.Forms.ShapeExplorer(workbookSet, categoryFlags);
 
-                // Display the Shape Explorer to the user.
+                // Display the Shape Explorer to the user.  GetOwnerWindow() retrieves the parent
+                // window of the WorkbookView control, which allows the dialog to stay on top even
+                // when a user clicks back onto the WorkbookView / parent window.
                 explorer.Show(workbookView.GetOwnerWindow());
             }
             finally

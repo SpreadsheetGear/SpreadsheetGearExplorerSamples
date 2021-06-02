@@ -27,7 +27,6 @@ namespace SamplesLibrary
         IRange RangeSelection { get; set; }
         public string DisplayReference { get; set; }
         public string DisplayReferenceName { get; set; }
-        public System.Windows.Forms.IWin32Window GetOwnerWindow();
         public void GetLock();
         public void ReleaseLock();
         public void Print(bool showPrintDialog);
@@ -35,5 +34,13 @@ namespace SamplesLibrary
         public void PrintPreview();
         public void PrintPreview(PrintWhat printWhat);
         public void LocationToRange(double x, double y, out double row, out double column, RangeLocationFlags flags);
+
+        /// <summary>
+        /// NOTE: this method is unrelated to / not implemented by the WinForms and WPF WorkbookView classes.  Some 
+        /// samples use this method to get the parent window of the running sample when showing one of the "Explorer"
+        /// dialogs.  This allows the Explorer dialog to stay on top of the parent window, even when the user clicks
+        /// back on the WorkbookView in the parent window.
+        /// </summary>
+        public System.Windows.Forms.IWin32Window GetOwnerWindow();
     }
 }
