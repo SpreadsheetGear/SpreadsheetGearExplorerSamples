@@ -31,6 +31,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DesignerAndExplorerDialogsSample));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.workbookView = new WindowsFormsExplorer.WinFormsWorkbookView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonWorkbookExplorer = new System.Windows.Forms.Button();
             this.buttonRangeExplorer = new System.Windows.Forms.Button();
@@ -63,8 +65,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_rangeCategories_font = new System.Windows.Forms.CheckBox();
             this.checkBox_rangeCategories_alignment = new System.Windows.Forms.CheckBox();
             this.checkBox_rangeCategories_numberFormats = new System.Windows.Forms.CheckBox();
-            this.workbookView = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -78,20 +80,40 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.workbookView, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(703, 839);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(725, 839);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // workbookView
+            // 
+            this.workbookView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workbookView.FormulaBar = null;
+            this.workbookView.Location = new System.Drawing.Point(240, 3);
+            this.workbookView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.workbookView.Name = "workbookView";
+            this.workbookView.Size = new System.Drawing.Size(481, 833);
+            this.workbookView.TabIndex = 1;
+            this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
+            // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(230, 833);
+            this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.AutoSize = true;
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -103,8 +125,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 3);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 3);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
@@ -117,8 +139,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(206, 833);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(230, 830);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
             // buttonWorkbookExplorer
             // 
@@ -129,11 +151,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookExplorer.Location = new System.Drawing.Point(4, 34);
             this.buttonWorkbookExplorer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonWorkbookExplorer.Name = "buttonWorkbookExplorer";
-            this.buttonWorkbookExplorer.Size = new System.Drawing.Size(198, 25);
+            this.buttonWorkbookExplorer.Size = new System.Drawing.Size(222, 25);
             this.buttonWorkbookExplorer.TabIndex = 1;
             this.buttonWorkbookExplorer.Text = "Workbook Explorer";
             this.buttonWorkbookExplorer.UseVisualStyleBackColor = true;
-            this.buttonWorkbookExplorer.Click += new System.EventHandler(this.buttonWorkbookExplorer_Click);
             // 
             // buttonRangeExplorer
             // 
@@ -144,11 +165,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonRangeExplorer.Location = new System.Drawing.Point(4, 65);
             this.buttonRangeExplorer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonRangeExplorer.Name = "buttonRangeExplorer";
-            this.buttonRangeExplorer.Size = new System.Drawing.Size(198, 25);
+            this.buttonRangeExplorer.Size = new System.Drawing.Size(222, 25);
             this.buttonRangeExplorer.TabIndex = 2;
             this.buttonRangeExplorer.Text = "Range Explorer";
             this.buttonRangeExplorer.UseVisualStyleBackColor = true;
-            this.buttonRangeExplorer.Click += new System.EventHandler(this.buttonRangeExplorer_Click);
             // 
             // buttonWorkbookDesigner
             // 
@@ -159,11 +179,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookDesigner.Location = new System.Drawing.Point(4, 3);
             this.buttonWorkbookDesigner.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonWorkbookDesigner.Name = "buttonWorkbookDesigner";
-            this.buttonWorkbookDesigner.Size = new System.Drawing.Size(198, 25);
+            this.buttonWorkbookDesigner.Size = new System.Drawing.Size(222, 25);
             this.buttonWorkbookDesigner.TabIndex = 0;
             this.buttonWorkbookDesigner.Text = "Workbook Designer";
             this.buttonWorkbookDesigner.UseVisualStyleBackColor = true;
-            this.buttonWorkbookDesigner.Click += new System.EventHandler(this.buttonWorkbookDesigner_Click);
             // 
             // buttonChartExplorer
             // 
@@ -174,11 +193,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonChartExplorer.Location = new System.Drawing.Point(4, 354);
             this.buttonChartExplorer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonChartExplorer.Name = "buttonChartExplorer";
-            this.buttonChartExplorer.Size = new System.Drawing.Size(198, 25);
+            this.buttonChartExplorer.Size = new System.Drawing.Size(222, 25);
             this.buttonChartExplorer.TabIndex = 3;
             this.buttonChartExplorer.Text = "Chart Explorer";
             this.buttonChartExplorer.UseVisualStyleBackColor = true;
-            this.buttonChartExplorer.Click += new System.EventHandler(this.buttonChartExplorer_Click);
             // 
             // buttonShapeExplorer
             // 
@@ -189,11 +207,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonShapeExplorer.Location = new System.Drawing.Point(4, 593);
             this.buttonShapeExplorer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonShapeExplorer.Name = "buttonShapeExplorer";
-            this.buttonShapeExplorer.Size = new System.Drawing.Size(198, 25);
+            this.buttonShapeExplorer.Size = new System.Drawing.Size(222, 25);
             this.buttonShapeExplorer.TabIndex = 4;
             this.buttonShapeExplorer.Text = "Shape Explorer";
             this.buttonShapeExplorer.UseVisualStyleBackColor = true;
-            this.buttonShapeExplorer.Click += new System.EventHandler(this.buttonShapeExplorer_Click);
             // 
             // groupBox1
             // 
@@ -524,18 +541,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_rangeCategories_numberFormats.Text = "Number Formats";
             this.checkBox_rangeCategories_numberFormats.UseVisualStyleBackColor = true;
             // 
-            // workbookView
-            // 
-            this.workbookView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workbookView.FormulaBar = null;
-            this.workbookView.Location = new System.Drawing.Point(218, 3);
-            this.workbookView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.workbookView.Name = "workbookView";
-            this.workbookView.Size = new System.Drawing.Size(481, 833);
-            this.workbookView.TabIndex = 1;
-            this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            // 
-            // DesignerAndExplorersSample
+            // DesignerAndExplorerDialogsSample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -543,10 +549,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "DesignerAndExplorersSample";
-            this.Size = new System.Drawing.Size(703, 839);
+            this.Name = "DesignerAndExplorerDialogsSample";
+            this.Size = new System.Drawing.Size(725, 839);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -563,21 +569,22 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button buttonRangeExplorer;
-        private System.Windows.Forms.Button buttonShapeExplorer;
-        private System.Windows.Forms.Button buttonWorkbookDesigner;
-        private System.Windows.Forms.Button buttonWorkbookExplorer;
         private WinFormsWorkbookView workbookView;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button buttonWorkbookExplorer;
+        private System.Windows.Forms.Button buttonRangeExplorer;
+        private System.Windows.Forms.Button buttonWorkbookDesigner;
         private System.Windows.Forms.Button buttonChartExplorer;
+        private System.Windows.Forms.Button buttonShapeExplorer;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_alignment;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_font;
         private System.Windows.Forms.CheckBox checkBox_shapeCategories_protection;
         private System.Windows.Forms.CheckBox checkBox_shapeCategories_autoShape;
         private System.Windows.Forms.CheckBox checkBox_shapeCategories_control;
         private System.Windows.Forms.CheckBox checkBox_shapeCategories_line;
         private System.Windows.Forms.CheckBox checkBox_shapeCategories_fill;
+        private System.Windows.Forms.CheckBox checkBox_shapeCategories_font;
+        private System.Windows.Forms.CheckBox checkBox_shapeCategories_alignment;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox checkBox_chartCategories_axes;
         private System.Windows.Forms.CheckBox checkBox_chartCategories_series;
