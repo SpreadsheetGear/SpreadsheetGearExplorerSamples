@@ -378,7 +378,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_pageSetup.AutoSize = true;
             this.checkBox_chartCategories_pageSetup.Checked = true;
             this.checkBox_chartCategories_pageSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_pageSetup.Location = new System.Drawing.Point(19, 197);
+            this.checkBox_chartCategories_pageSetup.Location = new System.Drawing.Point(22, 197);
             this.checkBox_chartCategories_pageSetup.Name = "checkBox_chartCategories_pageSetup";
             this.checkBox_chartCategories_pageSetup.Size = new System.Drawing.Size(89, 19);
             this.checkBox_chartCategories_pageSetup.TabIndex = 4;
