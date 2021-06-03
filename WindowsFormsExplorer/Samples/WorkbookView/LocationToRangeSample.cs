@@ -28,7 +28,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             workbookView.GetLock();
             try
             {
-                workbookView.ActiveCell.Value = "Click on any cell to fill it with a color.";
+                workbookView.ActiveWorksheet.Cells["A1"].Value = "Click on any cell to fill it with a color.";
             }
             finally
             {
