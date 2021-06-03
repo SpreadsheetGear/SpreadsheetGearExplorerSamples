@@ -48,6 +48,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_shapeCategories_font = new System.Windows.Forms.CheckBox();
             this.checkBox_shapeCategories_alignment = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox_chartCategories_chartData = new System.Windows.Forms.CheckBox();
             this.checkBox_chartCategories_axes = new System.Windows.Forms.CheckBox();
             this.checkBox_chartCategories_series = new System.Windows.Forms.CheckBox();
             this.checkBox_chartCategories_pageSetup = new System.Windows.Forms.CheckBox();
@@ -155,6 +156,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookExplorer.TabIndex = 1;
             this.buttonWorkbookExplorer.Text = "Workbook Explorer";
             this.buttonWorkbookExplorer.UseVisualStyleBackColor = true;
+            this.buttonWorkbookExplorer.Click += new System.EventHandler(this.buttonWorkbookExplorer_Click);
             // 
             // buttonRangeExplorer
             // 
@@ -169,6 +171,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonRangeExplorer.TabIndex = 2;
             this.buttonRangeExplorer.Text = "Range Explorer";
             this.buttonRangeExplorer.UseVisualStyleBackColor = true;
+            this.buttonRangeExplorer.Click += new System.EventHandler(this.buttonRangeExplorer_Click);
             // 
             // buttonWorkbookDesigner
             // 
@@ -183,6 +186,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookDesigner.TabIndex = 0;
             this.buttonWorkbookDesigner.Text = "Workbook Designer";
             this.buttonWorkbookDesigner.UseVisualStyleBackColor = true;
+            this.buttonWorkbookDesigner.Click += new System.EventHandler(this.buttonWorkbookDesigner_Click);
             // 
             // buttonChartExplorer
             // 
@@ -197,6 +201,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonChartExplorer.TabIndex = 3;
             this.buttonChartExplorer.Text = "Chart Explorer";
             this.buttonChartExplorer.UseVisualStyleBackColor = true;
+            this.buttonChartExplorer.Click += new System.EventHandler(this.buttonChartExplorer_Click);
             // 
             // buttonShapeExplorer
             // 
@@ -204,13 +209,14 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonShapeExplorer.AutoSize = true;
             this.buttonShapeExplorer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonShapeExplorer.Location = new System.Drawing.Point(4, 593);
+            this.buttonShapeExplorer.Location = new System.Drawing.Point(4, 624);
             this.buttonShapeExplorer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonShapeExplorer.Name = "buttonShapeExplorer";
             this.buttonShapeExplorer.Size = new System.Drawing.Size(222, 25);
             this.buttonShapeExplorer.TabIndex = 4;
             this.buttonShapeExplorer.Text = "Shape Explorer";
             this.buttonShapeExplorer.UseVisualStyleBackColor = true;
+            this.buttonShapeExplorer.Click += new System.EventHandler(this.buttonShapeExplorer_Click);
             // 
             // groupBox1
             // 
@@ -222,7 +228,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.groupBox1.Controls.Add(this.checkBox_shapeCategories_font);
             this.groupBox1.Controls.Add(this.checkBox_shapeCategories_alignment);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(3, 624);
+            this.groupBox1.Location = new System.Drawing.Point(3, 655);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 206);
             this.groupBox1.TabIndex = 5;
@@ -315,6 +321,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBox_chartCategories_chartData);
             this.groupBox2.Controls.Add(this.checkBox_chartCategories_axes);
             this.groupBox2.Controls.Add(this.checkBox_chartCategories_series);
             this.groupBox2.Controls.Add(this.checkBox_chartCategories_pageSetup);
@@ -325,17 +332,29 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(3, 385);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 202);
+            this.groupBox2.Size = new System.Drawing.Size(200, 233);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chart Explorer Flags";
+            // 
+            // checkBox_chartCategories_chartData
+            // 
+            this.checkBox_chartCategories_chartData.AutoSize = true;
+            this.checkBox_chartCategories_chartData.Checked = true;
+            this.checkBox_chartCategories_chartData.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_chartCategories_chartData.Location = new System.Drawing.Point(22, 47);
+            this.checkBox_chartCategories_chartData.Name = "checkBox_chartCategories_chartData";
+            this.checkBox_chartCategories_chartData.Size = new System.Drawing.Size(85, 19);
+            this.checkBox_chartCategories_chartData.TabIndex = 7;
+            this.checkBox_chartCategories_chartData.Text = "Chart Data";
+            this.checkBox_chartCategories_chartData.UseVisualStyleBackColor = true;
             // 
             // checkBox_chartCategories_axes
             // 
             this.checkBox_chartCategories_axes.AutoSize = true;
             this.checkBox_chartCategories_axes.Checked = true;
             this.checkBox_chartCategories_axes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_axes.Location = new System.Drawing.Point(23, 122);
+            this.checkBox_chartCategories_axes.Location = new System.Drawing.Point(22, 147);
             this.checkBox_chartCategories_axes.Name = "checkBox_chartCategories_axes";
             this.checkBox_chartCategories_axes.Size = new System.Drawing.Size(53, 19);
             this.checkBox_chartCategories_axes.TabIndex = 6;
@@ -347,7 +366,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_series.AutoSize = true;
             this.checkBox_chartCategories_series.Checked = true;
             this.checkBox_chartCategories_series.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_series.Location = new System.Drawing.Point(23, 147);
+            this.checkBox_chartCategories_series.Location = new System.Drawing.Point(22, 172);
             this.checkBox_chartCategories_series.Name = "checkBox_chartCategories_series";
             this.checkBox_chartCategories_series.Size = new System.Drawing.Size(60, 19);
             this.checkBox_chartCategories_series.TabIndex = 5;
@@ -359,7 +378,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_pageSetup.AutoSize = true;
             this.checkBox_chartCategories_pageSetup.Checked = true;
             this.checkBox_chartCategories_pageSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_pageSetup.Location = new System.Drawing.Point(23, 172);
+            this.checkBox_chartCategories_pageSetup.Location = new System.Drawing.Point(19, 197);
             this.checkBox_chartCategories_pageSetup.Name = "checkBox_chartCategories_pageSetup";
             this.checkBox_chartCategories_pageSetup.Size = new System.Drawing.Size(89, 19);
             this.checkBox_chartCategories_pageSetup.TabIndex = 4;
@@ -371,7 +390,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_title.AutoSize = true;
             this.checkBox_chartCategories_title.Checked = true;
             this.checkBox_chartCategories_title.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_title.Location = new System.Drawing.Point(23, 97);
+            this.checkBox_chartCategories_title.Location = new System.Drawing.Point(22, 122);
             this.checkBox_chartCategories_title.Name = "checkBox_chartCategories_title";
             this.checkBox_chartCategories_title.Size = new System.Drawing.Size(51, 19);
             this.checkBox_chartCategories_title.TabIndex = 3;
@@ -383,7 +402,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_legend.AutoSize = true;
             this.checkBox_chartCategories_legend.Checked = true;
             this.checkBox_chartCategories_legend.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_legend.Location = new System.Drawing.Point(23, 72);
+            this.checkBox_chartCategories_legend.Location = new System.Drawing.Point(22, 97);
             this.checkBox_chartCategories_legend.Name = "checkBox_chartCategories_legend";
             this.checkBox_chartCategories_legend.Size = new System.Drawing.Size(67, 19);
             this.checkBox_chartCategories_legend.TabIndex = 2;
@@ -395,7 +414,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.checkBox_chartCategories_plotArea.AutoSize = true;
             this.checkBox_chartCategories_plotArea.Checked = true;
             this.checkBox_chartCategories_plotArea.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_plotArea.Location = new System.Drawing.Point(23, 47);
+            this.checkBox_chartCategories_plotArea.Location = new System.Drawing.Point(22, 72);
             this.checkBox_chartCategories_plotArea.Name = "checkBox_chartCategories_plotArea";
             this.checkBox_chartCategories_plotArea.Size = new System.Drawing.Size(77, 19);
             this.checkBox_chartCategories_plotArea.TabIndex = 1;
@@ -603,5 +622,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         private System.Windows.Forms.CheckBox checkBox_rangeCategories_font;
         private System.Windows.Forms.CheckBox checkBox_rangeCategories_alignment;
         private System.Windows.Forms.CheckBox checkBox_rangeCategories_numberFormats;
+        private System.Windows.Forms.CheckBox checkBox_chartCategories_chartData;
     }
 }

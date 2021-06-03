@@ -38,6 +38,7 @@
                     <Label FontWeight="Bold" Padding="5,2,5,5">Show Chart Category Flags:</Label>
                     <StackPanel Margin="20,0,0,0">
                         <CheckBox x:Name="checkBox_chartCategories_chartArea" IsChecked="True">Chart Area</CheckBox>
+                        <CheckBox x:Name="checkBox_chartCategories_chartData" IsChecked="True">Chart Data</CheckBox>
                         <CheckBox x:Name="checkBox_chartCategories_plotArea" IsChecked="True">Plot Area</CheckBox>
                         <CheckBox x:Name="checkBox_chartCategories_legend" IsChecked="True">Legend</CheckBox>
                         <CheckBox x:Name="checkBox_chartCategories_title" IsChecked="True">Title</CheckBox>

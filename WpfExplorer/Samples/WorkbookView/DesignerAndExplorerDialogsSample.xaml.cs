@@ -61,6 +61,8 @@ namespace WPFExplorer.Samples.WorkbookView
             var categoryFlags = SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.None;
             if (checkBox_chartCategories_chartArea.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.ChartArea;
+            if (checkBox_chartCategories_chartData.IsChecked == true)
+                categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.ChartData;
             if (checkBox_chartCategories_plotArea.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.PlotArea;
             if (checkBox_chartCategories_legend.IsChecked == true)
