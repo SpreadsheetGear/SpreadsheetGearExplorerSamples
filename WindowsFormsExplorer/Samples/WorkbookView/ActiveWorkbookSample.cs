@@ -114,21 +114,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         {
             Sample = new SamplesLibrary.Samples.WorkboookView.ActiveWorkbookSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
-            workbookView.GetLock();
-            try
-            {
-                workbookView.ActiveCell.Value = "Click on any cell to fill it with a color.";
-            }
-            finally
-            {
-                workbookView.ReleaseLock();
-            }
         }
         #endregion
-
-        private void tableLayoutPanel1_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
-        {
-
-        }
     }
 }
