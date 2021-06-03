@@ -17,7 +17,7 @@
             using (SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet())
             {
                 // Get the full path to a workbook template file, which contains number formats and formulas. 
-                string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrder.xml");
+                string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrderTemplate.xls");
 
                 // Open the template workbook and get an IRange from a defined name.
                 SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(workbookPath);
