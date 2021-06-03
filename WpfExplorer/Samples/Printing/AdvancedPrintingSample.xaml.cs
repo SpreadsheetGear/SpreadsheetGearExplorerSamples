@@ -67,6 +67,7 @@
         }
 
 
+        #region Sample Initialization Code
         public AdvancedPrintingSample()
         {
             InitializeComponent();
@@ -80,5 +81,6 @@
             // Associate workbook with the WorkbookView control
             workbookView.ActiveWorkbook = workbook;
         }
+        #endregion
     }
 }

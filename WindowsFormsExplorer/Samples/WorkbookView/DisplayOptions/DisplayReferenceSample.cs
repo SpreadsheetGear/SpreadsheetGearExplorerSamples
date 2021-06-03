@@ -2,8 +2,9 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
 {
     public partial class DisplayReferenceSample : SampleUserControl
     {
-        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
-        // project sample or a similar sample in the WindowsFormsExplorer project.
+        // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
+        // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
+        // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
 
         private void radioButton_CheckedChanged(object sender, System.EventArgs e)

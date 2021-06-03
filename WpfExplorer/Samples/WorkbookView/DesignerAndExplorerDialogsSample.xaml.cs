@@ -4,24 +4,45 @@ namespace WPFExplorer.Samples.WorkbookView
 {
     public partial class DesignerAndExplorerDialogsSample : SampleUserControl
     {
-        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WpfExplorer
-        // project sample or a similar sample in the WindowsFormsExplorer project.
+        // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
+        // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
+        // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DesignerAndExplorerDialogsSample Sample { get; private set; }
 
         private void button_workbookDesigner_Click(object sender, RoutedEventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
+            /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
+            /// which has a 3 workbook limit.  If you are copying and pasting this sample code to your own projects and have a
+            /// Signed License that activates either the fully-licensed or 30-day evaluation mode of the software, then this
+            /// workbook disposal strategy is not needed. See the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> 
+            /// code file for more details.
             DisposalManager.ResetWorkbookView(workbookView);
+
             Sample.ShowWorkbookDesigner(workbookView);
         }
 
         private void button_workbookExplorer_Click(object sender, RoutedEventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
+            /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
+            /// which has a 3 workbook limit.  If you are copying and pasting this sample code to your own projects and have a
+            /// Signed License that activates either the fully-licensed or 30-day evaluation mode of the software, then this
+            /// workbook disposal strategy is not needed. See the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> 
+            /// code file for more details.
             DisposalManager.ResetWorkbookView(workbookView);
+
             Sample.ShowWorkbookExplorer(workbookView);
         }
 
         private void button_rangeExplorer_Click(object sender, RoutedEventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
+            /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
+            /// which has a 3 workbook limit.  If you are copying and pasting this sample code to your own projects and have a
+            /// Signed License that activates either the fully-licensed or 30-day evaluation mode of the software, then this
+            /// workbook disposal strategy is not needed. See the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> 
+            /// code file for more details.
             DisposalManager.ResetWorkbookView(workbookView);
 
             // "Or" together all of the selected RangeExplorerCategoryFlags.
@@ -53,6 +74,12 @@ namespace WPFExplorer.Samples.WorkbookView
 
         private void button_chartExplorer_Click(object sender, RoutedEventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
+            /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
+            /// which has a 3 workbook limit.  If you are copying and pasting this sample code to your own projects and have a
+            /// Signed License that activates either the fully-licensed or 30-day evaluation mode of the software, then this
+            /// workbook disposal strategy is not needed. See the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> 
+            /// code file for more details.
             DisposalManager.ResetWorkbookView(workbookView);
 
             // "Or" together all of the selected ChartExplorerCategoryFlags.
@@ -81,6 +108,12 @@ namespace WPFExplorer.Samples.WorkbookView
 
         private void button_shapeExplorer_Click(object sender, RoutedEventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
+            /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
+            /// which has a 3 workbook limit.  If you are copying and pasting this sample code to your own projects and have a
+            /// Signed License that activates either the fully-licensed or 30-day evaluation mode of the software, then this
+            /// workbook disposal strategy is not needed. See the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> 
+            /// code file for more details.
             DisposalManager.ResetWorkbookView(workbookView);
 
             // "Or" together all of the selected ShapeExplorerCategoryFlags.

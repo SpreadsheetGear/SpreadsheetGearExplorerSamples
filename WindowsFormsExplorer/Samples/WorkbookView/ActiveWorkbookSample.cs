@@ -5,12 +5,18 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 {
     public partial class ActiveWorkbookSample : SampleUserControl
     {
-        // Most code for this Sample is in the SamplesLibrary project and can be run from either this WindowsFormsExplorer
-        // project sample or a similar sample in the WindowsFormsExplorer project.
+        // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
+        // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
+        // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.ActiveWorkbookSample Sample { get; private set; }
 
         private void button_newWorkbook_Click(object sender, EventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
+            /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
+            /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
+            /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
+            /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
             DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Call into sample to load a new workbook.
@@ -22,6 +28,11 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private void button_loadDisk_Click(object sender, EventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
+            /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
+            /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
+            /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
+            /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
             DisposalManager.ResetWorkbookView(workbookView, false);
 
             // Create an OpenFileDialog.
@@ -47,6 +58,11 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private async void button_loadUriAsp_Click(object sender, EventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
+            /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
+            /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
+            /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
+            /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
             DisposalManager.ResetWorkbookView(workbookView, false);
             progressBar.Visible = true;
 
@@ -73,6 +89,11 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private async void button_loadUriXLSX_Click(object sender, EventArgs e)
         {
+            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
+            /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
+            /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
+            /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
+            /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
             DisposalManager.ResetWorkbookView(workbookView, false);
             progressBar.Visible = true;
 
