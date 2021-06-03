@@ -29,7 +29,7 @@
             Workbook.ActiveWorksheet.Cells["A1:F6"].WrapText = true;
             Workbook.ActiveWorksheet.Cells["A1"].Value = "Right-click on the WorkbookView and select the " +
                 "'Workbook Explorer...' context menu option.  In the TreeView on the left pane, expand [Book1] " +
-                "to view available worksheets and note that 'Sheet2' is present because it is 'VeryHidden'.  " +
+                "to view available worksheets and note that 'Sheet2' is not listed because it is 'VeryHidden'.  " +
                 "Sheet1 is listed because it is 'Hidden', and could be made visible again from this dialog.";
         }
     }
