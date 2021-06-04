@@ -30,6 +30,17 @@
         }
 
 
+        private void buttonRedo_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            // Attempt to Redo.  If it fails (probably because there is nothing to redo), display the error
+            // in a MessageBox.
+            if (!Sample.RedoCommand(workbookView, out string errorMessage))
+            {
+                System.Windows.MessageBox.Show(errorMessage, "SpreadsheetGear Explorer: Error");
+            }
+        }
+
+
         private void slider_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
         {
             UpdateColor();

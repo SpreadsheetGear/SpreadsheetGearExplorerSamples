@@ -16,6 +16,7 @@
         <StackPanel Grid.Column="0">
             <Button Content="Execute" Margin="10,10,10,0" Click="buttonExecute_Click" />
             <Button Content="Undo" Margin="10,5,10,0" Click="buttonUndo_Click" />
+            <Button Content="Redo" Margin="10,5,10,0" Click="buttonRedo_Click" />
             <Label Content="Color Preview" Margin="10,10,10,0" FontWeight="Bold" />
             <Rectangle Name="colorPreview" Height="40" Margin="10,5,10,0" Stroke="Black" />
             <Label Content="Red" Margin="10,10,10,0" FontWeight="Bold" />

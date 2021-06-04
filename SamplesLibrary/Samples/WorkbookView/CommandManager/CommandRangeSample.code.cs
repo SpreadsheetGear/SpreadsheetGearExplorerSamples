@@ -21,6 +21,7 @@
             }
         }
 
+
         public bool UndoCommand(IWorkbookView workbookView, out string errorMessage)
         {
             errorMessage = null;
@@ -47,6 +48,35 @@
                 workbookView.ReleaseLock();
             }
         }
+
+
+        public bool RedoCommand(IWorkbookView workbookView, out string errorMessage)
+        {
+            errorMessage = null;
+
+            // NOTE: Must acquire a workbook set lock.
+            workbookView.GetLock();
+            try
+            {
+                // Redo the last undone command.
+                workbookView.ActiveCommandManager.Redo();
+
+                // Return true to indicate redo was successful.
+                return true;
+            }
+            catch (System.Exception exc)
+            {
+                // Provide an error message when something goes wrong.
+                errorMessage = exc.Message;
+                return false;
+            }
+            finally
+            {
+                // NOTE: Must release the workbook set lock.
+                workbookView.ReleaseLock();
+            }
+        }
+
 
         /*
          * Demonstrate creating an undoable command that sets the Interior color of the currently selected

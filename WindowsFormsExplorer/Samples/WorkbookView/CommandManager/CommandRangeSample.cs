@@ -32,6 +32,18 @@
         }
 
 
+        private void button_redo_Click(object sender, System.EventArgs e)
+        {
+            // Attempt to Redo.  If it fails (probably because there is nothing to redo), display the error
+            // in a MessageBox.
+            if (!Sample.RedoCommand(workbookView, out string errorMessage))
+            {
+                System.Windows.Forms.MessageBox.Show(errorMessage, "SpreadsheetGear Explorer",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
+        }
+
+
         private void trackBar_ValueChanged(object sender, System.EventArgs e)
         {
             System.Drawing.Color previewColor = System.Drawing.Color.FromArgb(
