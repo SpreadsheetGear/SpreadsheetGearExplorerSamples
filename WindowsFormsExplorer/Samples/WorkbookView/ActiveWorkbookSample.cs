@@ -72,7 +72,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
                 UpdateLocationTextBox("");
 
                 // Call into sample to load workbook from a URI that dynamically generates an Excel file.
-                string uri = await Sample.LoadFromUri_RazorPage(workbookView);
+                string uri = await Sample.LoadFromUri_AspNetGenerated(workbookView);
 
                 // Update TextBox indicating it the URI it was loaded from.
                 UpdateLocationTextBox(uri);

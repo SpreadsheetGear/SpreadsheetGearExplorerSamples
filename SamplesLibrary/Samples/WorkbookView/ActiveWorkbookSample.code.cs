@@ -28,13 +28,14 @@ namespace SamplesLibrary.Samples.WorkboookView
         }
 
 
-        public async Task<string> LoadFromUri_RazorPage(IWorkbookView workbookView)
+        public async Task<string> LoadFromUri_AspNetGenerated(IWorkbookView workbookView)
         {
             // Specify the URI that will return a workbook as the response.
+            // NOTE: chartdynamic.aspx dynamically generates returns a workbook in the response stream.
+            // For samples on how to do this please visit
+            //     https://www.spreadsheetgear.com/support/samples/asp.net.aspx
             string uri = "https://www.spreadsheetgear.com/support/samples/chartdynamic.aspx";
 
-            //NOTE: chartdynamic.aspx returns a workbook in the response stream.  For samples on how to
-            //      do this please visit https://www.spreadsheetgear.com/support/samples/asp.net.aspx
             await LoadFromURI(workbookView, uri);
 
             return uri;
@@ -43,7 +44,8 @@ namespace SamplesLibrary.Samples.WorkboookView
 
         public async Task<string> LoadFromUri_XSLX(IWorkbookView workbookView)
         {
-            // Specify the URI that will return a workbook as the response.
+            // Specify the URI that will return a workbook as the response.  chartgallery.xlsx is an
+            // Excel file stored on the web server.
             string uri = "https://www.spreadsheetgear.com/support/samples/files/chartgallery.xlsx";
 
             await LoadFromURI(workbookView, uri);
@@ -63,17 +65,28 @@ namespace SamplesLibrary.Samples.WorkboookView
                 // Request to contents of the provided Uri.
                 System.Net.Http.HttpResponseMessage response = await httpClient.GetAsync(uri);
 
-                // Open the requested contents as a stream.
-                using (System.IO.Stream stream = await response.Content.ReadAsStreamAsync())
+                // Only proceed to open workbook stream if the response was OK
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    // NOTE: Use GetWorkbookSet(System.Globalization.CultureInfo.CurrentCulture)
-                    //       to use the current culture instead of the default US English culture.
-                    SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet();
+                    // Open the requested contents as a stream.
+                    using (System.IO.Stream stream = await response.Content.ReadAsStreamAsync())
+                    {
+                        // NOTE: Use GetWorkbookSet(System.Globalization.CultureInfo.CurrentCulture)
+                        //       to use the current culture instead of the default US English culture.
+                        SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet();
 
-                    // Open the workbook from the Stream object.
-                    SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.OpenFromStream(stream);
+                        // Open the workbook from the Stream object.
+                        SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.OpenFromStream(stream);
 
-                    // Associate the workbook with the WorkbookView control.
+                        // Associate the workbook with the WorkbookView control.
+                        workbookView.ActiveWorkbook = workbook;
+                    }
+                }
+                // Otherwise, display a new workbook with an error message.
+                else
+                {
+                    SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook();
+                    workbook.ActiveWorksheet.Cells["A1"].Value = $"Error loading workbook from URI '{uri}'";
                     workbookView.ActiveWorkbook = workbook;
                 }
             }
