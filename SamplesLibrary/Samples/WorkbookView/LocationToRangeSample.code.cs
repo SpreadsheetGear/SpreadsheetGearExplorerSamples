@@ -21,7 +21,7 @@
 
                 // If this location is over a cell or row/col header, set the interior color.
                 if (range != null)
-                    range.EntireMergeArea.Interior.Color = SpreadsheetGear.Colors.SlateBlue;
+                    range.Interior.Color = SpreadsheetGear.Colors.SlateBlue;
             }
             finally
             {
