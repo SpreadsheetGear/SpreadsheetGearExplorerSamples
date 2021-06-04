@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Calculations.AmortizationCalculatorSample Sample { get; private set; }
 
-        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        private void Calculate()
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -38,6 +38,19 @@ namespace WindowsFormsExplorer.Samples.Calculations
             // Set the active workbook of the WorkbookView to the returned workbook, which will contain
             // the amortization table.
             workbookView.ActiveWorkbook = results.ResultsWorkbook;
+        }
+
+
+        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        {
+            Calculate();
+        }
+
+
+        private void textBox_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+                Calculate();
         }
 
 

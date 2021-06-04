@@ -7,7 +7,7 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Calculations.CustomFunctionsSample Sample { get; private set; }
 
-        private void buttonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void Calculate()
         {
             try
             {
@@ -23,6 +23,20 @@
                     "SpreadsheetGear", System.Windows.MessageBoxButton.OK);
             }
         }
+
+
+        private void buttonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            Calculate();
+        }
+
+
+        private void textBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter)
+                Calculate();
+        }
+
 
         #region Sample Initialization Code
         public CustomFunctionsSample()

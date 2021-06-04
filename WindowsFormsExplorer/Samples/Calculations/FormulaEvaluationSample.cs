@@ -27,6 +27,13 @@ namespace WindowsFormsExplorer.Samples.Calculations
         }
 
 
+        private void textBoxFormula_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+                EvaluateFormula();
+        }
+
+
         private void listBox1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             textBoxFormula.Text = exampleFormulasListBox.Text;

@@ -9,20 +9,21 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#DCEFEFEF" Offset="0" />
-                <GradientStop Color="#DCA0A0A0" Offset="1" />
-            </LinearGradientBrush>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
         </Grid.Background>
         <StackPanel>
-            <Label Content="Custom Function Calculator" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" />
+            <Label Content="Custom Function Calculator" Margin="10,10,10,0" FontSize="20" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
                 <Label Content="Enter values for MYADD:" Margin="10,10,0,0" VerticalAlignment="Center" />
-                <TextBox Name="textBox1" Width="100" Margin="10,10,0,0" />
-                <TextBox Name="textBox2" Width="100" Margin="10,10,0,0" />
+                <TextBox Name="textBox1" Width="100" Margin="10,10,0,0" KeyDown="textBox_KeyDown" VerticalContentAlignment="Top" />
+                <TextBox Name="textBox2" Width="100" Margin="10,10,0,0" KeyDown="textBox_KeyDown" />
                 <Button Content="Calculate" Width="85" Margin="10,10,0,0" Click="buttonCalculate_Click" />
             </StackPanel>
-            <Label Name="labelResult" Height="40" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" />
+            <Label Name="labelResult" Height="40" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" Width="454">
+                <Label.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                </Label.Background>
+            </Label>
             <Label Content="Notice these features:" Margin="10,10,10,0" FontWeight="Bold" />
             <StackPanel Margin="10,10,10,0">
                 <TextBlock Text="•  Demonstrates the use of a custom function named MYADD." Margin="5,0,5,0" />

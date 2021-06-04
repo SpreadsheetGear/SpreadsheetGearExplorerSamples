@@ -29,7 +29,7 @@
                     displayValue = result.ToString();
 
                 // Return information about the evaluated result.
-                return "Result calculated from EvaluateValue = " + displayValue;
+                return "Result calculated from ISheet.EvaluateValue(...) = " + displayValue;
             }
         }
     }

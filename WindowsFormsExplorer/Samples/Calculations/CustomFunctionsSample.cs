@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Calculations.CustomFunctionsSample Sample { get; private set; }
 
-        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        private void Calculate()
         {
             try
             {
@@ -22,6 +22,19 @@ namespace WindowsFormsExplorer.Samples.Calculations
                 System.Windows.Forms.MessageBox.Show(this, exc.Message, "SpreadsheetGear Explorer",
                     System.Windows.Forms.MessageBoxButtons.OK);
             }
+        }
+
+
+        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        {
+            Calculate();
+        }
+        
+
+        private void textBox_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+                Calculate();
         }
 
 

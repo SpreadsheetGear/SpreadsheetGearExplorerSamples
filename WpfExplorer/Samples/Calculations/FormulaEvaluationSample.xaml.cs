@@ -27,6 +27,15 @@
         }
 
 
+        private void textBoxFormula_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Return)
+            {
+                EvaluateFormula();
+            }
+        }
+
+
         private void listBoxFormulas_SelectionChanged(
             object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {

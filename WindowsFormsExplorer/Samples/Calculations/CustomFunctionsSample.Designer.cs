@@ -31,6 +31,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
+            this.labelFeatures2 = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanelValues = new System.Windows.Forms.TableLayoutPanel();
             this.labelEnterValues = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.labelTitleFeatures = new System.Windows.Forms.Label();
             this.labelFeatures1 = new System.Windows.Forms.Label();
-            this.labelFeatures2 = new System.Windows.Forms.Label();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelValues.SuspendLayout();
             this.tableLayoutPanelEvaluate.SuspendLayout();
@@ -47,21 +47,23 @@ namespace WindowsFormsExplorer.Samples.Calculations
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(184, 4);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(225, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 24);
+            this.textBox1.Size = new System.Drawing.Size(174, 28);
             this.textBox1.TabIndex = 1;
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(342, 4);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(421, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 24);
+            this.textBox2.Size = new System.Drawing.Size(174, 28);
             this.textBox2.TabIndex = 2;
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
             // tableLayoutPanelMain
             // 
@@ -75,32 +77,44 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.tableLayoutPanelMain.Controls.Add(this.tableLayoutPanelEvaluate, 0, 4);
             this.tableLayoutPanelMain.Controls.Add(this.labelTitleFeatures, 0, 6);
             this.tableLayoutPanelMain.Controls.Add(this.labelFeatures1, 0, 7);
-            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanelMain.Location = new System.Drawing.Point(0, 10);
+            this.tableLayoutPanelMain.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tableLayoutPanelMain.Name = "tableLayoutPanelMain";
             this.tableLayoutPanelMain.RowCount = 10;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanelMain.Size = new System.Drawing.Size(565, 234);
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(686, 336);
             this.tableLayoutPanelMain.TabIndex = 1;
+            // 
+            // labelFeatures2
+            // 
+            this.labelFeatures2.AutoSize = true;
+            this.labelFeatures2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFeatures2.Location = new System.Drawing.Point(4, 278);
+            this.labelFeatures2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.labelFeatures2.Name = "labelFeatures2";
+            this.labelFeatures2.Size = new System.Drawing.Size(678, 22);
+            this.labelFeatures2.TabIndex = 14;
+            this.labelFeatures2.Text = "       •  This function extends the SpreadsheetGear.CustomFunctions.Function clas" +
+    "s.";
             // 
             // labelTitle
             // 
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.Location = new System.Drawing.Point(4, 0);
-            this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitle.Location = new System.Drawing.Point(5, 0);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(219, 18);
+            this.labelTitle.Size = new System.Drawing.Size(441, 37);
             this.labelTitle.TabIndex = 3;
             this.labelTitle.Text = "Custom Function Calculator";
             // 
@@ -111,27 +125,28 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.tableLayoutPanelValues.ColumnCount = 4;
             this.tableLayoutPanelValues.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelValues.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelValues.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanelValues.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanelValues.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanelValues.Controls.Add(this.textBox2, 3, 0);
             this.tableLayoutPanelValues.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanelValues.Controls.Add(this.labelEnterValues, 0, 0);
-            this.tableLayoutPanelValues.Location = new System.Drawing.Point(3, 41);
+            this.tableLayoutPanelValues.Location = new System.Drawing.Point(4, 73);
+            this.tableLayoutPanelValues.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanelValues.Name = "tableLayoutPanelValues";
             this.tableLayoutPanelValues.RowCount = 1;
             this.tableLayoutPanelValues.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelValues.Size = new System.Drawing.Size(486, 32);
+            this.tableLayoutPanelValues.Size = new System.Drawing.Size(600, 40);
             this.tableLayoutPanelValues.TabIndex = 4;
             // 
             // labelEnterValues
             // 
             this.labelEnterValues.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelEnterValues.AutoSize = true;
-            this.labelEnterValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEnterValues.Location = new System.Drawing.Point(4, 7);
-            this.labelEnterValues.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelEnterValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelEnterValues.Location = new System.Drawing.Point(5, 9);
+            this.labelEnterValues.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelEnterValues.Name = "labelEnterValues";
-            this.labelEnterValues.Size = new System.Drawing.Size(172, 18);
+            this.labelEnterValues.Size = new System.Drawing.Size(210, 22);
             this.labelEnterValues.TabIndex = 1;
             this.labelEnterValues.Text = "Enter values for MYADD:";
             // 
@@ -141,38 +156,39 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.tableLayoutPanelEvaluate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanelEvaluate.ColumnCount = 3;
             this.tableLayoutPanelEvaluate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanelEvaluate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanelEvaluate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanelEvaluate.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelEvaluate.Controls.Add(this.labelResult, 2, 0);
             this.tableLayoutPanelEvaluate.Controls.Add(this.buttonCalculate, 0, 0);
-            this.tableLayoutPanelEvaluate.Location = new System.Drawing.Point(3, 89);
+            this.tableLayoutPanelEvaluate.Location = new System.Drawing.Point(4, 139);
+            this.tableLayoutPanelEvaluate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanelEvaluate.Name = "tableLayoutPanelEvaluate";
             this.tableLayoutPanelEvaluate.RowCount = 1;
             this.tableLayoutPanelEvaluate.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanelEvaluate.Size = new System.Drawing.Size(263, 36);
+            this.tableLayoutPanelEvaluate.Size = new System.Drawing.Size(324, 44);
             this.tableLayoutPanelEvaluate.TabIndex = 11;
             // 
             // labelResult
             // 
             this.labelResult.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelResult.AutoSize = true;
-            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResult.Location = new System.Drawing.Point(98, 9);
-            this.labelResult.Margin = new System.Windows.Forms.Padding(5);
-            this.labelResult.MinimumSize = new System.Drawing.Size(160, 0);
+            this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelResult.Location = new System.Drawing.Point(118, 11);
+            this.labelResult.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.labelResult.MinimumSize = new System.Drawing.Size(200, 0);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(160, 18);
+            this.labelResult.Size = new System.Drawing.Size(200, 22);
             this.labelResult.TabIndex = 9;
             // 
             // buttonCalculate
             // 
             this.buttonCalculate.AutoSize = true;
             this.buttonCalculate.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.buttonCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.Location = new System.Drawing.Point(0, 4);
-            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
+            this.buttonCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonCalculate.Location = new System.Drawing.Point(0, 6);
+            this.buttonCalculate.Margin = new System.Windows.Forms.Padding(0, 6, 5, 6);
             this.buttonCalculate.Name = "buttonCalculate";
-            this.buttonCalculate.Size = new System.Drawing.Size(79, 28);
+            this.buttonCalculate.Size = new System.Drawing.Size(95, 32);
             this.buttonCalculate.TabIndex = 5;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
@@ -181,47 +197,36 @@ namespace WindowsFormsExplorer.Samples.Calculations
             // labelTitleFeatures
             // 
             this.labelTitleFeatures.AutoSize = true;
-            this.labelTitleFeatures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitleFeatures.Location = new System.Drawing.Point(4, 148);
-            this.labelTitleFeatures.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelTitleFeatures.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelTitleFeatures.Location = new System.Drawing.Point(5, 219);
+            this.labelTitleFeatures.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.labelTitleFeatures.Name = "labelTitleFeatures";
-            this.labelTitleFeatures.Size = new System.Drawing.Size(184, 18);
+            this.labelTitleFeatures.Size = new System.Drawing.Size(220, 22);
             this.labelTitleFeatures.TabIndex = 12;
             this.labelTitleFeatures.Text = "Notice These Features:";
             // 
             // labelFeatures1
             // 
             this.labelFeatures1.AutoSize = true;
-            this.labelFeatures1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFeatures1.Location = new System.Drawing.Point(3, 169);
-            this.labelFeatures1.Margin = new System.Windows.Forms.Padding(3);
+            this.labelFeatures1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelFeatures1.Location = new System.Drawing.Point(4, 246);
+            this.labelFeatures1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.labelFeatures1.Name = "labelFeatures1";
-            this.labelFeatures1.Size = new System.Drawing.Size(445, 18);
+            this.labelFeatures1.Size = new System.Drawing.Size(534, 22);
             this.labelFeatures1.TabIndex = 13;
             this.labelFeatures1.Text = "       •  Demonstrates the use of a custom function named MYADD.";
             // 
-            // labelFeatures2
-            // 
-            this.labelFeatures2.AutoSize = true;
-            this.labelFeatures2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFeatures2.Location = new System.Drawing.Point(3, 193);
-            this.labelFeatures2.Margin = new System.Windows.Forms.Padding(3);
-            this.labelFeatures2.Name = "labelFeatures2";
-            this.labelFeatures2.Size = new System.Drawing.Size(559, 18);
-            this.labelFeatures2.TabIndex = 14;
-            this.labelFeatures2.Text = "       •  This function extends the SpreadsheetGear.CustomFunctions.Function clas" +
-                "s.";
-            // 
             // CustomFunctionsSample
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.tableLayoutPanelMain);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "CustomFunctionsSample";
-            this.Size = new System.Drawing.Size(569, 238);
+            this.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.Size = new System.Drawing.Size(691, 352);
             this.tableLayoutPanelMain.ResumeLayout(false);
             this.tableLayoutPanelMain.PerformLayout();
             this.tableLayoutPanelValues.ResumeLayout(false);

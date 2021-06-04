@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Calculations.SimpleLoanCalculatorSample Sample { get; private set; }
 
-        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        private void Calculate()
         {
             SamplesLibrary.Samples.Calculations.SimpleLoanCalculatorResults results =
                 Sample.Calculate(textBoxAmount.Text, textBoxRate.Text, textBoxPeriods.Text);
@@ -20,6 +20,19 @@ namespace WindowsFormsExplorer.Samples.Calculations
 
             // Display the calculated result.
             labelPayment.Text = results.Payment;
+        }
+
+
+        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        {
+            Calculate();
+        }
+
+
+        private void textBox_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+                Calculate();
         }
 
 

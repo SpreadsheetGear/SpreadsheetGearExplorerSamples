@@ -10,17 +10,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FFEFEFEF" Offset="0" />
-                <GradientStop Color="#FFA0A0A0" Offset="1" />
-            </LinearGradientBrush>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlLightColorKey}}"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel>
-            <Label Content="Loan Calculator" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" />
+            <Label Content="Loan Calculator" Margin="10,10,10,0" FontSize="20" FontWeight="Bold" />
             <Grid Margin="10,10,10,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -38,9 +35,9 @@
                 <Label Content="Interest Rate (rate)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" />
                 <Label Content="Total # of Periods (Nper)" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" />
                 <Button Content="Calculate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="3" Click="buttonCalculate_Click" />
-                <TextBox Text="150000" x:Name="textBoxAmount" Margin="10,0,10,0" Grid.Column="1" />
-                <TextBox Text="0.0625" x:Name="textBoxRate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="1" />
-                <TextBox Text="360" x:Name="textBoxPeriods" Margin="10,5,10,0" Grid.Column="1" Grid.Row="2" />
+                <TextBox Text="150000" x:Name="textBoxAmount" Margin="10,5,10,0" Grid.Column="1" KeyDown="textBox_KeyDown" />
+                <TextBox Text="0.0625" x:Name="textBoxRate" Margin="10,5,10,0" Grid.Column="1" Grid.Row="1" KeyDown="textBox_KeyDown" />
+                <TextBox Text="360" x:Name="textBoxPeriods" Margin="10,5,10,0" Grid.Column="1" Grid.Row="2" KeyDown="textBox_KeyDown" />
                 <Label Content="Payment:" FontSize="12" FontWeight="Bold" Grid.Column="2" />
                 <Label x:Name="labelPayment" Margin="10,0,10,0" FontSize="12" FontWeight="Bold" Grid.Column="3" />
                 <Label Content="Last Payment:" FontSize="12" FontWeight="Bold" Grid.Column="2" Grid.Row="1" />
