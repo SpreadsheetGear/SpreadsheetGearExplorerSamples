@@ -9,13 +9,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="110" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
             <Button Content="Run Sample" Margin="10" Click="buttonRunSample_Click" />
         </StackPanel>
-        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
+        <sg:FormulaBar Grid.Row="0" Grid.Column="1"/>
+        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" Grid.Row="1" />
     </Grid>
 </src:SampleUserControl>
