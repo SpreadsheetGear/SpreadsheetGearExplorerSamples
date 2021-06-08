@@ -6,6 +6,8 @@
         {
             InitializeComponent();
             DisposalManager.RegisterWorkbookViews(workbookView);
+
+            // See ExcelThemeSample.xaml for the markup used to style the WorkbookView.
         }
     }
 }
