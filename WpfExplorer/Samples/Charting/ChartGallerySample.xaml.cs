@@ -55,6 +55,7 @@ namespace WPFExplorer.Samples.Charting
                 imageControl.Source = null;
         }
 
+        #region Sample Initialization Code
         public void InitializeSample()
         {
             // Initialize the sample
@@ -68,5 +69,6 @@ namespace WPFExplorer.Samples.Charting
             listBoxCategory.ItemsSource = chartCategories;
             listBoxCategory.SelectedIndex = 0;
         }
+        #endregion
     }
 }

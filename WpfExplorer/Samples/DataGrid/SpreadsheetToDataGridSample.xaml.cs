@@ -22,9 +22,11 @@
             dataGrid.ItemsSource = new System.Data.DataView(dataTable);
         }
 
+        #region Sample Initialization Code
         private void InitializeSample()
         {
             Sample = new SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample();
         }
+        #endregion
     }
 }

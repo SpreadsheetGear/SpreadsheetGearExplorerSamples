@@ -75,7 +75,6 @@
         {
             InitializeComponent();
             InitializeSample();
-            #endregion
         }
 
         public void InitializeSample()
@@ -140,6 +139,7 @@
                 workbookView.ReleaseLock();
             }
         }
+        #endregion
     }
 
 

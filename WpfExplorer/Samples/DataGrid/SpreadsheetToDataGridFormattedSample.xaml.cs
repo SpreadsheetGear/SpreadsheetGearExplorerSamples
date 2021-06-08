@@ -22,9 +22,11 @@
             InitializeSample();
         }
 
+        #region Sample Initialization Code
         private void InitializeSample()
         {
             Sample = new SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridFormattedSample();
         }
+        #endregion
     }
 }
