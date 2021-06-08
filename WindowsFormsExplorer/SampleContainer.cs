@@ -190,6 +190,10 @@ namespace WindowsFormsExplorer
                 editor.SyntaxHighlighting = _syntaxHighlightingDefinitions[sourceCodeItem.Extension];
             editor.Document = document;
 
+            var foldingManager = ICSharpCode.AvalonEdit.Folding.FoldingManager.Install(editor.TextArea);
+            var csFoldingStrategy = new AvalonEditRegionFoldingStrategy();
+            foldingManager.UpdateFoldings(csFoldingStrategy.CreateFoldings(document), -1);
+
             ElementHost elementHost = new ElementHost();
             elementHost.Dock = DockStyle.Fill;
             elementHost.Child = editor;
