@@ -45,10 +45,12 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
         }
 
 
+        #region Sample Initialization Code
         public CellEndEditSample()
         {
             InitializeComponent();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
+        #endregion
     }
 }

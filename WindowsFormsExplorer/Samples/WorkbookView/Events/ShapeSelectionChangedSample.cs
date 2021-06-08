@@ -27,10 +27,13 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             }
         }
 
+
+        #region Sample Initialization Code
         public ShapeSelectionChangedSample()
         {
             InitializeComponent();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
+        #endregion
     }
 }
