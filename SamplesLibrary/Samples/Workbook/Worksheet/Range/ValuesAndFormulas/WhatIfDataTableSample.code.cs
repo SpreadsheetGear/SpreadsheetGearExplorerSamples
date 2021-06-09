@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
-    class WhatIfDataTableSample : ISpreadsheetGearEngineSample
+    public class WhatIfDataTableSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

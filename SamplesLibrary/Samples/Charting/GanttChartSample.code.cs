@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Charting
 {
-    class GanttChartSample : ISpreadsheetGearEngineSample
+    public class GanttChartSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

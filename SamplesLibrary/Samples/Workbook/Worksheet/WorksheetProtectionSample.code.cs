@@ -56,15 +56,15 @@
             protectOptions.AllowFormattingColumns = false;
             // ... See documentation or use IntelliSense for additional options...
 
-            // Prevent IRange.Locked==true cells from being selected.
+            // Prevent IRange.Locked == true cells from being selected.
             worksheet.EnableSelection = SpreadsheetGear.EnableSelection.UnlockedCells;
 
             // Enable this property to allow programmatic changes to still be made to a 
             // worksheet even when worksheet protection is enabled.  UI protection is still 
             // enforced.
             worksheet.ProtectionMode = true;
-            worksheet.Cells["A6"].Value = "Successfully programmatically modified with worksheet " +
-                "protection enabled because IWorksheet.ProtectionMode was set to true.";
+            worksheet.Cells["A6"].Value = "This cell was modified while worksheet " +
+                "protection was enabled because IWorksheet.ProtectionMode was set to true.";
         }
     }
 }

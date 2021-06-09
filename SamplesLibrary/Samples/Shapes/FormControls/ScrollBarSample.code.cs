@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Shapes.FormControls
 {
-    public partial class ScrollBarSample : ISpreadsheetGearEngineSample
+    public class ScrollBarSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

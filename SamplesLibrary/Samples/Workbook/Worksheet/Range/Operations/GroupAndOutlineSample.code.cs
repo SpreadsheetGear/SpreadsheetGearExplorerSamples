@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations
 {
-    class GroupAndOutlineSample : ISpreadsheetGearEngineSample
+    public class GroupAndOutlineSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Shapes.FormControls
 {
-    public partial class ButtonSample : ISpreadsheetGearEngineSample
+    public class ButtonSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

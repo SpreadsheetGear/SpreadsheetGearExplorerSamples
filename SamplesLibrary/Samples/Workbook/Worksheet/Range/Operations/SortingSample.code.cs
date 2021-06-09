@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations
 {
-    class SortingSample : ISpreadsheetGearEngineSample
+    public class SortingSample : ISpreadsheetGearEngineSample
     {
         // Store the range that will be sorted in Range.
         public SpreadsheetGear.IRange Range { get; set; }

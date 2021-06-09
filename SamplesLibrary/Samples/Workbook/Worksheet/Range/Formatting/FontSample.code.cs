@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Formatting
 {
-    class FontSample : ISpreadsheetGearEngineSample
+    public class FontSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

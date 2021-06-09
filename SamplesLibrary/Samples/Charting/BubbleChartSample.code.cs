@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Charting
 {
-    public partial class BubbleChartSample : ISpreadsheetGearEngineSample
+    public class BubbleChartSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations
 {
-    class AutoFilterSample : ISpreadsheetGearEngineSample
+    public class AutoFilterSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Shapes.FormControls
 {
-    public partial class GroupBoxAndOptionButtonsSample : ISpreadsheetGearEngineSample
+    public class GroupBoxAndOptionButtonsSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

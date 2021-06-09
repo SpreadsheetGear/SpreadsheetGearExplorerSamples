@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations
 {
-    class FillDataSeriesSample : ISpreadsheetGearEngineSample
+    public class FillDataSeriesSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

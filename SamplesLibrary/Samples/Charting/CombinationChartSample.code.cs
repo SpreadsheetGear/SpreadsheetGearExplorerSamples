@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Charting
 {
-    class CombinationChartSample : ISpreadsheetGearEngineSample
+    public class CombinationChartSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Shapes.FormControls
 {
-    public partial class CheckBoxSample : ISpreadsheetGearEngineSample
+    public class CheckBoxSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

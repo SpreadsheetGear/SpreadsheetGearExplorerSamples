@@ -21,6 +21,8 @@ namespace SamplesLibrary.Samples.WorkboookView
             // NOTE: Use GetWorkbookSet(System.Globalization.CultureInfo.CurrentCulture)
             //       to use the current culture instead of the default US English culture.
             SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet();
+
+            // Open the workbook using the provided path.
             SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(filePath);
 
             // Associate the workbook with the WorkbookView control.
@@ -36,7 +38,7 @@ namespace SamplesLibrary.Samples.WorkboookView
             //     https://www.spreadsheetgear.com/support/samples/asp.net.aspx
             string uri = "https://www.spreadsheetgear.com/support/samples/chartdynamic.aspx";
 
-            await LoadFromURI(workbookView, uri);
+            await this.LoadFromURI(workbookView, uri);
 
             return uri;
         }
@@ -48,12 +50,17 @@ namespace SamplesLibrary.Samples.WorkboookView
             // Excel file stored on the web server.
             string uri = "https://www.spreadsheetgear.com/support/samples/files/chartgallery.xlsx";
 
-            await LoadFromURI(workbookView, uri);
+            await this.LoadFromURI(workbookView, uri);
 
             return uri;
         }
 
 
+        /// <summary>
+        /// Opens a System.IO.Stream from the provided URI to an Excel workbook file, which is opened
+        /// by SpreadsheetGear using the IWorkbooks.OpenFromStream(...) method and displayed on the
+        /// provided WorkbookView.
+        /// </summary>
         public async Task LoadFromURI(IWorkbookView workbookView, string uriString)
         {
             // Create a System.Uri from the provided uriString.

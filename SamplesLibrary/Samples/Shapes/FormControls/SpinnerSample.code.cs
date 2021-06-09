@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Shapes.FormControls
 {
-    public partial class SpinnerSample : ISpreadsheetGearEngineSample
+    public class SpinnerSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 

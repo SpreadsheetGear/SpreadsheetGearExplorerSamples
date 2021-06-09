@@ -1,6 +1,6 @@
 ﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
-    class GoalSeekSample : ISpreadsheetGearEngineSample
+    public class GoalSeekSample : ISpreadsheetGearEngineSample
     {
         public SpreadsheetGear.IWorkbook Workbook { get; set; }
 
