@@ -28,25 +28,37 @@ namespace WindowsFormsExplorer
         }
 
         private ImageList _samplesImageList;
-        // Index values below are image position in _samplesImageList
-        private const int EngineImageIndex = 4;
-        private const int WindowsImageIndex = 6;
-        private const int WindowsWorkbookViewImageIndex = 5;
+        // Index values are image positions in _samplesImageList
+        private int _imageIndexEngine = 2;
+        private int _imageIndexWindows = 3;
+        private int _imageIndexWorkbookView = 4;
 
         private void InitializeTreeviewImages()
         {
+            // TreeView image size vs rendered size doesn't work consistently on low vs high DPI screens.  Use a smaller
+            // image and image size based on DPI of the primary screen to improve this.
+            var g = CreateGraphics();
+            if (g.DpiX <= 96)
+            {
+                _imageIndexEngine = 5;
+                _imageIndexWindows = 6;
+                _imageIndexWorkbookView = 7;
+            }
+            var treeViewImageSize = g.DpiX == 96 ? 16 : 32;
+
             _samplesImageList = new ImageList();
             _samplesImageList.ColorDepth = ColorDepth.Depth24Bit;
             // TODO: remove and clean up old images as needed (check Web / WPF Images folder as well).
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderOpened_32));            // 0
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderClosed_32));            // 1
-            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.brackets_curly_32));          // 2
-            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.window_alt_32));              // 3
-            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.SpreadsheetGearLogo_32));     // 4
-            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.WorkbookView_32));            // 5
-            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.UserControl_32));             // 6
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.SpreadsheetGearLogo_32));     // 2
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.UserControl_32));             // 3
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.WorkbookView_32));            // 4
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.SpreadsheetGearLogo_16));     // 5
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.UserControl_16));             // 6
+            _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.WorkbookView_16));            // 7
 
-            _samplesImageList.ImageSize = new Size(32, 32); // increase size from 16x16 deafault
+            _samplesImageList.ImageSize = new Size(treeViewImageSize, treeViewImageSize);
             samplesTreeView.ImageList = _samplesImageList;
             samplesTreeView.AfterCollapse += SamplesTreeView_AfterCollapse;
             samplesTreeView.AfterExpand += SamplesTreeView_AfterExpand;
@@ -81,13 +93,13 @@ namespace WindowsFormsExplorer
             {
                 int imageIndex;
                 if (sampleInfo.IsSpreadsheetGearEngineSample)
-                    imageIndex = EngineImageIndex;
+                    imageIndex = _imageIndexEngine;
                 else
                 {
                     if (sampleInfo.UsesWorkbookView)
-                        imageIndex = WindowsWorkbookViewImageIndex;
+                        imageIndex = _imageIndexWorkbookView;
                     else
-                        imageIndex = WindowsImageIndex;
+                        imageIndex = _imageIndexWindows;
                 }
                 int selectedImageIndex = imageIndex;
                 var sampleNode = new TreeNode(sampleInfo.Name, imageIndex, selectedImageIndex);

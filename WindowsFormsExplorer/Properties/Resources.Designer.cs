@@ -63,16 +63,6 @@ namespace WindowsFormsExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brackets_curly_32 {
-            get {
-                object obj = ResourceManager.GetObject("brackets_curly_32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FolderClosed_32 {
             get {
                 object obj = ResourceManager.GetObject("FolderClosed_32", resourceCulture);
@@ -93,9 +83,29 @@ namespace WindowsFormsExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SpreadsheetGearLogo_16 {
+            get {
+                object obj = ResourceManager.GetObject("SpreadsheetGearLogo_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SpreadsheetGearLogo_32 {
             get {
                 object obj = ResourceManager.GetObject("SpreadsheetGearLogo_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UserControl_16 {
+            get {
+                object obj = ResourceManager.GetObject("UserControl_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +123,9 @@ namespace WindowsFormsExplorer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap window_alt_32 {
+        internal static System.Drawing.Bitmap WorkbookView_16 {
             get {
-                object obj = ResourceManager.GetObject("window_alt_32", resourceCulture);
+                object obj = ResourceManager.GetObject("WorkbookView_16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
