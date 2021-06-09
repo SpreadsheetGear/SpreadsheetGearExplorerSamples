@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Copyright © SpreadsheetGear LLC. All Rights Reserved.
+* 
+* SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
