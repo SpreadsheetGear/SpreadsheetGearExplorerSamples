@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Copyright © SpreadsheetGear LLC. All Rights Reserved.
+* 
+* SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
+*/
+
+using System;
 using System.Collections.Generic;
 using ICSharpCode.AvalonEdit.Document;
 using ICSharpCode.AvalonEdit.Folding;
@@ -12,77 +18,60 @@ namespace WPFExplorer
     {
         public IEnumerable<NewFolding> CreateFoldings(TextDocument document)
         {
-            var folds = new List<NewFolding>();
-            CreateFoldingsInternal(document, 0, folds);
-            return folds;
-        }
-
-
-        private int CreateFoldingsInternal(TextDocument document, int offset, List<NewFolding> folds)
-        {
-            if (offset >= document.TextLength)
-                return offset;
-
-            bool insideRegion = false;
-            string regionLabel = null;
-            int regionIndexStart = -1;
+            List<NewFolding> newFoldings = new List<NewFolding>();
+            Stack<RegionInfo> startOffsets = new Stack<RegionInfo>();
+            int offset = 0;
             while (offset < document.TextLength)
             {
                 char c = document.GetCharAt(offset);
-                switch (c)
+                if (c == '#')
                 {
-                    case '#':
-                        if (!insideRegion)
+                    if (document.Text.Substring(offset, "#region".Length) == "#region")
+                    {
+                        // Extract label from region
+                        var line = document.GetLineByOffset(offset);
+                        int lineEnd = line.Offset + line.Length;
+                        int labelLength = lineEnd - offset;
+                        string regionLabel = document.GetText(offset, labelLength).Trim();
+                        if (regionLabel.Length == 0)
+                            regionLabel = "#region";
+
+                        startOffsets.Push(new RegionInfo(offset, regionLabel));
+                        offset = lineEnd;
+                    }
+                    else if (document.Text.Substring(offset, "#endregion".Length) == "#endregion")
+                    {
+                        int endOffset = offset + "#endregion".Length;
+                        var lastRegion = startOffsets.Pop();
+                        newFoldings.Add(new NewFolding()
                         {
-                            string marker = "#region";
-                            int markerLength = marker.Length;
-                            int markerOffsetEnd = offset + markerLength;
-                            if (markerOffsetEnd > document.TextLength)
-                                return markerOffsetEnd;
-
-                            if (document.Text.Substring(offset, markerLength) == marker)
-                            {
-                                insideRegion = true;
-                                regionIndexStart = offset;
-
-                                // Extract label
-                                var line = document.GetLineByOffset(offset);
-                                int lineEnd = line.Offset + line.Length;
-                                int labelLength = lineEnd - offset;
-                                regionLabel = document.GetText(offset, labelLength).Trim();
-                                if (regionLabel.Length == 0)
-                                    regionLabel = "#region";
-                                offset += regionLabel.Length;
-                            }
-                            else
-                                offset++;
-                        }
-                        else
-                        {
-                            string marker = "#endregion";
-                            int markerLength = marker.Length;
-                            int markerOffsetEnd = offset + markerLength;
-                            if (markerOffsetEnd > document.TextLength)
-                                return markerOffsetEnd;
-
-                            if (document.Text.Substring(offset, markerLength) == "#endregion")
-                            {
-                                folds.Add(new NewFolding(regionIndexStart, markerOffsetEnd) { Name = regionLabel, DefaultClosed = true });
-                                insideRegion = false;
-                                regionLabel = null;
-                                regionIndexStart = -1;
-                                offset += markerLength;
-                            }
-                            else
-                                offset++;
-                        }
-                        break;
-                    default:
+                            StartOffset = lastRegion.StartOffset,
+                            EndOffset = endOffset,
+                            Name = lastRegion.Label,
+                            DefaultClosed = true
+                        });
+                        offset = endOffset;
+                    }
+                    else
                         offset++;
-                        break;
                 }
+                else
+                    offset++;
             }
-            return offset;
+            newFoldings.Sort((a, b) => a.StartOffset.CompareTo(b.StartOffset));
+            return newFoldings;
+        }
+
+
+        private class RegionInfo
+        {
+            public RegionInfo(int startOffset, string label)
+            {
+                StartOffset = startOffset;
+                Label = label;
+            }
+            public int StartOffset { get; set; }
+            public string Label { get; set; }
         }
     }
 }
