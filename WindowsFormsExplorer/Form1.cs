@@ -36,15 +36,16 @@ namespace WindowsFormsExplorer
         private void InitializeTreeviewImages()
         {
             // TreeView image size vs rendered size doesn't work consistently on low vs high DPI screens.  Use a smaller
-            // image and image size based on DPI of the primary screen to improve this.
+            // image list size and actual image size based on DPI of the primary screen to improve rendering.
             var g = CreateGraphics();
+            var treeViewImageSize = 32;
             if (g.DpiX <= 96)
             {
                 _imageIndexEngine = 5;
                 _imageIndexWindows = 6;
                 _imageIndexWorkbookView = 7;
+                treeViewImageSize = 16;
             }
-            var treeViewImageSize = g.DpiX == 96 ? 16 : 32;
 
             _samplesImageList = new ImageList();
             _samplesImageList.ColorDepth = ColorDepth.Depth24Bit;
