@@ -22,9 +22,6 @@
     <Reference Include="SpreadsheetGear.Drawing">
       <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="SpreadsheetGear.Windows">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
