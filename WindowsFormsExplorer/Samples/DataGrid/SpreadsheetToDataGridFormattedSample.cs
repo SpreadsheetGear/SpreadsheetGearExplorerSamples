@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.DataGrid
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridFormattedSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.EventArgs e)
+        private void ButtonRunSample_Click(object sender, System.EventArgs e)
         {
             try
             {
@@ -23,7 +23,6 @@ namespace WindowsFormsExplorer.Samples.DataGrid
                     System.Windows.Forms.MessageBoxButtons.OK);
             }
         }
-
 
         #region Sample Initialization Code
         public SpreadsheetToDataGridFormattedSample()

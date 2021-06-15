@@ -98,7 +98,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.radioButtonWorksheet.TabStop = true;
             this.radioButtonWorksheet.Text = "Worksheet";
             this.radioButtonWorksheet.UseVisualStyleBackColor = true;
-            this.radioButtonWorksheet.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonWorksheet.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonRange
             // 
@@ -111,7 +111,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.radioButtonRange.TabStop = true;
             this.radioButtonRange.Text = "Range";
             this.radioButtonRange.UseVisualStyleBackColor = true;
-            this.radioButtonRange.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonRange.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonDefinedName
             // 
@@ -124,7 +124,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.radioButtonDefinedName.TabStop = true;
             this.radioButtonDefinedName.Text = "Defined Name";
             this.radioButtonDefinedName.UseVisualStyleBackColor = true;
-            this.radioButtonDefinedName.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonDefinedName.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonMultipleRanges
             // 
@@ -137,7 +137,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.radioButtonMultipleRanges.TabStop = true;
             this.radioButtonMultipleRanges.Text = "Multiple Ranges";
             this.radioButtonMultipleRanges.UseVisualStyleBackColor = true;
-            this.radioButtonMultipleRanges.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonMultipleRanges.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonWorkbook
             // 
@@ -151,7 +151,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.radioButtonWorkbook.TabStop = true;
             this.radioButtonWorkbook.Text = "Workbook";
             this.radioButtonWorkbook.UseVisualStyleBackColor = true;
-            this.radioButtonWorkbook.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonWorkbook.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonUsedRange
             // 

@@ -48,7 +48,6 @@
             }
         }
 
-
         /*
          * Demonstrate creating a simple undoable command which
          * toggles the display of gridlines.

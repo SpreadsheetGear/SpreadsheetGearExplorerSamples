@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class CellBeginEditSample : SampleUserControl
     {
-        private void workbookView_CellBeginEdit(
+        private void WorkbookView_CellBeginEdit(
             object sender, SpreadsheetGear.Windows.Forms.CellBeginEditEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -24,7 +24,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public CellBeginEditSample()

@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.Printing
 {
     public partial class AdvancedPrintingSample : SampleUserControl
     {
-        private void buttonPrint_Click(object sender, System.EventArgs e)
+        private void ButtonPrint_Click(object sender, System.EventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
             workbookView.GetLock();
@@ -46,8 +46,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             }
         }
 
-
-        private void buttonPrintPreview_Click(object sender, System.EventArgs e)
+        private void ButtonPrintPreview_Click(object sender, System.EventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
             workbookView.GetLock();
@@ -80,7 +79,6 @@ namespace WindowsFormsExplorer.Samples.Printing
                 workbookView.ReleaseLock();
             }
         }
-
 
         private SpreadsheetGear.Drawing.Printing.WorkbookPrintDocument CreatePrintDocument(
             SpreadsheetGear.IWorkbook workbook)
@@ -117,7 +115,6 @@ namespace WindowsFormsExplorer.Samples.Printing
             // Return the workbook print document.
             return document;
         }
-
 
         #region Sample Initialization Code
         public AdvancedPrintingSample()

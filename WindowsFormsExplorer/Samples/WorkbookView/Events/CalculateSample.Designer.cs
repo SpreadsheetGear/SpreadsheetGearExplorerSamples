@@ -50,7 +50,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.workbookView.Size = new System.Drawing.Size(471, 634);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            this.workbookView.Calculate += new SpreadsheetGear.Windows.Forms.CalculateEventHandler(this.workbookView_Calculate);
+            this.workbookView.Calculate += new SpreadsheetGear.Windows.Forms.CalculateEventHandler(this.WorkbookView_Calculate);
             // 
             // tableLayoutPanel1
             // 
@@ -104,7 +104,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.buttonCalculate.TabIndex = 0;
             this.buttonCalculate.Text = "Calculate Time";
             this.buttonCalculate.UseVisualStyleBackColor = true;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.buttonCalculate.Click += new System.EventHandler(this.ButtonCalculate_Click);
             // 
             // dateTimePicker1
             // 

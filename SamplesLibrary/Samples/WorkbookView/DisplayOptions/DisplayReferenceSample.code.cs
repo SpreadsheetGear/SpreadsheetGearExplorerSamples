@@ -33,7 +33,6 @@
             workbookView.ActiveWorkbookSet = workbookSet;
         }
 
-
         public void UpdateDisplayReference(IWorkbookView workbookView, string displayReferenceType)
         {
             workbookView.GetLock();

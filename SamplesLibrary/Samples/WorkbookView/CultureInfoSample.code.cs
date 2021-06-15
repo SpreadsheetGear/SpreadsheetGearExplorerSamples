@@ -57,7 +57,6 @@ namespace SamplesLibrary.Samples.WorkboookView
             workbookView_selectedCulture.ActiveWorkbook = workbook_selectedCulture;
         }
 
-
         public List<string> GetAllCultures()
         {
             // Get a list of all cultures

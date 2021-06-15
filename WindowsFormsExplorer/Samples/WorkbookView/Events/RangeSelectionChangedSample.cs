@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class RangeSelectionChangedSample : SampleUserControl
     {
-        private void workbookView_RangeSelectionChanged(
+        private void WorkbookView_RangeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Forms.RangeSelectionChangedEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -21,7 +21,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public RangeSelectionChangedSample()

@@ -72,7 +72,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
             this.buttonRunSample.TabIndex = 0;
             this.buttonRunSample.Text = "Run Sample";
             this.buttonRunSample.UseVisualStyleBackColor = true;
-            this.buttonRunSample.Click += new System.EventHandler(this.buttonRunSample_Click);
+            this.buttonRunSample.Click += new System.EventHandler(this.ButtonRunSample_Click);
             // 
             // PerformanceSample
             // 

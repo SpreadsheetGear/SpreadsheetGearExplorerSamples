@@ -43,7 +43,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.workbookView.Size = new System.Drawing.Size(270, 274);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            this.workbookView.CellBeginEdit += new SpreadsheetGear.Windows.Forms.CellBeginEditEventHandler(this.workbookView_CellBeginEdit);
+            this.workbookView.CellBeginEdit += new SpreadsheetGear.Windows.Forms.CellBeginEditEventHandler(this.WorkbookView_CellBeginEdit);
             // 
             // tableLayoutPanel1
             // 

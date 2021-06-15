@@ -2,13 +2,12 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class CalculateSample : SampleUserControl
     {
-        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        private void ButtonCalculate_Click(object sender, System.EventArgs e)
         {
             CalculateWorkbook(workbookView);
         }
 
-
-        private void workbookView_Calculate(
+        private void WorkbookView_Calculate(
             object sender, SpreadsheetGear.Windows.Forms.CalculateEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -34,7 +33,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             }
         }
 
-
         private void CalculateWorkbook(SpreadsheetGear.Windows.Forms.WorkbookView workbookView)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -50,7 +48,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public CalculateSample()

@@ -40,19 +40,16 @@ namespace WindowsFormsExplorer.Samples.Calculations
             workbookView.ActiveWorkbook = results.ResultsWorkbook;
         }
 
-
-        private void buttonCalculate_Click(object sender, System.EventArgs e)
+        private void ButtonCalculate_Click(object sender, System.EventArgs e)
         {
             Calculate();
         }
 
-
-        private void textBox_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TextBox_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 Calculate();
         }
-
 
         #region Sample Initialization Code
         public AmortizationCalculatorSample()

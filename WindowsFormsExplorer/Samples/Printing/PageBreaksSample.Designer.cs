@@ -90,7 +90,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.buttonPrintPreview.TabIndex = 2;
             this.buttonPrintPreview.Text = "Print Preview...";
             this.buttonPrintPreview.UseVisualStyleBackColor = true;
-            this.buttonPrintPreview.Click += new System.EventHandler(this.buttonPrintPreview_Click);
+            this.buttonPrintPreview.Click += new System.EventHandler(this.ButtonPrintPreview_Click);
             // 
             // groupBoxPageBreaks
             // 

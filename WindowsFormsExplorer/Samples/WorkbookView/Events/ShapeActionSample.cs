@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class ShapeActionSample : SampleUserControl
     {
-        private void workbookView_ShapeAction(
+        private void WorkbookView_ShapeAction(
             object sender, SpreadsheetGear.Windows.Forms.ShapeActionEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -34,7 +34,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public ShapeActionSample()

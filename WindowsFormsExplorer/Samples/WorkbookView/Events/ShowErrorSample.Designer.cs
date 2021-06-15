@@ -45,7 +45,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.workbookView.Size = new System.Drawing.Size(675, 780);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            this.workbookView.ShowError += new SpreadsheetGear.Windows.Forms.ShowErrorEventHandler(this.workbookView_ShowError);
+            this.workbookView.ShowError += new SpreadsheetGear.Windows.Forms.ShowErrorEventHandler(this.WorkbookView_ShowError);
             // 
             // tableLayoutPanel1
             // 

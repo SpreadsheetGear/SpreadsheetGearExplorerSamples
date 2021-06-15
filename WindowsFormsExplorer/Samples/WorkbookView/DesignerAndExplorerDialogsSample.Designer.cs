@@ -40,32 +40,32 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonChartExplorer = new System.Windows.Forms.Button();
             this.buttonShapeExplorer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox_shapeCategories_protection = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_autoShape = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_control = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_line = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_fill = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_font = new System.Windows.Forms.CheckBox();
-            this.checkBox_shapeCategories_alignment = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesProtection = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesAutoShape = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesControl = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesLine = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesFill = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesFont = new System.Windows.Forms.CheckBox();
+            this.checkBoxShapeCategoriesAlignment = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox_chartCategories_chartData = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_axes = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_series = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_pageSetup = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_title = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_legend = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_plotArea = new System.Windows.Forms.CheckBox();
-            this.checkBox_chartCategories_chartArea = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesChartData = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesAxes = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesSeries = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesPageSetup = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesTitle = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesLegend = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesPlotArea = new System.Windows.Forms.CheckBox();
+            this.checkBoxChartCategoriesChartArea = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox_rangeCategories_conditionalFormats = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_validation = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_interior = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_protection = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_hyperlink = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_borders = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_font = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_alignment = new System.Windows.Forms.CheckBox();
-            this.checkBox_rangeCategories_numberFormats = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesConditionalFormats = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesValidation = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesInterior = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesProtection = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesHyperlink = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesBorders = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesFont = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesAlignment = new System.Windows.Forms.CheckBox();
+            this.checkBoxRangeCategoriesNumberFormats = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -156,7 +156,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookExplorer.TabIndex = 1;
             this.buttonWorkbookExplorer.Text = "Workbook Explorer";
             this.buttonWorkbookExplorer.UseVisualStyleBackColor = true;
-            this.buttonWorkbookExplorer.Click += new System.EventHandler(this.buttonWorkbookExplorer_Click);
+            this.buttonWorkbookExplorer.Click += new System.EventHandler(this.ButtonWorkbookExplorer_Click);
             // 
             // buttonRangeExplorer
             // 
@@ -171,7 +171,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonRangeExplorer.TabIndex = 2;
             this.buttonRangeExplorer.Text = "Range Explorer";
             this.buttonRangeExplorer.UseVisualStyleBackColor = true;
-            this.buttonRangeExplorer.Click += new System.EventHandler(this.buttonRangeExplorer_Click);
+            this.buttonRangeExplorer.Click += new System.EventHandler(this.ButtonRangeExplorer_Click);
             // 
             // buttonWorkbookDesigner
             // 
@@ -186,7 +186,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonWorkbookDesigner.TabIndex = 0;
             this.buttonWorkbookDesigner.Text = "Workbook Designer";
             this.buttonWorkbookDesigner.UseVisualStyleBackColor = true;
-            this.buttonWorkbookDesigner.Click += new System.EventHandler(this.buttonWorkbookDesigner_Click);
+            this.buttonWorkbookDesigner.Click += new System.EventHandler(this.ButtonWorkbookDesigner_Click);
             // 
             // buttonChartExplorer
             // 
@@ -201,7 +201,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonChartExplorer.TabIndex = 3;
             this.buttonChartExplorer.Text = "Chart Explorer";
             this.buttonChartExplorer.UseVisualStyleBackColor = true;
-            this.buttonChartExplorer.Click += new System.EventHandler(this.buttonChartExplorer_Click);
+            this.buttonChartExplorer.Click += new System.EventHandler(this.ButtonChartExplorer_Click);
             // 
             // buttonShapeExplorer
             // 
@@ -216,17 +216,17 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.buttonShapeExplorer.TabIndex = 4;
             this.buttonShapeExplorer.Text = "Shape Explorer";
             this.buttonShapeExplorer.UseVisualStyleBackColor = true;
-            this.buttonShapeExplorer.Click += new System.EventHandler(this.buttonShapeExplorer_Click);
+            this.buttonShapeExplorer.Click += new System.EventHandler(this.ButtonShapeExplorer_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_protection);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_autoShape);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_control);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_line);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_fill);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_font);
-            this.groupBox1.Controls.Add(this.checkBox_shapeCategories_alignment);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesProtection);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesAutoShape);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesControl);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesLine);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesFill);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesFont);
+            this.groupBox1.Controls.Add(this.checkBoxShapeCategoriesAlignment);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(3, 655);
             this.groupBox1.Name = "groupBox1";
@@ -235,100 +235,100 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shape Explorer Flags";
             // 
-            // checkBox_shapeCategories_protection
+            // checkBoxShapeCategoriesProtection
             // 
-            this.checkBox_shapeCategories_protection.AutoSize = true;
-            this.checkBox_shapeCategories_protection.Checked = true;
-            this.checkBox_shapeCategories_protection.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_protection.Location = new System.Drawing.Point(23, 122);
-            this.checkBox_shapeCategories_protection.Name = "checkBox_shapeCategories_protection";
-            this.checkBox_shapeCategories_protection.Size = new System.Drawing.Size(85, 19);
-            this.checkBox_shapeCategories_protection.TabIndex = 6;
-            this.checkBox_shapeCategories_protection.Text = "Protection";
-            this.checkBox_shapeCategories_protection.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesProtection.AutoSize = true;
+            this.checkBoxShapeCategoriesProtection.Checked = true;
+            this.checkBoxShapeCategoriesProtection.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesProtection.Location = new System.Drawing.Point(23, 122);
+            this.checkBoxShapeCategoriesProtection.Name = "checkBoxShapeCategoriesProtection";
+            this.checkBoxShapeCategoriesProtection.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxShapeCategoriesProtection.TabIndex = 6;
+            this.checkBoxShapeCategoriesProtection.Text = "Protection";
+            this.checkBoxShapeCategoriesProtection.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_autoShape
+            // checkBoxShapeCategoriesAutoShape
             // 
-            this.checkBox_shapeCategories_autoShape.AutoSize = true;
-            this.checkBox_shapeCategories_autoShape.Checked = true;
-            this.checkBox_shapeCategories_autoShape.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_autoShape.Location = new System.Drawing.Point(23, 147);
-            this.checkBox_shapeCategories_autoShape.Name = "checkBox_shapeCategories_autoShape";
-            this.checkBox_shapeCategories_autoShape.Size = new System.Drawing.Size(87, 19);
-            this.checkBox_shapeCategories_autoShape.TabIndex = 5;
-            this.checkBox_shapeCategories_autoShape.Text = "AutoShape";
-            this.checkBox_shapeCategories_autoShape.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesAutoShape.AutoSize = true;
+            this.checkBoxShapeCategoriesAutoShape.Checked = true;
+            this.checkBoxShapeCategoriesAutoShape.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesAutoShape.Location = new System.Drawing.Point(23, 147);
+            this.checkBoxShapeCategoriesAutoShape.Name = "checkBoxShapeCategoriesAutoShape";
+            this.checkBoxShapeCategoriesAutoShape.Size = new System.Drawing.Size(87, 19);
+            this.checkBoxShapeCategoriesAutoShape.TabIndex = 5;
+            this.checkBoxShapeCategoriesAutoShape.Text = "AutoShape";
+            this.checkBoxShapeCategoriesAutoShape.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_control
+            // checkBoxShapeCategoriesControl
             // 
-            this.checkBox_shapeCategories_control.AutoSize = true;
-            this.checkBox_shapeCategories_control.Checked = true;
-            this.checkBox_shapeCategories_control.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_control.Location = new System.Drawing.Point(23, 172);
-            this.checkBox_shapeCategories_control.Name = "checkBox_shapeCategories_control";
-            this.checkBox_shapeCategories_control.Size = new System.Drawing.Size(67, 19);
-            this.checkBox_shapeCategories_control.TabIndex = 4;
-            this.checkBox_shapeCategories_control.Text = "Control";
-            this.checkBox_shapeCategories_control.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesControl.AutoSize = true;
+            this.checkBoxShapeCategoriesControl.Checked = true;
+            this.checkBoxShapeCategoriesControl.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesControl.Location = new System.Drawing.Point(23, 172);
+            this.checkBoxShapeCategoriesControl.Name = "checkBoxShapeCategoriesControl";
+            this.checkBoxShapeCategoriesControl.Size = new System.Drawing.Size(67, 19);
+            this.checkBoxShapeCategoriesControl.TabIndex = 4;
+            this.checkBoxShapeCategoriesControl.Text = "Control";
+            this.checkBoxShapeCategoriesControl.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_line
+            // checkBoxShapeCategoriesLine
             // 
-            this.checkBox_shapeCategories_line.AutoSize = true;
-            this.checkBox_shapeCategories_line.Checked = true;
-            this.checkBox_shapeCategories_line.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_line.Location = new System.Drawing.Point(23, 97);
-            this.checkBox_shapeCategories_line.Name = "checkBox_shapeCategories_line";
-            this.checkBox_shapeCategories_line.Size = new System.Drawing.Size(49, 19);
-            this.checkBox_shapeCategories_line.TabIndex = 3;
-            this.checkBox_shapeCategories_line.Text = "Line";
-            this.checkBox_shapeCategories_line.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesLine.AutoSize = true;
+            this.checkBoxShapeCategoriesLine.Checked = true;
+            this.checkBoxShapeCategoriesLine.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesLine.Location = new System.Drawing.Point(23, 97);
+            this.checkBoxShapeCategoriesLine.Name = "checkBoxShapeCategoriesLine";
+            this.checkBoxShapeCategoriesLine.Size = new System.Drawing.Size(49, 19);
+            this.checkBoxShapeCategoriesLine.TabIndex = 3;
+            this.checkBoxShapeCategoriesLine.Text = "Line";
+            this.checkBoxShapeCategoriesLine.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_fill
+            // checkBoxShapeCategoriesFill
             // 
-            this.checkBox_shapeCategories_fill.AutoSize = true;
-            this.checkBox_shapeCategories_fill.Checked = true;
-            this.checkBox_shapeCategories_fill.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_fill.Location = new System.Drawing.Point(23, 72);
-            this.checkBox_shapeCategories_fill.Name = "checkBox_shapeCategories_fill";
-            this.checkBox_shapeCategories_fill.Size = new System.Drawing.Size(41, 19);
-            this.checkBox_shapeCategories_fill.TabIndex = 2;
-            this.checkBox_shapeCategories_fill.Text = "Fill";
-            this.checkBox_shapeCategories_fill.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesFill.AutoSize = true;
+            this.checkBoxShapeCategoriesFill.Checked = true;
+            this.checkBoxShapeCategoriesFill.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesFill.Location = new System.Drawing.Point(23, 72);
+            this.checkBoxShapeCategoriesFill.Name = "checkBoxShapeCategoriesFill";
+            this.checkBoxShapeCategoriesFill.Size = new System.Drawing.Size(41, 19);
+            this.checkBoxShapeCategoriesFill.TabIndex = 2;
+            this.checkBoxShapeCategoriesFill.Text = "Fill";
+            this.checkBoxShapeCategoriesFill.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_font
+            // checkBoxShapeCategoriesFont
             // 
-            this.checkBox_shapeCategories_font.AutoSize = true;
-            this.checkBox_shapeCategories_font.Checked = true;
-            this.checkBox_shapeCategories_font.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_font.Location = new System.Drawing.Point(23, 47);
-            this.checkBox_shapeCategories_font.Name = "checkBox_shapeCategories_font";
-            this.checkBox_shapeCategories_font.Size = new System.Drawing.Size(51, 19);
-            this.checkBox_shapeCategories_font.TabIndex = 1;
-            this.checkBox_shapeCategories_font.Text = "Font";
-            this.checkBox_shapeCategories_font.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesFont.AutoSize = true;
+            this.checkBoxShapeCategoriesFont.Checked = true;
+            this.checkBoxShapeCategoriesFont.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesFont.Location = new System.Drawing.Point(23, 47);
+            this.checkBoxShapeCategoriesFont.Name = "checkBoxShapeCategoriesFont";
+            this.checkBoxShapeCategoriesFont.Size = new System.Drawing.Size(51, 19);
+            this.checkBoxShapeCategoriesFont.TabIndex = 1;
+            this.checkBoxShapeCategoriesFont.Text = "Font";
+            this.checkBoxShapeCategoriesFont.UseVisualStyleBackColor = true;
             // 
-            // checkBox_shapeCategories_alignment
+            // checkBoxShapeCategoriesAlignment
             // 
-            this.checkBox_shapeCategories_alignment.AutoSize = true;
-            this.checkBox_shapeCategories_alignment.Checked = true;
-            this.checkBox_shapeCategories_alignment.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_shapeCategories_alignment.Location = new System.Drawing.Point(23, 22);
-            this.checkBox_shapeCategories_alignment.Name = "checkBox_shapeCategories_alignment";
-            this.checkBox_shapeCategories_alignment.Size = new System.Drawing.Size(84, 19);
-            this.checkBox_shapeCategories_alignment.TabIndex = 0;
-            this.checkBox_shapeCategories_alignment.Text = "Alignment";
-            this.checkBox_shapeCategories_alignment.UseVisualStyleBackColor = true;
+            this.checkBoxShapeCategoriesAlignment.AutoSize = true;
+            this.checkBoxShapeCategoriesAlignment.Checked = true;
+            this.checkBoxShapeCategoriesAlignment.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxShapeCategoriesAlignment.Location = new System.Drawing.Point(23, 22);
+            this.checkBoxShapeCategoriesAlignment.Name = "checkBoxShapeCategoriesAlignment";
+            this.checkBoxShapeCategoriesAlignment.Size = new System.Drawing.Size(84, 19);
+            this.checkBoxShapeCategoriesAlignment.TabIndex = 0;
+            this.checkBoxShapeCategoriesAlignment.Text = "Alignment";
+            this.checkBoxShapeCategoriesAlignment.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_chartData);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_axes);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_series);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_pageSetup);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_title);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_legend);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_plotArea);
-            this.groupBox2.Controls.Add(this.checkBox_chartCategories_chartArea);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesChartData);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesAxes);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesSeries);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesPageSetup);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesTitle);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesLegend);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesPlotArea);
+            this.groupBox2.Controls.Add(this.checkBoxChartCategoriesChartArea);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox2.Location = new System.Drawing.Point(3, 385);
             this.groupBox2.Name = "groupBox2";
@@ -337,113 +337,113 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chart Explorer Flags";
             // 
-            // checkBox_chartCategories_chartData
+            // checkBoxChartCategoriesChartData
             // 
-            this.checkBox_chartCategories_chartData.AutoSize = true;
-            this.checkBox_chartCategories_chartData.Checked = true;
-            this.checkBox_chartCategories_chartData.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_chartData.Location = new System.Drawing.Point(22, 47);
-            this.checkBox_chartCategories_chartData.Name = "checkBox_chartCategories_chartData";
-            this.checkBox_chartCategories_chartData.Size = new System.Drawing.Size(85, 19);
-            this.checkBox_chartCategories_chartData.TabIndex = 7;
-            this.checkBox_chartCategories_chartData.Text = "Chart Data";
-            this.checkBox_chartCategories_chartData.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesChartData.AutoSize = true;
+            this.checkBoxChartCategoriesChartData.Checked = true;
+            this.checkBoxChartCategoriesChartData.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesChartData.Location = new System.Drawing.Point(22, 47);
+            this.checkBoxChartCategoriesChartData.Name = "checkBoxChartCategoriesChartData";
+            this.checkBoxChartCategoriesChartData.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxChartCategoriesChartData.TabIndex = 7;
+            this.checkBoxChartCategoriesChartData.Text = "Chart Data";
+            this.checkBoxChartCategoriesChartData.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_axes
+            // checkBoxChartCategoriesAxes
             // 
-            this.checkBox_chartCategories_axes.AutoSize = true;
-            this.checkBox_chartCategories_axes.Checked = true;
-            this.checkBox_chartCategories_axes.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_axes.Location = new System.Drawing.Point(22, 147);
-            this.checkBox_chartCategories_axes.Name = "checkBox_chartCategories_axes";
-            this.checkBox_chartCategories_axes.Size = new System.Drawing.Size(53, 19);
-            this.checkBox_chartCategories_axes.TabIndex = 6;
-            this.checkBox_chartCategories_axes.Text = "Axes";
-            this.checkBox_chartCategories_axes.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesAxes.AutoSize = true;
+            this.checkBoxChartCategoriesAxes.Checked = true;
+            this.checkBoxChartCategoriesAxes.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesAxes.Location = new System.Drawing.Point(22, 147);
+            this.checkBoxChartCategoriesAxes.Name = "checkBoxChartCategoriesAxes";
+            this.checkBoxChartCategoriesAxes.Size = new System.Drawing.Size(53, 19);
+            this.checkBoxChartCategoriesAxes.TabIndex = 6;
+            this.checkBoxChartCategoriesAxes.Text = "Axes";
+            this.checkBoxChartCategoriesAxes.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_series
+            // checkBoxChartCategoriesSeries
             // 
-            this.checkBox_chartCategories_series.AutoSize = true;
-            this.checkBox_chartCategories_series.Checked = true;
-            this.checkBox_chartCategories_series.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_series.Location = new System.Drawing.Point(22, 172);
-            this.checkBox_chartCategories_series.Name = "checkBox_chartCategories_series";
-            this.checkBox_chartCategories_series.Size = new System.Drawing.Size(60, 19);
-            this.checkBox_chartCategories_series.TabIndex = 5;
-            this.checkBox_chartCategories_series.Text = "Series";
-            this.checkBox_chartCategories_series.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesSeries.AutoSize = true;
+            this.checkBoxChartCategoriesSeries.Checked = true;
+            this.checkBoxChartCategoriesSeries.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesSeries.Location = new System.Drawing.Point(22, 172);
+            this.checkBoxChartCategoriesSeries.Name = "checkBoxChartCategoriesSeries";
+            this.checkBoxChartCategoriesSeries.Size = new System.Drawing.Size(60, 19);
+            this.checkBoxChartCategoriesSeries.TabIndex = 5;
+            this.checkBoxChartCategoriesSeries.Text = "Series";
+            this.checkBoxChartCategoriesSeries.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_pageSetup
+            // checkBoxChartCategoriesPageSetup
             // 
-            this.checkBox_chartCategories_pageSetup.AutoSize = true;
-            this.checkBox_chartCategories_pageSetup.Checked = true;
-            this.checkBox_chartCategories_pageSetup.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_pageSetup.Location = new System.Drawing.Point(22, 197);
-            this.checkBox_chartCategories_pageSetup.Name = "checkBox_chartCategories_pageSetup";
-            this.checkBox_chartCategories_pageSetup.Size = new System.Drawing.Size(89, 19);
-            this.checkBox_chartCategories_pageSetup.TabIndex = 4;
-            this.checkBox_chartCategories_pageSetup.Text = "Page Setup";
-            this.checkBox_chartCategories_pageSetup.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesPageSetup.AutoSize = true;
+            this.checkBoxChartCategoriesPageSetup.Checked = true;
+            this.checkBoxChartCategoriesPageSetup.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesPageSetup.Location = new System.Drawing.Point(22, 197);
+            this.checkBoxChartCategoriesPageSetup.Name = "checkBoxChartCategoriesPageSetup";
+            this.checkBoxChartCategoriesPageSetup.Size = new System.Drawing.Size(89, 19);
+            this.checkBoxChartCategoriesPageSetup.TabIndex = 4;
+            this.checkBoxChartCategoriesPageSetup.Text = "Page Setup";
+            this.checkBoxChartCategoriesPageSetup.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_title
+            // checkBoxChartCategoriesTitle
             // 
-            this.checkBox_chartCategories_title.AutoSize = true;
-            this.checkBox_chartCategories_title.Checked = true;
-            this.checkBox_chartCategories_title.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_title.Location = new System.Drawing.Point(22, 122);
-            this.checkBox_chartCategories_title.Name = "checkBox_chartCategories_title";
-            this.checkBox_chartCategories_title.Size = new System.Drawing.Size(51, 19);
-            this.checkBox_chartCategories_title.TabIndex = 3;
-            this.checkBox_chartCategories_title.Text = "Title";
-            this.checkBox_chartCategories_title.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesTitle.AutoSize = true;
+            this.checkBoxChartCategoriesTitle.Checked = true;
+            this.checkBoxChartCategoriesTitle.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesTitle.Location = new System.Drawing.Point(22, 122);
+            this.checkBoxChartCategoriesTitle.Name = "checkBoxChartCategoriesTitle";
+            this.checkBoxChartCategoriesTitle.Size = new System.Drawing.Size(51, 19);
+            this.checkBoxChartCategoriesTitle.TabIndex = 3;
+            this.checkBoxChartCategoriesTitle.Text = "Title";
+            this.checkBoxChartCategoriesTitle.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_legend
+            // checkBoxChartCategoriesLegend
             // 
-            this.checkBox_chartCategories_legend.AutoSize = true;
-            this.checkBox_chartCategories_legend.Checked = true;
-            this.checkBox_chartCategories_legend.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_legend.Location = new System.Drawing.Point(22, 97);
-            this.checkBox_chartCategories_legend.Name = "checkBox_chartCategories_legend";
-            this.checkBox_chartCategories_legend.Size = new System.Drawing.Size(67, 19);
-            this.checkBox_chartCategories_legend.TabIndex = 2;
-            this.checkBox_chartCategories_legend.Text = "Legend";
-            this.checkBox_chartCategories_legend.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesLegend.AutoSize = true;
+            this.checkBoxChartCategoriesLegend.Checked = true;
+            this.checkBoxChartCategoriesLegend.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesLegend.Location = new System.Drawing.Point(22, 97);
+            this.checkBoxChartCategoriesLegend.Name = "checkBoxChartCategoriesLegend";
+            this.checkBoxChartCategoriesLegend.Size = new System.Drawing.Size(67, 19);
+            this.checkBoxChartCategoriesLegend.TabIndex = 2;
+            this.checkBoxChartCategoriesLegend.Text = "Legend";
+            this.checkBoxChartCategoriesLegend.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_plotArea
+            // checkBoxChartCategoriesPlotArea
             // 
-            this.checkBox_chartCategories_plotArea.AutoSize = true;
-            this.checkBox_chartCategories_plotArea.Checked = true;
-            this.checkBox_chartCategories_plotArea.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_plotArea.Location = new System.Drawing.Point(22, 72);
-            this.checkBox_chartCategories_plotArea.Name = "checkBox_chartCategories_plotArea";
-            this.checkBox_chartCategories_plotArea.Size = new System.Drawing.Size(77, 19);
-            this.checkBox_chartCategories_plotArea.TabIndex = 1;
-            this.checkBox_chartCategories_plotArea.Text = "Plot Area";
-            this.checkBox_chartCategories_plotArea.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesPlotArea.AutoSize = true;
+            this.checkBoxChartCategoriesPlotArea.Checked = true;
+            this.checkBoxChartCategoriesPlotArea.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesPlotArea.Location = new System.Drawing.Point(22, 72);
+            this.checkBoxChartCategoriesPlotArea.Name = "checkBoxChartCategoriesPlotArea";
+            this.checkBoxChartCategoriesPlotArea.Size = new System.Drawing.Size(77, 19);
+            this.checkBoxChartCategoriesPlotArea.TabIndex = 1;
+            this.checkBoxChartCategoriesPlotArea.Text = "Plot Area";
+            this.checkBoxChartCategoriesPlotArea.UseVisualStyleBackColor = true;
             // 
-            // checkBox_chartCategories_chartArea
+            // checkBoxChartCategoriesChartArea
             // 
-            this.checkBox_chartCategories_chartArea.AutoSize = true;
-            this.checkBox_chartCategories_chartArea.Checked = true;
-            this.checkBox_chartCategories_chartArea.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_chartCategories_chartArea.Location = new System.Drawing.Point(23, 22);
-            this.checkBox_chartCategories_chartArea.Name = "checkBox_chartCategories_chartArea";
-            this.checkBox_chartCategories_chartArea.Size = new System.Drawing.Size(85, 19);
-            this.checkBox_chartCategories_chartArea.TabIndex = 0;
-            this.checkBox_chartCategories_chartArea.Text = "Chart Area";
-            this.checkBox_chartCategories_chartArea.UseVisualStyleBackColor = true;
+            this.checkBoxChartCategoriesChartArea.AutoSize = true;
+            this.checkBoxChartCategoriesChartArea.Checked = true;
+            this.checkBoxChartCategoriesChartArea.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxChartCategoriesChartArea.Location = new System.Drawing.Point(23, 22);
+            this.checkBoxChartCategoriesChartArea.Name = "checkBoxChartCategoriesChartArea";
+            this.checkBoxChartCategoriesChartArea.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxChartCategoriesChartArea.TabIndex = 0;
+            this.checkBoxChartCategoriesChartArea.Text = "Chart Area";
+            this.checkBoxChartCategoriesChartArea.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_conditionalFormats);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_validation);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_interior);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_protection);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_hyperlink);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_borders);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_font);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_alignment);
-            this.groupBox3.Controls.Add(this.checkBox_rangeCategories_numberFormats);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesConditionalFormats);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesValidation);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesInterior);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesProtection);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesHyperlink);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesBorders);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesFont);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesAlignment);
+            this.groupBox3.Controls.Add(this.checkBoxRangeCategoriesNumberFormats);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox3.Location = new System.Drawing.Point(3, 96);
             this.groupBox3.Name = "groupBox3";
@@ -452,113 +452,113 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Range Explorer Flags";
             // 
-            // checkBox_rangeCategories_conditionalFormats
+            // checkBoxRangeCategoriesConditionalFormats
             // 
-            this.checkBox_rangeCategories_conditionalFormats.AutoSize = true;
-            this.checkBox_rangeCategories_conditionalFormats.Checked = true;
-            this.checkBox_rangeCategories_conditionalFormats.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_conditionalFormats.Location = new System.Drawing.Point(23, 222);
-            this.checkBox_rangeCategories_conditionalFormats.Name = "checkBox_rangeCategories_conditionalFormats";
-            this.checkBox_rangeCategories_conditionalFormats.Size = new System.Drawing.Size(136, 19);
-            this.checkBox_rangeCategories_conditionalFormats.TabIndex = 8;
-            this.checkBox_rangeCategories_conditionalFormats.Text = "Conditional Formats";
-            this.checkBox_rangeCategories_conditionalFormats.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesConditionalFormats.AutoSize = true;
+            this.checkBoxRangeCategoriesConditionalFormats.Checked = true;
+            this.checkBoxRangeCategoriesConditionalFormats.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesConditionalFormats.Location = new System.Drawing.Point(23, 222);
+            this.checkBoxRangeCategoriesConditionalFormats.Name = "checkBoxRangeCategoriesConditionalFormats";
+            this.checkBoxRangeCategoriesConditionalFormats.Size = new System.Drawing.Size(136, 19);
+            this.checkBoxRangeCategoriesConditionalFormats.TabIndex = 8;
+            this.checkBoxRangeCategoriesConditionalFormats.Text = "Conditional Formats";
+            this.checkBoxRangeCategoriesConditionalFormats.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_validation
+            // checkBoxRangeCategoriesValidation
             // 
-            this.checkBox_rangeCategories_validation.AutoSize = true;
-            this.checkBox_rangeCategories_validation.Checked = true;
-            this.checkBox_rangeCategories_validation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_validation.Location = new System.Drawing.Point(23, 197);
-            this.checkBox_rangeCategories_validation.Name = "checkBox_rangeCategories_validation";
-            this.checkBox_rangeCategories_validation.Size = new System.Drawing.Size(80, 19);
-            this.checkBox_rangeCategories_validation.TabIndex = 7;
-            this.checkBox_rangeCategories_validation.Text = "Validation";
-            this.checkBox_rangeCategories_validation.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesValidation.AutoSize = true;
+            this.checkBoxRangeCategoriesValidation.Checked = true;
+            this.checkBoxRangeCategoriesValidation.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesValidation.Location = new System.Drawing.Point(23, 197);
+            this.checkBoxRangeCategoriesValidation.Name = "checkBoxRangeCategoriesValidation";
+            this.checkBoxRangeCategoriesValidation.Size = new System.Drawing.Size(80, 19);
+            this.checkBoxRangeCategoriesValidation.TabIndex = 7;
+            this.checkBoxRangeCategoriesValidation.Text = "Validation";
+            this.checkBoxRangeCategoriesValidation.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_interior
+            // checkBoxRangeCategoriesInterior
             // 
-            this.checkBox_rangeCategories_interior.AutoSize = true;
-            this.checkBox_rangeCategories_interior.Checked = true;
-            this.checkBox_rangeCategories_interior.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_interior.Location = new System.Drawing.Point(23, 122);
-            this.checkBox_rangeCategories_interior.Name = "checkBox_rangeCategories_interior";
-            this.checkBox_rangeCategories_interior.Size = new System.Drawing.Size(69, 19);
-            this.checkBox_rangeCategories_interior.TabIndex = 6;
-            this.checkBox_rangeCategories_interior.Text = "Interior";
-            this.checkBox_rangeCategories_interior.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesInterior.AutoSize = true;
+            this.checkBoxRangeCategoriesInterior.Checked = true;
+            this.checkBoxRangeCategoriesInterior.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesInterior.Location = new System.Drawing.Point(23, 122);
+            this.checkBoxRangeCategoriesInterior.Name = "checkBoxRangeCategoriesInterior";
+            this.checkBoxRangeCategoriesInterior.Size = new System.Drawing.Size(69, 19);
+            this.checkBoxRangeCategoriesInterior.TabIndex = 6;
+            this.checkBoxRangeCategoriesInterior.Text = "Interior";
+            this.checkBoxRangeCategoriesInterior.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_protection
+            // checkBoxRangeCategoriesProtection
             // 
-            this.checkBox_rangeCategories_protection.AutoSize = true;
-            this.checkBox_rangeCategories_protection.Checked = true;
-            this.checkBox_rangeCategories_protection.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_protection.Location = new System.Drawing.Point(23, 147);
-            this.checkBox_rangeCategories_protection.Name = "checkBox_rangeCategories_protection";
-            this.checkBox_rangeCategories_protection.Size = new System.Drawing.Size(85, 19);
-            this.checkBox_rangeCategories_protection.TabIndex = 5;
-            this.checkBox_rangeCategories_protection.Text = "Protection";
-            this.checkBox_rangeCategories_protection.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesProtection.AutoSize = true;
+            this.checkBoxRangeCategoriesProtection.Checked = true;
+            this.checkBoxRangeCategoriesProtection.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesProtection.Location = new System.Drawing.Point(23, 147);
+            this.checkBoxRangeCategoriesProtection.Name = "checkBoxRangeCategoriesProtection";
+            this.checkBoxRangeCategoriesProtection.Size = new System.Drawing.Size(85, 19);
+            this.checkBoxRangeCategoriesProtection.TabIndex = 5;
+            this.checkBoxRangeCategoriesProtection.Text = "Protection";
+            this.checkBoxRangeCategoriesProtection.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_hyperlink
+            // checkBoxRangeCategoriesHyperlink
             // 
-            this.checkBox_rangeCategories_hyperlink.AutoSize = true;
-            this.checkBox_rangeCategories_hyperlink.Checked = true;
-            this.checkBox_rangeCategories_hyperlink.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_hyperlink.Location = new System.Drawing.Point(23, 172);
-            this.checkBox_rangeCategories_hyperlink.Name = "checkBox_rangeCategories_hyperlink";
-            this.checkBox_rangeCategories_hyperlink.Size = new System.Drawing.Size(80, 19);
-            this.checkBox_rangeCategories_hyperlink.TabIndex = 4;
-            this.checkBox_rangeCategories_hyperlink.Text = "Hyperlink";
-            this.checkBox_rangeCategories_hyperlink.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesHyperlink.AutoSize = true;
+            this.checkBoxRangeCategoriesHyperlink.Checked = true;
+            this.checkBoxRangeCategoriesHyperlink.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesHyperlink.Location = new System.Drawing.Point(23, 172);
+            this.checkBoxRangeCategoriesHyperlink.Name = "checkBoxRangeCategoriesHyperlink";
+            this.checkBoxRangeCategoriesHyperlink.Size = new System.Drawing.Size(80, 19);
+            this.checkBoxRangeCategoriesHyperlink.TabIndex = 4;
+            this.checkBoxRangeCategoriesHyperlink.Text = "Hyperlink";
+            this.checkBoxRangeCategoriesHyperlink.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_borders
+            // checkBoxRangeCategoriesBorders
             // 
-            this.checkBox_rangeCategories_borders.AutoSize = true;
-            this.checkBox_rangeCategories_borders.Checked = true;
-            this.checkBox_rangeCategories_borders.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_borders.Location = new System.Drawing.Point(23, 97);
-            this.checkBox_rangeCategories_borders.Name = "checkBox_rangeCategories_borders";
-            this.checkBox_rangeCategories_borders.Size = new System.Drawing.Size(70, 19);
-            this.checkBox_rangeCategories_borders.TabIndex = 3;
-            this.checkBox_rangeCategories_borders.Text = "Borders";
-            this.checkBox_rangeCategories_borders.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesBorders.AutoSize = true;
+            this.checkBoxRangeCategoriesBorders.Checked = true;
+            this.checkBoxRangeCategoriesBorders.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesBorders.Location = new System.Drawing.Point(23, 97);
+            this.checkBoxRangeCategoriesBorders.Name = "checkBoxRangeCategoriesBorders";
+            this.checkBoxRangeCategoriesBorders.Size = new System.Drawing.Size(70, 19);
+            this.checkBoxRangeCategoriesBorders.TabIndex = 3;
+            this.checkBoxRangeCategoriesBorders.Text = "Borders";
+            this.checkBoxRangeCategoriesBorders.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_font
+            // checkBoxRangeCategoriesFont
             // 
-            this.checkBox_rangeCategories_font.AutoSize = true;
-            this.checkBox_rangeCategories_font.Checked = true;
-            this.checkBox_rangeCategories_font.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_font.Location = new System.Drawing.Point(23, 72);
-            this.checkBox_rangeCategories_font.Name = "checkBox_rangeCategories_font";
-            this.checkBox_rangeCategories_font.Size = new System.Drawing.Size(51, 19);
-            this.checkBox_rangeCategories_font.TabIndex = 2;
-            this.checkBox_rangeCategories_font.Text = "Font";
-            this.checkBox_rangeCategories_font.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesFont.AutoSize = true;
+            this.checkBoxRangeCategoriesFont.Checked = true;
+            this.checkBoxRangeCategoriesFont.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesFont.Location = new System.Drawing.Point(23, 72);
+            this.checkBoxRangeCategoriesFont.Name = "checkBoxRangeCategoriesFont";
+            this.checkBoxRangeCategoriesFont.Size = new System.Drawing.Size(51, 19);
+            this.checkBoxRangeCategoriesFont.TabIndex = 2;
+            this.checkBoxRangeCategoriesFont.Text = "Font";
+            this.checkBoxRangeCategoriesFont.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_alignment
+            // checkBoxRangeCategoriesAlignment
             // 
-            this.checkBox_rangeCategories_alignment.AutoSize = true;
-            this.checkBox_rangeCategories_alignment.Checked = true;
-            this.checkBox_rangeCategories_alignment.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_alignment.Location = new System.Drawing.Point(23, 47);
-            this.checkBox_rangeCategories_alignment.Name = "checkBox_rangeCategories_alignment";
-            this.checkBox_rangeCategories_alignment.Size = new System.Drawing.Size(84, 19);
-            this.checkBox_rangeCategories_alignment.TabIndex = 1;
-            this.checkBox_rangeCategories_alignment.Text = "Alignment";
-            this.checkBox_rangeCategories_alignment.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesAlignment.AutoSize = true;
+            this.checkBoxRangeCategoriesAlignment.Checked = true;
+            this.checkBoxRangeCategoriesAlignment.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesAlignment.Location = new System.Drawing.Point(23, 47);
+            this.checkBoxRangeCategoriesAlignment.Name = "checkBoxRangeCategoriesAlignment";
+            this.checkBoxRangeCategoriesAlignment.Size = new System.Drawing.Size(84, 19);
+            this.checkBoxRangeCategoriesAlignment.TabIndex = 1;
+            this.checkBoxRangeCategoriesAlignment.Text = "Alignment";
+            this.checkBoxRangeCategoriesAlignment.UseVisualStyleBackColor = true;
             // 
-            // checkBox_rangeCategories_numberFormats
+            // checkBoxRangeCategoriesNumberFormats
             // 
-            this.checkBox_rangeCategories_numberFormats.AutoSize = true;
-            this.checkBox_rangeCategories_numberFormats.Checked = true;
-            this.checkBox_rangeCategories_numberFormats.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_rangeCategories_numberFormats.Location = new System.Drawing.Point(23, 22);
-            this.checkBox_rangeCategories_numberFormats.Name = "checkBox_rangeCategories_numberFormats";
-            this.checkBox_rangeCategories_numberFormats.Size = new System.Drawing.Size(120, 19);
-            this.checkBox_rangeCategories_numberFormats.TabIndex = 0;
-            this.checkBox_rangeCategories_numberFormats.Text = "Number Formats";
-            this.checkBox_rangeCategories_numberFormats.UseVisualStyleBackColor = true;
+            this.checkBoxRangeCategoriesNumberFormats.AutoSize = true;
+            this.checkBoxRangeCategoriesNumberFormats.Checked = true;
+            this.checkBoxRangeCategoriesNumberFormats.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxRangeCategoriesNumberFormats.Location = new System.Drawing.Point(23, 22);
+            this.checkBoxRangeCategoriesNumberFormats.Name = "checkBoxRangeCategoriesNumberFormats";
+            this.checkBoxRangeCategoriesNumberFormats.Size = new System.Drawing.Size(120, 19);
+            this.checkBoxRangeCategoriesNumberFormats.TabIndex = 0;
+            this.checkBoxRangeCategoriesNumberFormats.Text = "Number Formats";
+            this.checkBoxRangeCategoriesNumberFormats.UseVisualStyleBackColor = true;
             // 
             // DesignerAndExplorerDialogsSample
             // 
@@ -597,31 +597,31 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         private System.Windows.Forms.Button buttonChartExplorer;
         private System.Windows.Forms.Button buttonShapeExplorer;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_protection;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_autoShape;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_control;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_line;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_fill;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_font;
-        private System.Windows.Forms.CheckBox checkBox_shapeCategories_alignment;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesProtection;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesAutoShape;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesControl;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesLine;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesFill;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesFont;
+        private System.Windows.Forms.CheckBox checkBoxShapeCategoriesAlignment;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_axes;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_series;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_pageSetup;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_title;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_legend;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_plotArea;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_chartArea;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesAxes;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesSeries;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesPageSetup;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesTitle;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesLegend;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesPlotArea;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesChartArea;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_conditionalFormats;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_validation;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_interior;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_protection;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_hyperlink;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_borders;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_font;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_alignment;
-        private System.Windows.Forms.CheckBox checkBox_rangeCategories_numberFormats;
-        private System.Windows.Forms.CheckBox checkBox_chartCategories_chartData;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesConditionalFormats;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesValidation;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesInterior;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesProtection;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesHyperlink;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesBorders;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesFont;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesAlignment;
+        private System.Windows.Forms.CheckBox checkBoxRangeCategoriesNumberFormats;
+        private System.Windows.Forms.CheckBox checkBoxChartCategoriesChartData;
     }
 }

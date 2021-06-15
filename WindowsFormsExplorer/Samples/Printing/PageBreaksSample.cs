@@ -7,12 +7,11 @@ namespace WindowsFormsExplorer.Samples.Printing
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Printing.PageBreaksSample Sample { get; private set; }
 
-        private void buttonPrintPreview_Click(object sender, System.EventArgs e)
+        private void ButtonPrintPreview_Click(object sender, System.EventArgs e)
         {
             // Run the sample.
             Sample.Print(workbookView, radioButtonPageBreaksUsed.Checked);
         }
-
 
         #region Sample Initialization Code
         public PageBreaksSample()

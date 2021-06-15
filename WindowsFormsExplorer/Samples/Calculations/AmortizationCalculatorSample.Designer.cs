@@ -143,7 +143,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBoxAmount.Size = new System.Drawing.Size(157, 28);
             this.textBoxAmount.TabIndex = 1;
             this.textBoxAmount.Text = "$150,000";
-            this.textBoxAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
+            this.textBoxAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // textBoxRate
             // 
@@ -156,7 +156,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBoxRate.Size = new System.Drawing.Size(157, 28);
             this.textBoxRate.TabIndex = 3;
             this.textBoxRate.Text = "6.25%";
-            this.textBoxRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
+            this.textBoxRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // textBoxPeriods
             // 
@@ -169,7 +169,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBoxPeriods.Size = new System.Drawing.Size(157, 28);
             this.textBoxPeriods.TabIndex = 5;
             this.textBoxPeriods.Text = "360";
-            this.textBoxPeriods.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
+            this.textBoxPeriods.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // buttonCalculate
             // 
@@ -183,7 +183,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.buttonCalculate.Size = new System.Drawing.Size(95, 32);
             this.buttonCalculate.TabIndex = 6;
             this.buttonCalculate.Text = "Calculate";
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.buttonCalculate.Click += new System.EventHandler(this.ButtonCalculate_Click);
             // 
             // labelLoanAmount
             // 

@@ -7,13 +7,12 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
 
-        private void workbookView_MouseDown(
+        private void WorkbookView_MouseDown(
             object sender, System.Windows.Forms.MouseEventArgs e)
         {
             // Run the sample.
             Sample.ColorizeClickedCell(workbookView, e.X, e.Y);
         }
-
 
         #region Sample Initialization Code
         public LocationToRangeSample()

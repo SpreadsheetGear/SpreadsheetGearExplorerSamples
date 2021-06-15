@@ -10,7 +10,7 @@
             new MyUIManager(workbookView.ActiveWorkbookSet);
         }
 
-        private void buttonRunSample_Click(object sender, System.EventArgs e)
+        private void ButtonRunSample_Click(object sender, System.EventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
             workbookView.GetLock();
@@ -41,7 +41,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public CustomControlSample()

@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CultureInfoSample));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.listBox_cultures = new System.Windows.Forms.ListBox();
+            this.listBoxCultures = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_runSample = new System.Windows.Forms.Button();
+            this.buttonRunSample = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.workbookView_deDE = new WindowsFormsExplorer.WinFormsWorkbookView();
+            this.workbookViewDeDE = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.formulaBar1 = new SpreadsheetGear.Windows.Forms.FormulaBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.workbookView_selectedCulture = new WindowsFormsExplorer.WinFormsWorkbookView();
+            this.workbookViewSelectedCulture = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.formulaBar2 = new SpreadsheetGear.Windows.Forms.FormulaBar();
-            this.label_selectedCulture = new System.Windows.Forms.Label();
+            this.labelSelectedCulture = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listBox_cultures);
+            this.splitContainer1.Panel1.Controls.Add(this.listBoxCultures);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
             // 
             // splitContainer1.Panel2
@@ -75,34 +75,34 @@
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
-            // listBox_cultures
+            // listBoxCultures
             // 
-            this.listBox_cultures.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox_cultures.FormattingEnabled = true;
-            this.listBox_cultures.ItemHeight = 25;
-            this.listBox_cultures.Location = new System.Drawing.Point(0, 74);
-            this.listBox_cultures.Name = "listBox_cultures";
-            this.listBox_cultures.Size = new System.Drawing.Size(221, 833);
-            this.listBox_cultures.TabIndex = 1;
+            this.listBoxCultures.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxCultures.FormattingEnabled = true;
+            this.listBoxCultures.ItemHeight = 25;
+            this.listBoxCultures.Location = new System.Drawing.Point(0, 74);
+            this.listBoxCultures.Name = "listBoxCultures";
+            this.listBoxCultures.Size = new System.Drawing.Size(221, 833);
+            this.listBoxCultures.TabIndex = 1;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button_runSample);
+            this.panel3.Controls.Add(this.buttonRunSample);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(221, 74);
             this.panel3.TabIndex = 2;
             // 
-            // button_runSample
+            // buttonRunSample
             // 
-            this.button_runSample.Location = new System.Drawing.Point(23, 11);
-            this.button_runSample.Name = "button_runSample";
-            this.button_runSample.Size = new System.Drawing.Size(176, 55);
-            this.button_runSample.TabIndex = 0;
-            this.button_runSample.Text = "Run Sample";
-            this.button_runSample.UseVisualStyleBackColor = true;
-            this.button_runSample.Click += new System.EventHandler(this.button_runSample_Click);
+            this.buttonRunSample.Location = new System.Drawing.Point(23, 11);
+            this.buttonRunSample.Name = "buttonRunSample";
+            this.buttonRunSample.Size = new System.Drawing.Size(176, 55);
+            this.buttonRunSample.TabIndex = 0;
+            this.buttonRunSample.Text = "Run Sample";
+            this.buttonRunSample.UseVisualStyleBackColor = true;
+            this.buttonRunSample.Click += new System.EventHandler(this.ButtonRunSample_Click);
             // 
             // splitContainer2
             // 
@@ -118,7 +118,7 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.panel2);
-            this.splitContainer2.Panel2.Controls.Add(this.label_selectedCulture);
+            this.splitContainer2.Panel2.Controls.Add(this.labelSelectedCulture);
             this.splitContainer2.Size = new System.Drawing.Size(926, 907);
             this.splitContainer2.SplitterDistance = 432;
             this.splitContainer2.SplitterWidth = 3;
@@ -126,7 +126,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.workbookView_deDE);
+            this.panel1.Controls.Add(this.workbookViewDeDE);
             this.panel1.Controls.Add(this.formulaBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 25);
@@ -134,14 +134,14 @@
             this.panel1.Size = new System.Drawing.Size(432, 882);
             this.panel1.TabIndex = 0;
             // 
-            // workbookView_deDE
+            // workbookViewDeDE
             // 
-            this.workbookView_deDE.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workbookView_deDE.FormulaBar = this.formulaBar1;
-            this.workbookView_deDE.Location = new System.Drawing.Point(0, 41);
-            this.workbookView_deDE.Name = "workbookView_deDE";
-            this.workbookView_deDE.Size = new System.Drawing.Size(432, 841);
-            this.workbookView_deDE.TabIndex = 1;
+            this.workbookViewDeDE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workbookViewDeDE.FormulaBar = this.formulaBar1;
+            this.workbookViewDeDE.Location = new System.Drawing.Point(0, 41);
+            this.workbookViewDeDE.Name = "workbookViewDeDE";
+            this.workbookViewDeDE.Size = new System.Drawing.Size(432, 841);
+            this.workbookViewDeDE.TabIndex = 1;
             // 
             // formulaBar1
             // 
@@ -165,7 +165,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.workbookView_selectedCulture);
+            this.panel2.Controls.Add(this.workbookViewSelectedCulture);
             this.panel2.Controls.Add(this.formulaBar2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 25);
@@ -173,14 +173,14 @@
             this.panel2.Size = new System.Drawing.Size(491, 882);
             this.panel2.TabIndex = 3;
             // 
-            // workbookView_selectedCulture
+            // workbookViewSelectedCulture
             // 
-            this.workbookView_selectedCulture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workbookView_selectedCulture.FormulaBar = this.formulaBar2;
-            this.workbookView_selectedCulture.Location = new System.Drawing.Point(0, 41);
-            this.workbookView_selectedCulture.Name = "workbookView_selectedCulture";
-            this.workbookView_selectedCulture.Size = new System.Drawing.Size(491, 841);
-            this.workbookView_selectedCulture.TabIndex = 1;
+            this.workbookViewSelectedCulture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.workbookViewSelectedCulture.FormulaBar = this.formulaBar2;
+            this.workbookViewSelectedCulture.Location = new System.Drawing.Point(0, 41);
+            this.workbookViewSelectedCulture.Name = "workbookViewSelectedCulture";
+            this.workbookViewSelectedCulture.Size = new System.Drawing.Size(491, 841);
+            this.workbookViewSelectedCulture.TabIndex = 1;
             // 
             // formulaBar2
             // 
@@ -191,16 +191,16 @@
             this.formulaBar2.TabIndex = 0;
             this.formulaBar2.TabStop = false;
             // 
-            // label_selectedCulture
+            // labelSelectedCulture
             // 
-            this.label_selectedCulture.AutoSize = true;
-            this.label_selectedCulture.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_selectedCulture.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_selectedCulture.Location = new System.Drawing.Point(0, 0);
-            this.label_selectedCulture.Name = "label_selectedCulture";
-            this.label_selectedCulture.Size = new System.Drawing.Size(151, 25);
-            this.label_selectedCulture.TabIndex = 2;
-            this.label_selectedCulture.Text = "Selected Culture";
+            this.labelSelectedCulture.AutoSize = true;
+            this.labelSelectedCulture.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelSelectedCulture.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSelectedCulture.Location = new System.Drawing.Point(0, 0);
+            this.labelSelectedCulture.Name = "labelSelectedCulture";
+            this.labelSelectedCulture.Size = new System.Drawing.Size(151, 25);
+            this.labelSelectedCulture.TabIndex = 2;
+            this.labelSelectedCulture.Text = "Selected Culture";
             // 
             // CultureInfoSample
             // 
@@ -229,17 +229,17 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button_runSample;
+        private System.Windows.Forms.Button buttonRunSample;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Panel panel1;
-        private WinFormsWorkbookView workbookView_deDE;
+        private WinFormsWorkbookView workbookViewDeDE;
         private SpreadsheetGear.Windows.Forms.FormulaBar formulaBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private WinFormsWorkbookView workbookView_selectedCulture;
+        private WinFormsWorkbookView workbookViewSelectedCulture;
         private SpreadsheetGear.Windows.Forms.FormulaBar formulaBar2;
-        private System.Windows.Forms.Label label_selectedCulture;
-        private System.Windows.Forms.ListBox listBox_cultures;
+        private System.Windows.Forms.Label labelSelectedCulture;
+        private System.Windows.Forms.ListBox listBoxCultures;
         private System.Windows.Forms.Panel panel3;
     }
 }

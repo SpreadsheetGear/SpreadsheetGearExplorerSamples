@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Printing
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Printing.BasicPrintingSample Sample { get; private set; }
 
-        private void buttonPrint_Click(object sender, System.EventArgs e)
+        private void ButtonPrint_Click(object sender, System.EventArgs e)
         {
             // Determine what to print...
             SpreadsheetGear.Printing.PrintWhat printWhat = GetPrintWhat();
@@ -16,7 +16,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             Sample.Print(workbookView, printWhat);
         }
 
-        private void buttonPrintPreview_Click(object sender, System.EventArgs e)
+        private void ButtonPrintPreview_Click(object sender, System.EventArgs e)
         {
             // Determine what to print...
             SpreadsheetGear.Printing.PrintWhat printWhat = GetPrintWhat();
@@ -24,7 +24,6 @@ namespace WindowsFormsExplorer.Samples.Printing
             // Call into sample to open Windows' built-in Print Preview dialog.
             Sample.PrintPreview(workbookView, printWhat);
         }
-
 
         private SpreadsheetGear.Printing.PrintWhat GetPrintWhat()
         {
@@ -41,7 +40,6 @@ namespace WindowsFormsExplorer.Samples.Printing
 
             return printWhat;
         }
-
 
         #region Sample Initialization Code
         public BasicPrintingSample()

@@ -21,7 +21,6 @@
             }
         }
 
-
         public bool UndoCommand(IWorkbookView workbookView, out string errorMessage)
         {
             errorMessage = null;
@@ -49,7 +48,6 @@
             }
         }
 
-
         public bool RedoCommand(IWorkbookView workbookView, out string errorMessage)
         {
             errorMessage = null;
@@ -76,7 +74,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         /*
          * Demonstrate creating an undoable command that sets the Interior color of the currently selected

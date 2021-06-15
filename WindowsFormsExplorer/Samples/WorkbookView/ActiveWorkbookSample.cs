@@ -10,7 +10,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.ActiveWorkbookSample Sample { get; private set; }
 
-        private void button_newWorkbook_Click(object sender, EventArgs e)
+        private void ButtonNewWorkbook_Click(object sender, EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -26,7 +26,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             UpdateLocationTextBox("New Workbook");
         }
 
-        private void button_loadDisk_Click(object sender, EventArgs e)
+        private void ButtonLoadDisk_Click(object sender, EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -56,7 +56,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             }
         }
 
-        private async void button_loadUriAsp_Click(object sender, EventArgs e)
+        private async void ButtonLoadUriAsp_Click(object sender, EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -87,7 +87,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             }
         }
 
-        private async void button_loadUriXLSX_Click(object sender, EventArgs e)
+        private async void ButtonLoadUriXLSX_Click(object sender, EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -122,7 +122,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         {
             locationLabel.Text = location;
         }
-
 
         #region Sample Initialization Code
         public ActiveWorkbookSample()

@@ -7,10 +7,10 @@
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
-        private void button_execute_Click(object sender, System.EventArgs e)
+        private void ButtonExecute_Click(object sender, System.EventArgs e)
         {
             // Get the System color in Color Preview box and convert to SpreadsheetGear Color object.
-            System.Drawing.Color systemColor = panel_colorPreview.BackColor;
+            System.Drawing.Color systemColor = panelColorPreview.BackColor;
 
             // SpreadsheetGear uses its own SpreadsheetGear.Color, so we need to convert the System color.
             SpreadsheetGear.Color sgColor = SpreadsheetGear.Color.FromArgb(systemColor.R, systemColor.G, systemColor.B);
@@ -19,8 +19,7 @@
             Sample.ExecuteCommand(workbookView, sgColor);
         }
 
-
-        private void button_undo_Click(object sender, System.EventArgs e)
+        private void ButtonUndo_Click(object sender, System.EventArgs e)
         {
             // Attempt to Undo.  If it fails (probably because there is nothing to undo), display the error
             // in a MessageBox.
@@ -31,8 +30,7 @@
             }
         }
 
-
-        private void button_redo_Click(object sender, System.EventArgs e)
+        private void ButtonRedo_Click(object sender, System.EventArgs e)
         {
             // Attempt to Redo.  If it fails (probably because there is nothing to redo), display the error
             // in a MessageBox.
@@ -43,17 +41,15 @@
             }
         }
 
-
-        private void trackBar_ValueChanged(object sender, System.EventArgs e)
+        private void TrackBar_ValueChanged(object sender, System.EventArgs e)
         {
             System.Drawing.Color previewColor = System.Drawing.Color.FromArgb(
-                trackBar_red.Value,
-                trackBar_green.Value,
-                trackBar_blue.Value
+                trackBarRed.Value,
+                trackBarGreen.Value,
+                trackBarBlue.Value
             );
-            panel_colorPreview.BackColor = previewColor;
+            panelColorPreview.BackColor = previewColor;
         }
-
 
         #region Sample Initialization Code
         public CommandRangeSample()
@@ -66,9 +62,9 @@
         {
             Sample = new SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
-            trackBar_red.Value = panel_colorPreview.BackColor.R;
-            trackBar_green.Value = panel_colorPreview.BackColor.G;
-            trackBar_blue.Value = panel_colorPreview.BackColor.B;
+            trackBarRed.Value = panelColorPreview.BackColor.R;
+            trackBarGreen.Value = panelColorPreview.BackColor.G;
+            trackBarBlue.Value = panelColorPreview.BackColor.B;
         }
         #endregion
     }

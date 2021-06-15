@@ -27,7 +27,6 @@
             }
         }
 
-
         public void ShowWorkbookExplorer(IWorkbookView workbookView)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -52,7 +51,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         public void ShowRangeExplorer(IWorkbookView workbookView, 
             SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags categoryFlags)
@@ -84,7 +82,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         public void ShowChartExplorer(IWorkbookView workbookView, 
             SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags categoryFlags)
@@ -138,7 +135,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         public void ShowShapeExplorer(IWorkbookView workbookView, 
             SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags categoryFlags)

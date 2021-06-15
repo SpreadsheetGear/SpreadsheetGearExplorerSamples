@@ -61,7 +61,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             this.workbookView.Size = new System.Drawing.Size(675, 782);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            this.workbookView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.workbookView_MouseDown);
+            this.workbookView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.WorkbookView_MouseDown);
             // 
             // LocationToRange
             // 

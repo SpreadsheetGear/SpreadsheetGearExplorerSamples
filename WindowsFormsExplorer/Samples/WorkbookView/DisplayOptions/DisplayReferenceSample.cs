@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
 
-        private void radioButton_CheckedChanged(object sender, System.EventArgs e)
+        private void RadioButton_CheckedChanged(object sender, System.EventArgs e)
         {
             // Get the selected display reference.
             string selectedItem = ((System.Windows.Forms.RadioButton)sender).Text;
@@ -15,7 +15,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             // Run the sample.
             Sample.UpdateDisplayReference(workbookView, selectedItem);
         }
-
 
         #region Sample Initialization Code
         public DisplayReferenceSample()

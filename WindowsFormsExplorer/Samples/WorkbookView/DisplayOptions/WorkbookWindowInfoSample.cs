@@ -7,24 +7,23 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample Sample { get; private set; }
 
-        private void button_toggleScrollBars_Click(object sender, System.EventArgs e)
+        private void ButtonToggleScrollBars_Click(object sender, System.EventArgs e)
         {
             Sample.ToggleScrollBars(workbookView);
         }
 
-        private void button_toggleSheetTabs_Click(object sender, System.EventArgs e)
+        private void ButtonToggleSheetTabs_Click(object sender, System.EventArgs e)
         {
             Sample.ToggleSheetTabs(workbookView);
         }
 
-        private void tabRatioTrackBar_ValueChanged(object sender, System.EventArgs e)
+        private void TabRatioTrackBar_ValueChanged(object sender, System.EventArgs e)
         {
             int tabRatioPercent = tabRatioTrackBar.Value;
             double tabRatio = tabRatioPercent / 100.0;
-            label_tabRatio.Text = $"Tab Ratio: {tabRatioPercent}%";
+            labelTabRatio.Text = $"Tab Ratio: {tabRatioPercent}%";
             Sample.SetTabRatio(workbookView, tabRatio);
         }
-
 
         #region Sample Initialization Code
         public WorkbookWindowInfoSample()

@@ -7,26 +7,25 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
 
-        private void buttonFreezePanes_Click(object sender, System.EventArgs e)
+        private void ButtonFreezePanes_Click(object sender, System.EventArgs e)
         {
             Sample.FreezePanes(workbookView);
         }
 
-        private void buttonGridlines_Click(object sender, System.EventArgs e)
+        private void ButtonGridlines_Click(object sender, System.EventArgs e)
         {
             Sample.ToggleGridlines(workbookView);
         }
 
-        private void buttonHeadings_Click(object sender, System.EventArgs e)
+        private void ButtonHeadings_Click(object sender, System.EventArgs e)
         {
             Sample.ToggleHeadings(workbookView);
         }
 
-        private void zoomTrackBar_ValueChanged(object sender, System.EventArgs e)
+        private void ZoomTrackBar_ValueChanged(object sender, System.EventArgs e)
         {
             Sample.Zoom(workbookView, zoomTrackBar.Value);
         }
-
 
         #region Sample Initialization Code
         public WorksheetWindowInfoSample()

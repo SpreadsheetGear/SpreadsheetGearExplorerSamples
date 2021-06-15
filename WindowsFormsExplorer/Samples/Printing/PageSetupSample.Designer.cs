@@ -66,7 +66,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.buttonRunSample.TabIndex = 0;
             this.buttonRunSample.Text = "Print Preview...";
             this.buttonRunSample.UseVisualStyleBackColor = true;
-            this.buttonRunSample.Click += new System.EventHandler(this.buttonRunSample_Click);
+            this.buttonRunSample.Click += new System.EventHandler(this.ButtonRunSample_Click);
             // 
             // workbookView
             // 

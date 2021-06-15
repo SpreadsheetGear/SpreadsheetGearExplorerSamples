@@ -30,9 +30,9 @@ namespace WindowsFormsExplorer.Samples.Printing
                 if (PrintPreviewControl.Document != value)
                 {
                     PrintPreviewControl.Document = value;
-                    value.BeginPrint += new PrintEventHandler(printDocument_BeginPrint);
-                    value.EndPrint += new PrintEventHandler(printDocument_EndPrint);
-                    value.PrintPage += new PrintPageEventHandler(printDocument_PrintPage);
+                    value.BeginPrint += new PrintEventHandler(PrintDocument_BeginPrint);
+                    value.EndPrint += new PrintEventHandler(PrintDocument_EndPrint);
+                    value.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
                 }
             }
         }
@@ -99,31 +99,31 @@ namespace WindowsFormsExplorer.Samples.Printing
             toolStripButtonNextPage.Enabled = HasNextPage;
         }
 
-        private void printDocument_BeginPrint(object sender, PrintEventArgs e)
+        private void PrintDocument_BeginPrint(object sender, PrintEventArgs e)
         {
             // Initialize the page count.
             _pageCount = 0;
         }
 
-        private void printDocument_EndPrint(object sender, PrintEventArgs e)
+        private void PrintDocument_EndPrint(object sender, PrintEventArgs e)
         {
             // Call routine to enable or disable previous and next page buttons.
             CheckPageStatus();
         }
 
-        private void printDocument_PrintPage(object sender, PrintPageEventArgs e)
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
             // Increment the page count.
             _pageCount++;
         }
 
-        private void printPreviewControl_StartPageChanged(object sender, EventArgs e)
+        private void PrintPreviewControl_StartPageChanged(object sender, EventArgs e)
         {
             // Call routine to enable or disable previous and next page buttons.
             CheckPageStatus();
         }
 
-        private void toolStripButtonPrint_Click(object sender, EventArgs e)
+        private void ToolStripButtonPrint_Click(object sender, EventArgs e)
         {
             // Create a print dialog.
             System.Windows.Forms.PrintDialog dialog = new System.Windows.Forms.PrintDialog();
@@ -139,7 +139,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             }
         }
 
-        private void toolStripButtonZoom_Click(object sender, EventArgs e)
+        private void ToolStripButtonZoom_Click(object sender, EventArgs e)
         {
             if (toolStripButtonZoom.Checked)
             {
@@ -154,21 +154,21 @@ namespace WindowsFormsExplorer.Samples.Printing
             }
         }
 
-        private void toolStripButtonPreviousPage_Click(object sender, EventArgs e)
+        private void ToolStripButtonPreviousPage_Click(object sender, EventArgs e)
         {
             // Decrement the start page if possible.
             if (HasPreviousPage)
                 PrintPreviewControl.StartPage -= 1;
         }
 
-        private void toolStripButtonNextPage_Click(object sender, EventArgs e)
+        private void ToolStripButtonNextPage_Click(object sender, EventArgs e)
         {
             // Increment the start page if possible.
             if (HasNextPage)
                 PrintPreviewControl.StartPage += 1;
         }
 
-        private void toolStripButtonClose_Click(object sender, EventArgs e)
+        private void ToolStripButtonClose_Click(object sender, EventArgs e)
         {
             // Close the print preview dialog.
             this.Close();

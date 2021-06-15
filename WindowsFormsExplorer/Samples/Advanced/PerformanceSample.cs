@@ -9,11 +9,10 @@ namespace WindowsFormsExplorer.Samples.Advanced
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Advanced.PerformanceSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, EventArgs e)
+        private void ButtonRunSample_Click(object sender, EventArgs e)
         {
             Sample.RunSample(workbookView.ActiveWorkbookSet);
         }
-
 
         #region Sample Initialization Code
         public PerformanceSample()

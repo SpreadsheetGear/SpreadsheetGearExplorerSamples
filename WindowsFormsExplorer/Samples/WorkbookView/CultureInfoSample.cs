@@ -10,21 +10,20 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.CultureInfoSample Sample { get; private set; }
 
-        private void button_runSample_Click(object sender, EventArgs e)
+        private void ButtonRunSample_Click(object sender, EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookViews.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
             /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
             /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
             /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
-            DisposalManager.ResetWorkbookView(workbookView_deDE, false);
-            DisposalManager.ResetWorkbookView(workbookView_selectedCulture, false);
+            DisposalManager.ResetWorkbookView(workbookViewDeDE, false);
+            DisposalManager.ResetWorkbookView(workbookViewSelectedCulture, false);
 
-            Sample.RunSample(workbookView_deDE, workbookView_selectedCulture, (string)listBox_cultures.SelectedItem);
+            Sample.RunSample(workbookViewDeDE, workbookViewSelectedCulture, (string)listBoxCultures.SelectedItem);
 
-            label_selectedCulture.Text = $"Selected Culture ({listBox_cultures.SelectedItem})";
+            labelSelectedCulture.Text = $"Selected Culture ({listBoxCultures.SelectedItem})";
         }
-
 
         #region Sample Initialization Code
         public CultureInfoSample()
@@ -36,12 +35,12 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         private void InitializeSample()
         {
             Sample = new SamplesLibrary.Samples.WorkboookView.CultureInfoSample();
-            DisposalManager.RegisterWorkbookViews(workbookView_deDE, workbookView_selectedCulture);
+            DisposalManager.RegisterWorkbookViews(workbookViewDeDE, workbookViewSelectedCulture);
 
             // Get all cultures and populate ListBox with them
             List<string> cultures = Sample.GetAllCultures();
-            listBox_cultures.DataSource = cultures;
-            listBox_cultures.SelectedIndex = 0;
+            listBoxCultures.DataSource = cultures;
+            listBoxCultures.SelectedIndex = 0;
 
             splitContainer2.SplitterDistance = splitContainer2.Parent.Width / 2;
         }

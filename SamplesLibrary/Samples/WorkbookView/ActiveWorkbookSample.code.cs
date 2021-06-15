@@ -15,7 +15,6 @@ namespace SamplesLibrary.Samples.WorkboookView
             workbookView.ActiveWorkbook = workbook;
         }
 
-
         public void LoadFromDisk(IWorkbookView workbookView, string filePath)
         {
             // NOTE: Use GetWorkbookSet(System.Globalization.CultureInfo.CurrentCulture)
@@ -28,7 +27,6 @@ namespace SamplesLibrary.Samples.WorkboookView
             // Associate the workbook with the WorkbookView control.
             workbookView.ActiveWorkbook = workbook;
         }
-
 
         public async Task<string> LoadFromUri_AspNetGenerated(IWorkbookView workbookView)
         {
@@ -43,7 +41,6 @@ namespace SamplesLibrary.Samples.WorkboookView
             return uri;
         }
 
-
         public async Task<string> LoadFromUri_XSLX(IWorkbookView workbookView)
         {
             // Specify the URI that will return a workbook as the response.  chartgallery.xlsx is an
@@ -54,7 +51,6 @@ namespace SamplesLibrary.Samples.WorkboookView
 
             return uri;
         }
-
 
         /// <summary>
         /// Opens a System.IO.Stream from the provided URI to an Excel workbook file, which is opened

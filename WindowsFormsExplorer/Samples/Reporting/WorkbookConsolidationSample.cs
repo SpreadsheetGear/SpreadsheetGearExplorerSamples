@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Reporting
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Reporting.WorkbookConsolidationSample Sample { get; private set; }
 
-        private void radioButton_CheckedChanged(object sender, System.EventArgs e)
+        private void RadioButton_CheckedChanged(object sender, System.EventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
@@ -26,7 +26,6 @@ namespace WindowsFormsExplorer.Samples.Reporting
             // Run the sample.
             Sample.RunReport(workbookView, selectedRegion);
         }
-
 
         #region Sample Initialization Code
         public WorkbookConsolidationSample()

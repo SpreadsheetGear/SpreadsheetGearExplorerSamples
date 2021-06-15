@@ -39,10 +39,10 @@ namespace WindowsFormsExplorer
 
             EngineSample.InitializeWorkbook();
             workbookView.ActiveWorkbook = EngineSample.Workbook;
-            button_runSample.Enabled = true;
+            buttonRunSample.Enabled = true;
         }
 
-        private void button_runSample_Click(object sender, EventArgs e)
+        private void ButtonRunSample_Click(object sender, EventArgs e)
         {
             workbookView.GetLock();
             try
@@ -53,10 +53,10 @@ namespace WindowsFormsExplorer
             {
                 workbookView.ReleaseLock();
             }
-            button_runSample.Enabled = false;
+            buttonRunSample.Enabled = false;
         }
 
-        private void button_resetSample_Click(object sender, EventArgs e)
+        private void ButtonResetSample_Click(object sender, EventArgs e)
         {
             InitializeSample();
         }

@@ -105,7 +105,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.buttonPrintPreview.TabIndex = 2;
             this.buttonPrintPreview.Text = "Print Preview...";
             this.buttonPrintPreview.UseVisualStyleBackColor = true;
-            this.buttonPrintPreview.Click += new System.EventHandler(this.buttonPrintPreview_Click);
+            this.buttonPrintPreview.Click += new System.EventHandler(this.ButtonPrintPreview_Click);
             // 
             // buttonPrint
             // 
@@ -116,7 +116,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.buttonPrint.TabIndex = 1;
             this.buttonPrint.Text = "Print...";
             this.buttonPrint.UseVisualStyleBackColor = true;
-            this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            this.buttonPrint.Click += new System.EventHandler(this.ButtonPrint_Click);
             // 
             // groupBoxPrintWhat
             // 

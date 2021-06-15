@@ -48,7 +48,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.printPreviewControl.Name = "printPreviewControl";
             this.printPreviewControl.Size = new System.Drawing.Size(792, 546);
             this.printPreviewControl.TabIndex = 0;
-            this.printPreviewControl.StartPageChanged += new System.EventHandler(this.printPreviewControl_StartPageChanged);
+            this.printPreviewControl.StartPageChanged += new System.EventHandler(this.PrintPreviewControl_StartPageChanged);
             // 
             // toolStrip
             // 
@@ -74,7 +74,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.toolStripButtonPrint.Name = "toolStripButtonPrint";
             this.toolStripButtonPrint.Size = new System.Drawing.Size(32, 22);
             this.toolStripButtonPrint.Text = "Print";
-            this.toolStripButtonPrint.Click += new System.EventHandler(this.toolStripButtonPrint_Click);
+            this.toolStripButtonPrint.Click += new System.EventHandler(this.ToolStripButtonPrint_Click);
             // 
             // toolStripButtonZoom
             // 
@@ -85,7 +85,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.toolStripButtonZoom.Name = "toolStripButtonZoom";
             this.toolStripButtonZoom.Size = new System.Drawing.Size(38, 22);
             this.toolStripButtonZoom.Text = "Zoom";
-            this.toolStripButtonZoom.Click += new System.EventHandler(this.toolStripButtonZoom_Click);
+            this.toolStripButtonZoom.Click += new System.EventHandler(this.ToolStripButtonZoom_Click);
             // 
             // toolStripSeparator1
             // 
@@ -100,7 +100,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.toolStripButtonPreviousPage.Name = "toolStripButtonPreviousPage";
             this.toolStripButtonPreviousPage.Size = new System.Drawing.Size(80, 22);
             this.toolStripButtonPreviousPage.Text = "Previous Page";
-            this.toolStripButtonPreviousPage.Click += new System.EventHandler(this.toolStripButtonPreviousPage_Click);
+            this.toolStripButtonPreviousPage.Click += new System.EventHandler(this.ToolStripButtonPreviousPage_Click);
             // 
             // toolStripButtonNextPage
             // 
@@ -110,7 +110,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.toolStripButtonNextPage.Name = "toolStripButtonNextPage";
             this.toolStripButtonNextPage.Size = new System.Drawing.Size(61, 22);
             this.toolStripButtonNextPage.Text = "Next Page";
-            this.toolStripButtonNextPage.Click += new System.EventHandler(this.toolStripButtonNextPage_Click);
+            this.toolStripButtonNextPage.Click += new System.EventHandler(this.ToolStripButtonNextPage_Click);
             // 
             // toolStripSeparator2
             // 
@@ -125,7 +125,7 @@ namespace WindowsFormsExplorer.Samples.Printing
             this.toolStripButtonClose.Name = "toolStripButtonClose";
             this.toolStripButtonClose.Size = new System.Drawing.Size(37, 22);
             this.toolStripButtonClose.Text = "Close";
-            this.toolStripButtonClose.Click += new System.EventHandler(this.toolStripButtonClose_Click);
+            this.toolStripButtonClose.Click += new System.EventHandler(this.ToolStripButtonClose_Click);
             // 
             // CustomPrintPreviewDialog
             // 

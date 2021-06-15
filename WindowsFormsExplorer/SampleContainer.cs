@@ -64,7 +64,6 @@ namespace WindowsFormsExplorer
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-
         public void SetSample(SampleInfo sampleInfo)
         {
             DisposeCurrentSample();
@@ -115,13 +114,11 @@ namespace WindowsFormsExplorer
             UpdateSourceCodeTabs(sampleInfo);
         }
 
-
         private void ResizeSplitterToShowSample()
         {
             if (splitContainer1.SplitterDistance == 0)
                 splitContainer1.SplitterDistance = Height / (Height > 800 ? 3 : 2);
         }
-
 
         /// <summary>
         /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SampleUserControl"/> that contains the SpreadsheetGear Windows Sample, and both classes must have the same name.
@@ -143,7 +140,6 @@ namespace WindowsFormsExplorer
             return (SampleUserControl)Activator.CreateInstance(userControlType);
         }
 
-
         public void DisposeCurrentSample()
         {
             if (panelSampleContainer.Controls.Count == 1)
@@ -154,7 +150,6 @@ namespace WindowsFormsExplorer
             }
             System.Diagnostics.Debug.Assert(panelSampleContainer.Controls.Count == 0);
         }
-
 
         public void UpdateSourceCodeTabs(SampleInfo sampleInfo)
         {
@@ -171,7 +166,6 @@ namespace WindowsFormsExplorer
             }
             tabControl.SelectTab(0);
         }
-
 
         private ElementHost CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
@@ -200,7 +194,6 @@ namespace WindowsFormsExplorer
 
             return elementHost;
         }
-
 
         private void ClearTabs()
         {

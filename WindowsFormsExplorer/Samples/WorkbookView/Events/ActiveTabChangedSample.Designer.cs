@@ -44,7 +44,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
             this.workbookView.Size = new System.Drawing.Size(270, 274);
             this.workbookView.TabIndex = 0;
             this.workbookView.WorkbookSetState = resources.GetString("workbookView.WorkbookSetState");
-            this.workbookView.ActiveTabChanged += new SpreadsheetGear.Windows.Forms.ActiveTabChangedEventHandler(this.workbookView_ActiveTabChanged);
+            this.workbookView.ActiveTabChanged += new SpreadsheetGear.Windows.Forms.ActiveTabChangedEventHandler(this.WorkbookView_ActiveTabChanged);
             // 
             // tableLayoutPanel1
             // 

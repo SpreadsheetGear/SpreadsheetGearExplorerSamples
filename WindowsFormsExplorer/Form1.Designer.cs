@@ -35,8 +35,8 @@ namespace WindowsFormsExplorer
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_collapse = new System.Windows.Forms.Button();
-            this.button_expand = new System.Windows.Forms.Button();
+            this.buttonCollapse = new System.Windows.Forms.Button();
+            this.buttonExpand = new System.Windows.Forms.Button();
             this.categorySummaryPane = new WindowsFormsExplorer.CategorySummaryPane();
             this.sampleContainer = new WindowsFormsExplorer.SampleContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -57,7 +57,7 @@ namespace WindowsFormsExplorer
             this.samplesTreeView.Name = "samplesTreeView";
             this.samplesTreeView.Size = new System.Drawing.Size(371, 1330);
             this.samplesTreeView.TabIndex = 0;
-            this.samplesTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.samplesTreeView_AfterSelect);
+            this.samplesTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.SamplesTreeView_AfterSelect);
             // 
             // splitContainer1
             // 
@@ -107,8 +107,8 @@ namespace WindowsFormsExplorer
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button_collapse);
-            this.panel2.Controls.Add(this.button_expand);
+            this.panel2.Controls.Add(this.buttonCollapse);
+            this.panel2.Controls.Add(this.buttonExpand);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(4, 4);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -116,27 +116,27 @@ namespace WindowsFormsExplorer
             this.panel2.Size = new System.Drawing.Size(367, 81);
             this.panel2.TabIndex = 1;
             // 
-            // button_collapse
+            // buttonCollapse
             // 
-            this.button_collapse.Location = new System.Drawing.Point(190, 13);
-            this.button_collapse.Margin = new System.Windows.Forms.Padding(4);
-            this.button_collapse.Name = "button_collapse";
-            this.button_collapse.Size = new System.Drawing.Size(168, 50);
-            this.button_collapse.TabIndex = 1;
-            this.button_collapse.Text = "Collapse All";
-            this.button_collapse.UseVisualStyleBackColor = true;
-            this.button_collapse.Click += new System.EventHandler(this.button_collapse_Click);
+            this.buttonCollapse.Location = new System.Drawing.Point(190, 13);
+            this.buttonCollapse.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCollapse.Name = "buttonCollapse";
+            this.buttonCollapse.Size = new System.Drawing.Size(168, 50);
+            this.buttonCollapse.TabIndex = 1;
+            this.buttonCollapse.Text = "Collapse All";
+            this.buttonCollapse.UseVisualStyleBackColor = true;
+            this.buttonCollapse.Click += new System.EventHandler(this.ButtonCollapse_Click);
             // 
-            // button_expand
+            // buttonExpand
             // 
-            this.button_expand.Location = new System.Drawing.Point(14, 13);
-            this.button_expand.Margin = new System.Windows.Forms.Padding(4);
-            this.button_expand.Name = "button_expand";
-            this.button_expand.Size = new System.Drawing.Size(168, 50);
-            this.button_expand.TabIndex = 0;
-            this.button_expand.Text = "Expand All";
-            this.button_expand.UseVisualStyleBackColor = true;
-            this.button_expand.Click += new System.EventHandler(this.button_expand_Click);
+            this.buttonExpand.Location = new System.Drawing.Point(14, 13);
+            this.buttonExpand.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonExpand.Name = "buttonExpand";
+            this.buttonExpand.Size = new System.Drawing.Size(168, 50);
+            this.buttonExpand.TabIndex = 0;
+            this.buttonExpand.Text = "Expand All";
+            this.buttonExpand.UseVisualStyleBackColor = true;
+            this.buttonExpand.Click += new System.EventHandler(this.ButtonExpand_Click);
             // 
             // categorySummaryPane
             // 
@@ -187,8 +187,8 @@ namespace WindowsFormsExplorer
         private CategorySummaryPane categorySummaryPane;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button_collapse;
-        private System.Windows.Forms.Button button_expand;
+        private System.Windows.Forms.Button buttonCollapse;
+        private System.Windows.Forms.Button buttonExpand;
         private SampleContainer sampleContainer;
     }
 }

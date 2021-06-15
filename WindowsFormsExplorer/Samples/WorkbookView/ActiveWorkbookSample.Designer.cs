@@ -32,10 +32,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ActiveWorkbookSample));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button_loadUriXLSX = new System.Windows.Forms.Button();
-            this.button_loadUriAsp = new System.Windows.Forms.Button();
-            this.button_newWorkbook = new System.Windows.Forms.Button();
-            this.button_loadDisk = new System.Windows.Forms.Button();
+            this.buttonLoadUriXLSX = new System.Windows.Forms.Button();
+            this.buttonLoadUriAsp = new System.Windows.Forms.Button();
+            this.buttonNewWorkbook = new System.Windows.Forms.Button();
+            this.buttonLoadDisk = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.workbookView = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -68,57 +68,57 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button_loadUriXLSX);
-            this.panel1.Controls.Add(this.button_loadUriAsp);
-            this.panel1.Controls.Add(this.button_newWorkbook);
-            this.panel1.Controls.Add(this.button_loadDisk);
+            this.panel1.Controls.Add(this.buttonLoadUriXLSX);
+            this.panel1.Controls.Add(this.buttonLoadUriAsp);
+            this.panel1.Controls.Add(this.buttonNewWorkbook);
+            this.panel1.Controls.Add(this.buttonLoadDisk);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 317);
             this.panel1.TabIndex = 2;
             // 
-            // button_loadUriXLSX
+            // buttonLoadUriXLSX
             // 
-            this.button_loadUriXLSX.Location = new System.Drawing.Point(11, 125);
-            this.button_loadUriXLSX.Name = "button_loadUriXLSX";
-            this.button_loadUriXLSX.Size = new System.Drawing.Size(221, 23);
-            this.button_loadUriXLSX.TabIndex = 3;
-            this.button_loadUriXLSX.Text = "Load from URI (File on Server)";
-            this.button_loadUriXLSX.UseVisualStyleBackColor = true;
-            this.button_loadUriXLSX.Click += new System.EventHandler(this.button_loadUriXLSX_Click);
+            this.buttonLoadUriXLSX.Location = new System.Drawing.Point(11, 125);
+            this.buttonLoadUriXLSX.Name = "buttonLoadUriXLSX";
+            this.buttonLoadUriXLSX.Size = new System.Drawing.Size(221, 23);
+            this.buttonLoadUriXLSX.TabIndex = 3;
+            this.buttonLoadUriXLSX.Text = "Load from URI (File on Server)";
+            this.buttonLoadUriXLSX.UseVisualStyleBackColor = true;
+            this.buttonLoadUriXLSX.Click += new System.EventHandler(this.ButtonLoadUriXLSX_Click);
             // 
-            // button_loadUriAsp
+            // buttonLoadUriAsp
             // 
-            this.button_loadUriAsp.Location = new System.Drawing.Point(12, 96);
-            this.button_loadUriAsp.Name = "button_loadUriAsp";
-            this.button_loadUriAsp.Size = new System.Drawing.Size(220, 23);
-            this.button_loadUriAsp.TabIndex = 2;
-            this.button_loadUriAsp.Text = "Load from URI (ASP.NET Generated)";
-            this.button_loadUriAsp.UseVisualStyleBackColor = true;
-            this.button_loadUriAsp.Click += new System.EventHandler(this.button_loadUriAsp_Click);
+            this.buttonLoadUriAsp.Location = new System.Drawing.Point(12, 96);
+            this.buttonLoadUriAsp.Name = "buttonLoadUriAsp";
+            this.buttonLoadUriAsp.Size = new System.Drawing.Size(220, 23);
+            this.buttonLoadUriAsp.TabIndex = 2;
+            this.buttonLoadUriAsp.Text = "Load from URI (ASP.NET Generated)";
+            this.buttonLoadUriAsp.UseVisualStyleBackColor = true;
+            this.buttonLoadUriAsp.Click += new System.EventHandler(this.ButtonLoadUriAsp_Click);
             // 
-            // button_newWorkbook
+            // buttonNewWorkbook
             // 
-            this.button_newWorkbook.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button_newWorkbook.Location = new System.Drawing.Point(12, 12);
-            this.button_newWorkbook.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button_newWorkbook.Name = "button_newWorkbook";
-            this.button_newWorkbook.Size = new System.Drawing.Size(220, 25);
-            this.button_newWorkbook.TabIndex = 1;
-            this.button_newWorkbook.Text = "New Workbook";
-            this.button_newWorkbook.UseVisualStyleBackColor = true;
-            this.button_newWorkbook.Click += new System.EventHandler(this.button_newWorkbook_Click);
+            this.buttonNewWorkbook.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonNewWorkbook.Location = new System.Drawing.Point(12, 12);
+            this.buttonNewWorkbook.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonNewWorkbook.Name = "buttonNewWorkbook";
+            this.buttonNewWorkbook.Size = new System.Drawing.Size(220, 25);
+            this.buttonNewWorkbook.TabIndex = 1;
+            this.buttonNewWorkbook.Text = "New Workbook";
+            this.buttonNewWorkbook.UseVisualStyleBackColor = true;
+            this.buttonNewWorkbook.Click += new System.EventHandler(this.ButtonNewWorkbook_Click);
             // 
-            // button_loadDisk
+            // buttonLoadDisk
             // 
-            this.button_loadDisk.Location = new System.Drawing.Point(12, 52);
-            this.button_loadDisk.Name = "button_loadDisk";
-            this.button_loadDisk.Size = new System.Drawing.Size(220, 23);
-            this.button_loadDisk.TabIndex = 0;
-            this.button_loadDisk.Text = "Load from Disk...";
-            this.button_loadDisk.UseVisualStyleBackColor = true;
-            this.button_loadDisk.Click += new System.EventHandler(this.button_loadDisk_Click);
+            this.buttonLoadDisk.Location = new System.Drawing.Point(12, 52);
+            this.buttonLoadDisk.Name = "buttonLoadDisk";
+            this.buttonLoadDisk.Size = new System.Drawing.Size(220, 23);
+            this.buttonLoadDisk.TabIndex = 0;
+            this.buttonLoadDisk.Text = "Load from Disk...";
+            this.buttonLoadDisk.UseVisualStyleBackColor = true;
+            this.buttonLoadDisk.Click += new System.EventHandler(this.ButtonLoadDisk_Click);
             // 
             // panel2
             // 
@@ -205,10 +205,10 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button_newWorkbook;
-        private System.Windows.Forms.Button button_loadDisk;
-        private System.Windows.Forms.Button button_loadUriXLSX;
-        private System.Windows.Forms.Button button_loadUriAsp;
+        private System.Windows.Forms.Button buttonNewWorkbook;
+        private System.Windows.Forms.Button buttonLoadDisk;
+        private System.Windows.Forms.Button buttonLoadUriXLSX;
+        private System.Windows.Forms.Button buttonLoadUriAsp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private WinFormsWorkbookView workbookView;

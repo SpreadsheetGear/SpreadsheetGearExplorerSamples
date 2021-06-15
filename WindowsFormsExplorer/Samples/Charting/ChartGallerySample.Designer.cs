@@ -73,7 +73,7 @@ namespace WindowsFormsExplorer.Samples.Charting
             this.listBoxCategory.Name = "listBoxCategory";
             this.listBoxCategory.Size = new System.Drawing.Size(100, 184);
             this.listBoxCategory.TabIndex = 0;
-            this.listBoxCategory.SelectedIndexChanged += new System.EventHandler(this.listBoxCategory_SelectedIndexChanged);
+            this.listBoxCategory.SelectedIndexChanged += new System.EventHandler(this.ListBoxCategory_SelectedIndexChanged);
             // 
             // pictureBox
             // 
@@ -94,7 +94,7 @@ namespace WindowsFormsExplorer.Samples.Charting
             this.listBoxType.Name = "listBoxType";
             this.listBoxType.Size = new System.Drawing.Size(163, 184);
             this.listBoxType.TabIndex = 1;
-            this.listBoxType.SelectedIndexChanged += new System.EventHandler(this.listBoxType_SelectedIndexChanged);
+            this.listBoxType.SelectedIndexChanged += new System.EventHandler(this.ListBoxType_SelectedIndexChanged);
             // 
             // labelCategory
             // 

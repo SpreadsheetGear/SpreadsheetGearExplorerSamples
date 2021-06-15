@@ -19,7 +19,6 @@
                 workbookView.ActiveWorksheet.Cells["B1"].Formula = "No Selection";
         }
 
-
         public void InitializeSample(IWorkbookView workbookView)
         {
             // Get the full path to a workbook.

@@ -13,7 +13,6 @@
             Workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);
         }
 
-
         public void RunSample()
         {
             // Create some local variables to the active worksheet and its cells.

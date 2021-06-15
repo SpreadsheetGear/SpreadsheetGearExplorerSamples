@@ -100,7 +100,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
             this.buttonAddThread.TabIndex = 0;
             this.buttonAddThread.Text = "Add Thread";
             this.buttonAddThread.UseVisualStyleBackColor = true;
-            this.buttonAddThread.Click += new System.EventHandler(this.buttonAddThread_Click);
+            this.buttonAddThread.Click += new System.EventHandler(this.ButtonAddThread_Click);
             // 
             // buttonRemoveThread
             // 
@@ -115,7 +115,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
             this.buttonRemoveThread.TabIndex = 1;
             this.buttonRemoveThread.Text = "Remove Thread";
             this.buttonRemoveThread.UseVisualStyleBackColor = true;
-            this.buttonRemoveThread.Click += new System.EventHandler(this.buttonRemoveThread_Click);
+            this.buttonRemoveThread.Click += new System.EventHandler(this.ButtonRemoveThread_Click);
             // 
             // ThreadingSample
             // 

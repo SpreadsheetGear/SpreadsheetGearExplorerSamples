@@ -89,7 +89,7 @@ namespace WindowsFormsExplorer.Samples.Reporting
             this.radioButtonEast.TabStop = true;
             this.radioButtonEast.Text = "East";
             this.radioButtonEast.UseVisualStyleBackColor = true;
-            this.radioButtonEast.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonEast.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonWest
             // 
@@ -102,7 +102,7 @@ namespace WindowsFormsExplorer.Samples.Reporting
             this.radioButtonWest.TabStop = true;
             this.radioButtonWest.Text = "West";
             this.radioButtonWest.UseVisualStyleBackColor = true;
-            this.radioButtonWest.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonWest.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // radioButtonBoth
             // 
@@ -115,7 +115,7 @@ namespace WindowsFormsExplorer.Samples.Reporting
             this.radioButtonBoth.TabStop = true;
             this.radioButtonBoth.Text = "Both";
             this.radioButtonBoth.UseVisualStyleBackColor = true;
-            this.radioButtonBoth.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            this.radioButtonBoth.CheckedChanged += new System.EventHandler(this.RadioButton_CheckedChanged);
             // 
             // workbookView
             // 

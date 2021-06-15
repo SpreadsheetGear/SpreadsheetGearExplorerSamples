@@ -53,7 +53,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(174, 28);
             this.textBox1.TabIndex = 1;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // textBox2
             // 
@@ -63,7 +63,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(174, 28);
             this.textBox2.TabIndex = 2;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBox_KeyDown);
             // 
             // tableLayoutPanelMain
             // 
@@ -192,7 +192,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.buttonCalculate.TabIndex = 5;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
-            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
+            this.buttonCalculate.Click += new System.EventHandler(this.ButtonCalculate_Click);
             // 
             // labelTitleFeatures
             // 

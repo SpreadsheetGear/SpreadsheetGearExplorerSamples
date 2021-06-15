@@ -7,12 +7,11 @@ namespace WindowsFormsExplorer.Samples.Printing
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Printing.PageSetupSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.EventArgs e)
+        private void ButtonRunSample_Click(object sender, System.EventArgs e)
         {
             // Run the sample.
             Sample.PrintPreview(workbookView);
         }
-
 
         #region Sample Initialization Code
         public PageSetupSample()

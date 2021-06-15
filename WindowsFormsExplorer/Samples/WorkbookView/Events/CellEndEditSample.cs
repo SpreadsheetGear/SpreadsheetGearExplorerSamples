@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class CellEndEditSample : SampleUserControl
     {
-        private void workbookView_CellEndEdit(
+        private void WorkbookView_CellEndEdit(
             object sender, SpreadsheetGear.Windows.Forms.CellEndEditEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -43,7 +43,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public CellEndEditSample()

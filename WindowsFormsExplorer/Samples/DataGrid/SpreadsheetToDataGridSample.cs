@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.DataGrid
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.EventArgs e)
+        private void ButtonRunSample_Click(object sender, System.EventArgs e)
         {
             // Generate a DataTable from the sample.
             System.Data.DataTable dataTable = Sample.GenerateDataTable();
@@ -15,7 +15,6 @@ namespace WindowsFormsExplorer.Samples.DataGrid
             // Bind a DataGridView to the DataTable.
             dataGridView.DataSource = dataTable;
         }
-
 
         #region Sample Initialization Code
         public SpreadsheetToDataGridSample()

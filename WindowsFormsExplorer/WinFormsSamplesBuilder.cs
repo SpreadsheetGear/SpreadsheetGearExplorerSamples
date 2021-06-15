@@ -68,7 +68,6 @@ namespace WindowsFormsExplorer
         }
     }
 
-
     public static class CategoryExtensions
     {
         /// <summary>

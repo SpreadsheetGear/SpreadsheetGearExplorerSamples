@@ -113,7 +113,7 @@ namespace WindowsFormsExplorer
             }
         }
 
-        private void samplesTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        private void SamplesTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             var selectedNode = samplesTreeView.SelectedNode;
             if (selectedNode != null)
@@ -136,12 +136,12 @@ namespace WindowsFormsExplorer
             }
         }
 
-        private void button_expand_Click(object sender, System.EventArgs e)
+        private void ButtonExpand_Click(object sender, System.EventArgs e)
         {
             samplesTreeView.ExpandAll();
         }
 
-        private void button_collapse_Click(object sender, System.EventArgs e)
+        private void ButtonCollapse_Click(object sender, System.EventArgs e)
         {
             samplesTreeView.CollapseAll();
             samplesTreeView.Nodes[0].Expand();

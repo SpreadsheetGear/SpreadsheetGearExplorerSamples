@@ -7,17 +7,15 @@ namespace WindowsFormsExplorer.Samples.Advanced
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Advanced.ThreadingSample Sample { get; private set; }
 
-
-        private void buttonAddThread_Click(object sender, System.EventArgs e)
+        private void ButtonAddThread_Click(object sender, System.EventArgs e)
         {
             Sample.AddThread(workbookView);
         }
 
-        private void buttonRemoveThread_Click(object sender, System.EventArgs e)
+        private void ButtonRemoveThread_Click(object sender, System.EventArgs e)
         {
             Sample.RemoveThread(workbookView);
         }
-
 
         #region Sample Initialization Code
         public ThreadingSample()

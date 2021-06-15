@@ -7,13 +7,13 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.CommandManager.SimpleCommandSample Sample { get; private set; }
 
-        private void buttonExecute_Click(object sender, System.EventArgs e)
+        private void ButtonExecute_Click(object sender, System.EventArgs e)
         {
             // Run the sample to execute the command.
             Sample.ExecuteCommand(workbookView);
         }
 
-        private void buttonUndo_Click(object sender, System.EventArgs e)
+        private void ButtonUndo_Click(object sender, System.EventArgs e)
         {
             // Attempt to Undo.  If it fails (probably because there is nothing to undo), display the error
             // in a MessageBox.
@@ -23,7 +23,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
                     System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
         }
-
 
         #region Sample Initialization Code
         public SimpleCommandSample()

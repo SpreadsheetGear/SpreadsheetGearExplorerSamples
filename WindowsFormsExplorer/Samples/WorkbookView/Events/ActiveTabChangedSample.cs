@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class ActiveTabChangedSample : SampleUserControl
     {
-        private void workbookView_ActiveTabChanged(
+        private void WorkbookView_ActiveTabChanged(
             object sender, SpreadsheetGear.Windows.Forms.ActiveTabChangedEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -28,7 +28,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public ActiveTabChangedSample()

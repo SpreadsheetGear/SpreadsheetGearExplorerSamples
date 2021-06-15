@@ -99,7 +99,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.buttonFreezePanes.TabIndex = 1;
             this.buttonFreezePanes.Text = "Freeze Panes";
             this.buttonFreezePanes.UseVisualStyleBackColor = true;
-            this.buttonFreezePanes.Click += new System.EventHandler(this.buttonFreezePanes_Click);
+            this.buttonFreezePanes.Click += new System.EventHandler(this.ButtonFreezePanes_Click);
             // 
             // buttonHeadings
             // 
@@ -114,7 +114,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.buttonHeadings.TabIndex = 3;
             this.buttonHeadings.Text = "Headings";
             this.buttonHeadings.UseVisualStyleBackColor = true;
-            this.buttonHeadings.Click += new System.EventHandler(this.buttonHeadings_Click);
+            this.buttonHeadings.Click += new System.EventHandler(this.ButtonHeadings_Click);
             // 
             // buttonGridlines
             // 
@@ -129,7 +129,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.buttonGridlines.TabIndex = 2;
             this.buttonGridlines.Text = "Gridlines";
             this.buttonGridlines.UseVisualStyleBackColor = true;
-            this.buttonGridlines.Click += new System.EventHandler(this.buttonGridlines_Click);
+            this.buttonGridlines.Click += new System.EventHandler(this.ButtonGridlines_Click);
             // 
             // workbookView
             // 
@@ -167,7 +167,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.zoomTrackBar.Name = "zoomTrackBar";
             this.zoomTrackBar.Size = new System.Drawing.Size(242, 101);
             this.zoomTrackBar.TabIndex = 1;
-            this.zoomTrackBar.ValueChanged += new System.EventHandler(this.zoomTrackBar_ValueChanged);
+            this.zoomTrackBar.ValueChanged += new System.EventHandler(this.ZoomTrackBar_ValueChanged);
             // 
             // WorksheetWindowInfo
             // 

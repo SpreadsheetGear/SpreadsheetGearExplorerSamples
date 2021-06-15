@@ -92,7 +92,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.buttonUndo.TabIndex = 3;
             this.buttonUndo.Text = "Undo";
             this.buttonUndo.UseVisualStyleBackColor = true;
-            this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
+            this.buttonUndo.Click += new System.EventHandler(this.ButtonUndo_Click);
             // 
             // buttonExecute
             // 
@@ -105,7 +105,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.buttonExecute.TabIndex = 0;
             this.buttonExecute.Text = "Execute";
             this.buttonExecute.UseVisualStyleBackColor = true;
-            this.buttonExecute.Click += new System.EventHandler(this.buttonExecute_Click);
+            this.buttonExecute.Click += new System.EventHandler(this.ButtonExecute_Click);
             // 
             // SimpleCommandSample
             // 

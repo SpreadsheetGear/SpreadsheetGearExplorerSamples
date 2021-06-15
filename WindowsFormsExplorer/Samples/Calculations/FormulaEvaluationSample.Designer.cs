@@ -78,7 +78,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.textBoxFormula.Size = new System.Drawing.Size(600, 28);
             this.textBoxFormula.TabIndex = 4;
             this.textBoxFormula.Text = "TEXT(STDEV(1, 2, 3, 4), \"0.00\")";
-            this.textBoxFormula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxFormula_KeyDown);
+            this.textBoxFormula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxFormula_KeyDown);
             // 
             // labelEnterFormula
             // 
@@ -144,7 +144,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.buttonEvaluate.TabIndex = 5;
             this.buttonEvaluate.Text = "Evaluate";
             this.buttonEvaluate.UseVisualStyleBackColor = false;
-            this.buttonEvaluate.Click += new System.EventHandler(this.buttonEvaluate_Click);
+            this.buttonEvaluate.Click += new System.EventHandler(this.ButtonEvaluate_Click);
             // 
             // panel1
             // 
@@ -172,7 +172,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.exampleFormulasListBox.Name = "exampleFormulasListBox";
             this.exampleFormulasListBox.Size = new System.Drawing.Size(557, 204);
             this.exampleFormulasListBox.TabIndex = 1;
-            this.exampleFormulasListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.exampleFormulasListBox.SelectedIndexChanged += new System.EventHandler(this.ListBox1_SelectedIndexChanged);
             // 
             // label1
             // 

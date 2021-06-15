@@ -35,21 +35,21 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.trackBar_blue = new System.Windows.Forms.TrackBar();
-            this.trackBar_green = new System.Windows.Forms.TrackBar();
-            this.trackBar_red = new System.Windows.Forms.TrackBar();
+            this.trackBarBlue = new System.Windows.Forms.TrackBar();
+            this.trackBarGreen = new System.Windows.Forms.TrackBar();
+            this.trackBarRed = new System.Windows.Forms.TrackBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_colorPreview = new System.Windows.Forms.Panel();
-            this.button_undo = new System.Windows.Forms.Button();
-            this.button_execute = new System.Windows.Forms.Button();
-            this.button_redo = new System.Windows.Forms.Button();
+            this.panelColorPreview = new System.Windows.Forms.Panel();
+            this.buttonUndo = new System.Windows.Forms.Button();
+            this.buttonExecute = new System.Windows.Forms.Button();
+            this.buttonRedo = new System.Windows.Forms.Button();
             this.workbookView = new WindowsFormsExplorer.WinFormsWorkbookView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_blue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_green)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_red)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBlue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarGreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRed)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -70,17 +70,17 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button_redo);
+            this.panel1.Controls.Add(this.buttonRedo);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.trackBar_blue);
-            this.panel1.Controls.Add(this.trackBar_green);
-            this.panel1.Controls.Add(this.trackBar_red);
+            this.panel1.Controls.Add(this.trackBarBlue);
+            this.panel1.Controls.Add(this.trackBarGreen);
+            this.panel1.Controls.Add(this.trackBarRed);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel_colorPreview);
-            this.panel1.Controls.Add(this.button_undo);
-            this.panel1.Controls.Add(this.button_execute);
+            this.panel1.Controls.Add(this.panelColorPreview);
+            this.panel1.Controls.Add(this.buttonUndo);
+            this.panel1.Controls.Add(this.buttonExecute);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
@@ -110,35 +110,35 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.label3.TabIndex = 5;
             this.label3.Text = "Green";
             // 
-            // trackBar_blue
+            // trackBarBlue
             // 
-            this.trackBar_blue.Location = new System.Drawing.Point(14, 468);
-            this.trackBar_blue.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.trackBar_blue.Maximum = 255;
-            this.trackBar_blue.Name = "trackBar_blue";
-            this.trackBar_blue.Size = new System.Drawing.Size(170, 69);
-            this.trackBar_blue.TabIndex = 9;
-            this.trackBar_blue.ValueChanged += new System.EventHandler(this.trackBar_ValueChanged);
+            this.trackBarBlue.Location = new System.Drawing.Point(14, 468);
+            this.trackBarBlue.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.trackBarBlue.Maximum = 255;
+            this.trackBarBlue.Name = "trackBarBlue";
+            this.trackBarBlue.Size = new System.Drawing.Size(170, 69);
+            this.trackBarBlue.TabIndex = 9;
+            this.trackBarBlue.ValueChanged += new System.EventHandler(this.TrackBar_ValueChanged);
             // 
-            // trackBar_green
+            // trackBarGreen
             // 
-            this.trackBar_green.Location = new System.Drawing.Point(14, 378);
-            this.trackBar_green.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.trackBar_green.Maximum = 255;
-            this.trackBar_green.Name = "trackBar_green";
-            this.trackBar_green.Size = new System.Drawing.Size(170, 69);
-            this.trackBar_green.TabIndex = 8;
-            this.trackBar_green.ValueChanged += new System.EventHandler(this.trackBar_ValueChanged);
+            this.trackBarGreen.Location = new System.Drawing.Point(14, 378);
+            this.trackBarGreen.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.trackBarGreen.Maximum = 255;
+            this.trackBarGreen.Name = "trackBarGreen";
+            this.trackBarGreen.Size = new System.Drawing.Size(170, 69);
+            this.trackBarGreen.TabIndex = 8;
+            this.trackBarGreen.ValueChanged += new System.EventHandler(this.TrackBar_ValueChanged);
             // 
-            // trackBar_red
+            // trackBarRed
             // 
-            this.trackBar_red.Location = new System.Drawing.Point(14, 292);
-            this.trackBar_red.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.trackBar_red.Maximum = 255;
-            this.trackBar_red.Name = "trackBar_red";
-            this.trackBar_red.Size = new System.Drawing.Size(170, 69);
-            this.trackBar_red.TabIndex = 7;
-            this.trackBar_red.ValueChanged += new System.EventHandler(this.trackBar_ValueChanged);
+            this.trackBarRed.Location = new System.Drawing.Point(14, 292);
+            this.trackBarRed.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.trackBarRed.Maximum = 255;
+            this.trackBarRed.Name = "trackBarRed";
+            this.trackBarRed.Size = new System.Drawing.Size(170, 69);
+            this.trackBarRed.TabIndex = 7;
+            this.trackBarRed.ValueChanged += new System.EventHandler(this.TrackBar_ValueChanged);
             // 
             // label2
             // 
@@ -162,48 +162,48 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.label1.TabIndex = 3;
             this.label1.Text = "Color Preview";
             // 
-            // panel_colorPreview
+            // panelColorPreview
             // 
-            this.panel_colorPreview.BackColor = System.Drawing.Color.Red;
-            this.panel_colorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_colorPreview.Location = new System.Drawing.Point(16, 193);
-            this.panel_colorPreview.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.panel_colorPreview.Name = "panel_colorPreview";
-            this.panel_colorPreview.Size = new System.Drawing.Size(171, 60);
-            this.panel_colorPreview.TabIndex = 2;
+            this.panelColorPreview.BackColor = System.Drawing.Color.Red;
+            this.panelColorPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColorPreview.Location = new System.Drawing.Point(16, 193);
+            this.panelColorPreview.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.panelColorPreview.Name = "panelColorPreview";
+            this.panelColorPreview.Size = new System.Drawing.Size(171, 60);
+            this.panelColorPreview.TabIndex = 2;
             // 
-            // button_undo
+            // buttonUndo
             // 
-            this.button_undo.Location = new System.Drawing.Point(14, 62);
-            this.button_undo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button_undo.Name = "button_undo";
-            this.button_undo.Size = new System.Drawing.Size(170, 35);
-            this.button_undo.TabIndex = 1;
-            this.button_undo.Text = "Undo";
-            this.button_undo.UseVisualStyleBackColor = true;
-            this.button_undo.Click += new System.EventHandler(this.button_undo_Click);
+            this.buttonUndo.Location = new System.Drawing.Point(14, 62);
+            this.buttonUndo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.buttonUndo.Name = "buttonUndo";
+            this.buttonUndo.Size = new System.Drawing.Size(170, 35);
+            this.buttonUndo.TabIndex = 1;
+            this.buttonUndo.Text = "Undo";
+            this.buttonUndo.UseVisualStyleBackColor = true;
+            this.buttonUndo.Click += new System.EventHandler(this.ButtonUndo_Click);
             // 
-            // button_execute
+            // buttonExecute
             // 
-            this.button_execute.Location = new System.Drawing.Point(14, 15);
-            this.button_execute.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button_execute.Name = "button_execute";
-            this.button_execute.Size = new System.Drawing.Size(170, 35);
-            this.button_execute.TabIndex = 0;
-            this.button_execute.Text = "Execute";
-            this.button_execute.UseVisualStyleBackColor = true;
-            this.button_execute.Click += new System.EventHandler(this.button_execute_Click);
+            this.buttonExecute.Location = new System.Drawing.Point(14, 15);
+            this.buttonExecute.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.buttonExecute.Name = "buttonExecute";
+            this.buttonExecute.Size = new System.Drawing.Size(170, 35);
+            this.buttonExecute.TabIndex = 0;
+            this.buttonExecute.Text = "Execute";
+            this.buttonExecute.UseVisualStyleBackColor = true;
+            this.buttonExecute.Click += new System.EventHandler(this.ButtonExecute_Click);
             // 
-            // button_redo
+            // buttonRedo
             // 
-            this.button_redo.Location = new System.Drawing.Point(14, 110);
-            this.button_redo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button_redo.Name = "button_redo";
-            this.button_redo.Size = new System.Drawing.Size(170, 35);
-            this.button_redo.TabIndex = 10;
-            this.button_redo.Text = "Redo";
-            this.button_redo.UseVisualStyleBackColor = true;
-            this.button_redo.Click += new System.EventHandler(this.button_redo_Click);
+            this.buttonRedo.Location = new System.Drawing.Point(14, 110);
+            this.buttonRedo.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.buttonRedo.Name = "buttonRedo";
+            this.buttonRedo.Size = new System.Drawing.Size(170, 35);
+            this.buttonRedo.TabIndex = 10;
+            this.buttonRedo.Text = "Redo";
+            this.buttonRedo.UseVisualStyleBackColor = true;
+            this.buttonRedo.Click += new System.EventHandler(this.ButtonRedo_Click);
             // 
             // workbookView
             // 
@@ -227,9 +227,9 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_blue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_green)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_red)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBlue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarGreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarRed)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,16 +239,16 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.CommandManager
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel_colorPreview;
-        private System.Windows.Forms.Button button_undo;
-        private System.Windows.Forms.Button button_execute;
-        private System.Windows.Forms.TrackBar trackBar_blue;
-        private System.Windows.Forms.TrackBar trackBar_green;
-        private System.Windows.Forms.TrackBar trackBar_red;
+        private System.Windows.Forms.Panel panelColorPreview;
+        private System.Windows.Forms.Button buttonUndo;
+        private System.Windows.Forms.Button buttonExecute;
+        private System.Windows.Forms.TrackBar trackBarBlue;
+        private System.Windows.Forms.TrackBar trackBarGreen;
+        private System.Windows.Forms.TrackBar trackBarRed;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button_redo;
+        private System.Windows.Forms.Button buttonRedo;
         private WinFormsWorkbookView workbookView;
     }
 }

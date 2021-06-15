@@ -2,7 +2,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
 {
     public partial class ShapeSelectionChangedSample : SampleUserControl
     {
-        private void workbookView_ShapeSelectionChanged(
+        private void WorkbookView_ShapeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Forms.ShapeSelectionChangedEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -26,7 +26,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public ShapeSelectionChangedSample()

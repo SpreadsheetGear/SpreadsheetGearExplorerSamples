@@ -9,7 +9,7 @@ namespace WindowsFormsExplorer.Samples.Charting
         // app as well as the WPFExplorer samples app.
         public SamplesLibrary.Samples.Charting.ChartGallerySample Sample { get; private set; }
 
-        private void listBoxCategory_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void ListBoxCategory_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             // Get the selected chart category and type.
             string selectedCategory = (string)listBoxCategory.SelectedItem;
@@ -25,8 +25,7 @@ namespace WindowsFormsExplorer.Samples.Charting
             listBoxType.SelectedIndex = 0;
         }
 
-
-        private void listBoxType_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void ListBoxType_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             // Get the selected Chart Category and Chart Type.
             string selectedCategory = (string)listBoxCategory.SelectedItem;

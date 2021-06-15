@@ -20,26 +20,22 @@ namespace WindowsFormsExplorer.Samples.Calculations
             }
         }
 
-
-        private void buttonEvaluate_Click(object sender, System.EventArgs e)
+        private void ButtonEvaluate_Click(object sender, System.EventArgs e)
         {
             EvaluateFormula();
         }
 
-
-        private void textBoxFormula_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TextBoxFormula_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 EvaluateFormula();
         }
 
-
-        private void listBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void ListBox1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             textBoxFormula.Text = exampleFormulasListBox.Text;
             EvaluateFormula();
         }
-
 
         #region Sample Initialization Code
         public FormulaEvaluationSample()
