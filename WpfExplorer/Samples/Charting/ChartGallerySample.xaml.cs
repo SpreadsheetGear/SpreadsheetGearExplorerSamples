@@ -38,18 +38,20 @@ namespace WPFExplorer.Samples.Charting
             // Only render if both a chart category and type was selected.
             if (selectedCategory != null && selectedType != null)
             {
-                // Call into sample to generate a PNG stream image of the chart.
-                using (System.IO.MemoryStream bitmapStream = Sample.RenderBitmapStreamGDI(selectedCategory, selectedType))
-                {
-                    BitmapImage bitmapImage = new BitmapImage();
-                    bitmapImage.BeginInit();
-                    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-                    bitmapImage.StreamSource = bitmapStream;
-                    bitmapImage.EndInit();
+                // Get the worksheet based on the selected category name.
+                SpreadsheetGear.IWorksheet worksheet = Sample.ChartWorkbook.Worksheets[selectedCategory];
 
-                    // Set the bitmap source to display in the image control.
-                    imageControl.Source = bitmapImage;
-                }
+                // Get the chart based on the selected type.
+                SpreadsheetGear.Charts.IChart chart = worksheet.Shapes[selectedType].Chart;
+
+                // Create the SpreadsheetGear Image class.
+                SpreadsheetGear.Windows.Media.Image image = new SpreadsheetGear.Windows.Media.Image(chart);
+
+                // Generate a new BitmapSource representing the shape.
+                System.Windows.Media.Imaging.BitmapSource bitmap = image.GetBitmap();
+
+                // Set the bitmap source to display in the image control.
+                imageControl.Source = bitmap;
             }
             else
                 imageControl.Source = null;

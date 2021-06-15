@@ -35,16 +35,27 @@ namespace WindowsFormsExplorer.Samples.Charting
             // Only render if both a chart category and type was selected.
             if (selectedCategory != null && selectedType != null)
             {
-                // Call into sample to generate a Bitmap image of the chart.
-                System.Drawing.Bitmap bitmap = Sample.RenderBitmapGDI(selectedCategory, selectedType);
+                // Get the worksheet based on the selected category name.
+                SpreadsheetGear.IWorksheet worksheet = Sample.ChartWorkbook.Worksheets[selectedCategory];
+
+                // Get the chart based on the selected type.
+                SpreadsheetGear.Charts.IChart chart = worksheet.Shapes[selectedType].Chart;
+
+                // Create the SpreadsheetGear Image class.
+                SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(chart);
+
+                // Set the DPI of the image to match the current display device.
+                image.Dpi = this.DeviceDpi;
+
+                // Generate a new Bitmap representing the shape.
+                System.Drawing.Bitmap bitmap = image.GetBitmap();
                 
-                // Set the PictureBox source to display in the bitmap.
+                // Set the PictureBox source to display the bitmap.
                 pictureBox.Image = bitmap;
             }
             else
                 pictureBox.Image = null;
         }
-
 
         #region Sample Initialization Code
         public ChartGallerySample()
