@@ -9,6 +9,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <src:WpfWorkbookView x:Name="workbookView" ShowError="workbookView_ShowError" />
+        <src:WpfWorkbookView x:Name="workbookView" ShowError="WorkbookView_ShowError" />
     </Grid>
 </src:SampleUserControl>

@@ -7,7 +7,7 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridFormattedSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Generate a DataTable from the sample.
             System.Data.DataTable dataTable = Sample.GenerateDataTable();

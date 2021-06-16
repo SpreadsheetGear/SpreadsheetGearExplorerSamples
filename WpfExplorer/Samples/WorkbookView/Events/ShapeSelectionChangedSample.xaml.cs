@@ -4,12 +4,11 @@
     {
         public SamplesLibrary.Samples.WorkboookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
 
-        private void workbookView_ShapeSelectionChanged(
+        private void WorkbookView_ShapeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Controls.ShapeSelectionChangedEventArgs e)
         {
             Sample.ShapeSelectionChanged(workbookView, e.ShapeSelection);
         }
-
 
         #region Sample Initialization Code
         public ShapeSelectionChangedSample()

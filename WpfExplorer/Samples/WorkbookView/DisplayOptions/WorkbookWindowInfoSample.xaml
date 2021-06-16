@@ -14,13 +14,13 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Toggle ScrollBars" Margin="10,10,10,0" Click="button_toggleScrollBars_Click" />
-            <Button Content="Toggle SheetTabs" Margin="10,5,10,0" Click="button_toggleSheetTabs_Click" />
+            <Button Content="Toggle ScrollBars" Margin="10,10,10,0" Click="ButtonToggleScrollBars_Click" />
+            <Button Content="Toggle SheetTabs" Margin="10,5,10,0" Click="ButtonToggleSheetTabs_Click" />
             <StackPanel Orientation="Horizontal">
                 <Label Content="Tab Ratio:" Margin="10,15,0,0" FontWeight="Bold" />
                 <Label Content="100%" Name="tabRatioLabel" Margin="5,15,10,0" FontWeight="Bold" />
             </StackPanel>
-            <Slider Name="slider_tabRatio" Margin="10,0,10,0" ValueChanged="slider_tabRatio_ValueChanged" />
+            <Slider Name="sliderTabRatio" Margin="10,0,10,0" ValueChanged="SliderTabRatio_ValueChanged" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

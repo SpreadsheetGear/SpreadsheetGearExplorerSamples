@@ -39,7 +39,6 @@ namespace WPFExplorer
             markdownScrollViewer.MarkdownStyle = standardStyle;
         }
 
-
         public void SetCategory(Category category)
         {
             var markdown = category.GetCategorySummaryMarkdown("📁", "▶️");

@@ -26,13 +26,13 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Vertical" Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Margin="0,5,0,5">
-            <Button x:Name="button_runSample" Padding="5" Margin="5" Click="button_runSample_Click" VerticalAlignment="Center" Width="125" HorizontalAlignment="Left">
+            <Button x:Name="buttonRunSample" Padding="5" Margin="5" Click="ButtonRunSample_Click" VerticalAlignment="Center" Width="125" HorizontalAlignment="Left">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/WpfExplorer;component/Images/Run_16x.png" Width="16" Height="16" Margin="0,0,3,0" />
                     <TextBlock>Run Sample</TextBlock>
                 </StackPanel>
             </Button>
-            <Button x:Name="button_resetSample" Padding="5" Margin="5" Click="button_resetSample_Click" VerticalAlignment="Center" Width="125" HorizontalAlignment="Left">
+            <Button x:Name="buttonResetSample" Padding="5" Margin="5" Click="ButtonResetSample_Click" VerticalAlignment="Center" Width="125" HorizontalAlignment="Left">
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/WpfExplorer;component/Images/Undo_16x.png" Width="16" Height="16" Margin="0,0,3,0" />
                     <TextBlock>Reset Sample</TextBlock>

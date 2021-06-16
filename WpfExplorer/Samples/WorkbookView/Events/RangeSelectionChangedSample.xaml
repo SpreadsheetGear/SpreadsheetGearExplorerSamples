@@ -9,6 +9,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <src:WpfWorkbookView x:Name="workbookView" RangeSelectionChanged="workbookView_RangeSelectionChanged" />
+        <src:WpfWorkbookView x:Name="workbookView" RangeSelectionChanged="WorkbookView_RangeSelectionChanged" />
     </Grid>
 </src:SampleUserControl>

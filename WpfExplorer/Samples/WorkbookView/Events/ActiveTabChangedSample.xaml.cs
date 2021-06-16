@@ -2,7 +2,7 @@
 {
     public partial class ActiveTabChangedSample : SampleUserControl
     {
-        private void workbookView_ActiveTabChanged(
+        private void WorkbookView_ActiveTabChanged(
             object sender, SpreadsheetGear.Windows.Controls.ActiveTabChangedEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is 
@@ -21,7 +21,6 @@
             // Display the information in the TextBlock.
             textBlock.Text = text;
         }
-
 
         #region Sample Initialization Code
         public ActiveTabChangedSample()

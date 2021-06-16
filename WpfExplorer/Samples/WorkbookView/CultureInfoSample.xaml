@@ -20,8 +20,8 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button x:Name="button_loadCulture" Grid.Row="0" Content="Run Sample" Margin="5" Click="button_runSample_Click" />
-                <ListBox x:Name="listBox_cultures" Grid.Row="1"></ListBox>
+                <Button x:Name="buttonLoadCulture" Grid.Row="0" Content="Run Sample" Margin="5" Click="ButtonRunSample_Click" />
+                <ListBox x:Name="listBoxCultures" Grid.Row="1"></ListBox>
             </Grid>
         </Grid>
         <Grid Grid.Column="1">
@@ -34,7 +34,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" FontWeight="Bold">German Culture (de-DE)</Label>
-            <Label x:Name="label_selectedCulture" Grid.Row="0" Grid.Column="1" FontWeight="Bold">Selected Culture</Label>
+            <Label x:Name="labelSelectedCulture" Grid.Row="0" Grid.Column="1" FontWeight="Bold">Selected Culture</Label>
             
             <Grid Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
@@ -42,7 +42,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <sg:FormulaBar Grid.Row="0"></sg:FormulaBar>
-                <src:WpfWorkbookView x:Name="workbookView_deDE" Grid.Row="1"></src:WpfWorkbookView>
+                <src:WpfWorkbookView x:Name="workbookViewDeDE" Grid.Row="1"></src:WpfWorkbookView>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="1">
@@ -51,7 +51,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <sg:FormulaBar Grid.Row="0"></sg:FormulaBar>
-                <src:WpfWorkbookView x:Name="workbookView_selectedCulture" Grid.Row="1"></src:WpfWorkbookView>
+                <src:WpfWorkbookView x:Name="workbookViewSelectedCulture" Grid.Row="1"></src:WpfWorkbookView>
             </Grid>
         </Grid>
     </Grid>

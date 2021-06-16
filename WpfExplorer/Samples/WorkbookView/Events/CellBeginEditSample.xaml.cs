@@ -2,7 +2,7 @@
 {
     public partial class CellBeginEditSample : SampleUserControl
     {
-        private void workbookView_CellBeginEdit(object sender, 
+        private void WorkbookView_CellBeginEdit(object sender, 
             SpreadsheetGear.Windows.Controls.CellBeginEditEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is 
@@ -21,7 +21,6 @@
                 e.Cancel = true;
             }
         }
-
 
         #region Sample Initialization Code
         public CellBeginEditSample()

@@ -2,7 +2,7 @@
 {
     public partial class RangeChangedSample : SampleUserControl
     {
-        private void workbookView_RangeChanged(
+        private void WorkbookView_RangeChanged(
             object sender, SpreadsheetGear.Windows.Controls.RangeChangedEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is 
@@ -18,7 +18,6 @@
             // Display the information in the TextBlock
             textBlock.Text = text;
         }
-
 
         #region Sample Initialization Code
         public RangeChangedSample()

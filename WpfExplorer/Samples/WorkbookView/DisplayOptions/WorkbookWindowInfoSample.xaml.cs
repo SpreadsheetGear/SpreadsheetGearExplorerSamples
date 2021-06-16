@@ -10,17 +10,17 @@ namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample Sample { get; private set; }
 
-        private void button_toggleScrollBars_Click(object sender, RoutedEventArgs e)
+        private void ButtonToggleScrollBars_Click(object sender, RoutedEventArgs e)
         {
             Sample.ToggleScrollBars(workbookView);
         }
 
-        private void button_toggleSheetTabs_Click(object sender, RoutedEventArgs e)
+        private void ButtonToggleSheetTabs_Click(object sender, RoutedEventArgs e)
         {
             Sample.ToggleSheetTabs(workbookView);
         }
 
-        private void slider_tabRatio_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
+        private void SliderTabRatio_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
         {
             double tabRatio = e.NewValue;
             tabRatioLabel.Content = $"{tabRatio:0.00}";
@@ -43,10 +43,10 @@ namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
             try
             {
                 var windowInfo = workbookView.ActiveWorkbookWindowInfo;
-                slider_tabRatio.Minimum = 0;
-                slider_tabRatio.Maximum = 1;
-                slider_tabRatio.SmallChange = 0.01;
-                slider_tabRatio.Value = windowInfo.TabRatio;
+                sliderTabRatio.Minimum = 0;
+                sliderTabRatio.Maximum = 1;
+                sliderTabRatio.SmallChange = 0.01;
+                sliderTabRatio.Value = windowInfo.TabRatio;
             }
             finally
             {

@@ -14,7 +14,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Print Preview..." Margin="10" Click="buttonPrintPreview_Click" />
+            <Button Content="Print Preview..." Margin="10" Click="ButtonPrintPreview_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

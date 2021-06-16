@@ -22,19 +22,16 @@
             labelPayment.Content = results.Payment;
         }
 
-
-        private void buttonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Calculate();
         }
 
-
-        private void textBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void TextBox_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == System.Windows.Input.Key.Enter)
                 Calculate();
         }
-
 
         #region Sample Initialization Code
         public SimpleLoanCalculatorSample()

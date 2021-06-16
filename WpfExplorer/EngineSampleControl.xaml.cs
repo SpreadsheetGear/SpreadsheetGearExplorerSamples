@@ -23,12 +23,10 @@ namespace WPFExplorer
             InitializeSample();
         }
 
-
         public EngineSampleControl()
         {
             InitializeComponent();
         }
-
 
         private void InitializeSample()
         {
@@ -41,11 +39,10 @@ namespace WPFExplorer
 
             SpreadsheetGearEngineSample.InitializeWorkbook();
             workbookView.ActiveWorkbook = SpreadsheetGearEngineSample.Workbook;
-            button_runSample.IsEnabled = true;
+            buttonRunSample.IsEnabled = true;
         }
 
-
-        private void button_runSample_Click(object sender, RoutedEventArgs e)
+        private void ButtonRunSample_Click(object sender, RoutedEventArgs e)
         {
             workbookView.GetLock();
             try
@@ -56,11 +53,10 @@ namespace WPFExplorer
             {
                 workbookView.ReleaseLock();
             }
-            button_runSample.IsEnabled = false;
+            buttonRunSample.IsEnabled = false;
         }
 
-
-        private void button_resetSample_Click(object sender, RoutedEventArgs e)
+        private void ButtonResetSample_Click(object sender, RoutedEventArgs e)
         {
             InitializeSample();
         }

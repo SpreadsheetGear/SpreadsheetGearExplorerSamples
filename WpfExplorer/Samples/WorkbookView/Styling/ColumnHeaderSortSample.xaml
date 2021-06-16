@@ -15,7 +15,7 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="sg:ColumnHeader">
-                            <Grid x:Name="Root" MouseLeftButtonDown="columnHeader_MouseLeftButtonDown">
+                            <Grid x:Name="Root" MouseLeftButtonDown="ColumnHeader_MouseLeftButtonDown">
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal" />

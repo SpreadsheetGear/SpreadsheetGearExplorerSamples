@@ -13,7 +13,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Run Sample" Margin="10,15,10,0" Click="buttonRunSample_Click" />
+            <Button Content="Run Sample" Margin="10,15,10,0" Click="ButtonRunSample_Click" />
         </StackPanel>
         <DataGrid x:Name="dataGrid" Grid.Column="1" />
     </Grid>

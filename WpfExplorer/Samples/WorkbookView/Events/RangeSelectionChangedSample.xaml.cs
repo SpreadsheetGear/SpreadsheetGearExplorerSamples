@@ -2,7 +2,7 @@
 {
     public partial class RangeSelectionChangedSample : SampleUserControl
     {
-        private void workbookView_RangeSelectionChanged(
+        private void WorkbookView_RangeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Controls.RangeSelectionChangedEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is 
@@ -14,7 +14,6 @@
             // Display information about the selected range.
             workbookView.ActiveWorksheet.Cells["B1"].Formula = range.Address;
         }
-
 
         #region Sample Initialization Code
         public RangeSelectionChangedSample()

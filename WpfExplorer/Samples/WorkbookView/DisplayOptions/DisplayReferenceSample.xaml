@@ -14,12 +14,12 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Margin="5">
-            <RadioButton x:Name="radioButton_workbook" Tag="Workbook" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Workbook</RadioButton>
-            <RadioButton x:Name="radioButton_worksheet" Tag="Worksheet" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Worksheet</RadioButton>
-            <RadioButton x:Name="radioButton_range" Tag="Range" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Range</RadioButton>
-            <RadioButton x:Name="radioButton_definedName" Tag="Defined Name" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Defined Name</RadioButton>
-            <RadioButton x:Name="radioButton_multipleRanges" Tag="Multiple Ranges" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Multiple Ranges</RadioButton>
-            <RadioButton x:Name="radioButton_usedRanges" Tag="Used Ranges" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Used Ranges</RadioButton>
+            <RadioButton x:Name="radioButtonWorkbook" Tag="Workbook" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Workbook</RadioButton>
+            <RadioButton x:Name="radioButtonWorksheet" Tag="Worksheet" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Worksheet</RadioButton>
+            <RadioButton x:Name="radioButtonRange" Tag="Range" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Range</RadioButton>
+            <RadioButton x:Name="radioButtonDefinedName" Tag="Defined Name" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Defined Name</RadioButton>
+            <RadioButton x:Name="radioButtonMultipleRanges" Tag="Multiple Ranges" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Multiple Ranges</RadioButton>
+            <RadioButton x:Name="radioButtonUsedRanges" Tag="Used Ranges" GroupName="DisplayReferenceGroup" Checked="RadioButton_Checked" Margin="2">Used Ranges</RadioButton>
         </StackPanel>
 
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1"></src:WpfWorkbookView>

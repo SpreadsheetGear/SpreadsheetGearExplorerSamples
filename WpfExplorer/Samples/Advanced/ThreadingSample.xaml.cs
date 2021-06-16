@@ -7,13 +7,12 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Advanced.ThreadingSample Sample { get; private set; }
 
-
-        private void buttonAddThread_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonAddThread_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Sample.AddThread(workbookView);
         }
 
-        private void buttonRemoveThread_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonRemoveThread_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             try
             {

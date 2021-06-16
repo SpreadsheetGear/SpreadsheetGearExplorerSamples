@@ -10,7 +10,7 @@ namespace WPFExplorer.Samples.WorkbookView
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
 
-        private void workbookView_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void WorkbookView_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
             // Get the clicked mouse coordinates relative to the WorkbookView control.
             Point position = e.GetPosition(workbookView);

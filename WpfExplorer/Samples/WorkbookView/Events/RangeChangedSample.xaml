@@ -14,6 +14,6 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <TextBlock Name="textBlock" Margin="10,10,10,0" TextWrapping="Wrap" FontSize="14" />
-        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" RangeChanged="workbookView_RangeChanged" />
+        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" RangeChanged="WorkbookView_RangeChanged" />
     </Grid>
 </src:SampleUserControl>

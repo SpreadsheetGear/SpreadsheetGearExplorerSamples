@@ -2,7 +2,7 @@
 {
     public partial class ColumnHeaderSortSample : SampleUserControl
     {
-        private void columnHeader_MouseLeftButtonDown(
+        private void ColumnHeader_MouseLeftButtonDown(
             object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             // Get a reference to the custom column header elements.
@@ -61,7 +61,7 @@
             }
         }
 
-        private void workbookView_CellBeginEdit(
+        private void WorkbookView_CellBeginEdit(
             object sender, SpreadsheetGear.Windows.Controls.CellBeginEditEventArgs e)
         {
             // Cancel edit mode if the edit was triggered by double-clicking column header.

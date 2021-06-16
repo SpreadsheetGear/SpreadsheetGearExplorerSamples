@@ -18,7 +18,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="0">
-            <Button Content="Run Sample" Margin="10" Click="buttonRunSample_Click" />
+            <Button Content="Run Sample" Margin="10" Click="ButtonRunSample_Click" />
         </StackPanel>
         <sg:FormulaBar Grid.Row="0" Grid.Column="1"/>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" Grid.Row="1" />

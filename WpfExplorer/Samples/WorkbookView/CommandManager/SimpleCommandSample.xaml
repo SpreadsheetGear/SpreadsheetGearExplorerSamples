@@ -14,8 +14,8 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Execute" Margin="10,10,10,0" Click="buttonExecute_Click" />
-            <Button Content="Undo" Margin="10,5,10,0" Click="buttonUndo_Click" />
+            <Button Content="Execute" Margin="10,10,10,0" Click="ButtonExecute_Click" />
+            <Button Content="Undo" Margin="10,5,10,0" Click="ButtonUndo_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

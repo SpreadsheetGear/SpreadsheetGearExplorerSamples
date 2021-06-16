@@ -14,10 +14,10 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Calculate Time" Margin="10,10,10,0" Click="buttonCalculate_Click" />
+            <Button Content="Calculate Time" Margin="10,10,10,0" Click="ButtonCalculate_Click" />
             <Label Content="Current Time:" Margin="10,20,10,0" />
             <TextBox x:Name="textBox" Margin="10,5,10,0" />
         </StackPanel>
-        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" Calculate="workbookView_Calculate" />
+        <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" Calculate="WorkbookView_Calculate" />
     </Grid>
 </src:SampleUserControl>

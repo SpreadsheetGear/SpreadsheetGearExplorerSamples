@@ -30,20 +30,20 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,5">
-                <Button x:Name="button_expandCategories" Click="button_expandCategories_Click" Margin="0,2,5,2" ToolTip="Expand All">
+                <Button x:Name="buttonExpandCategories" Click="ButtonExpandCategories_Click" Margin="0,2,5,2" ToolTip="Expand All">
                     <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
                         <Image Source="/WpfExplorer;component/Images/chevron-double-down-32.png" Width="12" Height="12" Margin="3" />
                         <TextBlock Margin="3">Expand All</TextBlock>
                     </StackPanel>
                 </Button>
-                <Button x:Name="button_collapseCategories" Click="button_collapseCategories_Click" Margin="2,2,0,2" ToolTip="Collapse All">
+                <Button x:Name="buttonCollapseCategories" Click="ButtonCollapseCategories_Click" Margin="2,2,0,2" ToolTip="Collapse All">
                     <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
                         <Image Source="/WpfExplorer;component/Images/chevron-double-up-32.png" Width="12" Height="12" Margin="3"/>
                         <TextBlock Margin="3">Collapse All</TextBlock>
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <TreeView x:Name="samplesTreeView" Grid.Row="1" SelectedItemChanged="samplesTreeView_SelectedItemChanged">
+            <TreeView x:Name="samplesTreeView" Grid.Row="1" SelectedItemChanged="SamplesTreeView_SelectedItemChanged">
                 <TreeView.Resources>
                     <Style x:Key="TreeViewItemStyle" TargetType="TreeViewItem">
                         <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />

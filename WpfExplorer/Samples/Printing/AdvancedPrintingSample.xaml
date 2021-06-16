@@ -17,7 +17,7 @@
             <Label Content="Print What:" Margin="10,10,10,0" FontWeight="Bold" />
             <CheckBox Content="Range" Name="checkBoxRange" Margin="15,5,10,0" IsChecked="True" />
             <CheckBox Content="Chart" Name="checkBoxChart" Margin="15,5,10,0" IsChecked="True" />
-            <Button Content="Print..." Margin="10,15,10,0" Click="buttonPrint_Click" />
+            <Button Content="Print..." Margin="10,15,10,0" Click="ButtonPrint_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

@@ -9,7 +9,7 @@ namespace WPFExplorer.Samples.WorkbookView
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DesignerAndExplorerDialogsSample Sample { get; private set; }
 
-        private void button_workbookDesigner_Click(object sender, RoutedEventArgs e)
+        private void ButtonWorkbookDesigner_Click(object sender, RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -22,7 +22,7 @@ namespace WPFExplorer.Samples.WorkbookView
             Sample.ShowWorkbookDesigner(workbookView);
         }
 
-        private void button_workbookExplorer_Click(object sender, RoutedEventArgs e)
+        private void ButtonWorkbookExplorer_Click(object sender, RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -35,7 +35,7 @@ namespace WPFExplorer.Samples.WorkbookView
             Sample.ShowWorkbookExplorer(workbookView);
         }
 
-        private void button_rangeExplorer_Click(object sender, RoutedEventArgs e)
+        private void ButtonRangeExplorer_Click(object sender, RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -49,30 +49,30 @@ namespace WPFExplorer.Samples.WorkbookView
             // You can limit which categories are displayed in the RangeExplorer by passing in only 
             // the desired RangeExplorerCategoryFlags, or show all with the "All" flag.
             var categoryFlags = SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.None;
-            if (checkBox_rangeCategories_numberFormat.IsChecked == true)
+            if (checkBoxRangeCategoriesNumberFormat.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.NumberFormat;
-            if (checkBox_rangeCategories_alignment.IsChecked == true)
+            if (checkBoxRangeCategoriesAlignment.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Alignment;
-            if (checkBox_rangeCategories_font.IsChecked == true)
+            if (checkBoxRangeCategoriesFont.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Font;
-            if (checkBox_rangeCategories_borders.IsChecked == true)
+            if (checkBoxRangeCategoriesBorders.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Borders;
-            if (checkBox_rangeCategories_interior.IsChecked == true)
+            if (checkBoxRangeCategoriesInterior.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Interior;
-            if (checkBox_rangeCategories_protection.IsChecked == true)
+            if (checkBoxRangeCategoriesProtection.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Protection;
-            if (checkBox_rangeCategories_hyperlink.IsChecked == true)
+            if (checkBoxRangeCategoriesHyperlink.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Hyperlink;
-            if (checkBox_rangeCategories_validation.IsChecked == true)
+            if (checkBoxRangeCategoriesValidation.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.Validation;
-            if (checkBox_rangeCategories_conditionalFormats.IsChecked == true)
+            if (checkBoxRangeCategoriesConditionalFormats.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.RangeExplorerCategoryFlags.FormatConditions;
 
             // Run the sample.
             Sample.ShowRangeExplorer(workbookView, categoryFlags);
         }
 
-        private void button_chartExplorer_Click(object sender, RoutedEventArgs e)
+        private void ButtonChartExplorer_Click(object sender, RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -86,27 +86,27 @@ namespace WPFExplorer.Samples.WorkbookView
             // You can limit which categories are displayed in the ChartExplorer by passing in only 
             // the desired ChartExplorerCategoryFlags, or show all with the "All" flag.
             var categoryFlags = SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.None;
-            if (checkBox_chartCategories_chartArea.IsChecked == true)
+            if (checkBoxChartCategoriesChartArea.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.ChartArea;
-            if (checkBox_chartCategories_chartData.IsChecked == true)
+            if (checkBoxChartCategoriesChartData.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.ChartData;
-            if (checkBox_chartCategories_plotArea.IsChecked == true)
+            if (checkBoxChartCategoriesPlotArea.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.PlotArea;
-            if (checkBox_chartCategories_legend.IsChecked == true)
+            if (checkBoxChartCategoriesLegend.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.Legend;
-            if (checkBox_chartCategories_title.IsChecked == true)
+            if (checkBoxChartCategoriesTitle.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.ChartTitle;
-            if (checkBox_chartCategories_axes.IsChecked == true)
+            if (checkBoxChartCategoriesAxes.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.Axes;
-            if (checkBox_chartCategories_series.IsChecked == true)
+            if (checkBoxChartCategoriesSeries.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.SeriesCollection;
-            if (checkBox_chartCategories_pageSetup.IsChecked == true)
+            if (checkBoxChartCategoriesPageSetup.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ChartExplorerCategoryFlags.PageSetup;
 
             Sample.ShowChartExplorer(workbookView, categoryFlags);
         }
 
-        private void button_shapeExplorer_Click(object sender, RoutedEventArgs e)
+        private void ButtonShapeExplorer_Click(object sender, RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -120,24 +120,23 @@ namespace WPFExplorer.Samples.WorkbookView
             // You can limit which categories are displayed in the ShapeExplorer by passing in only 
             // the desired ShapeExplorerCategoryFlags, or show all with the "All" flag.
             var categoryFlags = SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.None;
-            if (checkBox_shapeCategories_alignment.IsChecked == true)
+            if (checkBoxShapeCategoriesAlignment.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Alignment;
-            if (checkBox_shapeCategories_font.IsChecked == true)
+            if (checkBoxShapeCategoriesFont.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Font;
-            if (checkBox_shapeCategories_fill.IsChecked == true)
+            if (checkBoxShapeCategoriesFill.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Fill;
-            if (checkBox_shapeCategories_line.IsChecked == true)
+            if (checkBoxShapeCategoriesLine.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Line;
-            if (checkBox_shapeCategories_protection.IsChecked == true)
+            if (checkBoxShapeCategoriesProtection.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Protection;
-            if (checkBox_shapeCategories_autoShape.IsChecked == true)
+            if (checkBoxShapeCategoriesAutoShape.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.AutoShape;
-            if (checkBox_shapeCategories_control.IsChecked == true)
+            if (checkBoxShapeCategoriesControl.IsChecked == true)
                 categoryFlags |= SpreadsheetGear.Windows.Forms.ShapeExplorerCategoryFlags.Control;
 
             Sample.ShowShapeExplorer(workbookView, categoryFlags);
         }
-
 
         #region Sample Initialization Code
         public DesignerAndExplorerDialogsSample()

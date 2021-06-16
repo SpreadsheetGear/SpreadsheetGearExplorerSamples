@@ -7,28 +7,27 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
 
-        private void buttonFreezePanes_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonFreezePanes_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Sample.FreezePanes(workbookView);
         }
 
-        private void buttonToggleGridlines_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonToggleGridlines_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Sample.ToggleGridlines(workbookView);
         }
 
-        private void buttonToggleHeadings_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonToggleHeadings_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Sample.ToggleHeadings(workbookView);
         }
 
-        private void sliderZoom_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
+        private void SliderZoom_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
         {
             int zoom = System.Convert.ToInt32(e.NewValue);
             labelZoom.Content = zoom + "%";
             Sample.Zoom(workbookView, zoom);
         }
-
 
         #region Sample Initialization Code
         public WorksheetWindowInfoSample()

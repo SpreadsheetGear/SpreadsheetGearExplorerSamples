@@ -103,14 +103,14 @@
                     if (newView != null)
                     {
                         newView.Calculate +=
-                            new SpreadsheetGear.Windows.Controls.CalculateEventHandler(rowHeaderContent.workbookView_Calculate);
+                            new SpreadsheetGear.Windows.Controls.CalculateEventHandler(rowHeaderContent.WorkbookView_Calculate);
                     }
 
                     // Remove any previous Calculate event handler.
                     if (oldView != null)
                     {
                         newView.Calculate -=
-                            new SpreadsheetGear.Windows.Controls.CalculateEventHandler(rowHeaderContent.workbookView_Calculate);
+                            new SpreadsheetGear.Windows.Controls.CalculateEventHandler(rowHeaderContent.WorkbookView_Calculate);
                     }
                 }
 
@@ -120,7 +120,7 @@
         }
 
         // WorkbookView Calculate event handler.
-        private void workbookView_Calculate(object sender,
+        private void WorkbookView_Calculate(object sender,
             SpreadsheetGear.Windows.Controls.CalculateEventArgs e)
         {
             // Update the data state.
@@ -217,6 +217,4 @@
         }
         #endregion
     }
-
-
 }

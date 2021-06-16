@@ -61,7 +61,6 @@ namespace WPFExplorer
             }
         }
 
-
         public void SetSample(SampleInfo sampleInfo)
         {
             DisposeCurrentSample();
@@ -106,7 +105,6 @@ namespace WPFExplorer
             UpdateSourceCodeTabs(sampleInfo);
         }
 
-
         private void ResizeSplitterToShowSample()
         {
             var rowSample = grid.RowDefinitions[0];
@@ -117,7 +115,6 @@ namespace WPFExplorer
                 rowSourceCode.Height = new GridLength(3, GridUnitType.Star);
             }
         }
-
 
         /// <summary>
         /// Any <see cref="ISpreadsheetGearWindowsSample"/> must also have a corresponding <see cref="SampleUserControl"/> that contains the SpreadsheetGear Windows Sample, and both classes must have the same name.
@@ -139,7 +136,6 @@ namespace WPFExplorer
             return (SampleUserControl)Activator.CreateInstance(userControlType);
         }
 
-
         public void DisposeCurrentSample()
         {
             if (grid_sampleControlContainer.Children.Count == 1)
@@ -147,7 +143,6 @@ namespace WPFExplorer
             grid_sampleControlContainer.Children.Clear();
             System.Diagnostics.Debug.Assert(grid_sampleControlContainer.Children.Count == 0);
         }
-
 
         public void UpdateSourceCodeTabs(SampleInfo sampleInfo)
         {
@@ -167,7 +162,6 @@ namespace WPFExplorer
                 tabControl.Items.Add(tab);
             }
         }
-
 
         private TextEditor CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
@@ -194,7 +188,6 @@ namespace WPFExplorer
 
             return editor;
         }
-
 
         private void ClearTabs()
         {

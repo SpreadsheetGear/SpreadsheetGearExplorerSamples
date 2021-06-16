@@ -2,7 +2,7 @@
 {
     public partial class ShowErrorSample : SampleUserControl
     {
-        private void workbookView_ShowError(
+        private void WorkbookView_ShowError(
             object sender, SpreadsheetGear.Windows.Controls.ShowErrorEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -25,7 +25,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public ShowErrorSample()

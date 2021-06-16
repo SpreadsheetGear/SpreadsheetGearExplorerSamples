@@ -2,7 +2,7 @@
 {
     public partial class ShapeActionSample : SampleUserControl
     {
-        private void workbookView_ShapeAction(
+        private void WorkbookView_ShapeAction(
             object sender, SpreadsheetGear.Windows.Controls.ShapeActionEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is 
@@ -27,7 +27,6 @@
                     break;
             }
         }
-
 
         #region Sample Initialization Code
         public ShapeActionSample()

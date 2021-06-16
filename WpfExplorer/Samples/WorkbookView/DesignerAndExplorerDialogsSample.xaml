@@ -15,50 +15,50 @@
         </Grid.ColumnDefinitions>
         <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
             <StackPanel CanVerticallyScroll="True" ScrollViewer.CanContentScroll="True">
-                <Button x:Name="button_workbookDesigner" Content="Workbook Designer" Margin="5" Click="button_workbookDesigner_Click" />
-                <Button x:Name="button_workbookExplorer" Content="Workbook Explorer" Margin="5" Click="button_workbookExplorer_Click" />
-                <Button x:Name="button_rangeExplorer" Content="Range Explorer" Margin="5,5,5,0" Click="button_rangeExplorer_Click" />
+                <Button x:Name="buttonWorkbookDesigner" Content="Workbook Designer" Margin="5" Click="ButtonWorkbookDesigner_Click" />
+                <Button x:Name="buttonWorkbookExplorer" Content="Workbook Explorer" Margin="5" Click="ButtonWorkbookExplorer_Click" />
+                <Button x:Name="buttonRangeExplorer" Content="Range Explorer" Margin="5,5,5,0" Click="ButtonRangeExplorer_Click" />
                 <StackPanel Margin="10,0,0,10">
                     <Label FontWeight="Bold" Padding="5,2,5,5">Show Range Category Flags:</Label>
                     <StackPanel Margin="20,0,0,0">
-                        <CheckBox x:Name="checkBox_rangeCategories_numberFormat" IsChecked="True">Number Formats</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_alignment" IsChecked="True">Alignment</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_font" IsChecked="True">Font</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_borders" IsChecked="True">Borders</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_interior" IsChecked="True">Interior</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_protection" IsChecked="True">Protection</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_hyperlink" IsChecked="True">Hyperlink</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_validation" IsChecked="True">Validation</CheckBox>
-                        <CheckBox x:Name="checkBox_rangeCategories_conditionalFormats" IsChecked="True">Conditional Formats</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesNumberFormat" IsChecked="True">Number Formats</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesAlignment" IsChecked="True">Alignment</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesFont" IsChecked="True">Font</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesBorders" IsChecked="True">Borders</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesInterior" IsChecked="True">Interior</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesProtection" IsChecked="True">Protection</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesHyperlink" IsChecked="True">Hyperlink</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesValidation" IsChecked="True">Validation</CheckBox>
+                        <CheckBox x:Name="checkBoxRangeCategoriesConditionalFormats" IsChecked="True">Conditional Formats</CheckBox>
 
                     </StackPanel>
                 </StackPanel>
-                <Button x:Name="button_chartExplorer" Content="Chart Explorer" Margin="5,5,5,1" Click="button_chartExplorer_Click" />
+                <Button x:Name="buttonChartExplorer" Content="Chart Explorer" Margin="5,5,5,1" Click="ButtonChartExplorer_Click" />
                 <StackPanel Margin="10,0,0,10">
                     <Label FontWeight="Bold" Padding="5,2,5,5">Show Chart Category Flags:</Label>
                     <StackPanel Margin="20,0,0,0">
-                        <CheckBox x:Name="checkBox_chartCategories_chartArea" IsChecked="True">Chart Area</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_chartData" IsChecked="True">Chart Data</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_plotArea" IsChecked="True">Plot Area</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_legend" IsChecked="True">Legend</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_title" IsChecked="True">Title</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_axes" IsChecked="True">Axes</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_series" IsChecked="True">Series</CheckBox>
-                        <CheckBox x:Name="checkBox_chartCategories_pageSetup" IsChecked="True">Page Setup</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesChartArea" IsChecked="True">Chart Area</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesChartData" IsChecked="True">Chart Data</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesPlotArea" IsChecked="True">Plot Area</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesLegend" IsChecked="True">Legend</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesTitle" IsChecked="True">Title</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesAxes" IsChecked="True">Axes</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesSeries" IsChecked="True">Series</CheckBox>
+                        <CheckBox x:Name="checkBoxChartCategoriesPageSetup" IsChecked="True">Page Setup</CheckBox>
                     </StackPanel>
                 </StackPanel>
 
-                <Button x:Name="button_shapeExplorer" Content="Shape Explorer" Margin="5,5,5,0" Click="button_shapeExplorer_Click" />
+                <Button x:Name="buttonShapeExplorer" Content="Shape Explorer" Margin="5,5,5,0" Click="ButtonShapeExplorer_Click" />
                 <StackPanel Margin="10,0,0,10">
                     <Label FontWeight="Bold" Padding="5,2,5,5">Show Shape Category Flags:</Label>
                     <StackPanel Margin="20,0,0,0">
-                        <CheckBox x:Name="checkBox_shapeCategories_alignment" IsChecked="True">Alignment</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_font" IsChecked="True">Font</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_fill" IsChecked="True">Fill</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_line" IsChecked="True">Line</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_protection" IsChecked="True">Protection</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_autoShape" IsChecked="True">AutoShape</CheckBox>
-                        <CheckBox x:Name="checkBox_shapeCategories_control" IsChecked="True">Control</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesAlignment" IsChecked="True">Alignment</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesFont" IsChecked="True">Font</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesFill" IsChecked="True">Fill</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesLine" IsChecked="True">Line</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesProtection" IsChecked="True">Protection</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesAutoShape" IsChecked="True">AutoShape</CheckBox>
+                        <CheckBox x:Name="checkBoxShapeCategoriesControl" IsChecked="True">Control</CheckBox>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

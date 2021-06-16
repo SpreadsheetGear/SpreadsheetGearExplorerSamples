@@ -2,7 +2,7 @@
 {
     public partial class AdvancedPrintingSample : SampleUserControl
     {
-        private void buttonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Print();
         }
@@ -65,7 +65,6 @@
             // Return the workbook print document.
             return document;
         }
-
 
         #region Sample Initialization Code
         public AdvancedPrintingSample()

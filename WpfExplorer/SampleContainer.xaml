@@ -28,7 +28,7 @@
             </Grid.RowDefinitions>
 
             <!-- Running Sample Grid-->
-            <Grid Grid.Row="0" x:Name="grid_wpfSample">
+            <Grid Grid.Row="0" x:Name="gridWpfSample">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />

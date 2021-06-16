@@ -23,7 +23,6 @@ namespace WPFExplorer.Samples.WorkbookView.Reporting
             Sample.RunReport(workbookView, selectedRegion);
         }
 
-
         #region Sample Initialization Code
         public WorkbookConsolidationSample()
         {

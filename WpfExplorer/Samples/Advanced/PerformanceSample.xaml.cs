@@ -7,7 +7,7 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Advanced.PerformanceSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
             /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 

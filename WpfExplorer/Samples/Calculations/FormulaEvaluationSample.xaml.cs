@@ -20,14 +20,12 @@
             }
         }
 
-
-        private void buttonEvaluate_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonEvaluate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             EvaluateFormula();
         }
 
-
-        private void textBoxFormula_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        private void TextBoxFormula_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if (e.Key == System.Windows.Input.Key.Return)
             {
@@ -35,15 +33,13 @@
             }
         }
 
-
-        private void listBoxFormulas_SelectionChanged(
+        private void ListBoxFormulas_SelectionChanged(
             object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             var item = listBoxFormulas.SelectedItem as System.Windows.Controls.ListBoxItem;
             textBoxFormula.Text = item.Content.ToString();
             EvaluateFormula();
         }
-
 
         #region Sample Initialization Code
         public FormulaEvaluationSample()

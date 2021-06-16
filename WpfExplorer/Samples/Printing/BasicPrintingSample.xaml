@@ -18,8 +18,8 @@
             <RadioButton Content="Sheet" x:Name="radioButtonSheet" GroupName="PrintWhat" Margin="15,5,10,0" IsChecked="True" />
             <RadioButton Content="Workbook" x:Name="radioButtonWorkbook" GroupName="PrintWhat" Margin="15,5,10,0" />
             <RadioButton Content="Selection" x:Name="radioButtonSelection" GroupName="PrintWhat" Margin="15,5,10,0" />
-            <Button Content="Print..." Margin="10,15,10,0" Click="buttonPrint_Click" />
-            <Button Content="Print Preview..." Margin="10,15,10,0" Click="buttonPrintPreview_Click" />
+            <Button Content="Print..." Margin="10,15,10,0" Click="ButtonPrint_Click" />
+            <Button Content="Print Preview..." Margin="10,15,10,0" Click="ButtonPrintPreview_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

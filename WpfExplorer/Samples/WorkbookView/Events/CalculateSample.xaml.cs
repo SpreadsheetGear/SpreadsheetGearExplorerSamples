@@ -2,7 +2,7 @@
 {
     public partial class CalculateSample : SampleUserControl
     {
-        private void workbookView_Calculate(
+        private void WorkbookView_Calculate(
             object sender, SpreadsheetGear.Windows.Controls.CalculateEventArgs e)
         {
             // NOTE: Must acquire a workbook set lock.
@@ -27,7 +27,7 @@
             }
         }
 
-        private void buttonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonCalculate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             CalculateWorkbook();
         }
@@ -47,7 +47,6 @@
                 workbookView.ReleaseLock();
             }
         }
-
 
         #region Sample Initialization Code
         public CalculateSample()

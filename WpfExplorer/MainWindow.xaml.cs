@@ -43,7 +43,6 @@ namespace WPFExplorer
             PopulateSampleTree();
         }
 
-
         private void PopulateSampleTree()
         {
             // Build the shared categories and SpreadsheetGear Engine and Windows samples.
@@ -62,8 +61,7 @@ namespace WPFExplorer
                 treeViewItem.IsSelected = true;
         }
 
-
-        private void samplesTreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void SamplesTreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
             var selectedItem = (sender as TreeView).SelectedItem;
 
@@ -83,18 +81,15 @@ namespace WPFExplorer
             }
         }
 
-
-        private void button_collapseCategories_Click(object sender, RoutedEventArgs e)
+        private void ButtonCollapseCategories_Click(object sender, RoutedEventArgs e)
         {
             SetSamplesTreeViewExpansion(samplesTreeView, false);
         }
 
-
-        private void button_expandCategories_Click(object sender, RoutedEventArgs e)
+        private void ButtonExpandCategories_Click(object sender, RoutedEventArgs e)
         {
             SetSamplesTreeViewExpansion(samplesTreeView, true);
         }
-
 
         private void SetSamplesTreeViewExpansion(ItemsControl parent, bool expand)
         {
@@ -119,7 +114,6 @@ namespace WPFExplorer
             }
         }
 
-
         private TreeViewItem GetTreeViewItem(ItemsControl parent, object item, bool expand)
         {
             if (item is TreeViewItem tvi)
@@ -133,7 +127,6 @@ namespace WPFExplorer
             }
             return result;
         }
-
 
         private TreeViewItem ContainerFromItem(ItemsControl parent, object item) => (TreeViewItem)parent.ItemContainerGenerator.ContainerFromItem(item);
     }

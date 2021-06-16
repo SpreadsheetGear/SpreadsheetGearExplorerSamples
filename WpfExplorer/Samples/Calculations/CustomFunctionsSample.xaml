@@ -15,9 +15,9 @@
             <Label Content="Custom Function Calculator" Margin="10,10,10,0" FontSize="20" FontWeight="Bold" />
             <StackPanel Orientation="Horizontal">
                 <Label Content="Enter values for MYADD:" Margin="10,10,0,0" VerticalAlignment="Center" />
-                <TextBox Name="textBox1" Width="100" Margin="10,10,0,0" KeyDown="textBox_KeyDown" VerticalContentAlignment="Top" />
-                <TextBox Name="textBox2" Width="100" Margin="10,10,0,0" KeyDown="textBox_KeyDown" />
-                <Button Content="Calculate" Width="85" Margin="10,10,0,0" Click="buttonCalculate_Click" />
+                <TextBox Name="textBox1" Width="100" Margin="10,10,0,0" KeyDown="TextBox_KeyDown" VerticalContentAlignment="Top" />
+                <TextBox Name="textBox2" Width="100" Margin="10,10,0,0" KeyDown="TextBox_KeyDown" />
+                <Button Content="Calculate" Width="85" Margin="10,10,0,0" Click="ButtonCalculate_Click" />
             </StackPanel>
             <Label Name="labelResult" Height="40" Margin="10,10,10,0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" Width="454">
                 <Label.Background>

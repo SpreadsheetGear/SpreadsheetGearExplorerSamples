@@ -7,7 +7,7 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.WorkboookView.ActiveWorksheetSample Sample { get; private set; }
 
-        private void buttonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonRunSample_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView and sets it 
             /// up with a new workbook.  Disposal of old workbooks is necessary when using SpreadsheetGear in the "Free" mode,
@@ -20,7 +20,6 @@
             // Run the sample.
             Sample.SetActiveWorksheet(workbookView);
         }
-
 
         #region Sample Initialization Code
         public ActiveWorksheetSample()

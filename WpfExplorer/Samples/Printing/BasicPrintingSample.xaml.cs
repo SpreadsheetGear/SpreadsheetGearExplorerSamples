@@ -7,7 +7,7 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Printing.BasicPrintingSample Sample { get; private set; }
 
-        private void buttonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Determine what to print...
             SpreadsheetGear.Printing.PrintWhat printWhat = GetPrintWhat();
@@ -16,8 +16,7 @@
             Sample.Print(workbookView, printWhat);
         }
 
-
-        private void buttonPrintPreview_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonPrintPreview_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Determine what to print...
             SpreadsheetGear.Printing.PrintWhat printWhat = GetPrintWhat();
@@ -25,7 +24,6 @@
             // Run sample to launch Windows' built-in Print Preview dialog.
             Sample.PrintPreview(workbookView, printWhat);
         }
-
 
         private SpreadsheetGear.Printing.PrintWhat GetPrintWhat()
         {
@@ -42,7 +40,6 @@
 
             return printWhat;
         }
-
 
         #region Sample Initialization Code
         public BasicPrintingSample()

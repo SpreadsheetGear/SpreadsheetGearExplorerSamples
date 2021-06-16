@@ -4,7 +4,7 @@
     {
         public SamplesLibrary.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
-        private void buttonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Get color in Color Preview box and convert to SpreadsheetGear Color object.
             System.Windows.Media.SolidColorBrush brush =
@@ -18,8 +18,7 @@
             }            
         }
 
-
-        private void buttonUndo_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonUndo_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Attempt to Undo.  If it fails (probably because there is nothing to undo), display the error
             // in a MessageBox.
@@ -29,8 +28,7 @@
             }
         }
 
-
-        private void buttonRedo_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonRedo_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Attempt to Redo.  If it fails (probably because there is nothing to redo), display the error
             // in a MessageBox.
@@ -40,12 +38,10 @@
             }
         }
 
-
-        private void slider_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
+        private void Slider_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)
         {
             UpdateColor();
         }
-
 
         private void UpdateColor()
         {
@@ -58,7 +54,6 @@
                     System.Convert.ToByte(sliderBlue.Value)));
             }
         }
-
 
         #region Sample Initialization Code
         public CommandRangeSample()

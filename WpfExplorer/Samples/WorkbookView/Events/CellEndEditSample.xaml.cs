@@ -2,7 +2,7 @@
 {
     public partial class CellEndEditSample : SampleUserControl
     {
-        private void workbookView_CellEndEdit(object sender, SpreadsheetGear.Windows.Controls.CellEndEditEventArgs e)
+        private void WorkbookView_CellEndEdit(object sender, SpreadsheetGear.Windows.Controls.CellEndEditEventArgs e)
         {
             // NOTE: GetLock() / ReleaseLock() not required because a lock is acquired before this method is invoked.
 
@@ -34,7 +34,6 @@
                 }
             }
         }
-
 
         #region Sample Initialization Code
         public CellEndEditSample()

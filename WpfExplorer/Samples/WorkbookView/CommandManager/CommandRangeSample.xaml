@@ -14,17 +14,17 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0">
-            <Button Content="Execute" Margin="10,10,10,0" Click="buttonExecute_Click" />
-            <Button Content="Undo" Margin="10,5,10,0" Click="buttonUndo_Click" />
-            <Button Content="Redo" Margin="10,5,10,0" Click="buttonRedo_Click" />
+            <Button Content="Execute" Margin="10,10,10,0" Click="ButtonExecute_Click" />
+            <Button Content="Undo" Margin="10,5,10,0" Click="ButtonUndo_Click" />
+            <Button Content="Redo" Margin="10,5,10,0" Click="ButtonRedo_Click" />
             <Label Content="Color Preview" Margin="10,10,10,0" FontWeight="Bold" />
             <Rectangle Name="colorPreview" Height="40" Margin="10,5,10,0" Stroke="Black" />
             <Label Content="Red" Margin="10,10,10,0" FontWeight="Bold" />
-            <Slider Name="sliderRed" Margin="10,0,10,0" Maximum="255" Value="255" ValueChanged="slider_ValueChanged" />
+            <Slider Name="sliderRed" Margin="10,0,10,0" Maximum="255" Value="255" ValueChanged="Slider_ValueChanged" />
             <Label Content="Green" Margin="10,5,10,0" FontWeight="Bold" />
-            <Slider Name="sliderGreen" Margin="10,0,10,0" Maximum="255" Value="255" ValueChanged="slider_ValueChanged" />
+            <Slider Name="sliderGreen" Margin="10,0,10,0" Maximum="255" Value="255" ValueChanged="Slider_ValueChanged" />
             <Label Content="Blue" Margin="10,5,10,0" FontWeight="Bold" />
-            <Slider Name="sliderBlue" Margin="10,0,10,0" FontWeight="Bold" Maximum="255" ValueChanged="slider_ValueChanged" />
+            <Slider Name="sliderBlue" Margin="10,0,10,0" FontWeight="Bold" Maximum="255" ValueChanged="Slider_ValueChanged" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

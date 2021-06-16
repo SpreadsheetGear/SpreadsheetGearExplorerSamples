@@ -7,12 +7,11 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Printing.PageBreaksSample Sample { get; private set; }
 
-        private void buttonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonPrint_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Run the sample.
             Sample.Print(workbookView, radioButtonRegion.IsChecked == true);
         }
-
 
         #region Sample Initialization Code
         public PageBreaksSample()

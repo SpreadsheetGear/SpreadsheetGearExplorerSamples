@@ -7,12 +7,11 @@
         // well as the WindowsFormsExplorer samples app.
         public SamplesLibrary.Samples.Printing.PageSetupSample Sample { get; private set; }
 
-        private void buttonPrintPreview_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonPrintPreview_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             // Run the sample
             Sample.PrintPreview(workbookView);
         }
-
 
         #region Sample Initialization Code
         public PageSetupSample()

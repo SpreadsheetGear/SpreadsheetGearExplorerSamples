@@ -48,8 +48,7 @@ namespace WPFExplorer.Samples.WorkbookView.UIManager
             }
         }
 
-
-        private void buttonRunSample_Click(object sender, RoutedEventArgs e)
+        private void ButtonRunSample_Click(object sender, RoutedEventArgs e)
         {
             RunSample();
         }
@@ -61,7 +60,6 @@ namespace WPFExplorer.Samples.WorkbookView.UIManager
         }
         #endregion
     }
-
 
     // UIManager replacement class.
     public class MyUIManager : SpreadsheetGear.Windows.Controls.UIManager

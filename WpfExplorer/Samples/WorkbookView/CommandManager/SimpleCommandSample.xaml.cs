@@ -4,19 +4,18 @@
     {
         public SamplesLibrary.Samples.WorkboookView.CommandManager.SimpleCommandSample Sample { get; private set; }
 
-        private void buttonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Sample.ExecuteCommand(workbookView);
         }
 
-        private void buttonUndo_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void ButtonUndo_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             if (!Sample.UndoCommand(workbookView, out string errorMessage))
             {
                 System.Windows.MessageBox.Show(errorMessage, "SpreadsheetGear Explorer: Error");
             }
         }
-
 
         #region Sample Initialization Code
         public SimpleCommandSample()

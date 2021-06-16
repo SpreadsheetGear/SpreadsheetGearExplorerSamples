@@ -16,7 +16,7 @@ namespace WPFExplorer.Samples.Charting
             InitializeSample();
         }
 
-        private void listBoxCategory_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ListBoxCategory_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             // Get the selected chart category and type.
             string selectedCategory = (string)listBoxCategory.SelectedItem;
@@ -29,7 +29,7 @@ namespace WPFExplorer.Samples.Charting
             listBoxType.SelectedIndex = 0;
         }
 
-        private void listBoxType_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void ListBoxType_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             // Get the selected Chart Category and Chart Type.
             string selectedCategory = (string)listBoxCategory.SelectedItem;

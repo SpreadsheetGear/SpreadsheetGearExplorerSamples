@@ -62,7 +62,6 @@ namespace WPFExplorer
             return newFoldings;
         }
 
-
         private class RegionInfo
         {
             public RegionInfo(int startOffset, string label)

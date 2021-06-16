@@ -14,8 +14,8 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <StackPanel>
-            <Button Content="Add Thread" Margin="10,10,10,0" VerticalAlignment="Top" Click="buttonAddThread_Click" />
-            <Button Content="Remove Thread" Margin="10,5,10,0" VerticalAlignment="Top" Click="buttonRemoveThread_Click" />
+            <Button Content="Add Thread" Margin="10,10,10,0" VerticalAlignment="Top" Click="ButtonAddThread_Click" />
+            <Button Content="Remove Thread" Margin="10,5,10,0" VerticalAlignment="Top" Click="ButtonRemoveThread_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>

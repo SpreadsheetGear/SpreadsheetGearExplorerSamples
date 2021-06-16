@@ -16,8 +16,8 @@
             <Label Content="Excel-Compatible Formula Evaluator" Margin="10,10,10,0" FontSize="20" FontWeight="Bold" Padding="0,5,5,5" />
             <Label Padding="0,5,5,0" Margin="10,0,0,2">Enter an Excel-compatible formula to evaluate:</Label>
             <StackPanel Orientation="Horizontal">
-                <TextBox Text="TEXT(STDEV(1, 2, 3, 4), &quot;0.00&quot;)" Name="textBoxFormula" Width="380" Margin="10,0,0,0" KeyDown="textBoxFormula_KeyDown" />
-                <Button Content="Evaluate Formula" Width="120" Margin="10,0,10,0" Click="buttonEvaluate_Click" />
+                <TextBox Text="TEXT(STDEV(1, 2, 3, 4), &quot;0.00&quot;)" Name="textBoxFormula" Width="380" Margin="10,0,0,0" KeyDown="TextBoxFormula_KeyDown" />
+                <Button Content="Evaluate Formula" Width="120" Margin="10,0,10,0" Click="ButtonEvaluate_Click" />
             </StackPanel>
             <Label Name="labelResult" Margin="10,10,10,10" FontSize="12" FontWeight="Bold" Padding="5,5,5,5" HorizontalAlignment="Left" MinHeight="30" MinWidth="510" >
                 <Label.Background>
@@ -25,7 +25,7 @@
                 </Label.Background>
             </Label>
             <Label Content="Example Formulas:" Margin="10,0,10,0" FontWeight="Bold" Padding="0,5,5,5" />
-            <ListBox Name="listBoxFormulas" Width="380" Margin="10,0,10,0" HorizontalAlignment="Left" SelectionChanged="listBoxFormulas_SelectionChanged">
+            <ListBox Name="listBoxFormulas" Width="380" Margin="10,0,10,0" HorizontalAlignment="Left" SelectionChanged="ListBoxFormulas_SelectionChanged">
                 <ListBoxItem Content="SUM(1, 2, 3)" />
                 <ListBoxItem Content="IF(HOUR(NOW())&lt;12, &quot;Good Morning!&quot;, &quot;Good Afternoon&quot;)" />
                 <ListBoxItem Content="ROUND(RAND()*100, 0)" />
