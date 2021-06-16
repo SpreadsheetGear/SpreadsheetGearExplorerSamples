@@ -97,6 +97,6 @@
                 Note also that the ColumnHeader's style has been customized.
             </TextBlock>
         </Grid>
-        <src:WpfWorkbookView x:Name="workbookView" ColumnHeaderStyle="{StaticResource MyCustomColumnHeaderStyle}" Grid.Column="1" CellBeginEdit="workbookView_CellBeginEdit" />
+        <src:WpfWorkbookView x:Name="workbookView" ColumnHeaderStyle="{StaticResource MyCustomColumnHeaderStyle}" Grid.Column="1" CellBeginEdit="WorkbookView_CellBeginEdit" />
     </Grid>
 </src:SampleUserControl>
