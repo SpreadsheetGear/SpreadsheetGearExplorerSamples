@@ -85,7 +85,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.UIManager
             // workbookView
             // 
             this.workbookView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.workbookView.FormulaBar = this.formulaBar;
             this.workbookView.Location = new System.Drawing.Point(0, 41);
             this.workbookView.Name = "workbookView";
             this.workbookView.Size = new System.Drawing.Size(494, 491);
