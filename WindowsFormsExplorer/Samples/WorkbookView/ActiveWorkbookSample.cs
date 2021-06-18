@@ -28,13 +28,6 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private void ButtonLoadDisk_Click(object sender, EventArgs e)
         {
-            /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
-            /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
-            /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
-            /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
-            /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
-            DisposalManager.ResetWorkbookView(workbookView, false);
-
             // Create an OpenFileDialog.
             OpenFileDialog dialog = new OpenFileDialog();
 
@@ -43,6 +36,13 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
             {
                 try
                 {
+                    /// Disposes of the IWorkbookSet (and IWorkbook objects contained within it) used by the WorkbookView.  Disposal of 
+                    /// old workbooks is necessary when using SpreadsheetGear in the "Free" mode, which has a 3 workbook limit.  If you 
+                    /// are copying and pasting this sample code to your own projects and have a Signed License that activates either the 
+                    /// fully-licensed or 30-day evaluation mode of the software, then this workbook disposal strategy is not needed. See 
+                    /// the comments in the <see cref="SamplesLibrary.SGDisposalManager"/> code file for more details.
+                    DisposalManager.ResetWorkbookView(workbookView, false);
+
                     // Call into sample to load workbook from file specified in dialog.
                     Sample.LoadFromDisk(workbookView, dialog.FileName);
 
