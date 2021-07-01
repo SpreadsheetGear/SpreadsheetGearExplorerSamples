@@ -37,7 +37,7 @@ namespace WebExplorer.Pages
 
 
         /// <summary>
-        /// Retrives details about the specified sample.
+        /// Retrieves details about the specified sample.
         /// </summary>
         public IActionResult OnGetLoadSample(string sampleName)
         {

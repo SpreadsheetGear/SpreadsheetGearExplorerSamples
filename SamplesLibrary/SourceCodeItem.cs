@@ -11,8 +11,8 @@ using System.Text.RegularExpressions;
 namespace SamplesLibrary
 {
     /// <summary>
-    /// Reads a source code file from the specified path and sets up an HTML string that can be
-    /// passed into a web control to display next to the running sample.
+    /// Reads a source code file from the specified path and cleans / formats the code to be presented
+    /// next to the running sample.
     /// </summary>
     public class SourceCodeItem
     {
