@@ -101,7 +101,8 @@ namespace SamplesLibrary
         public bool CanDownloadFile { get; set; } = false;
 
         /// <summary>
-        /// After running this sample, an image of the results can be rendered using SpreadsheetGear.Drawing.Image.
+        /// After running this sample, an image of the results can be rendered using the SpreadsheetGear.Drawing.Image or
+        /// SpreadsheetGear.Windows.Media.Image classes.
         /// </summary>
         public bool CanRenderImage { get; set; } = false;
 
