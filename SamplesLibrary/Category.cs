@@ -49,7 +49,7 @@ namespace SamplesLibrary
         /// </summary>
         public bool HideNameFromCategorySummary { get; set; }
 
-        private List<Category> _childCategories  = new List<Category>();
+        private readonly List<Category> _childCategories  = new List<Category>();
         public IEnumerable<Category> ChildCategories => _childCategories.OrderBy(c => c.SortIndex);
         public List<SampleInfo> SampleInfos { get; set; } = new List<SampleInfo>();
 
@@ -83,7 +83,6 @@ namespace SamplesLibrary
 
         private Category FindCategory(Category currentCategory, string categoryName)
         {
-            Category foundCategory = null;
             foreach (var childCategory in currentCategory.ChildCategories)
             {
                 if (categoryName.Equals(childCategory.Name, System.StringComparison.InvariantCultureIgnoreCase))
@@ -92,7 +91,7 @@ namespace SamplesLibrary
                 }
                 else
                 {
-                    foundCategory = FindCategory(childCategory, categoryName);
+                    Category foundCategory = FindCategory(childCategory, categoryName);
                     if (foundCategory != null)
                         return foundCategory;
                 }

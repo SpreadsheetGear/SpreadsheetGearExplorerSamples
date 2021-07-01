@@ -54,7 +54,7 @@
          */
         private class CommandSimple : SpreadsheetGear.Commands.Command
         {
-            private IWorkbookView _workbookView;
+            private readonly IWorkbookView _workbookView;
             private bool _saveDisplayGridlines;
 
             public CommandSimple(IWorkbookView workbookView)

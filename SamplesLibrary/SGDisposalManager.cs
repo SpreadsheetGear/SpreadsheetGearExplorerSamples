@@ -41,7 +41,7 @@ namespace SamplesLibrary
         /// Implemented samples should call <see cref="RegisterWorkbookViews(IWorkbookView[])"/> to register these 
         /// WorkbookView controls.
         /// </summary>
-        private List<IWorkbookView> _workbookViews = new List<IWorkbookView>();
+        private readonly List<IWorkbookView> _workbookViews = new List<IWorkbookView>();
 
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace SamplesLibrary
         /// should call <see cref="RegisterIWorkbookSets(IWorkbookSet[])"/> to add to this list.  For WorkbookViews, use 
         /// <see cref="RegisterWorkbookViews(IWorkbookView[])"/> to dispose its ActiveWorkbookSet.
         /// </summary>
-        private List<IWorkbookSet> _workbookSets = new List<IWorkbookSet>();
+        private readonly List<IWorkbookSet> _workbookSets = new List<IWorkbookSet>();
 
 
         /// <summary>

@@ -16,7 +16,7 @@ namespace SamplesLibrary
     /// </summary>
     public class SourceCodeItem
     {
-        private string _sampleName, _sampleDescription;
+        private readonly string _sampleName, _sampleDescription;
 
         public SourceCodeItem(string filePath, string sampleName, string sampleDescription)
         {
@@ -108,7 +108,7 @@ namespace SamplesLibrary
         /// viwer-friendly way.  This dictionary maps known file extensions to the CSS classes for the
         /// given language.
         /// </summary>
-        private static Dictionary<string, string> _extensionsMapper = new Dictionary<string, string>() {
+        private static readonly Dictionary<string, string> _extensionsMapper = new Dictionary<string, string>() {
             { ".cs", "cs" },
             { ".xaml", "xml" }
         };

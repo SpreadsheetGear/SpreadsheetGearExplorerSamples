@@ -78,9 +78,9 @@ namespace WebExplorer
             sample.Workbook.WorkbookSet.Dispose();
 
             // Return the workbook stream with the correct MIME / ContentType.
-            FileResult fileResult = new FileStreamResult(workbookStream,
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-            fileResult.FileDownloadName = $"SpreadsheetGear-Sample-{sampleName.Replace(" ", "-")}.xlsx";
+            FileResult fileResult = new FileStreamResult(workbookStream, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+                FileDownloadName = $"SpreadsheetGear-Sample-{sampleName.Replace(" ", "-")}.xlsx"
+            };
             return fileResult;
         }
 
@@ -116,13 +116,14 @@ namespace WebExplorer
                     usedRange.Row + usedRange.RowCount - 1,
                     usedRange.Column + usedRange.ColumnCount - 1];
             }
-             
-            // Create an image class which will render the image of the specified range.
-            SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(renderRange);
 
-            // Increase the DPI to provide sharper results in the browser (image will be scaled by 50% to
-            // avoid too large of an image).
-            image.Dpi = 192;
+            // Create an image class which will render the image of the specified range.
+            SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(renderRange)
+            {
+                // Increase the DPI to provide sharper results in the browser (image will be scaled by 50% to
+                // avoid too large of an image).
+                Dpi = 192
+            };
 
             // Render a System.Drawing.Bitmap of the range.
             Bitmap bitmap = image.GetBitmap();
@@ -136,8 +137,9 @@ namespace WebExplorer
             sample.Workbook.WorkbookSet.Dispose();
 
             // Return the image stream with the correct MIME / ContentType.
-            FileResult fileResult = new FileStreamResult(stream, "image/png");
-            fileResult.FileDownloadName = $"SpreadsheetGear-Sample-{sampleName.Replace(" ", "-")}.png";
+            FileResult fileResult = new FileStreamResult(stream, "image/png") {
+                FileDownloadName = $"SpreadsheetGear-Sample-{sampleName.Replace(" ", "-")}.png"
+            };
             return fileResult;
         }
 
