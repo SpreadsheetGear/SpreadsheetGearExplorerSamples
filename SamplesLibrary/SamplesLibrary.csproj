@@ -410,9 +410,6 @@
     <None Update="Files\Engine\SignedLicenseInstructions.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Files\ExplorerIntro.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Files\ExplorerIntro.md">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
