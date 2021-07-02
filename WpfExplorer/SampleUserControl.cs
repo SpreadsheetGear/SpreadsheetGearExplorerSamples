@@ -33,6 +33,8 @@ namespace WPFExplorer
             {
                 DisposalManager.Dispose();
             }
+
+            _disposed = true;
         }
 
         public Guid Id { get; } = Guid.NewGuid();

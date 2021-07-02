@@ -32,6 +32,8 @@ namespace WindowsFormsExplorer
             {
                 DisposalManager.Dispose();
             }
+
+            _disposed = true;
         }
     }
 }
