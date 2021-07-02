@@ -45,22 +45,22 @@ namespace SamplesLibrary.Samples.Calculations
             nper.Formula = numPeriods;
 
             // Setup a AmortizationCalculatorResults object to return the results.
-            AmortizationCalculatorResults results = new AmortizationCalculatorResults();
+            AmortizationCalculatorResults results = new AmortizationCalculatorResults {
+                // Copy the formatted worksheet values to the text boxes.
+                LoanAmount = pv.Text,
+                InterestRate = rate.Text,
+                NumPeriods = nper.Text,
 
-            // Copy the formatted worksheet values to the text boxes.
-            results.LoanAmount = pv.Text;
-            results.InterestRate = rate.Text;
-            results.NumPeriods = nper.Text;
+                // Get additional info from Defined Names that refer to cells holding calculated values.
+                // This workbook is setup with Automatic calculation mode, so just the act of getting IRange.Text 
+                // will trigger a calculation and return an updated value.
+                Payment = workbook.Names["Payment"].RefersToRange.Text,
+                LastPayment = workbook.Names["LastPayment"].RefersToRange.Text,
+                TotalInterest = workbook.Names["TotalInterest"].RefersToRange.Text,
 
-            // Get additional info from Defined Names that refer to cells holding calculated values.
-            // This workbook is setup with Automatic calculation mode, so just the act of getting IRange.Text 
-            // will trigger a calculation and return an updated value.
-            results.Payment = workbook.Names["Payment"].RefersToRange.Text;
-            results.LastPayment = workbook.Names["LastPayment"].RefersToRange.Text;
-            results.TotalInterest = workbook.Names["TotalInterest"].RefersToRange.Text;
-
-            // Return the workbook to display the amortization table in a WorkbookView control.
-            results.ResultsWorkbook = workbook;
+                // Return the workbook to display the amortization table in a WorkbookView control.
+                ResultsWorkbook = workbook
+            };
 
             // Return the results.
             return results;

@@ -24,7 +24,7 @@ namespace WPFExplorer
             if (value is SamplesLibrary.Category)
             {
                 Category category = (Category)value;
-                Uri uri = null;
+                Uri uri;
                 if (category.IsExpanded)
                     uri = new Uri("/images/FolderOpened-32.png", UriKind.Relative);
                 else

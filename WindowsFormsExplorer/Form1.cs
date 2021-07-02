@@ -47,9 +47,9 @@ namespace WindowsFormsExplorer
                 treeViewImageSize = 16;
             }
 
-            _samplesImageList = new ImageList();
-            _samplesImageList.ColorDepth = ColorDepth.Depth24Bit;
-            // TODO: remove and clean up old images as needed (check Web / WPF Images folder as well).
+            _samplesImageList = new ImageList() {
+                ColorDepth = ColorDepth.Depth24Bit
+            };
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderOpened_32));            // 0
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.FolderClosed_32));            // 1
             _samplesImageList.Images.Add(new Bitmap(WindowsFormsExplorer.Properties.Resources.SpreadsheetGearLogo_32));     // 2
@@ -84,8 +84,9 @@ namespace WindowsFormsExplorer
 
         private void BuildTreeView(TreeNode currentNode, Category currentCategory)
         {
-            var categoryNode = new TreeNode(currentCategory.Name, 0, 0);
-            categoryNode.Tag = currentCategory;
+            var categoryNode = new TreeNode(currentCategory.Name, 0, 0) {
+                Tag = currentCategory
+            };
             if (currentNode != null)
                 currentNode.Nodes.Add(categoryNode);
             else
@@ -103,8 +104,9 @@ namespace WindowsFormsExplorer
                         imageIndex = _imageIndexWindows;
                 }
                 int selectedImageIndex = imageIndex;
-                var sampleNode = new TreeNode(sampleInfo.Name, imageIndex, selectedImageIndex);
-                sampleNode.Tag = sampleInfo;
+                var sampleNode = new TreeNode(sampleInfo.Name, imageIndex, selectedImageIndex) {
+                    Tag = sampleInfo
+                };
                 categoryNode.Nodes.Add(sampleNode);
             }
             foreach (var childCategory in currentCategory.ChildCategories)

@@ -15,11 +15,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet, its window info, 
-            // and cells.
+            // Create a local variable to the active worksheet.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IWorksheetWindowInfo windowInfo = worksheet.WindowInfo;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // Get the full path to a PNG image.
             string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Engine\SpreadsheetGearLogoAndText.png");

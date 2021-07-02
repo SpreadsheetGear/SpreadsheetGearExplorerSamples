@@ -38,17 +38,17 @@
                 nper.Formula = numPeriods;
 
                 // Setup a SimpleLoanCalculatorResults object to return the results.
-                SimpleLoanCalculatorResults results = new SimpleLoanCalculatorResults();
+                SimpleLoanCalculatorResults results = new SimpleLoanCalculatorResults {
+                    // Copy the formatted worksheet values to the corresponding result properties.
+                    LoanAmount = pv.Text,
+                    InterestRate = rate.Text,
+                    NumPeriods = nper.Text,
 
-                // Copy the formatted worksheet values to the corresponding result properties.
-                results.LoanAmount = pv.Text;
-                results.InterestRate = rate.Text;
-                results.NumPeriods = nper.Text;
-
-                // Get payment amount from the Defined Name that refers to the cell holding the payment formula.
-                // This workbook is setup with Automatic calculation mode, so just the act of getting IRange.Text 
-                // will trigger a calculation and return an updated value.
-                results.Payment = workbook.Names["payment"].RefersToRange.Text;
+                    // Get payment amount from the Defined Name that refers to the cell holding the payment formula.
+                    // This workbook is setup with Automatic calculation mode, so just the act of getting IRange.Text 
+                    // will trigger a calculation and return an updated value.
+                    Payment = workbook.Names["payment"].RefersToRange.Text
+                };
 
                 // Return the results.
                 return results;

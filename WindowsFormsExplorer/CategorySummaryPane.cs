@@ -17,15 +17,16 @@ namespace WindowsFormsExplorer
 {
     public partial class CategorySummaryPane : UserControl
     {
-        private ElementHost _elementHost;
-        private MarkdownScrollViewer _markdownScrollViewer;
+        private readonly ElementHost _elementHost;
+        private readonly MarkdownScrollViewer _markdownScrollViewer;
 
         public CategorySummaryPane()
         {
             InitializeComponent();
 
-            _elementHost = new ElementHost();
-            _elementHost.Dock = DockStyle.Fill;
+            _elementHost = new ElementHost() {
+                Dock = DockStyle.Fill
+            };
             this.Controls.Add(_elementHost);
 
             _markdownScrollViewer = new MarkdownScrollViewer();

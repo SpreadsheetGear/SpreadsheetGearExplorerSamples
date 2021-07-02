@@ -127,7 +127,7 @@ namespace SamplesLibrary.Samples.Shapes.Lines
             worksheet.UsedRange.Font.Bold = true;
         }
 
-        private static Random _rand = new Random();
+        private static readonly Random _rand = new Random();
         private static SpreadsheetGear.Themes.ColorSchemeIndex PickRandomThemeColor()
         {
             // Construct a List from the ColorSchemeIndex enum that consists of the 6 "Accent"

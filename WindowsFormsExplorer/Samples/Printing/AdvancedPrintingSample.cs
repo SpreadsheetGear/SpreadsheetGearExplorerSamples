@@ -15,10 +15,10 @@ namespace WindowsFormsExplorer.Samples.Printing
                 using (document)
                 {
                     // Create a print dialog.
-                    System.Windows.Forms.PrintDialog dialog = new System.Windows.Forms.PrintDialog();
-
-                    // Set the print dialogs print document.
-                    dialog.Document = document;
+                    System.Windows.Forms.PrintDialog dialog = new System.Windows.Forms.PrintDialog {
+                        // Set the print dialogs print document.
+                        Document = document
+                    };
 
                     // Work around this issue:
                     // http://stackoverflow.com/questions/6385844/printdialog-showdialog-not-showing-the-print-dialog-in-windows-7-with-64-bit
@@ -59,10 +59,10 @@ namespace WindowsFormsExplorer.Samples.Printing
                 using (document)
                 {
                     // Create a custom print preview dialog.
-                    CustomPrintPreviewDialog dialog = new CustomPrintPreviewDialog();
-
-                    // Set the print preview dialogs print document.
-                    dialog.Document = document;
+                    CustomPrintPreviewDialog dialog = new CustomPrintPreviewDialog {
+                        // Set the print preview dialogs print document.
+                        Document = document
+                    };
 
                     // Show the print preview dialog.
                     dialog.ShowDialog(this);

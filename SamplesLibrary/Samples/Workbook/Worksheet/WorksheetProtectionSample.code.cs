@@ -16,9 +16,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet and its cells.
+            // Create a local variable to the active worksheet.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // The Protect(...) method provides full control over the various options you can use
             // to protect a worksheet.  You can provide an optional first parameter for the 

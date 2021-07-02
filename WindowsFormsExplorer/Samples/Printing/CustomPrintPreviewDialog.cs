@@ -126,10 +126,10 @@ namespace WindowsFormsExplorer.Samples.Printing
         private void ToolStripButtonPrint_Click(object sender, EventArgs e)
         {
             // Create a print dialog.
-            System.Windows.Forms.PrintDialog dialog = new System.Windows.Forms.PrintDialog();
-
-            // Set the print dialogs print document.
-            dialog.Document = Document;
+            System.Windows.Forms.PrintDialog dialog = new System.Windows.Forms.PrintDialog {
+                // Set the print dialogs print document.
+                Document = Document
+            };
 
             // Show the print dialog and check the return status...
             if (dialog.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)

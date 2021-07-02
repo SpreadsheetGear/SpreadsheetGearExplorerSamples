@@ -50,13 +50,15 @@
             // for as little time as possible.
             myBackgroundWorkers.Add(worker);
 
-            // Create a thread and give it a name.
-            System.Threading.Thread thread = new System.Threading.Thread(worker.Run);
-            thread.Name = MyBackgroundWorkerCount.ToString();
+            // Create a thread.
+            System.Threading.Thread thread = new System.Threading.Thread(worker.Run) {
+                // Give it a name matching the total added thread count.
+                Name = MyBackgroundWorkerCount.ToString(),
 
-            // Make it a background thread so it will die when the
-            // application is closed.
-            thread.IsBackground = true;
+                // Make it a background thread so it will die when the
+                // application is closed.
+                IsBackground = true
+            };
 
             // Start it up.
             thread.Start();
@@ -97,7 +99,7 @@
             }
         }
 
-        private System.Collections.Generic.List<MyBackgroundWorker> myBackgroundWorkers =
+        private readonly System.Collections.Generic.List<MyBackgroundWorker> myBackgroundWorkers =
             new System.Collections.Generic.List<MyBackgroundWorker>();
 
 
@@ -245,7 +247,7 @@
             private bool fastWay;                           // Specifies whether to use IRange.Value or advanced API.
             private double totalCount;                      // Accumulates the total for this worker.
             private double iterations;                      // Accumulates the number of iterations for this worker.
-            private System.Random rand;                     // For generating pseudo-random data.
+            private readonly System.Random rand;            // For generating pseudo-random data.
         }
 
         // Some constants for column indexing into ActiveWorksheet.Cells.

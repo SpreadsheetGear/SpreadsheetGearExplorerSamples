@@ -15,9 +15,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet and its cells.
+            // Create a local variable to the active worksheet.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // Get range that Conditional Formatting will be applied to.
             SpreadsheetGear.IRange dataRange = worksheet.Cells["A2:D15"];

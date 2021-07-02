@@ -15,9 +15,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active sheet and its cells.
+            // Create a local variable to the active worksheet.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // Get a reference to the target cell.
             SpreadsheetGear.IRange targetCell = worksheet.Cells["TargetCell"];

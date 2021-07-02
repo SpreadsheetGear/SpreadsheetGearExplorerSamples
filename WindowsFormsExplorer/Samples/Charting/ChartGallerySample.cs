@@ -41,10 +41,10 @@ namespace WindowsFormsExplorer.Samples.Charting
                 SpreadsheetGear.Charts.IChart chart = worksheet.Shapes[selectedType].Chart;
 
                 // Create the SpreadsheetGear Image class.
-                SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(chart);
-
-                // Set the DPI of the image to match the current display device.
-                image.Dpi = this.DeviceDpi;
+                SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(chart) {
+                    // Set the DPI of the image to match the current display device.
+                    Dpi = this.DeviceDpi
+                };
 
                 // Generate a new Bitmap representing the shape.
                 System.Drawing.Bitmap bitmap = image.GetBitmap();

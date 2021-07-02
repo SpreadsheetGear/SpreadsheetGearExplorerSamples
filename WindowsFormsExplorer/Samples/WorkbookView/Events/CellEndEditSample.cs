@@ -14,8 +14,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.Events
                 if (range.Row == 0 && range.Column == 1)
                 {
                     // Try to convert the entry to an integer.
-                    int result;
-                    bool validInt = System.Int32.TryParse(e.Entry, out result);
+                    bool validInt = System.Int32.TryParse(e.Entry, out int result);
 
                     // Check if the entry is valid.
                     if (!validInt || result <= 0)

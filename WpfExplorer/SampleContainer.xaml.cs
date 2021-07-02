@@ -26,7 +26,7 @@ namespace WPFExplorer
     /// </summary>
     public partial class SampleContainer : UserControl
     {
-        private Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
+        private readonly Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
 
         public SampleContainer()
         {
@@ -165,15 +165,17 @@ namespace WPFExplorer
 
         private TextEditor CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
-            var document = new TextDocument();
-            document.Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext);
-            document.FileName = sourceCodeItem.FileName;
+            var document = new TextDocument() {
+                Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext),
+                FileName = sourceCodeItem.FileName
+            };
 
-            var editor = new TextEditor();
-            editor.FontFamily = new FontFamily("Consolas");
-            editor.FontSize = 14;
-            editor.IsReadOnly = true;
-            editor.Padding = new Thickness(10, 10, 0, 0);
+            var editor = new TextEditor() {
+                FontFamily = new FontFamily("Consolas"),
+                FontSize = 14,
+                IsReadOnly = true,
+                Padding = new Thickness(10, 10, 0, 0)
+            };
             if (sourceCodeItem.Extension == ".cs")
                 editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
             else if (sourceCodeItem.Extension == ".xaml")

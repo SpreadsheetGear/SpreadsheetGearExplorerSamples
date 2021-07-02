@@ -12,10 +12,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet, its window info
-            // and its cells.
+            // Create local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IWorksheetWindowInfo windowInfo = worksheet.WindowInfo;
             SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // Setup some sample data to create a chart series.

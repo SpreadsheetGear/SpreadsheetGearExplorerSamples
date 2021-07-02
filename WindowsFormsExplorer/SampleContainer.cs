@@ -26,7 +26,7 @@ namespace WindowsFormsExplorer
     /// </summary>
     public partial class SampleContainer : UserControl
     {
-        private Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
+        private readonly Dictionary<string, IHighlightingDefinition> _syntaxHighlightingDefinitions;
 
         public SampleContainer()
         {
@@ -158,9 +158,10 @@ namespace WindowsFormsExplorer
             for (int i = 0; i < sampleInfo.SourceCodes.Count; i++)
             {
                 var sourceCodeItem = sampleInfo.SourceCodes[i];
-                var tab = new TabPage();
-                tab.Text = sourceCodeItem.FileName;
-                tab.ToolTipText = sourceCodeItem.FullPath;
+                var tab = new TabPage() {
+                    Text = sourceCodeItem.FileName,
+                    ToolTipText = sourceCodeItem.FullPath
+                };
                 tab.Controls.Add(CreateSourceCodeEditor(sourceCodeItem));
                 tabControl.TabPages.Add(tab);
             }
@@ -169,15 +170,17 @@ namespace WindowsFormsExplorer
 
         private ElementHost CreateSourceCodeEditor(SourceCodeItem sourceCodeItem)
         {
-            var document = new TextDocument();
-            document.Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext);
-            document.FileName = sourceCodeItem.FileName;
+            var document = new TextDocument() {
+                Text = sourceCodeItem.GetSourceCode(SourceCodeFormat.Plaintext),
+                FileName = sourceCodeItem.FileName
+            };
 
-            var editor = new TextEditor();
-            editor.FontFamily = new System.Windows.Media.FontFamily("Consolas");
-            editor.FontSize = 14;
-            editor.IsReadOnly = true;
-            editor.Padding = new Thickness(10, 10, 0, 0);
+            var editor = new TextEditor() {
+                FontFamily = new System.Windows.Media.FontFamily("Consolas"),
+                FontSize = 14,
+                IsReadOnly = true,
+                Padding = new Thickness(10, 10, 0, 0)
+            };
             if (sourceCodeItem.Extension == ".cs")
                 editor.SyntaxHighlighting = HighlightingManager.Instance.GetDefinition("C#");
             if (_syntaxHighlightingDefinitions.ContainsKey(sourceCodeItem.Extension))
@@ -188,9 +191,10 @@ namespace WindowsFormsExplorer
             var csFoldingStrategy = new AvalonEditRegionFoldingStrategy();
             foldingManager.UpdateFoldings(csFoldingStrategy.CreateFoldings(document), -1);
 
-            ElementHost elementHost = new ElementHost();
-            elementHost.Dock = DockStyle.Fill;
-            elementHost.Child = editor;
+            ElementHost elementHost = new ElementHost() {
+                Dock = DockStyle.Fill,
+                Child = editor
+            };
 
             return elementHost;
         }

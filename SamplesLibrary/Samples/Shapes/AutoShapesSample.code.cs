@@ -12,9 +12,8 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet, cells and  window info.
+            // Create local variables to the active worksheet and its cells.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
             SpreadsheetGear.IWorksheetWindowInfo windowInfo = worksheet.WindowInfo;
 
             // Get a reference to the worksheet's shapes collection.

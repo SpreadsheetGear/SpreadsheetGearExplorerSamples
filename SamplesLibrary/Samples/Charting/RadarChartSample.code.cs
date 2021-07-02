@@ -15,11 +15,9 @@
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet, its window info, 
-            // and cells.
+            // Create local variables to the active worksheet and its window info.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
             SpreadsheetGear.IWorksheetWindowInfo windowInfo = worksheet.WindowInfo;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
 
             // Add a chart to the worksheet's shape collection.
             // NOTE: Calculate the coordinates of the chart by converting row and column

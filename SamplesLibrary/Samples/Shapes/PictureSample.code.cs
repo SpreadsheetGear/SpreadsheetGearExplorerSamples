@@ -16,9 +16,8 @@ namespace SamplesLibrary.Samples.Shapes
 
         public void RunSample()
         {
-            // Create some local variables to the active worksheet, cells and  window info.
+            // Create local variables to the active worksheet and its window info.
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
-            SpreadsheetGear.IRange cells = worksheet.Cells;
             SpreadsheetGear.IWorksheetWindowInfo windowInfo = worksheet.WindowInfo;
 
             // Get the full path to a PNG image file.

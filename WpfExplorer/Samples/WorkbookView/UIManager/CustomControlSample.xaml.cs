@@ -78,8 +78,9 @@ namespace WPFExplorer.Samples.WorkbookView.UIManager
             if (shape.Name == "MyCustomControl")
             {
                 // Create a custom control and set various properties.
-                _customControl = new Button();
-                _customControl.Content = "My Custom Button";
+                _customControl = new Button {
+                    Content = "My Custom Button"
+                };
 
                 // Add a Click event handler.
                 _customControl.Click += CustomControl_Click;
