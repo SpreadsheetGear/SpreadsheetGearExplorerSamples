@@ -82,29 +82,35 @@
         private class MyCommandRange : SpreadsheetGear.Commands.CommandRange
         {
             // The color we'll use to set the Interior of the range.
-            SpreadsheetGear.Color _color;
+            private readonly SpreadsheetGear.Color color;
 
             internal MyCommandRange(SpreadsheetGear.IRange range, SpreadsheetGear.Color color)
                 : base(range)
             {
-                _color = color;
+                this.color = color;
             }
 
             protected override bool Execute()
             {
-                bool executed = false;
+                // Execute the command.
+                Range.Interior.Color = color;
 
-                // Execute the command and return true if it executed successfully.
-                Range.Interior.Color = _color;
-                executed = true;
-
-                return executed;
+                // Returning true indicates this Command should be added to the Undo stack, which is typically
+                // the desired outcome for a successfully-executed command.  Returning false would keep this
+                // Command from being added to the Undo stack.  The Undo stack is preserved as-is / not cleared
+                // in the case of returning false.
+                return true;
             }
 
             protected override bool Undo()
             {
-                // Undo the command.
-                return base.Undo();
+                // Call base to undo the Command, which will revert the range back using whatever CommandRangeUndoFlags
+                // were specified for this Command (CommandRangeUndoFlags.Formats in this case).
+                bool retVal = base.Undo();
+
+                // The return value indicates whether this undone Command should be added to the Redo stack, which
+                // would be the desired outcome in most cases.  Returning false will clear the Redo stack.
+                return retVal;
             }
 
             public override string DisplayText
