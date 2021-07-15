@@ -100,7 +100,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             this.buttonToggleSheetTabs.Name = "buttonToggleSheetTabs";
             this.buttonToggleSheetTabs.Size = new System.Drawing.Size(188, 44);
             this.buttonToggleSheetTabs.TabIndex = 1;
-            this.buttonToggleSheetTabs.Text = "Toggle Scroll Bars";
+            this.buttonToggleSheetTabs.Text = "Toggle Sheet Tabs";
             this.buttonToggleSheetTabs.UseVisualStyleBackColor = true;
             this.buttonToggleSheetTabs.Click += new System.EventHandler(this.ButtonToggleSheetTabs_Click);
             // 
