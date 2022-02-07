@@ -192,7 +192,7 @@ namespace SamplesLibrary
                 html += $"  <b>{currentCategory.Name}</b>";
             if (!string.IsNullOrWhiteSpace(currentCategory.Description))
                 html += $"{(!HideNameFromCategorySummary ? " - " : "")}{currentCategory.Description}";
-            if (currentCategory.ChildCategories.Count() > 0)
+            if (currentCategory.ChildCategories.Any())
             {
                 html += $"  <ul class='fa-ul'>";
                 foreach (var childCategory in currentCategory.ChildCategories)
@@ -233,7 +233,7 @@ namespace SamplesLibrary
                 text += $"{(!HideNameFromCategorySummary ? " - " : "")}{desc}";
             }
             text += "\r\n";
-            if (currentCategory.ChildCategories.Count() > 0)
+            if (currentCategory.ChildCategories.Any())
             {
                 foreach (var childCategory in currentCategory.ChildCategories)
                 {
@@ -275,7 +275,7 @@ namespace SamplesLibrary
                     text += $"{tabs}\t*   **{sampleIcon} {sample.Name}** - {sample.Description}\r\n"; // Play Icon: 
                 }
             }
-            if (currentCategory.ChildCategories.Count() > 0)
+            if (currentCategory.ChildCategories.Any())
             {
                 foreach (var childCategory in currentCategory.ChildCategories)
                 {

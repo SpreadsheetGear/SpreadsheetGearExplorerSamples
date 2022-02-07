@@ -140,7 +140,7 @@ namespace SamplesLibrary.Samples.Shapes.Lines
                 .ToList();
 
             // Return random color from list.
-            return colors[_rand.Next(colors.Count())];
+            return colors[_rand.Next(colors.Count)];
         }
 
     }

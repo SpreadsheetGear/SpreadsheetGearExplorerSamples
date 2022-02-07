@@ -1,8 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>SpreadsheetGearLogo.ico</ApplicationIcon>
   </PropertyGroup>
@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AvalonEdit" Version="6.1.1" />
-    <PackageReference Include="MdXaml" Version="1.10.0" />
+    <PackageReference Include="AvalonEdit" Version="6.1.3.50" />
+    <PackageReference Include="MdXaml" Version="1.12.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,16 +23,16 @@
 
   <ItemGroup>
     <Reference Include="SpreadsheetGear">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.dll</HintPath>
     </Reference>
     <Reference Include="SpreadsheetGear.Drawing">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Drawing.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="SpreadsheetGear.Windows">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Windows.dll</HintPath>
     </Reference>
     <Reference Include="SpreadsheetGear.Windows.Forms">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\netcoreapp3.1\SpreadsheetGear.Windows.Forms.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Windows.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
 
