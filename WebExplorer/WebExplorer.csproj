@@ -17,10 +17,10 @@
 
   <ItemGroup>
     <Reference Include="SpreadsheetGear">
-      <HintPath>..\..\..\..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.dll</HintPath>
     </Reference>
     <Reference Include="SpreadsheetGear.Drawing">
-      <HintPath>..\..\..\..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Drawing.dll</HintPath>
+      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Drawing.dll</HintPath>
     </Reference>
   </ItemGroup>
 
