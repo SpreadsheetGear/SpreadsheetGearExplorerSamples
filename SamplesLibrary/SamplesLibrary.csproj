@@ -25,7 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.11.39" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+    <PackageReference Include="SpreadsheetGear.Windows" Version="9.*-*" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
@@ -35,21 +36,6 @@
       <SubType>Designer</SubType>
       <Generator></Generator>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SpreadsheetGear">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.dll</HintPath>
-    </Reference>
-    <Reference Include="SpreadsheetGear.Drawing">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Drawing.dll</HintPath>
-    </Reference>
-    <Reference Include="SpreadsheetGear.Windows">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Windows.dll</HintPath>
-    </Reference>
-    <Reference Include="SpreadsheetGear.Windows.Forms">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Windows.Forms.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>

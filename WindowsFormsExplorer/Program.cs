@@ -35,11 +35,11 @@ namespace WindowsFormsExplorer
             // the unlimited mode by providing a "Signed License" string.  If you are a Licensed user of 
             // SpreadsheetGear, you can visit the SpreadsheetGear Licensed User Downloads page to generate 
             // a Signed License string from your License Number:
-            //  - https://www.spreadsheetgear.com/downloads/downloadlicensed.aspx
+            //  - https://www.spreadsheetgear.com/Downloads/Licensed
             //
             // If you would like to evaluate the unlimited mode of SpreadsheetGear for 30 days, you can 
             // generate a Signed Trial License from the SpreadsheetGear Evaluation Downloads page:
-            //  - https://www.spreadsheetgear.com/downloads/register.aspx
+            //  - https://www.spreadsheetgear.com/Downloads/Evaluation
             //
             // Once you have your Signed License, replace it with the below line of code:
             // SpreadsheetGear.Factory.SetSignedLicense("MY SIGNED LICENSE HERE");

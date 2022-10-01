@@ -5,23 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<PackageReference Include="AutoMapper" Version="10.1.1" />
-	<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
-    <PackageReference Include="Markdig" Version="0.26.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.1" />
+	<PackageReference Include="AutoMapper" Version="12.0.0" />
+	<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Markdig" Version="0.30.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.9" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SamplesLibrary\SamplesLibrary.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SpreadsheetGear">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.dll</HintPath>
-    </Reference>
-    <Reference Include="SpreadsheetGear.Drawing">
-      <HintPath>..\..\..\..\SG\dev\bin\Release\net6.0-windows\SpreadsheetGear.Drawing.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

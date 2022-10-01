@@ -31,10 +31,10 @@ namespace SamplesLibrary.Samples.WorkboookView
         public async Task<string> LoadFromUri_AspNetGenerated(IWorkbookView workbookView)
         {
             // Specify the URI that will return a workbook as the response.
-            // NOTE: chartdynamic.aspx dynamically generates returns a workbook in the response stream.
-            // For samples on how to do this please visit
-            //     https://www.spreadsheetgear.com/support/samples/asp.net.aspx
-            string uri = "https://www.spreadsheetgear.com/support/samples/chartdynamic.aspx";
+            // NOTE: the below URL dynamically generates and returns a workbook in the response stream.
+            // For samples on how to do this please visit:
+            //     https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Reporting
+            string uri = "https://www.spreadsheetgear.com/Support/Samples/RazorPages/ExcelReportWithChart";
 
             await this.LoadFromURI(workbookView, uri);
 
@@ -43,9 +43,9 @@ namespace SamplesLibrary.Samples.WorkboookView
 
         public async Task<string> LoadFromUri_XSLX(IWorkbookView workbookView)
         {
-            // Specify the URI that will return a workbook as the response.  chartgallery.xlsx is an
-            // Excel file stored on the web server.
-            string uri = "https://www.spreadsheetgear.com/support/samples/files/chartgallery.xlsx";
+            // Specify the URI that will return a workbook as the response.  ChartGallery.xlsx is an
+            // Excel file stored on the SpreadsheetGear web server.
+            string uri = "https://www.spreadsheetgear.com/Support/Samples/Files/ChartGallery.xlsx";
 
             await this.LoadFromURI(workbookView, uri);
 
