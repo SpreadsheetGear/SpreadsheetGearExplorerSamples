@@ -118,6 +118,8 @@ namespace WebExplorer
             }
 
             // Create an image class which will render the image of the specified range.
+            // NOTE: the SpreadsheetGear.Drawing.Image class is part of the "SpreadsheetGear for Windows" product,
+            // and not available in the "SpreadsheetGear Engine for .NET" product.
             SpreadsheetGear.Drawing.Image image = new SpreadsheetGear.Drawing.Image(renderRange)
             {
                 // Increase the DPI to provide sharper results in the browser (image will be scaled by 50% to

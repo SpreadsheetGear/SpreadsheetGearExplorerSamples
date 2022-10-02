@@ -19,6 +19,10 @@ main {
   margin-left: 50px;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 ul.samples-tree {
   font-size: 10pt;
 }
@@ -79,7 +83,7 @@ pre[class*="language-"] {
 
 
 
-/* Page oerlay styles */
+/* Page overlay styles */
 #page-overlay {
   position: fixed;
   display: none;
@@ -119,6 +123,11 @@ img.scaled50 {
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
 }
 
+/* Bootstrap additions */
+.tooltip.tooltip-lg > .tooltip-inner {
+  max-width: 400px;
+  width: 400px;
+}
 
 /* SpreadsheetGear button styles */
 button.sg-btn,

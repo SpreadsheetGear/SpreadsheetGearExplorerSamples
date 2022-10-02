@@ -1,12 +1,15 @@
 ﻿function showPageOverlay(content) {
-  $("#page-overlay")
+    $("#page-overlay")
+    .fadeIn(100)
     .css("display", "block")
     .append(content);
   $(document).on('keydown', pageOverlayKeyDown);
 }
 
 function hidePageOverlay() {
-  $("#page-overlay").css("display", "none").html("");
+  $("#page-overlay")
+    .fadeOut(100)
+    .html("");
   $(document).off("keydown", pageOverlayKeyDown);
 }
 
@@ -26,3 +29,10 @@ function appendQueryString(url, varName, varValue) {
     url += "?" + varName + "=" + escape(varValue);
   return url;
 }
+
+$(function () {
+    let whiteList = $.fn.tooltip.Constructor.Default.whiteList
+    whiteList.span = ["style", "class"];
+    whiteList.div = ["style", "class"];
+  $('[data-toggle="tooltip"]').tooltip();
+});
