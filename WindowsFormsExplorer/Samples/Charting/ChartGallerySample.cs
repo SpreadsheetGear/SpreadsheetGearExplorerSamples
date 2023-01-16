@@ -7,7 +7,7 @@ namespace WindowsFormsExplorer.Samples.Charting
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
         // app as well as the WPFExplorer samples app.
-        public SamplesLibrary.Samples.Charting.ChartGallerySample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.Charting.ChartGallerySample Sample { get; private set; }
 
         private void ListBoxCategory_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -66,7 +66,7 @@ namespace WindowsFormsExplorer.Samples.Charting
         private void InitializeSample()
         {
             // Initialize the sample
-            Sample = new SamplesLibrary.Samples.Charting.ChartGallerySample();
+            Sample = new SamplesLibrary.Windows.Samples.Charting.ChartGallerySample();
             Sample.InitializeSample();
             DisposalManager.RegisterIWorkbookSets(Sample.ChartWorkbook.WorkbookSet);
 

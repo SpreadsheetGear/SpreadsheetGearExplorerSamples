@@ -52,6 +52,7 @@ namespace SamplesLibrary
         private readonly List<Category> _childCategories  = new List<Category>();
         public IEnumerable<Category> ChildCategories => _childCategories.OrderBy(c => c.SortIndex);
         public List<SampleInfo> SampleInfos { get; set; } = new List<SampleInfo>();
+        public List<SampleInfo> SampleInfosSorted => SampleInfos.OrderBy(i => i.SortIndex).ToList();
 
 
         /// <summary>
@@ -60,11 +61,11 @@ namespace SamplesLibrary
         /// <param name="name">Name displayed for Category</param>
         /// <param name="folderName">Pass in null or empty string to indicate this Category has no corresponding folder.</param>
         /// <param name="description">Description can include HTML markup.</param>
-        public Category AddCategory(string name, string folderName, string description, int? manualSortIndex = null, bool isExpanded = true)
+        /// <param name="sortIndex">Sort this and sibling Categories according to this property.</param>
+        /// <param name="isExpanded">Default state to use for samples in this category.</param>
+        public Category AddCategory(string name, string folderName, string description, int sortIndex, bool isExpanded = true)
         {
-            if (!manualSortIndex.HasValue)
-                manualSortIndex = ChildCategories.Select(c => c.SortIndex).DefaultIfEmpty().Max() + 1;
-            var cat = new Category(name, this, folderName, description, manualSortIndex.Value, isExpanded);
+            var cat = new Category(name, this, folderName, description, sortIndex, isExpanded);
             _childCategories.Add(cat);
             return cat;
         }
@@ -104,7 +105,7 @@ namespace SamplesLibrary
         {
             get
             {
-                foreach (var sampleInfo in SampleInfos)
+                foreach (var sampleInfo in SampleInfosSorted)
                     yield return sampleInfo;
                 foreach (var category in ChildCategories)
                     yield return category;
@@ -117,9 +118,9 @@ namespace SamplesLibrary
         /// </summary>
         /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
         /// information can be used by the samples app UI to display different icons representing the sample.</param>
-        public SampleInfo AddSample<T>(string name, string description, bool usesWorkbookView) where T : ISample
+        public SampleInfo AddSample<T>(string name, string description, int sortIndex, bool usesWorkbookView) where T : ISample
         {
-            var sampleInfo = SampleInfo.Create<T>(this, name, description, usesWorkbookView);
+            var sampleInfo = SampleInfo.Create<T>(this, name, description, sortIndex, usesWorkbookView);
             SampleInfos.Add(sampleInfo);
             return sampleInfo;
         }
@@ -201,10 +202,10 @@ namespace SamplesLibrary
                 }
                 html += $"  </ul>";
             }
-            if (currentCategory.SampleInfos.Count > 0)
+            if (currentCategory.SampleInfosSorted.Count > 0)
             {
                 html += $"  <ul class='fa-ul'>";
-                foreach (var sample in currentCategory.SampleInfos)
+                foreach (var sample in currentCategory.SampleInfosSorted)
                 {
                     html += $"<li class='sample'><span class='fa-li text-success'><i class='fas fa-play-circle'></i></span> <b>{sample.Name}</b> - {sample.Description}</li>";
                 }
@@ -240,9 +241,9 @@ namespace SamplesLibrary
                     text += childCategory.GetCategorySummaryPlaintextInternal(childCategory, numIndents + 1);
                 }
             }
-            if (currentCategory.SampleInfos.Count > 0)
+            if (currentCategory.SampleInfosSorted.Count > 0)
             {
-                foreach (var sample in currentCategory.SampleInfos)
+                foreach (var sample in currentCategory.SampleInfosSorted)
                 {
                     text += $"{indents}  - [Sample - {sample.Name}] - {sample.Description}\r\n";
                 }
@@ -268,9 +269,9 @@ namespace SamplesLibrary
                 text += $"{(!HideNameFromCategorySummary ? " - " : "")}{currentCategory.Description}";
             }
             text += "\r\n";
-            if (currentCategory.SampleInfos.Count > 0)
+            if (currentCategory.SampleInfosSorted.Count > 0)
             {
-                foreach (var sample in currentCategory.SampleInfos)
+                foreach (var sample in currentCategory.SampleInfosSorted)
                 {
                     text += $"{tabs}\t*   **{sampleIcon} {sample.Name}** - {sample.Description}\r\n"; // Play Icon: 
                 }

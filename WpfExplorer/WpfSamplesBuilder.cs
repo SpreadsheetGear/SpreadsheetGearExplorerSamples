@@ -5,6 +5,7 @@
 */
 
 using SamplesLibrary;
+using SamplesLibrary.Windows;
 using WPFExplorer.Samples.Printing;
 using WPFExplorer.Samples.WorkbookView.Events;
 using WPFExplorer.Samples.WorkbookView.UIManager;
@@ -18,41 +19,47 @@ namespace WPFExplorer
         /// <summary>
         ///  Adds a handful of samples that directly depend on the WPF WorkbookView implementation and so cannot use shared code like the <see cref="ISpreadsheetGearWindowsSample"/> samples.
         /// </summary>
-        public static void Build(Category rootCategory)
+        public static Category Build()
         {
+            // Build the shared categories and SpreadsheetGear Engine and Windows samples.
+            var rootCategory = WindowsSamplesBuilder.Build();
+
+            // Intermix in the WPF-specific samples.
             var explorerSamples = rootCategory.GetCategory("SpreadsheetGear Explorer Samples");
             var categoryWbvSamples = explorerSamples.GetCategory("WorkbookView");
             {
-                var categoryEvents = categoryWbvSamples.AddCategory("Events", "Events", "Handle some of the available WorkbookView events.");
+                var categoryEvents = categoryWbvSamples.AddCategory("Events", "Events", "Handle some of the available WorkbookView events.", 30);
                 {
-                    categoryEvents.AddWpfSample<CalculateSample>("Calculate", "Retrieve a date/time value from a cell after calculating.", true);
-                    categoryEvents.AddWpfSample<CellBeginEditSample>("CellBeginEdit", "Change the initial edit entry or cancel the edit.", true);
-                    categoryEvents.AddWpfSample<CellEndEditSample>("CellEndEdit", "Custom validation of user input.", true);
-                    categoryEvents.AddWpfSample<RangeChangedSample>("RangeChanged", "Display information about a changed range.", true);
-                    categoryEvents.AddWpfSample<RangeSelectionChangedSample>("RangeSelectionChanged", "Display information about the current range selection.", true);
-                    categoryEvents.AddWpfSample<ShapeSelectionChangedSample>("ShapeSelectionChanged", "Display information about the current shape selection.", true);
-                    categoryEvents.AddWpfSample<ActiveTabChangedSample>("ActiveTabChanged", "Display information about the active tab.", true);
-                    categoryEvents.AddWpfSample<ShapeActionSample>("ShapeAction", "Handle a built-in form control click event.", true);
-                    categoryEvents.AddWpfSample<ShowErrorSample>("ShowError", "Change or bypass default error message handling.", true);
+                    categoryEvents.AddWpfSample<CalculateSample>("Calculate", "Retrieve a date/time value from a cell after calculating.", 10, true);
+                    categoryEvents.AddWpfSample<CellBeginEditSample>("CellBeginEdit", "Change the initial edit entry or cancel the edit.", 20, true);
+                    categoryEvents.AddWpfSample<CellEndEditSample>("CellEndEdit", "Custom validation of user input.", 30, true);
+                    categoryEvents.AddWpfSample<RangeChangedSample>("RangeChanged", "Display information about a changed range.", 40, true);
+                    categoryEvents.AddWpfSample<RangeSelectionChangedSample>("RangeSelectionChanged", "Display information about the current range selection.", 50, true);
+                    categoryEvents.AddWpfSample<ShapeSelectionChangedSample>("ShapeSelectionChanged", "Display information about the current shape selection.", 60, true);
+                    categoryEvents.AddWpfSample<ActiveTabChangedSample>("ActiveTabChanged", "Display information about the active tab.", 70, true);
+                    categoryEvents.AddWpfSample<ShapeActionSample>("ShapeAction", "Handle a built-in form control click event.", 80, true);
+                    categoryEvents.AddWpfSample<ShowErrorSample>("ShowError", "Change or bypass default error message handling.", 90, true);
                 }
 
-                var categoryStyling = categoryWbvSamples.AddCategory("Styling", "Styling", "Use WPF Control Templates and other features to customize how the WorkbookView appears, and change the content of Row / Column Header area.");
+                var categoryStyling = categoryWbvSamples.AddCategory("Styling", "Styling", "Use WPF Control Templates and other features to customize how the WorkbookView appears, and change the content of Row / Column Header area.", 40);
                 {
-                    categoryStyling.AddWpfSample<SimpleStyleSample>("Simple Style", "Basic styling sample.", true);
-                    categoryStyling.AddWpfSample<ExcelThemeSample>("Excel Theme", "Theme the WorkbookView with an Excel-like theme.", true);
-                    categoryStyling.AddWpfSample<CustomHeadersSample>("Custom Headers", "Custom headers using data binding.", true);
-                    categoryStyling.AddWpfSample<ColumnHeaderSortSample>("ColumnHeader Sort", "Sort by clicking on a custom ColumnHeader.", true);
+                    categoryStyling.AddWpfSample<SimpleStyleSample>("Simple Style", "Basic styling sample.", 10, true);
+                    categoryStyling.AddWpfSample<ExcelThemeSample>("Excel Theme", "Theme the WorkbookView with an Excel-like theme.", 20, true);
+                    categoryStyling.AddWpfSample<CustomHeadersSample>("Custom Headers", "Custom headers using data binding.", 30, true);
+                    categoryStyling.AddWpfSample<ColumnHeaderSortSample>("ColumnHeader Sort", "Sort by clicking on a custom ColumnHeader.", 40, true);
                 }
 
-                var categoryUIManager = categoryWbvSamples.AddCategory("UIManager", "UIManager", "Extensions to the default UI Manager framework.");
+                var categoryUIManager = categoryWbvSamples.AddCategory("UIManager", "UIManager", "Extensions to the default UI Manager framework.", 50);
                 {
-                    categoryUIManager.AddWpfSample<CustomControlSample>("Custom Control", "Replace an existing IShape with your own custom control.", true);
+                    categoryUIManager.AddWpfSample<CustomControlSample>("Custom Control", "Replace an existing IShape with your own custom control.", 10, true);
                 }
             }
 
-            explorerSamples.GetCategory("Printing").AddWpfSample<AdvancedPrintingSample>("Advanced", "Use advanced techniques to print specific areas of a workbook.", true);
+            explorerSamples.GetCategory("Printing").AddWpfSample<AdvancedPrintingSample>("Advanced", "Use advanced techniques to print specific areas of a workbook.", 40, true);
 
             AddWpfSourceCodeFiles(explorerSamples);
+
+            return rootCategory;
         }
 
 
@@ -83,10 +90,10 @@ namespace WPFExplorer
         /// <summary>
         /// Just adds simple type checking through generics to ensure expected type for sample is used.
         /// </summary>
-        public static void AddWpfSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
+        public static void AddWpfSample<T>(this Category category, string sampleName, string description, int sortIndex, bool usesWorkbookView)
             where T : SampleUserControl
         {
-            category.AddSample<T>(sampleName, description, usesWorkbookView);
+            category.AddSample<T>(sampleName, description, sortIndex, usesWorkbookView);
         }
     }
 }

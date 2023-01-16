@@ -8,7 +8,7 @@ namespace WPFExplorer.Samples.Charting
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.Charting.ChartGallerySample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.Charting.ChartGallerySample Sample { get; private set; }
 
         public ChartGallerySample()
         {
@@ -61,7 +61,7 @@ namespace WPFExplorer.Samples.Charting
         public void InitializeSample()
         {
             // Initialize the sample
-            Sample = new SamplesLibrary.Samples.Charting.ChartGallerySample();
+            Sample = new SamplesLibrary.Windows.Samples.Charting.ChartGallerySample();
             Sample.InitializeSample();
             DisposalManager.RegisterIWorkbookSets(Sample.ChartWorkbook.WorkbookSet);
 

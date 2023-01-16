@@ -8,7 +8,7 @@ namespace WPFExplorer.Samples.WorkbookView
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkboookView.LocationToRangeSample Sample { get; private set; }
 
         private void WorkbookView_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -28,7 +28,7 @@ namespace WPFExplorer.Samples.WorkbookView
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.WorkboookView.LocationToRangeSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.LocationToRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             workbookView.GetLock();
             try

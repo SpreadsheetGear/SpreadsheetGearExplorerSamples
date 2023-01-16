@@ -19,12 +19,12 @@ namespace SamplesLibrary
         /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
         /// information can be used by the samples app UI to display different icons representing the sample.</param>
         /// <returns></returns>
-        public static SampleInfo Create<T>(Category category, string name, string description, bool usesWorkbookView)
+        public static SampleInfo Create<T>(Category category, string name, string description, int sortIndex, bool usesWorkbookView)
         {
-            return new SampleInfo(category, typeof(T), name, description, usesWorkbookView);
+            return new SampleInfo(category, typeof(T), name, description, sortIndex, usesWorkbookView);
         }
 
-        protected SampleInfo(Category category, Type sampleType, string name, string description, bool usesWorkbookView)
+        protected SampleInfo(Category category, Type sampleType, string name, string description, int sortIndex, bool usesWorkbookView)
         {
             if (sampleType.IsAssignableFrom(typeof(ISample)))
                 throw new ArgumentException($"{nameof(sampleType)} must implement {nameof(ISample)}", nameof(sampleType));
@@ -33,21 +33,20 @@ namespace SamplesLibrary
             SampleType = sampleType;
             Name = name ?? throw new ArgumentNullException(nameof(name));
             Description = description ?? "";
+            SortIndex = sortIndex;
             UsesWorkbookView = usesWorkbookView;
         }
 
         /// <summary>
         /// The <see cref="Type"/> of the sample, which is used to activate an instance of the sample using 
         /// the <see cref="CreateInstance{T}"/> method.  Should be a type that implements <see cref="ISample"/>,  
-        /// which includes <see cref="ISpreadsheetGearEngineSample"/>, <see cref="ISpreadsheetGearWindowsSample"/> 
+        /// which includes <see cref="ISpreadsheetGearEngineSample"/>, SamplesLibrary.Windows.ISpreadsheetGearWindowsSample
         /// and other types that are UI-platform specific (see SampleUserControl in WinForms and WPF projects, 
         /// for instance).
         /// </summary>
         public Type SampleType { get; set; }
 
-        public bool IsSpreadsheetGearEngineSample => typeof(ISpreadsheetGearEngineSample).IsAssignableFrom(SampleType);
-
-        public bool IsSpreadsheetGearWindowsSample => typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(SampleType);
+        public bool IsSpreadsheetGearEngineSample() => typeof(ISpreadsheetGearEngineSample).IsAssignableFrom(SampleType);
 
         /// <summary>
         /// Name of the sample.
@@ -58,6 +57,11 @@ namespace SamplesLibrary
         /// Description of the sample.
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Sort this and sibling SampleInfos according to this property.
+        /// </summary>
+        public int SortIndex { get; set; }
 
         /// <summary>
         /// Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
@@ -102,12 +106,15 @@ namespace SamplesLibrary
 
         /// <summary>
         /// After running this sample, an image of the results can be rendered using the SpreadsheetGear.Drawing.Image or
-        /// SpreadsheetGear.Windows.Media.Image classes.
+        /// SpreadsheetGear.Windows.Media.Image classes.  NOTE: image rendering is not available in the SpeadsheetGear Engine 
+        /// for .NET product, and would require using SpreadsheetGear for Windows.
         /// </summary>
         public bool CanRenderImage { get; set; } = false;
 
         /// <summary>
         /// Specify the A1-reference style range to render.  Specify null to render from A1 to the bottom-right end of the used range.
+        /// NOTE: image rendering is not available in the SpeadsheetGear Engine for .NET product, and would require using SpreadsheetGear 
+        /// for Windows.
         /// </summary>
         public string RenderImageRange { get; set; } = null;
 

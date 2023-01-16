@@ -5,7 +5,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
         // app as well as the WPFExplorer samples app.
-        public SamplesLibrary.Samples.Advanced.ThreadingSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.Advanced.ThreadingSample Sample { get; private set; }
 
         private void ButtonAddThread_Click(object sender, System.EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace WindowsFormsExplorer.Samples.Advanced
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.Advanced.ThreadingSample();
+            Sample = new SamplesLibrary.Windows.Samples.Advanced.ThreadingSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             Sample.InitializeSample(workbookView);
         }

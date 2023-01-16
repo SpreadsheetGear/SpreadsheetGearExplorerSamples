@@ -7,7 +7,7 @@ namespace WPFExplorer.Samples.WorkbookView
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.WorkboookView.DesignerAndExplorerDialogsSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkboookView.DesignerAndExplorerDialogsSample Sample { get; private set; }
 
         private void ButtonWorkbookDesigner_Click(object sender, RoutedEventArgs e)
         {
@@ -147,7 +147,7 @@ namespace WPFExplorer.Samples.WorkbookView
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.WorkboookView.DesignerAndExplorerDialogsSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.DesignerAndExplorerDialogsSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

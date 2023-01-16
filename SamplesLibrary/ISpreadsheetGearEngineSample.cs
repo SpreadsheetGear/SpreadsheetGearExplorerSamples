@@ -8,8 +8,8 @@ namespace SamplesLibrary
 {
     /// <summary>
     /// Base interface for all samples that demonstrate features of the SpreadsheetGear Engine for .NET product.
-    /// See <see cref="ISpreadsheetGearWindowsSample"/> for samples that might also demonstrate features involving UI,
-    /// such as the WorkbookView or FormulaBar controls.
+    /// See ISpreadsheetGearWindowsSample in the SamplesLibrary.Windows project for samples that also demonstrate 
+    /// features involving UI, such as the WorkbookView or FormulaBar controls.
     /// </summary>
     public interface ISpreadsheetGearEngineSample : ISample
     {

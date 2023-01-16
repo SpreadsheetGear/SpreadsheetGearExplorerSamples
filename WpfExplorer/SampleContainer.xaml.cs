@@ -5,6 +5,7 @@
 */
 
 using SamplesLibrary;
+using SamplesLibrary.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +69,7 @@ namespace WPFExplorer
             /// <see cref="ISpreadsheetGearEngineSample"/> are hosted in a <see cref="EngineSampleControl"/>and provide a 
             /// common user interface to load and run the sample.
             SampleUserControl sampleUserControl;
-            if (sampleInfo.IsSpreadsheetGearEngineSample)
+            if (sampleInfo.IsSpreadsheetGearEngineSample())
             {
                 var engineSample  = sampleInfo.CreateInstance<ISpreadsheetGearEngineSample>();
                 sampleUserControl = new EngineSampleControl(engineSample);
@@ -79,7 +80,7 @@ namespace WPFExplorer
                 /// <see cref="ISpreadsheetGearWindowsSample"/> sample types can still be shared between WPF, WinForms, etc., 
                 /// as a common IWorkbookView interface is used to work across UI frameworks.  A concrete XAML SampleUserControl 
                 /// still needs to be available to work alongside the <see cref="ISpreadsheetGearWindowsSample"/>, however.
-                if (sampleInfo.IsSpreadsheetGearWindowsSample)
+                if (sampleInfo.IsSpreadsheetGearWindowsSample())
                 {
                     sampleUserControl = FindSampleUserControlSample(sampleInfo.SampleType);
                 }

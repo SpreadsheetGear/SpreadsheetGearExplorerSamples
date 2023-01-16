@@ -5,7 +5,7 @@
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.DataGrid.SpreadsheetToDataGridSample Sample { get; private set; }
 
         public SpreadsheetToDataGridSample()
         {
@@ -25,7 +25,7 @@
         #region Sample Initialization Code
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.DataGrid.SpreadsheetToDataGridSample();
+            Sample = new SamplesLibrary.Windows.Samples.DataGrid.SpreadsheetToDataGridSample();
         }
         #endregion
     }

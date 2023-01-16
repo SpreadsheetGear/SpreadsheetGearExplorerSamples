@@ -5,7 +5,7 @@
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.Calculations.AmortizationCalculatorSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.Calculations.AmortizationCalculatorSample Sample { get; private set; }
 
         private void Calculate()
         {
@@ -22,7 +22,7 @@
             string numPeriods = textBoxPeriods.Text;
 
             // Run sample and get results back.
-            SamplesLibrary.Samples.Calculations.AmortizationCalculatorResults results = Sample.Calculate(loanAmount, interestRate, numPeriods);
+            SamplesLibrary.Windows.Samples.Calculations.AmortizationCalculatorResults results = Sample.Calculate(loanAmount, interestRate, numPeriods);
 
             // Copy over the original user inputs.  Note that simple-inputted values are now more nicely 
             // formatted (such as a loan amount of "1000" formatted to "$1,000").
@@ -60,7 +60,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.Calculations.AmortizationCalculatorSample();
+            Sample = new SamplesLibrary.Windows.Samples.Calculations.AmortizationCalculatorSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

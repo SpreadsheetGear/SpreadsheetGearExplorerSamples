@@ -9,7 +9,7 @@ using System;
 namespace SamplesLibrary
 {
     /// <summary>
-    /// Main interface for which an <see cref="ISpreadsheetGearEngineSample"/>, <see cref="ISpreadsheetGearWindowsSample"/> or any other sample is derived.
+    /// Main interface for which other sample interfaces (such as <see cref="ISpreadsheetGearEngineSample"/> and the ISpreadsheetGearWindowsSample interface in the SamplesLibrary.Windows project) are derived.
     /// </summary>
     public interface ISample  { }
 }

@@ -31,11 +31,15 @@ namespace SamplesLibrary.Samples.Shapes
             // and top are calculated in the code below.
             double width;
             double height;
-            System.Drawing.Image image = System.Drawing.Image.FromFile(imagePath);
-            using (image)
+            // Note we are using a 3rd party imaging library (SkiaSharp) here to open a PNG
+            // and get its measurements.  If you are on Windows, you could instead use the
+            // System.Drawing.Image class to get this information.  We do not do so here
+            // so that these Engine samples can be used in non-Windows environments such as
+            // Linux and MacOS.
+            using (var image = SkiaSharp.SKImage.FromEncodedData(imagePath))
             {
-                width = image.Width * 72.0 / image.HorizontalResolution;
-                height = image.Height * 72.0 / image.VerticalResolution;
+                width = image.Width * 72.0 / 96.0;
+                height = image.Height * 72.0 / 96.0;
             }
 
             // Calculate the left and top coordinates of the picture by converting 

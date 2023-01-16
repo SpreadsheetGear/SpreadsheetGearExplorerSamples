@@ -5,6 +5,7 @@
 */
 
 using SamplesLibrary;
+using SamplesLibrary.Windows;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,7 +20,7 @@ namespace WPFExplorer
     /// </summary>
     public abstract class SampleUserControl : UserControl, ISample, IDisposable
     {
-        public SGDisposalManager DisposalManager { get; private set; } = new SGDisposalManager();
+        public SGWindowsDisposalManager DisposalManager { get; private set; } = new SGWindowsDisposalManager();
 
         public void Dispose() => Dispose(true);
 

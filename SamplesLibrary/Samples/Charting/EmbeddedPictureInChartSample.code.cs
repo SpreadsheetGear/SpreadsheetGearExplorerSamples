@@ -24,13 +24,20 @@
             // Load picture into byte array.
             byte[] pictureBytes = System.IO.File.ReadAllBytes(workbookPath);
 
-            // Open the file as a System.Drawing.Image so that we can get its dimensions the proportion between the 
-            // height and width.
-            System.IO.MemoryStream ms = new System.IO.MemoryStream(pictureBytes);
-            System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
-            double imageWidth = image.Width;
-            double imageHeight = image.Height;
-            double imageProportion = imageHeight / imageWidth;
+            // Open the image so that we can get its dimensions and determine the proportion
+            // between the height and width.
+            double imageProportion;
+            // NOTE: we are using a 3rd party imaging library (SkiaSharp) here to open a PNG
+            // and get its measurements.  If you are on Windows, you could instead use the
+            // System.Drawing.Image class to get this information.  We do not do so here
+            // so that these Engine samples can be used in non-Windows environments such as
+            // Linux and MacOS.
+            using (var image = SkiaSharp.SKImage.FromEncodedData(pictureBytes))
+            {
+                double imageWidth = image.Width;
+                double imageHeight = image.Height;
+                imageProportion = imageHeight / imageWidth;
+            }
 
             // Get the Chart IShape and IChart objects.
             SpreadsheetGear.Shapes.IShape chartShape = worksheet.Shapes["Chart 1"];

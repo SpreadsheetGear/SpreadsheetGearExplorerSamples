@@ -5,6 +5,7 @@
 */
 
 using SamplesLibrary;
+using SamplesLibrary.Windows;
 using SpreadsheetGear.Windows.Controls;
 
 namespace WPFExplorer

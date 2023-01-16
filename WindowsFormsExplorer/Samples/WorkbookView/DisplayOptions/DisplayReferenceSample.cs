@@ -5,7 +5,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
         // app as well as the WPFExplorer samples app.
-        public SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample Sample { get; private set; }
 
         private void RadioButton_CheckedChanged(object sender, System.EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.DisplayReferenceSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
 

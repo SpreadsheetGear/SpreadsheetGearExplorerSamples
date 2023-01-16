@@ -23,7 +23,7 @@ namespace WebExplorer
         public SamplesService()
         {
             // Load all samples (excluding Windows samples since this is a web-based app).
-            _categoryRoot = SamplesBuilder.Build(includeWindowsSamples: false);
+            _categoryRoot = SamplesBuilder.Build();
         }
 
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFExplorer", "WpfExplorer\WPFExplorer.csproj", "{7156529D-EE02-40EF-ACE9-69DFE7978547}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExplorer", "WebExplorer\WebExplorer.csproj", "{8C87A857-4C23-4577-933F-A3A31BECA0F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary", "SamplesLibrary\SamplesLibrary.csproj", "{F042BC5B-D2C0-4416-B058-464AE47FBE88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplesLibrary.Windows", "SamplesLibrary.Windows\SamplesLibrary.Windows.csproj", "{DB7FF40E-39AA-48E6-8387-EA76CAB73803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F042BC5B-D2C0-4416-B058-464AE47FBE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F042BC5B-D2C0-4416-B058-464AE47FBE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F042BC5B-D2C0-4416-B058-464AE47FBE88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7FF40E-39AA-48E6-8387-EA76CAB73803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7FF40E-39AA-48E6-8387-EA76CAB73803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7FF40E-39AA-48E6-8387-EA76CAB73803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7FF40E-39AA-48E6-8387-EA76CAB73803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

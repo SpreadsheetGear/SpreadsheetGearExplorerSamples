@@ -5,7 +5,7 @@
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample Sample { get; private set; }
 
         private void ButtonFreezePanes_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -38,7 +38,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.WorksheetWindowInfoSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();

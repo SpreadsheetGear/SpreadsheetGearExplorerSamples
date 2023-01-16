@@ -5,7 +5,7 @@
 */
 
 using SamplesLibrary;
-using System;
+using SamplesLibrary.Windows;
 using System.Windows.Forms;
 
 namespace WindowsFormsExplorer
@@ -17,7 +17,7 @@ namespace WindowsFormsExplorer
     /// </summary>
     public class SampleUserControl : UserControl, ISample
     {
-        public SGDisposalManager DisposalManager { get; private set; } = new SGDisposalManager();
+        public SGWindowsDisposalManager DisposalManager { get; private set; } = new SGWindowsDisposalManager();
 
         protected SampleUserControl() { }
 

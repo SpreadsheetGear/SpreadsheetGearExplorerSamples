@@ -32,7 +32,7 @@ namespace WindowsFormsExplorer
             _markdownScrollViewer = new MarkdownScrollViewer();
 
             // Load style more accommodating to high-contrast modes.
-            var styleUri = new Uri($"/{nameof(SamplesLibrary)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var styleUri = new Uri($"/SamplesLibrary.Windows;component/Files/Markdown.Style.xaml", UriKind.Relative);
             var resourceDict = (ResourceDictionary)System.Windows.Application.LoadComponent(styleUri);
             var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
             _markdownScrollViewer.MarkdownStyle = standardStyle;

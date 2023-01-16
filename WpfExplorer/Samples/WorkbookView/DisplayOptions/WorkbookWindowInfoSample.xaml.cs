@@ -8,7 +8,7 @@ namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample Sample { get; private set; }
 
         private void ButtonToggleScrollBars_Click(object sender, RoutedEventArgs e)
         {
@@ -36,7 +36,7 @@ namespace WPFExplorer.Samples.WorkbookView.DisplayOptions
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions.WorkbookWindowInfoSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();

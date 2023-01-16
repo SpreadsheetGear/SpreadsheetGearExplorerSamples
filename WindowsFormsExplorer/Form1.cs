@@ -67,11 +67,8 @@ namespace WindowsFormsExplorer
 
         private void PopulateSampleTree()
         {
-            // Build the shared categories and SpreadsheetGear Engine and Windows samples.
-            var categoryRoot = SamplesBuilder.Build();
-
-            // Add in the WinForms-specific samples.
-            WinFormsSamplesBuilder.Build(categoryRoot);
+            // Get all of the samples (Engine, Windows, WinForms).
+            var categoryRoot = WinFormsSamplesBuilder.Build();
 
             // Build up TreeView items and select the first item.
             foreach (var category in categoryRoot.ChildCategories)
@@ -91,10 +88,10 @@ namespace WindowsFormsExplorer
                 currentNode.Nodes.Add(categoryNode);
             else
                 samplesTreeView.Nodes.Add(categoryNode);
-            foreach (var sampleInfo in currentCategory.SampleInfos)
+            foreach (var sampleInfo in currentCategory.SampleInfosSorted)
             {
                 int imageIndex;
-                if (sampleInfo.IsSpreadsheetGearEngineSample)
+                if (sampleInfo.IsSpreadsheetGearEngineSample())
                     imageIndex = _imageIndexEngine;
                 else
                 {

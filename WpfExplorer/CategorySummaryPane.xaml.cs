@@ -33,7 +33,7 @@ namespace WPFExplorer
                 }));
 
             // Load style more accommodating to high-contrast modes.
-            var styleUri = new Uri($"/{nameof(SamplesLibrary)};component/Files/Markdown.Style.xaml", UriKind.RelativeOrAbsolute);
+            var styleUri = new Uri($"/SamplesLibrary.Windows;component/Files/Markdown.Style.xaml", UriKind.Relative);
             var resourceDict = (ResourceDictionary)Application.LoadComponent(styleUri);
             var standardStyle = (Style)resourceDict["DocumentStyleStandard"];
             markdownScrollViewer.MarkdownStyle = standardStyle;

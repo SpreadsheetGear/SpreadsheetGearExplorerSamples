@@ -5,6 +5,7 @@
 */
 
 using SamplesLibrary;
+using SamplesLibrary.Windows;
 using System.Linq;
 using WindowsFormsExplorer.Samples.Printing;
 using WindowsFormsExplorer.Samples.WorkbookView.Events;
@@ -17,35 +18,41 @@ namespace WindowsFormsExplorer
     /// </summary>
     public class WinFormsSamplesBuilder
     {
-        public static void Build(Category rootCategory)
+        public static Category Build()
         {
+            // Build the shared categories and SpreadsheetGear Engine and Windows samples.
+            var rootCategory = WindowsSamplesBuilder.Build();
+
+            // Intermix in the WinForms-specific samples.
             var explorerSamples = rootCategory.GetCategory("SpreadsheetGear Explorer Samples");
             var categoryWbvSamples = explorerSamples.GetCategory("WorkbookView");
             {
-                var categoryEvents = categoryWbvSamples.AddCategory("Events", "Events", "Handle some of the available WorkbookView events.");
+                var categoryEvents = categoryWbvSamples.AddCategory("Events", "Events", "Handle some of the available WorkbookView events.", 30);
                 {
-                    categoryEvents.AddWinFormsSample<CalculateSample>("Calculate", "Retrieve a date/time value from a cell after calculating.", true);
-                    categoryEvents.AddWinFormsSample<CellBeginEditSample>("CellBeginEdit", "Change the initial edit entry or cancel the edit.", true);
-                    categoryEvents.AddWinFormsSample<CellEndEditSample>("CellEndEdit", "Custom validation of user input.", true);
-                    categoryEvents.AddWinFormsSample<RangeChangedSample>("RangeChanged", "Display information about a changed range.", true);
-                    categoryEvents.AddWinFormsSample<RangeSelectionChangedSample>("RangeSelectionChanged", "Display information about the current range selection.", true);
-                    categoryEvents.AddWinFormsSample<ShapeSelectionChangedSample>("ShapeSelectionChanged", "Display information about the current shape selection.", true);
-                    categoryEvents.AddWinFormsSample<ActiveTabChangedSample>("ActiveTabChanged", "Display information about the active tab.", true);
-                    categoryEvents.AddWinFormsSample<ShapeActionSample>("ShapeAction", "Handle a built-in form control click event.", true);
-                    categoryEvents.AddWinFormsSample<ShowErrorSample>("ShowError", "Change or bypass default error message handling.", true);
+                    categoryEvents.AddWinFormsSample<CalculateSample>("Calculate", "Retrieve a date/time value from a cell after calculating.", 10, true);
+                    categoryEvents.AddWinFormsSample<CellBeginEditSample>("CellBeginEdit", "Change the initial edit entry or cancel the edit.", 20, true);
+                    categoryEvents.AddWinFormsSample<CellEndEditSample>("CellEndEdit", "Custom validation of user input.", 30, true);
+                    categoryEvents.AddWinFormsSample<RangeChangedSample>("RangeChanged", "Display information about a changed range.", 40, true);
+                    categoryEvents.AddWinFormsSample<RangeSelectionChangedSample>("RangeSelectionChanged", "Display information about the current range selection.", 50, true);
+                    categoryEvents.AddWinFormsSample<ShapeSelectionChangedSample>("ShapeSelectionChanged", "Display information about the current shape selection.", 60, true);
+                    categoryEvents.AddWinFormsSample<ActiveTabChangedSample>("ActiveTabChanged", "Display information about the active tab.", 70, true);
+                    categoryEvents.AddWinFormsSample<ShapeActionSample>("ShapeAction", "Handle a built-in form control click event.", 80, true);
+                    categoryEvents.AddWinFormsSample<ShowErrorSample>("ShowError", "Change or bypass default error message handling.", 90, true);
                 }
 
-                var categoryUIManager = categoryWbvSamples.AddCategory("UIManager", "UIManager", "Extensions to the default UI Manager framework.");
+                var categoryUIManager = categoryWbvSamples.AddCategory("UIManager", "UIManager", "Extensions to the default UI Manager framework.", 40);
                 {
-                    var customControlSampleInfo = categoryUIManager.AddWinFormsSample<CustomControlSample>("Custom Control", "Replace an existing IShape with your own custom control.", true);
+                    var customControlSampleInfo = categoryUIManager.AddWinFormsSample<CustomControlSample>("Custom Control", "Replace an existing IShape with your own custom control.", 10, true);
                     customControlSampleInfo.AddSourceCode("MyUIManager.cs");
                 }
             }
 
-            var printingSampleInfo = explorerSamples.GetCategory("Printing").AddWinFormsSample<AdvancedPrintingSample>("Advanced", "Use advanced techniques to print specific areas of a workbook.", true);
+            var printingSampleInfo = explorerSamples.GetCategory("Printing").AddWinFormsSample<AdvancedPrintingSample>("Advanced", "Use advanced techniques to print specific areas of a workbook.", 40, true);
             printingSampleInfo.AddSourceCode("CustomPrintPreviewDialog.cs");
 
             AddWinFormsSourceCodeFiles(explorerSamples);
+
+            return rootCategory;
         }
 
         /// <summary>
@@ -75,10 +82,10 @@ namespace WindowsFormsExplorer
         /// </summary>
         /// <param name="usesWorkbookView">Indicates whether the execution of this sample depends on the presence of a WorkbookView control. This 
         /// information can be used by the samples app UI to display different icons representing the sample.</param>
-        public static SampleInfo AddWinFormsSample<T>(this Category category, string sampleName, string description, bool usesWorkbookView)
+        public static SampleInfo AddWinFormsSample<T>(this Category category, string sampleName, string description, int sortIndex, bool usesWorkbookView)
             where T : SampleUserControl
         {
-            var sampleInfo = category.AddSample<T>(sampleName, description, usesWorkbookView);
+            var sampleInfo = category.AddSample<T>(sampleName, description, sortIndex, usesWorkbookView);
             return sampleInfo;
         }
     }
