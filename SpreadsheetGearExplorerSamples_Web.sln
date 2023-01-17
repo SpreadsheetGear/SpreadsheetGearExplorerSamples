@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExplorer", "WebExplorer\WebExplorer.csproj", "{9BB52F49-5734-4320-9DDC-51281EB1A78A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary", "SamplesLibrary\SamplesLibrary.csproj", "{E35E24E3-4DDA-4AF1-9B65-424734783438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary.Engine", "SamplesLibrary.Engine\SamplesLibrary.Engine.csproj", "{E35E24E3-4DDA-4AF1-9B65-424734783438}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

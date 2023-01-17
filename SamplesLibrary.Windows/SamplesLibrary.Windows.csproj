@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SamplesLibrary\SamplesLibrary.Engine.csproj" />
+    <ProjectReference Include="..\SamplesLibrary.Engine\SamplesLibrary.Engine.csproj" />
   </ItemGroup>
 
   <ItemGroup>

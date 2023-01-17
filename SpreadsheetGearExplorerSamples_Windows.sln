@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFExplorer", "WpfExplorer\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsExplorer", "WindowsFormsExplorer\WindowsFormsExplorer.csproj", "{10359C77-5647-4A28-BC76-10057042A201}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary", "SamplesLibrary\SamplesLibrary.csproj", "{4D0E483D-A612-4DC5-AED0-E6157F19E5AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary.Engine", "SamplesLibrary.Engine\SamplesLibrary.Engine.csproj", "{4D0E483D-A612-4DC5-AED0-E6157F19E5AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

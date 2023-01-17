@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsExplorer", "Win
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebExplorer", "WebExplorer\WebExplorer.csproj", "{8C87A857-4C23-4577-933F-A3A31BECA0F6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary.Engine", "SamplesLibrary\SamplesLibrary.Engine.csproj", "{F042BC5B-D2C0-4416-B058-464AE47FBE88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary.Engine", "SamplesLibrary.Engine\SamplesLibrary.Engine.csproj", "{F042BC5B-D2C0-4416-B058-464AE47FBE88}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamplesLibrary.Windows", "SamplesLibrary.Windows\SamplesLibrary.Windows.csproj", "{DB7FF40E-39AA-48E6-8387-EA76CAB73803}"
 EndProject
