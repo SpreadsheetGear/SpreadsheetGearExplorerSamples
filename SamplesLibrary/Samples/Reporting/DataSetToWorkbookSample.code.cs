@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SamplesLibrary.Samples.Reporting
+namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class DataSetToWorkbookSample : ISpreadsheetGearEngineSample
     {

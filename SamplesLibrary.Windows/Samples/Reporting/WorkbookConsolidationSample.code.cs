@@ -90,7 +90,7 @@
             }
 
             // Get the full path to the workbook file.
-            string workbookPath = Helpers.GetFullOutputFolderPath(filename);
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(filename);
 
             // Return a workbook from the filename.
             return workbookSet.Workbooks.Open(workbookPath);

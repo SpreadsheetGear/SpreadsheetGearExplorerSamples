@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SamplesLibrary.Samples.Shapes
+namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class PictureSample : ISpreadsheetGearEngineSample
     {

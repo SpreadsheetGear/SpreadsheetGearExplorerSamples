@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     /// <summary>
     /// Base interface for all samples that demonstrate features of the SpreadsheetGear Engine for .NET product.

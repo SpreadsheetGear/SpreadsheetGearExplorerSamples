@@ -4,21 +4,21 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SamplesLibrary.Samples.Charting;
-using SamplesLibrary.Samples.Charting.Basic;
-using SamplesLibrary.Samples.Charting.Stock;
-using SamplesLibrary.Samples.Shapes;
-using SamplesLibrary.Samples.Workbook;
-using SamplesLibrary.Samples.Workbook.Worksheet;
-using SamplesLibrary.Samples.Workbook.Worksheet.Range.ConditionalFormats;
-using SamplesLibrary.Samples.Workbook.Worksheet.Range.Formatting;
-using SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations;
-using SamplesLibrary.Samples.Workbook.Worksheet.Range.ValuesAndFormulas;
-using SamplesLibrary.Samples.Shapes.FormControls;
-using SamplesLibrary.Samples.Shapes.Lines;
-using SamplesLibrary.Samples.Reporting;
+using SamplesLibrary.Engine.Samples.Charting;
+using SamplesLibrary.Engine.Samples.Charting.Basic;
+using SamplesLibrary.Engine.Samples.Charting.Stock;
+using SamplesLibrary.Engine.Samples.Shapes;
+using SamplesLibrary.Engine.Samples.Workbook;
+using SamplesLibrary.Engine.Samples.Workbook.Worksheet;
+using SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ConditionalFormats;
+using SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting;
+using SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations;
+using SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ValuesAndFormulas;
+using SamplesLibrary.Engine.Samples.Shapes.FormControls;
+using SamplesLibrary.Engine.Samples.Shapes.Lines;
+using SamplesLibrary.Engine.Samples.Reporting;
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     /// <summary>
     /// Builds up categories and SpreadsheetGear Engine Samples.

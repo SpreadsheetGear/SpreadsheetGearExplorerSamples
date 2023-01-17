@@ -22,7 +22,7 @@
         public void InitializeSample(IWorkbookView workbookView)
         {
             // Get the full path to a workbook.
-            string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\ShapeSelectionChanged.xlsx");
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\ShapeSelectionChanged.xlsx");
 
             // Open the workbook using the current culture.
             SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath,

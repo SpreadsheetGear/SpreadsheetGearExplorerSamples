@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Operations
+﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
 {
     public class GroupAndOutlineSample : ISpreadsheetGearEngineSample
     {

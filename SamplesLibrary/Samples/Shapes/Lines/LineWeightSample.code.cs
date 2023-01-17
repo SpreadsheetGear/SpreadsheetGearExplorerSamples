@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Shapes.Lines
+﻿namespace SamplesLibrary.Engine.Samples.Shapes.Lines
 {
     public class LineWeightSample : ISpreadsheetGearEngineSample
     {

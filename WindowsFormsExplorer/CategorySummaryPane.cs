@@ -8,7 +8,7 @@ using System;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-using SamplesLibrary;
+using SamplesLibrary.Engine;
 using MdXaml;
 using System.Windows.Input;
 using System.Diagnostics;

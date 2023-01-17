@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.Formatting
+﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting
 {
     public class HyperlinksSample : ISpreadsheetGearEngineSample
     {

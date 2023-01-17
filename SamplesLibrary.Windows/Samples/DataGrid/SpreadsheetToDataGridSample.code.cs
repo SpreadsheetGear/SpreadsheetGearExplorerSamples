@@ -9,7 +9,7 @@
             using (SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet())
             {
                 // Get the full path to a workbook file.
-                string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrder.xlsx");
+                string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrder.xlsx");
 
                 // Open workbook using the current culture.
                 SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(workbookPath);

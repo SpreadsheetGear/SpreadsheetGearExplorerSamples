@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HtmlAgilityPack;
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     /// <summary>
     /// Holds a collection of samples and sub-categories.

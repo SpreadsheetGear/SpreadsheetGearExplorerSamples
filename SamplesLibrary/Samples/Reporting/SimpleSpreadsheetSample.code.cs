@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Reporting
+﻿namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class SimpleSpreadsheetSample : ISpreadsheetGearEngineSample
     {

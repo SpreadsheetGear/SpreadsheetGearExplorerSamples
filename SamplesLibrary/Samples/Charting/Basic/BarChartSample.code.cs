@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Charting.Basic
+﻿namespace SamplesLibrary.Engine.Samples.Charting.Basic
 {
     public class BarChartSample : ISpreadsheetGearEngineSample
     {

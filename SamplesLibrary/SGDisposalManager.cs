@@ -8,7 +8,7 @@ using SpreadsheetGear;
 using System;
 using System.Collections.Generic;
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     /// <summary>
     /// <para>

@@ -9,7 +9,7 @@ namespace SamplesLibrary.Windows.Samples.Charting
         public void InitializeSample()
         {
             // Get the full path to a workbook containing all the charts that will be used by the Chart Gallery.
-            string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\ChartGallery.xlsx");
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\ChartGallery.xlsx");
 
             // Open the workbook.
             ChartWorkbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath);

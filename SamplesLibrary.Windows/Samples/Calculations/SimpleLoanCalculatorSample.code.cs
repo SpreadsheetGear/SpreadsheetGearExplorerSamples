@@ -22,7 +22,7 @@
             using (SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet())
             {
                 // Get the full path to a workbook with with loan formulas.
-                string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\CalculationsSimpleLoanCalc.xls");
+                string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\CalculationsSimpleLoanCalc.xls");
 
                 // Open the workbook.
                 SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(workbookPath);

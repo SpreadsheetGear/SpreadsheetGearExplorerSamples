@@ -4,6 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
+using SamplesLibrary.Engine;
 using SamplesLibrary.Windows.Samples.Advanced;
 using SamplesLibrary.Windows.Samples.Calculations;
 using SamplesLibrary.Windows.Samples.Charting;
@@ -20,7 +21,7 @@ namespace SamplesLibrary.Windows
     {
         public static Category Build()
         {
-            var categoryRoot = SamplesLibrary.SamplesBuilder.Build();
+            var categoryRoot = SamplesBuilder.Build();
             var explorerCategory = categoryRoot.ChildCategories.Single();
 
             var categoryWbvSamples = explorerCategory.AddCategory("WorkbookView", "WorkbookView", "WorkbookView properties, methods, designer, explorers, display options, and events.", 10);

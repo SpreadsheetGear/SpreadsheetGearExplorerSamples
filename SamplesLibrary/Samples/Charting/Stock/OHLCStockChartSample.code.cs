@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Charting.Stock
+﻿namespace SamplesLibrary.Engine.Samples.Charting.Stock
 {
     public class OHLCStockChartSample : ISpreadsheetGearEngineSample
     {

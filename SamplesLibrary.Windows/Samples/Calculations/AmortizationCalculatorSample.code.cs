@@ -29,7 +29,7 @@ namespace SamplesLibrary.Windows.Samples.Calculations
             SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet();
 
             // Get the full path to a workbook with with loan formulas and amortization table.
-            string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\CalculationsLoanAmortizationTable.xls");
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\CalculationsLoanAmortizationTable.xls");
 
             // Open the workbook.
             SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(workbookPath);

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace SamplesLibrary.Samples.Shapes.Lines
+namespace SamplesLibrary.Engine.Samples.Shapes.Lines
 {
     public class LineDashStyleSample : ISpreadsheetGearEngineSample
     {

@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook
+﻿namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class SavingAndOpeningSample : ISpreadsheetGearEngineSample
     {

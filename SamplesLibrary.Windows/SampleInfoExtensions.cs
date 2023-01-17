@@ -8,7 +8,7 @@ namespace SamplesLibrary.Windows
 {
     public static class SampleInfoExtensions
     {
-        public static bool IsSpreadsheetGearWindowsSample(this SampleInfo sampleInfo)
+        public static bool IsSpreadsheetGearWindowsSample(this SamplesLibrary.Engine.SampleInfo sampleInfo)
         {
             return typeof(ISpreadsheetGearWindowsSample).IsAssignableFrom(sampleInfo.SampleType);
         }

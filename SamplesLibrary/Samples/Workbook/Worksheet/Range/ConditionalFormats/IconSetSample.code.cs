@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.ConditionalFormats
+﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ConditionalFormats
 {
     public class IconSetSample : ISpreadsheetGearEngineSample
     {

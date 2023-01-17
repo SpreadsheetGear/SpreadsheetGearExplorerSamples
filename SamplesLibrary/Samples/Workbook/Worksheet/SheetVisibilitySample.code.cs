@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook.Worksheet
+﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
 {
     public class SheetVisibilitySample : ISpreadsheetGearEngineSample
     {

@@ -39,7 +39,7 @@
         public void InitializeSample(IWorkbookView workbookView)
         {
             // Get the full path to a workbook file.
-            string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\PrintingBasicRegions.xlsx");
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\PrintingBasicRegions.xlsx");
 
             // Open workbook using the current culture.
             SpreadsheetGear.IWorkbook workbook = SpreadsheetGear.Factory.GetWorkbook(workbookPath,

@@ -4,7 +4,7 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using SamplesLibrary;
+using SamplesLibrary.Engine;
 using SamplesLibrary.Windows;
 using WPFExplorer.Samples.Printing;
 using WPFExplorer.Samples.WorkbookView.Events;

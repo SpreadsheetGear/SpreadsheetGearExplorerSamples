@@ -8,7 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     /// <summary>
     /// Reads a source code file from the specified path and cleans / formats the code to be presented

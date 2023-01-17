@@ -13,5 +13,5 @@ namespace SamplesLibrary.Windows
     /// boxes, etc.).  See <see cref="ISpreadsheetGearEngineSample"/> for samples that only involve the use of the SpreadsheetGear 
     /// Engine for .NET product, which don't involve UI to run the sample.
     /// </summary>
-    public interface ISpreadsheetGearWindowsSample : ISample { }
+    public interface ISpreadsheetGearWindowsSample : SamplesLibrary.Engine.ISample { }
 }

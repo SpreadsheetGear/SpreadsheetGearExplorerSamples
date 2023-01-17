@@ -7,7 +7,7 @@ using SpreadsheetGear;
 
 namespace SamplesLibrary.Windows
 {
-    public class SGWindowsDisposalManager : SGDisposalManager
+    public class SGWindowsDisposalManager : SamplesLibrary.Engine.SGDisposalManager
     {
         /// <summary>
         /// Holds a list of WorkbookViews whose workbook sets should be disposed of when the sample is disposed.  

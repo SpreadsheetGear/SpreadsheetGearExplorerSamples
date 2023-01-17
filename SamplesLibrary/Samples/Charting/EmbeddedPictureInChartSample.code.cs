@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Charting
+﻿namespace SamplesLibrary.Engine.Samples.Charting
 {
     public class EmbeddedPictureInChartSample : ISpreadsheetGearEngineSample
     {

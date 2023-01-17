@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Shapes.FormControls
+﻿namespace SamplesLibrary.Engine.Samples.Shapes.FormControls
 {
     public class SpinnerSample : ISpreadsheetGearEngineSample
     {

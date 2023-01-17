@@ -23,7 +23,7 @@
             workbook2.Names.Add("MyName", "=Sheet1!$A$1:$A$10");
 
             // Get the full path to a workbook file that contains 4 sheets (North, South, East, West).
-            string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\DisplayReferenceRegions.xlsx");
+            string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\DisplayReferenceRegions.xlsx");
 
             // Open the workbook.
             var workbook4 = workbookSet.Workbooks.Open(workbookPath);

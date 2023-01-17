@@ -5,7 +5,7 @@
         public System.Data.DataTable GenerateDataTable()
         {
             // Get the full path to an XML file.
-            string xmlPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrder.xml");
+            string xmlPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrder.xml");
 
             // Create a DataSet from an XML file and retrieve an order table.
             System.Data.DataSet dataset = new System.Data.DataSet();
@@ -17,7 +17,7 @@
             using (SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet())
             {
                 // Get the full path to a workbook template file, which contains number formats and formulas. 
-                string workbookPath = Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrderTemplate.xls");
+                string workbookPath = SamplesLibrary.Engine.Helpers.GetFullOutputFolderPath(@"Files\Windows\SpiceOrderTemplate.xls");
 
                 // Open the template workbook and get an IRange from a defined name.
                 SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Open(workbookPath);

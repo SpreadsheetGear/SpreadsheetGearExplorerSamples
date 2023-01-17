@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Shapes
+﻿namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class TextBoxSample : ISpreadsheetGearEngineSample
     {

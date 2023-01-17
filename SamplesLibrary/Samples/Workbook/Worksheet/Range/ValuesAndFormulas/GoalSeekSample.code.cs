@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
+﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
     public class GoalSeekSample : ISpreadsheetGearEngineSample
     {

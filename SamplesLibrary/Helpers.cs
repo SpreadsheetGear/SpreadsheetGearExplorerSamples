@@ -10,7 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace SamplesLibrary
+namespace SamplesLibrary.Engine
 {
     public static class Helpers
     {
