@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "WpfExplorer"
+		},
+		{
+			"path": "WindowsFormsExplorer"
+		},
+		{
+			"path": "SamplesLibrary.Engine"
+		},
+		{
+			"path": "SamplesLibrary.Windows"
+		}
+	],
+	"settings": {}
+}

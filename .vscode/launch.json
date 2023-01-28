@@ -5,12 +5,12 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": "Launch Windows Forms Explorer",
+            "name": "Launch Windows Forms Explorer Samples",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-winforms-explorer",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/WindowsFormsExplorer/bin/Debug/netcoreapp3.1/WindowsFormsExplorer.dll",
+            "program": "${workspaceFolder}/WindowsFormsExplorer/bin/Debug/net6.0-windows/WindowsFormsExplorer.dll",
             "args": [],
             "cwd": "${workspaceFolder}/WindowsFormsExplorer",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
@@ -18,22 +18,22 @@
             "stopAtEntry": false
         },
         {
-            "name": "Launch WPF Explorer",
+            "name": "Launch WPF Explorer Samples",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-wpf-explorer",
-            "program": "${workspaceFolder}/WpfExplorer/bin/Debug/netcoreapp3.1/WpfExplorer.dll",
+            "program": "${workspaceFolder}/WpfExplorer/bin/Debug/net6.0-windows/WpfExplorer.dll",
             "args": [],
             "cwd": "${workspaceFolder}/WpfExplorer",
             "console": "internalConsole",
             "stopAtEntry": false
         },
         {
-            "name": "Launch Web Explorer",
+            "name": "Launch Web Explorer Samples",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build-web-explorer",
-            "program": "${workspaceFolder}/WebExplorer/bin/Debug/netcoreapp3.1/WebExplorer.dll",
+            "program": "${workspaceFolder}/WebExplorer/bin/Debug/net6.0-windows/WebExplorer.dll",
             "args": [],
             "cwd": "${workspaceFolder}/WebExplorer",
             "console": "internalConsole",

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../SamplesLibrary.Engine"
+		},
+		{
+			"path": "../SamplesLibrary.Windows"
+		}
+	],
+	"settings": {}
+}

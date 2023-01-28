@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "WebExplorer"
+		},
+		{
+			"path": "SamplesLibrary.Engine"
+		},
+		{
+			"path": "SamplesLibrary.Windows"
+		}
+	],
+	"settings": {}
+}
