@@ -60,7 +60,13 @@ namespace WebExplorer.Pages
             {
                 FileResult fileResult;
                 if (runSampletype == RunSampleType.RenderImage)
+                {
+#if WINDOWS
                     fileResult = _samplesService.RunSampleRenderImage(sampleName);
+#else
+                    throw new Exception("Invalid RunSampleType was provided.");
+#endif
+                }
                 else if (runSampletype == RunSampleType.DownloadFile)
                     fileResult = _samplesService.RunSampleDownload(sampleName);
                 else
@@ -82,6 +88,19 @@ namespace WebExplorer.Pages
         {
             string summary = _samplesService.GetCategorySummary(categoryName);
             return Content(summary);
+        }
+
+
+        public bool IsWindows
+        {
+            get
+            {
+#if WINDOWS
+                return true;
+#else
+                return false;
+#endif
+            }
         }
     }
 

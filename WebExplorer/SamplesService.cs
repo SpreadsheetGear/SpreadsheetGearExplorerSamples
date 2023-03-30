@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using SamplesLibrary.Engine;
 using SpreadsheetGear;
 using System;
-using System.Drawing;
 using System.Linq;
 
 namespace WebExplorer
@@ -84,7 +83,7 @@ namespace WebExplorer
             return fileResult;
         }
 
-
+#if WINDOWS
         /// <summary>
         /// All samples run are of type <see cref="ISpreadsheetGearEngineSample"/>, so can be run on their own (no UI 
         /// involved) using <see cref="ISpreadsheetGearEngineSample.RunSample"/>.
@@ -128,7 +127,7 @@ namespace WebExplorer
             };
 
             // Render a System.Drawing.Bitmap of the range.
-            Bitmap bitmap = image.GetBitmap();
+            System.Drawing.Bitmap bitmap = image.GetBitmap();
 
             // Save the bitmap to a PNG file.
             var stream = new System.IO.MemoryStream();
@@ -144,7 +143,7 @@ namespace WebExplorer
             };
             return fileResult;
         }
-
+#endif
 
         private SampleInfo GetSampleInfo(string sampleName)
         {
