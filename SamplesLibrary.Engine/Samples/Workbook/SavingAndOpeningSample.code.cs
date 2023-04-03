@@ -22,9 +22,9 @@
 
         public void RunSample()
         {
-            // Get path to the Output (under "bin") folder, as this is where the "Temp" directory is located and where the
+            // Get path to the Output (under "bin") folder.  This is where the "Temp" directory is located and where the
             // workbook files will be saved and opened.
-            string outputFolderPath = Helpers.GetFullOutputFolderPath();
+            string tempFolderPath = Helpers.GetFullOutputFolderPath(@"Temp\");
 
             // Supported file formats can be found in the SpreadsheetGear.FileFormat enum:
             //  - OpenXMLWorkbook - Excel Open XML (*.xlsx)
@@ -33,13 +33,12 @@
             //  - CSV - ASCII text-based comma-delimited (*.csv)
             //  - UnicodeText - Unicode text-based tab-delimited (*.txt)
 
-            // Save to file on disk with IWorkbook.SaveAs(...).  You can find these files in the "Temp" directory
-            // under the executing directory.
-            Workbook.SaveAs($@"{outputFolderPath}\Temp\Workbook.xlsx", SpreadsheetGear.FileFormat.OpenXMLWorkbook);
-            Workbook.SaveAs($@"{outputFolderPath}\Temp\Workbook.xlsm", SpreadsheetGear.FileFormat.OpenXMLWorkbookMacroEnabled);
-            Workbook.SaveAs($@"{outputFolderPath}\Temp\Workbook.xls", SpreadsheetGear.FileFormat.Excel8);
-            Workbook.SaveAs($@"{outputFolderPath}\Temp\Workbook.csv", SpreadsheetGear.FileFormat.CSV);
-            Workbook.SaveAs($@"{outputFolderPath}\Temp\Workbook.txt", SpreadsheetGear.FileFormat.UnicodeText);
+            // Save to file on disk with IWorkbook.SaveAs(...) to path specified by "tempFolderPath".
+            Workbook.SaveAs($"{tempFolderPath}Workbook.xlsx", SpreadsheetGear.FileFormat.OpenXMLWorkbook);
+            Workbook.SaveAs($"{tempFolderPath}Workbook.xlsm", SpreadsheetGear.FileFormat.OpenXMLWorkbookMacroEnabled);
+            Workbook.SaveAs($"{tempFolderPath}Workbook.xls", SpreadsheetGear.FileFormat.Excel8);
+            Workbook.SaveAs($"{tempFolderPath}Workbook.csv", SpreadsheetGear.FileFormat.CSV);
+            Workbook.SaveAs($"{tempFolderPath}Workbook.txt", SpreadsheetGear.FileFormat.UnicodeText);
 
             // Save to a Stream with IWorkbook.SaveToStream(...)
             System.IO.Stream workbookStream = Workbook.SaveToStream(SpreadsheetGear.FileFormat.OpenXMLWorkbook);
@@ -50,7 +49,7 @@
             // Open from disk using Factory.GetWorkbook(...).  SpreadsheetGear will automatically detect the 
             // file format and open appropriately.
             SpreadsheetGear.IWorkbook workbook1 = 
-                SpreadsheetGear.Factory.GetWorkbook($@"{outputFolderPath}\Temp\Workbook.xlsx");
+                SpreadsheetGear.Factory.GetWorkbook($"{tempFolderPath}Workbook.xlsx");
 
             // Alternatively, you can open a workbook by first creating an IWorkbookSet.  This allows you
             // to open a workbook on disk...
@@ -58,7 +57,7 @@
             {
                 // Open file on disk.
                 SpreadsheetGear.IWorkbook workbookFromDisk = 
-                    workbookSet.Workbooks.Open($@"{outputFolderPath}\Temp\Workbook.xlsx");
+                    workbookSet.Workbooks.Open($"{tempFolderPath}Workbook.xlsx");
 
                 // Do something with workbook...
             }

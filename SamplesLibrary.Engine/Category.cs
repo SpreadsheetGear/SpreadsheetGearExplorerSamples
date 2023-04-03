@@ -5,6 +5,7 @@
 */
 
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using HtmlAgilityPack;
 
@@ -134,7 +135,7 @@ namespace SamplesLibrary.Engine
         public string GetFolderPath()
         {
             var pathList = GetFolderPathInternal(new List<string>());
-            return string.Join(@"\", pathList);
+            return string.Join(Path.DirectorySeparatorChar, pathList);
         }
 
 
@@ -159,7 +160,7 @@ namespace SamplesLibrary.Engine
                 html = "<h2>Category and Sample Descriptions</h2>" + html;
             if (renderFullWebPage)
             {
-                var htmlTemplate = System.IO.File.ReadAllText(Helpers.GetFullOutputFolderPath(@"Files\SummaryTemplate.html"));
+                var htmlTemplate = File.ReadAllText(Helpers.GetFullOutputFolderPath(Path.Combine("Files", "SummaryTemplate.html")));
                 html = htmlTemplate.Replace("[[BODY]]", html);
             }
             return html;

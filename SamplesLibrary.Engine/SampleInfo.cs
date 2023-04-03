@@ -88,7 +88,7 @@ namespace SamplesLibrary.Engine
         /// based on the Category folder(s) that its in</param>
         public void AddSourceCode(string filename)
         {
-            SourceCodes.Add(new SourceCodeItem($@"{SampleFolderPath}\{filename}", Name, Description));
+            SourceCodes.Add(new SourceCodeItem(System.IO.Path.Combine(SampleFolderPath, filename), Name, Description));
         }
 
         /// <summary>
