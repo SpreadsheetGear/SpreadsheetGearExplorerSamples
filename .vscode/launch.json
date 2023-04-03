@@ -8,7 +8,7 @@
             "name": "Launch Web Explorer",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "web-explorer-build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/WebExplorer/bin/Debug/net6.0/WebExplorer.dll",
             "args": [],
