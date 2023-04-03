@@ -9,4 +9,4 @@ The Web Explorer presents **SpreadsheetGear Engine for .NET** samples using an A
 ## Running the Samples
 Depending on your development environment, you can access the samples in a variety of ways using Visual Studio 2022, Visual Studio Code (VSCode) and Visual Studio for Mac.
 
-Please see the <a href="../#section-running-the-samples">Running the Samples</a> section in this GitHub repository's main README.md for instructions on running this sample project.
+Please see the <a href="../README.md#section-running-the-samples">Running the Samples</a> section in this GitHub repository's main README.md for instructions on running this sample project.

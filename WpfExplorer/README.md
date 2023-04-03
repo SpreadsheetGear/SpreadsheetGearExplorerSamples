@@ -9,4 +9,4 @@ These samples target `net6.0-windows` and so requires running on Windows.
 ## Running the Samples
 You can access the samples using either Visual Studio 2022 or Visual Studio Code (VSCode) on Windows.
 
-Please see the <a href="../#section-running-the-samples">Running the Samples</a> section in this GitHub repository's main README.md for instructions on running this sample project.
+Please see the <a href="../README.md#section-running-the-samples">Running the Samples</a> section in this GitHub repository's main README.md for instructions on running this sample project.
