@@ -216,12 +216,37 @@
       loadSample(sampleName);
     });
 
-    $("#button-run-sample-render").click(function () {
-      let url = "@Html.Raw(Url.Page(null, "RunSample", new { sampleName = "SAMPLENAMEPLACEHODER", runSampleType = RunSampleType.RenderImage }))";
-      url = url.replace("SAMPLENAMEPLACEHODER", currentSampleInfo.name);
-      url = appendQueryString(url, "r", performance.now());
-      showPageOverlay("<div class='content loading text-center'><img src='" + url + "' class='scaled50' /></div>");
-    });
+    @if (Model.IsWindows)
+    {
+      <text>
+        $("#button-run-sample-render").click(function () {
+          let url = "@Html.Raw(Url.Page(null, "RunSample", new { sampleName = "SAMPLENAMEPLACEHODER", runSampleType = RunSampleType.RenderImage }))";
+          url = url.replace("SAMPLENAMEPLACEHODER", currentSampleInfo.name);
+          url = appendQueryString(url, "r", performance.now());
+
+          let $overlayDiv = $("<div class='content loading text-center'></div>");
+
+          let $img = $("<img class='scaled50'>");
+          $img.on("error", function () {
+            let $errorMessageDiv = $("<div class='alert alert-danger text-left'></div>");
+            $errorMessageDiv.html(`
+              <i class='fas fa-exclamation-triangle'></i>
+              An error occurred while attempting to render an image for this sample.<br /><br />
+
+              Note that image rendering is only supported on Windows (using the <i>SpreadsheetGear for Windows</i> product).  If you are on MacOS, Linux, etc., please ensure that you are running these samples with the <code class='text-body'>.net6.0</code> target instead of the <code class='text-body'>.net6.0-windows</code> target, which will prevent the 'Render Image' button from displaying.<br /><br />
+
+              You can learn more about the capabilities of the various SpreadsheetGear products from our Comparison Page:<br />
+
+              <a href='https://www.spreadsheetgear.com/Products/Compare' target='_blank' class='pl-4'>https://www.spreadsheetgear.com/Products/Compare</a>`);
+            $overlayDiv.empty();
+            $overlayDiv.append($errorMessageDiv);
+          });
+          $img.attr("src", url);
+          $overlayDiv.append($img);
+          showPageOverlay($overlayDiv);
+        });   
+      </text>
+    }
 
     $("#button-run-sample-download").click(function () {
         if (currentSampleInfo != null) {
