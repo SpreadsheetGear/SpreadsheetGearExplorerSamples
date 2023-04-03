@@ -5,38 +5,14 @@
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
             // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-            "name": "Launch Windows Forms Explorer Samples",
+            "name": "Launch Web Explorer",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build-winforms-explorer",
+            "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/WindowsFormsExplorer/bin/Debug/net6.0-windows/WindowsFormsExplorer.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/WindowsFormsExplorer",
-            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
-            "console": "internalConsole",
-            "stopAtEntry": false
-        },
-        {
-            "name": "Launch WPF Explorer Samples",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build-wpf-explorer",
-            "program": "${workspaceFolder}/WpfExplorer/bin/Debug/net6.0-windows/WpfExplorer.dll",
-            "args": [],
-            "cwd": "${workspaceFolder}/WpfExplorer",
-            "console": "internalConsole",
-            "stopAtEntry": false
-        },
-        {
-            "name": "Launch Web Explorer Samples",
-            "type": "coreclr",
-            "request": "launch",
-            "preLaunchTask": "build-web-explorer",
-            "program": "${workspaceFolder}/WebExplorer/bin/Debug/net6.0-windows/WebExplorer.dll",
+            "program": "${workspaceFolder}/WebExplorer/bin/Debug/net6.0/WebExplorer.dll",
             "args": [],
             "cwd": "${workspaceFolder}/WebExplorer",
-            "console": "internalConsole",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
@@ -44,18 +20,68 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
             },
             "env": {
-                "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS":"http://localhost:5005"
+                "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Pages": "${workspaceFolder}/Pages"
+                "/Views": "${workspaceFolder}/WebExplorer/Views"
             }
         },
         {
-            "name": ".NET Core Attach",
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Web Explorer (Windows Only)",
             "type": "coreclr",
-            "request": "attach",
-            "processId": "${command:pickProcess}"
+            "request": "launch",
+            "preLaunchTask": "web-explorer-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/WebExplorer/bin/Debug/net6.0-windows/WebExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/WebExplorer",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/WebExplorer/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch Windows Forms Explorer (Windows Only)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "windows-forms-explorer-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/WindowsFormsExplorer/bin/Debug/net6.0-windows/WindowsFormsExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+            "name": "Launch WPF Explorer (Windows Only)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "wpf-explorer-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/WPFExplorer/bin/Debug/net6.0-windows/WPFExplorer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            "console": "internalConsole",
+            "stopAtEntry": false
         }
     ]
 }
