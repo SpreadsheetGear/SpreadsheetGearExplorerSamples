@@ -38,7 +38,7 @@ Learn more about these products on our [Features Page](https://www.spreadsheetge
 
 ## Sample Projects
 
-There are 3 executabe Visual Studio Projects (\*.csproj) in this repository, pictured and described in more detail below.  These projects work with Visual Studio 2022, Visual Studio Code (VSCode) and Visual Studio for Mac.  See the [Running the Samples](#section-running-the-samples) section for more details on running these projects in your preferred IDE.  
+There are 3 executable Visual Studio Projects (\*.csproj) in this repository, pictured and described in more detail below.  These projects work with Visual Studio 2022, Visual Studio Code (VSCode) and Visual Studio for Mac.  See the [Running the Samples](#section-running-the-samples) section for more details on running these projects in your preferred IDE.  
 
 ### Web Explorer Samples
 ![Screenshot of the WPF Explorer](WebExplorer/screenshot.png)
