@@ -1,18 +1,94 @@
 # <img src="images/logo-sg.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> SpreadsheetGear Explorer Samples
 This repository contains samples demonstrating many features available in the products **SpreadsheetGear Engine for .NET** and **SpreadsheetGear for Windows**, including:
 
-* Cell formatting such as Fonts, Borders, Interior, Orientation, Hyperlinks, Validation, Cell Comments, Number Formats, Conditional Formatting.
-* Working with Cell Formulas and Values.
-* Range operations such as Auto-Filters, Cell Protection, Group and Outline, Sorting, Merge Cells, Fill Data Series
-* Worksheet features such as Worksheet Protection, Evaluating Ranges and Values from Formulas, Sheet Tab Colors, Named Ranges, Sheet Visibility, Move and Copy Sheets, Display Options.
-* Workbook features such as Reading and Writing Workbook Files from Disk, Stream or Byte Array, Workbook Encryption, Cell Styles, Protecting Workbook Structures and Windows, Sheet Management, Workbook and Worksheet "Window Info", Built-In and Custom Document Properties, DateTimes and Serial Numeric Dates.
-* Charting features including the various Chart Types (Column, Line, Pie, Bar, Area, Stock, Scatter, Bubble, Radar, Gantt and Combination), Embedding Pictures in Charts, Creating Chart Sheets.
-* Shape features including Form Controls (Button, CheckBox, ComboBox, ListBox, Spinner, ScrollBar, GroupBox and OptionButton), Lines (with Weight, Dash Style and Arrowhead options), Pictures, TextBoxes and AutoShapes.
-* Printing features (Headers and Footers, Zooom and FitToPages, PrintArea, PrintTitles, Orientation and Manual Page Breaks).
-* Image Rendering and User Interface Features (**Windows Only**)
-  * Interactive WorkbookView and FormulaBar controls for Windows Forms and WPF.
-  * High DPI image rendering of Ranges, Charts and other Shapes.
-  * WorkbookDesigner dialog and "Explorer" dialogs to modify various aspects of a workbook such as worksheets, ranges, charts, shapes, etc.
+<ul>
+  <li>
+    Cell Formatting
+    <ul style="columns: 3;">
+      <li>Fonts</li>
+      <li>Borders</li>
+      <li>Interior</li>
+      <li>Orientation</li>
+      <li>Hyperlinks</li>
+      <li>Validation</li>
+      <li>Cell Comments</li>
+      <li>Number Formats</li>
+      <li>Conditional Formatting</li>
+    </ul>
+  </li>
+  <li>
+    Range Operations
+    <ul style="columns: 3;">
+      <li>Auto-Filters</li>
+      <li>Cell Protection</li>
+      <li>Group and Outline</li>
+      <li>Sorting</li>
+      <li>Merge Cells</li>
+      <li>Fill Data Series</li>
+    </ul>
+  </li>
+  <li>Cell Formulas, Calculations and Values</li>
+  <li>
+    Worksheet features
+    <ul style="columns: 3;">
+      <li>Evaluating Ranges and Values from Formulas</li>
+      <li>Sheet Tab Colors</li>
+      <li>Named Ranges</li>
+      <li>Sheet Visibility</li>
+      <li>Move and Copy Sheets</li>
+      <li>Display Options</li>
+    </ul>
+  </li>
+  <li>Workbook features
+    <ul style="columns: 2;">
+      <li>Reading and Writing Workbook Files from Disk, Stream or Byte Array</li>
+      <li>Workbook Encryption</li>
+      <li>Cell Styles</li>
+      <li>Protecting Workbook Structures and Windows</li>
+      <li>Sheet Management (Add, Move, Copy, Delete Sheets)</li>
+      <li>Workbook and Worksheet "Window Info"</li>
+      <li>Built-In and Custom Document Properties</li>
+      <li>DateTimes and Serial Numeric Dates</li>
+    </ul>
+  </li>
+  <li>
+    Charting Features
+    <ul style="columns: 2;">
+      <li>Chart Types (Column, Line, Pie, Bar, Area, Stock, Scatter, Bubble, Radar, Gantt and Combination)</li>
+      <li>Embedding Pictures in Charts</li>
+      <li>Creating Chart Sheets</li>
+    </ul>
+  </li>
+  <li>
+    Shape Features
+    <ul style="columns: 3;">
+      <li>Form Controls (Button, CheckBox, ComboBox, ListBox, Spinner, ScrollBar, GroupBox and OptionButton)</li>
+      <li>Lines (with Weight, Dash Style and Arrowhead options)</li>
+      <li>Pictures</li>
+      <li>TextBoxes</li>
+      <li>AutoShapes</li>
+    </ul>
+  </li>
+  <li>
+    Printing Features
+    <ul style="columns: 3;">
+      <li>Headers and Footers</li>
+      <li>Zoom and FitToPages</li>
+      <li>PrintArea</li>
+      <li>PrintTitles</li>
+      <li>Orientation</li>
+      <li>Manual Page Breaks</li>
+    </ul>
+  </li>
+  <li>
+    Image Rendering and WPF & WinForms Controls (<b>Windows Only</b>)
+    <ul style="columns: 2;">
+      <li>Interactive WorkbookView and FormulaBar controls for Windows Forms and WPF</li>
+      <li>High DPI image rendering of Ranges, Charts and other Shapes</li>
+      <li>WorkbookDesigner dialog and "Explorer" dialogs to modify various aspects of a workbook such as worksheets, ranges, charts, shapes, etc.</li>
+    </ul>
+  </li>
+</ul>
 
 ## SpreadsheetGear Products and Supported Platforms
 
@@ -91,7 +167,7 @@ Visual Studio Code (VSCode) is a cross-platform code editor, supported on Window
   - **WPF Explorer Samples** - Windows Only
   - **Windows Forms Explorer Samples** - Windows Only
 
-To run applicable samples with Visual Studio Code, please also install at minimum the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [.NET Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-pack).  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
+To run applicable samples with Visual Studio Code, please also install the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [.NET Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-pack).  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
 
 ![Visual Studio Code's Run and Debug Side Bar](images/vs-code-run-and-debug.png)
 
