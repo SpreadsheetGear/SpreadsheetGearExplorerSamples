@@ -9,7 +9,7 @@
             //       to use the current culture instead of the default US English culture.
             using (SpreadsheetGear.IWorkbookSet workbookSet = SpreadsheetGear.Factory.GetWorkbookSet())
             {
-                // Create a new workbook and get referene to the first worksheet.
+                // Create a new workbook and get reference to the first worksheet.
                 SpreadsheetGear.IWorkbook workbook = workbookSet.Workbooks.Add();
                 SpreadsheetGear.IWorksheet worksheet = workbook.Worksheets[0];
 

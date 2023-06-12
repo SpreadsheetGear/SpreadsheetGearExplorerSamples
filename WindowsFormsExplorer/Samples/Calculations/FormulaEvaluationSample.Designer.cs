@@ -162,7 +162,7 @@ namespace WindowsFormsExplorer.Samples.Calculations
             this.exampleFormulasListBox.ItemHeight = 25;
             this.exampleFormulasListBox.Items.AddRange(new object[] {
             "SUM(1,2,3)",
-            "IF(HOUR(NOW())&lt;12, \"Good Morning!\", \"Good Afternoon\")",
+            "IF(HOUR(NOW())<12, \"Good Morning!\", \"Good Afternoon\")",
             "ROUND(RAND()*100, 0)",
             "VLOOKUP(2, {1,\"a\";2,\"b\";3,\"c\";4,\"d\";5,\"e\"}, 2)",
             "PMT(3.99%/12, 60, 25000)",
