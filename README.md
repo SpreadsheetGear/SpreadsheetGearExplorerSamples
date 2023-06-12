@@ -1,5 +1,10 @@
-# <img src="images/logo-sg.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> SpreadsheetGear Explorer Samples
-This repository contains samples demonstrating many features available in the products **SpreadsheetGear Engine for .NET** and **SpreadsheetGear for Windows**, including:
+# <img src="images/logo-sg-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> SpreadsheetGear Explorer Samples
+This repository contains samples demonstrating many features available in the following products:
+
+  - [SpreadsheetGear Engine for .NET](#sg-eng)
+  - [SpreadsheetGear for Windows](#sg-win)
+
+Product features demonstrated include:
 
 <ul>
   <li>
@@ -92,11 +97,12 @@ This repository contains samples demonstrating many features available in the pr
 
 ## SpreadsheetGear Products and Supported Platforms
 
+<a id="sg-eng"></a>
 ### <img src="images/logo-eng.svg" style="width: 25px; vertical-align: middle;" alt="Logo for 'SpreadsheetGear Engine for .NET' product"> SpreadsheetGear Engine for .NET
 *SpreadsheetGear Engine for .NET* provides a core set of APIs to read, write, manipulate and calculate workbooks, build charts, format worksheets and cells, and more.   
 
 This product targets both .NET 6 (`net6.0`) and .NET Standard 2.0 (`netstandard2.0`), providing a wide array of supported platforms and OS including:
-  - .NET Core 2.0 - .NET 6
+  - .NET Core 2.0 - .NET 6+
   - .NET Framework 4.6.2+
   - Windows
   - MacOS
@@ -105,9 +111,10 @@ This product targets both .NET 6 (`net6.0`) and .NET Standard 2.0 (`netstandard2
   - Xamarin (iOS, Android, etc.)
 
 ### <img src="images/logo-windows-11.svg" style="width: 25px; vertical-align: middle;" alt="Logo for Windows 11"> SpreadsheetGear for Windows
-Builds on *SpreadsheetGear Engine for .NET* to add powerful Excel-compatible image rendering, viewing, editing, formatting, calculating, filtering, sorting, charting, printing and more to your Windows Forms and WPF applications with the easy-to-use WorkbookView and FormulaBar controls.  
+Builds on the capabilities of *SpreadsheetGear Engine for .NET* to add powerful Excel-compatible image rendering, viewing, editing, formatting, calculating, filtering, sorting, charting, printing and more to your Windows Forms and WPF applications with the easy-to-use WorkbookView and FormulaBar controls.  
 
-*SpreadsheetGear for Windows* targets .NET 6 for Windows (`net6.0-windows`).
+<a id="sg-win"></a>
+*SpreadsheetGear for Windows* targets .NET 6 for Windows (`net6.0-windows`).  This product includes a license to also use *SpreadsheetGear Engine for .NET*.
 
 Learn more about these products on our [Features Page](https://www.spreadsheetgear.com/Products/Features) and more details on their differences on our [Comparison Page](https://www.spreadsheetgear.com/Products/Compare).
 
@@ -119,7 +126,7 @@ There are 3 executable Visual Studio Projects (\*.csproj) in this repository, pi
 ### Web Explorer Samples
 ![Screenshot of the WPF Explorer](WebExplorer/screenshot.png)
 
-The Web Explorer presents **SpreadsheetGear Engine for .NET** samples using an ASP.NET Core Web App.  Note this VS Project targets both `net6.0` and `net6.0-windows`:
+The Web Explorer presents *SpreadsheetGear Engine for .NET* samples using an ASP.NET Core Web App.  Note this VS Project targets both `net6.0` and `net6.0-windows`:
   - `net6.0`: Use this target framework to run the samples on a wide variety of platforms such as Windows, MacOS and Linux. Most samples provide an option to download an Excel workbook file with the results of the sample.
   - `net6.0-windows`: Use this target framework when running on Windows to provide an additional option to render an image of many of sample results.  Image rendering is accomplished by utilizing the *SpreadsheetGear for Windows* product, which has a `SpreadsheetGear.Drawing.Image` class that renders images of ranges, charts and other shapes.  For more samples that demonstrate this `Image` class please see our website's [Excel Chart and Range Imaging Razor Pages Samples](https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Imaging).
 
@@ -127,15 +134,15 @@ The Web Explorer presents **SpreadsheetGear Engine for .NET** samples using an A
 ### WPF Explorer Samples
 ![Screenshot of the WPF Explorer](WpfExplorer/screenshot.png)
 
-The WPF Explorer presents samples applicable to both the **SpreadsheetGear Engine for .NET** and **SpreadsheetGear for Windows** products in the context of a WPF Desktop App, where the WPF WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
+The WPF Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a WPF Desktop App, where the WPF WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
 
-These samples target `net6.0-windows` and so requires running on Windows.
+These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
 
 ### Windows Forms Explorer Samples
 ![Screenshot of the WPF Explorer](WindowsFormsExplorer/screenshot.png)
-The Windows Forms Explorer presents samples applicable to both the **SpreadsheetGear Engine for .NET** and **SpreadsheetGear for Windows** products in the context of a Windows Forms Desktop App, where the Windows Forms WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
+The Windows Forms Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a Windows Forms Desktop App, where the Windows Forms WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
 
-These samples target `net6.0-windows` and so requires running on Windows.
+These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
 
 
 <a name="section-running-the-samples"></a>
@@ -173,7 +180,9 @@ To run applicable samples with Visual Studio Code, please also install the [.NET
 
 > If you are on MacOS or Linux, the WPF and Windows Forms Explorer samples will not be runnable, nor will the version of the WebExplorer samples that depend on Windows to render images.  The "Web Explorer" samples are runnable from MacOS and Linux.
 
-The below individual folders can also be opened in VSCode, and relevant options will be provided to build & run the samples.  These folders also contain `*.code-workspace` files that you can open in VSCode (instead of opening the folder) if you would like to have all dependent projects included when viewing VSCode's Explorer Side Bar:
+The below individual folders can also be opened in VSCode, and relevant options will be provided to build & run the samples:
   - SpreadsheetGearExplorerSamples/WebExplorer
   - SpreadsheetGearExplorerSamples/WPFExplorer
   - SpreadsheetGearExplorerSamples/WindowsFormsExplorer
+
+These folders also contain `*.code-workspace` files that you can open in VSCode (instead of opening the folder) if you would like to have all dependent projects included when viewing VSCode's Explorer Side Bar
