@@ -1,4 +1,4 @@
-# <img src="images/logo-sg-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> SpreadsheetGear Explorer Samples
+# <img src="images/sg-logo-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> SpreadsheetGear Explorer Samples
 This repository contains samples demonstrating many features available in the following products:
 
   - [SpreadsheetGear Engine for .NET](#sg-eng)

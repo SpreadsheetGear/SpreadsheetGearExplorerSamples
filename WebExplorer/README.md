@@ -1,4 +1,4 @@
-# <img src="../images/logo-sg-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> Web Explorer Samples
+# <img src="../images/sg-logo-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> Web Explorer Samples
 ![Screenshot of the WPF Explorer](screenshot.png)
 
 The Web Explorer presents *SpreadsheetGear Engine for .NET* samples using an ASP.NET Core Web App.  Note this VS Project targets both `net6.0` and `net6.0-windows`:

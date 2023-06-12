@@ -1,4 +1,4 @@
-# <img src="../images/logo-sg-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> WPF Explorer Samples
+# <img src="../images/sg-logo-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> WPF Explorer Samples
 ![Screenshot of the WPF Explorer](screenshot.png)
 
 The WPF Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a WPF Desktop App, where the WPF WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
