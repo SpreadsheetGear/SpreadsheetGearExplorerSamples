@@ -109,11 +109,11 @@ This product targets both .NET 6 (`net6.0`) and .NET Standard 2.0 (`netstandard2
   - Linux
   - Mono
   - Xamarin (iOS, Android, etc.)
-
+  
+<a id="sg-win"></a>
 ### <img src="images/logo-windows-11.svg" style="width: 25px; vertical-align: middle;" alt="Logo for Windows 11"> SpreadsheetGear for Windows
 Builds on the capabilities of *SpreadsheetGear Engine for .NET* to add powerful Excel-compatible image rendering, viewing, editing, formatting, calculating, filtering, sorting, charting, printing and more to your Windows Forms and WPF applications with the easy-to-use WorkbookView and FormulaBar controls.  
 
-<a id="sg-win"></a>
 *SpreadsheetGear for Windows* targets .NET 6 for Windows (`net6.0-windows`).  This product includes a license to also use *SpreadsheetGear Engine for .NET*.
 
 Learn more about these products on our [Features Page](https://www.spreadsheetgear.com/Products/Features) and more details on their differences on our [Comparison Page](https://www.spreadsheetgear.com/Products/Compare).
