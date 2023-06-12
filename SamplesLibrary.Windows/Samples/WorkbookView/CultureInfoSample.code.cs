@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using SamplesLibrary.Engine;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
@@ -41,15 +42,16 @@ namespace SamplesLibrary.Windows.Samples.WorkboookView
             // then you won't see the above "de-DE" formatted vales.  This demonstrates that Excel files are not inherently 
             // saved with any particular localization settings.  Instead, Excel at runtime will dynamically apply the 
             // localization options used by your OS.
-            workbook_deDe.SaveAs(@"Temp\CultureWorkbook.xlsx", SpreadsheetGear.FileFormat.OpenXMLWorkbook);
+            string tempWorkbookPath = Helpers.GetFullOutputFolderPath(@"Temp\CultureWorkbook.xlsx");
+            workbook_deDe.SaveAs(tempWorkbookPath, SpreadsheetGear.FileFormat.OpenXMLWorkbook);
 
             // Get the CultureInfo selected in the ListBox for this sample, which is initially set to "en-US".
             CultureInfo selectedCultureInfo = CultureInfo.GetCultureInfo(cultureInfoName);
 
-            // Now open a new workbook and pass in the Cultureinfo object that was selected.  As described above about 
+            // Now open a new workbook and pass in the CultureInfo object that was selected.  As described above about 
             // Microsoft Excel, SpreadsheetGear will at runtime dynamically apply the specified CultureInfo settings to the 
             // workbook.  If you do not pass in any CultureInfo, SpreadsheetGear defaults to using "en-US".
-            SpreadsheetGear.IWorkbook workbook_selectedCulture = SpreadsheetGear.Factory.GetWorkbook(@"Temp\CultureWorkbook.xlsx",
+            SpreadsheetGear.IWorkbook workbook_selectedCulture = SpreadsheetGear.Factory.GetWorkbook(tempWorkbookPath,
                 selectedCultureInfo);
 
             // Display the workbooks in each WorkbookView.
