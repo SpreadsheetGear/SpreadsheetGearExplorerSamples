@@ -62,7 +62,7 @@
             // worksheet even when worksheet protection is enabled.  UI protection is still 
             // enforced.
             worksheet.ProtectionMode = true;
-            worksheet.Cells["A6"].Value = "This cell was modified while worksheet " +
+            worksheet.Cells["A6"].Value = "This cell was programmatically modified while worksheet " +
                 "protection was enabled because IWorksheet.ProtectionMode was set to true.";
         }
     }
