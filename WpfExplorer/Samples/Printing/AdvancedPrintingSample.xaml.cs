@@ -17,7 +17,7 @@
                 SpreadsheetGear.Windows.Printing.WorkbookPrintDocument document =
                     CreatePrintDocument(workbookView.ActiveWorkbook);
 
-                // Print, displaying the print dialog before printing.
+                // Print to the default printer.
                 document.Print();
             }
             catch (System.Exception exc)

@@ -17,7 +17,7 @@
             <Label Content="Page Breaks:" Margin="10,10,10,0" FontWeight="Bold" />
             <RadioButton Content="None" x:Name="radioButtonNone" GroupName="PageBreaks" Margin="15,5,10,0" IsChecked="True" />
             <RadioButton Content="By Region" x:Name="radioButtonRegion" GroupName="PageBreaks" Margin="15,5,10,0" />
-            <Button Content="Print..." Margin="10,15,10,0" Click="ButtonPrint_Click" />
+            <Button Content="Print Preview..." Margin="10,15,10,0" Click="ButtonPrint_Click" />
         </StackPanel>
         <src:WpfWorkbookView x:Name="workbookView" Grid.Column="1" />
     </Grid>
