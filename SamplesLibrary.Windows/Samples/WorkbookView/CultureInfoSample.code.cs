@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace SamplesLibrary.Windows.Samples.WorkboookView
+namespace SamplesLibrary.Windows.Samples.WorkbookView
 {
     public class CultureInfoSample : ISpreadsheetGearWindowsSample
     {

@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions
+﻿namespace SamplesLibrary.Windows.Samples.WorkbookView.DisplayOptions
 {
     public class DisplayReferenceSample : ISpreadsheetGearWindowsSample
     {

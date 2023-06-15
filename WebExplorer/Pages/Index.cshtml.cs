@@ -54,12 +54,12 @@ namespace WebExplorer.Pages
         /// Runs the sample and either returns a resulting file or renders an image of the results.
         /// </summary>
         /// <param name="sampleName">The name of the sample (<see cref="SampleInfo.Name"/>).
-        public IActionResult OnGetRunSample(string sampleName, RunSampleType runSampletype)
+        public IActionResult OnGetRunSample(string sampleName, RunSampleType runSampleType)
         {
             try
             {
                 FileResult fileResult;
-                if (runSampletype == RunSampleType.RenderImage)
+                if (runSampleType == RunSampleType.RenderImage)
                 {
 #if WINDOWS
                     fileResult = _samplesService.RunSampleRenderImage(sampleName);
@@ -67,7 +67,7 @@ namespace WebExplorer.Pages
                     throw new Exception("Invalid RunSampleType was provided.");
 #endif
                 }
-                else if (runSampletype == RunSampleType.DownloadFile)
+                else if (runSampleType == RunSampleType.DownloadFile)
                     fileResult = _samplesService.RunSampleDownload(sampleName);
                 else
                     throw new Exception("Invalid RunSampleType was provided.");

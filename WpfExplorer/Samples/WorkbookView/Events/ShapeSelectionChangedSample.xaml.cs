@@ -2,7 +2,7 @@
 {
     public partial class ShapeSelectionChangedSample : SampleUserControl
     {
-        public SamplesLibrary.Windows.Samples.WorkboookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.Events.ShapeSelectionChangedSample Sample { get; private set; }
 
         private void WorkbookView_ShapeSelectionChanged(
             object sender, SpreadsheetGear.Windows.Controls.ShapeSelectionChangedEventArgs e)
@@ -21,7 +21,7 @@
         {
             DisposalManager.RegisterWorkbookViews(workbookView);
             DisposalManager.ResetWorkbookView(workbookView, false);
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.Events.ShapeSelectionChangedSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.Events.ShapeSelectionChangedSample();
             Sample.InitializeSample(workbookView);
         }
         #endregion

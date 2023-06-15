@@ -11,9 +11,9 @@ using SamplesLibrary.Windows.Samples.Charting;
 using SamplesLibrary.Windows.Samples.DataGrid;
 using SamplesLibrary.Windows.Samples.Printing;
 using SamplesLibrary.Windows.Samples.Reporting;
-using SamplesLibrary.Windows.Samples.WorkboookView.CommandManager;
-using SamplesLibrary.Windows.Samples.WorkboookView.DisplayOptions;
-using SamplesLibrary.Windows.Samples.WorkboookView;
+using SamplesLibrary.Windows.Samples.WorkbookView.CommandManager;
+using SamplesLibrary.Windows.Samples.WorkbookView.DisplayOptions;
+using SamplesLibrary.Windows.Samples.WorkbookView;
 
 namespace SamplesLibrary.Windows
 {
@@ -28,7 +28,7 @@ namespace SamplesLibrary.Windows
             {
                 categoryWbvSamples.AddWindowsSample<ActiveWorkbookSample>("Active Workbook", "Create or open workbooks from a variety of locations (Disk, Uri, memory stream, byte array).", 10, true);
                 categoryWbvSamples.AddWindowsSample<ActiveWorksheetSample>("Active Worksheet", "Add multiple worksheets to a workbook and display a new worksheet.", 20, true);
-                categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.  This sample creates a workbook with the German ('de-DE') CultureInfo, saves the workbook to disk, and re-opens it in the selected CultureInfo to demonstrate changes in locale-senstive formats.", 30, true);
+                categoryWbvSamples.AddWindowsSample<CultureInfoSample>("CultureInfo", "Specify a CultureInfo to be used for various regional formatting conventions such as date formats, list separator, decimal separator, currency symbol and more.  This sample creates a workbook with the German ('de-DE') CultureInfo, saves the workbook to disk, and re-opens it in the selected CultureInfo to demonstrate changes in locale-sensitive formats.", 30, true);
                 categoryWbvSamples.AddWindowsSample<DesignerAndExplorerDialogsSample>("Designer and Explorer Dialogs", "Show the Workbook Designer, Workbook Explorer, Range Explorer, Chart Explorer, and Shape Explorer.", 40, true);
                 categoryWbvSamples.AddWindowsSample<LocationToRangeSample>("Location To Range", "Use the LocationToRange method from a mouse event.", 50, true);
 

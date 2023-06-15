@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Windows.Samples.WorkboookView.CommandManager
+﻿namespace SamplesLibrary.Windows.Samples.WorkbookView.CommandManager
 {
     public class SimpleCommandSample : ISpreadsheetGearWindowsSample
     {

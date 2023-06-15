@@ -5,7 +5,7 @@
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
         // app as well as the WPFExplorer samples app.
-        public SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
         private void ButtonExecute_Click(object sender, System.EventArgs e)
         {
@@ -60,7 +60,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.CommandRangeSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.CommandRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
             trackBarRed.Value = panelColorPreview.BackColor.R;
             trackBarGreen.Value = panelColorPreview.BackColor.G;

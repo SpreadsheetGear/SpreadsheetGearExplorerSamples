@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Windows.Samples.WorkboookView.Events
+﻿namespace SamplesLibrary.Windows.Samples.WorkbookView.Events
 {
     public class ShapeSelectionChangedSample : ISpreadsheetGearWindowsSample
     {

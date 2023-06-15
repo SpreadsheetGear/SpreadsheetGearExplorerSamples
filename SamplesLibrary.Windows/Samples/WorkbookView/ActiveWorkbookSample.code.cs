@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace SamplesLibrary.Windows.Samples.WorkboookView
+namespace SamplesLibrary.Windows.Samples.WorkbookView
 {
     public class ActiveWorkbookSample : ISpreadsheetGearWindowsSample
     {

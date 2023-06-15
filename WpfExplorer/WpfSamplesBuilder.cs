@@ -44,7 +44,7 @@ namespace WPFExplorer
                 var categoryStyling = categoryWbvSamples.AddCategory("Styling", "Styling", "Use WPF Control Templates and other features to customize how the WorkbookView appears, and change the content of Row / Column Header area.", 40);
                 {
                     categoryStyling.AddWpfSample<SimpleStyleSample>("Simple Style", "Basic styling sample.", 10, true);
-                    categoryStyling.AddWpfSample<ExcelThemeSample>("Excel Theme", "Theme the WorkbookView with an Excel-like theme.", 20, true);
+                    categoryStyling.AddWpfSample<ExcelThemeSample>("Excel 2007 Theme", "Theme the WorkbookView with an Excel 2007-like theme.", 20, true);
                     categoryStyling.AddWpfSample<CustomHeadersSample>("Custom Headers", "Custom headers using data binding.", 30, true);
                     categoryStyling.AddWpfSample<ColumnHeaderSortSample>("ColumnHeader Sort", "Sort by clicking on a custom ColumnHeader.", 40, true);
                 }

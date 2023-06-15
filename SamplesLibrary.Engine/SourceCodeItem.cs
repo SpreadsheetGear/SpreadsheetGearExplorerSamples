@@ -56,7 +56,7 @@ namespace SamplesLibrary.Engine
                 }
             }
 
-            // Modfiy tab size from default of 4 if needed.
+            // Modify tab size from default of 4 if needed.
             if (tabSize != 4)
             {
                 var regex = new Regex(@"(^|\G) {4}", RegexOptions.Multiline);
@@ -104,8 +104,8 @@ namespace SamplesLibrary.Engine
         public string Language { get; set; }
 
         /// <summary>
-        /// Formatted HTML uses the Prism.js syntax highligher library to format the sample code in a
-        /// viwer-friendly way.  This dictionary maps known file extensions to the CSS classes for the
+        /// Formatted HTML uses the Prism.js syntax highlighter library to format the sample code in a
+        /// viewer-friendly way.  This dictionary maps known file extensions to the CSS classes for the
         /// given language.
         /// </summary>
         private static readonly Dictionary<string, string> _extensionsMapper = new Dictionary<string, string>() {

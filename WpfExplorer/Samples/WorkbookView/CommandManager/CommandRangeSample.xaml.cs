@@ -2,7 +2,7 @@
 {
     public partial class CommandRangeSample : SampleUserControl
     {
-        public SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.CommandRangeSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.CommandRangeSample Sample { get; private set; }
 
         private void ButtonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -64,7 +64,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.CommandRangeSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.CommandRangeSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
 
             workbookView.GetLock();

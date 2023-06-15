@@ -2,7 +2,7 @@
 {
     public partial class SimpleCommandSample : SampleUserControl
     {
-        public SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.SimpleCommandSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.SimpleCommandSample Sample { get; private set; }
 
         private void ButtonExecute_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -26,7 +26,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.CommandManager.SimpleCommandSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.CommandManager.SimpleCommandSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion

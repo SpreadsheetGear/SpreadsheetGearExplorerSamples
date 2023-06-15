@@ -1,4 +1,4 @@
-﻿namespace SamplesLibrary.Windows.Samples.WorkboookView
+﻿namespace SamplesLibrary.Windows.Samples.WorkbookView
 {
     public class DesignerAndExplorerDialogsSample : ISpreadsheetGearWindowsSample
     {

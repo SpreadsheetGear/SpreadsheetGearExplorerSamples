@@ -24,7 +24,7 @@ namespace SamplesLibrary.Engine.Samples.Reporting
             System.Data.DataSet dataset = new System.Data.DataSet();
             dataset.ReadXml(xmlPath);
 
-            // Get the workbook set to also hold the template workbook alonside the report workbook.
+            // Get the workbook set to also hold the template workbook alongside the report workbook.
             SpreadsheetGear.IWorkbookSet workbookSet = Workbook.WorkbookSet;
 
             // Get the full path to a workbook template file which contains formats, borders and formulas.

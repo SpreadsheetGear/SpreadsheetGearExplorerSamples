@@ -8,7 +8,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WindowsFormsExplorer samples 
         // app as well as the WPFExplorer samples app.
-        public SamplesLibrary.Windows.Samples.WorkboookView.CultureInfoSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.CultureInfoSample Sample { get; private set; }
 
         private void ButtonRunSample_Click(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace WindowsFormsExplorer.Samples.WorkbookView
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.CultureInfoSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.CultureInfoSample();
             DisposalManager.RegisterWorkbookViews(workbookViewDeDE, workbookViewSelectedCulture);
 
             // Get all cultures and populate ListBox with them

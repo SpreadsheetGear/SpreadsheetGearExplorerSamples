@@ -60,7 +60,7 @@
 
             // Copy the source range values and formats to the destination range.
             // We have to call copy twice here since there is currently no PasteType
-            // which does values and all formats together. This is a limitaion in 
+            // which does values and all formats together. This is a limitation in 
             // the Excel API, but probably should be added to the SpreadsheetGear API.
             srcRange.Copy(dstRange,
                 SpreadsheetGear.PasteType.Values,

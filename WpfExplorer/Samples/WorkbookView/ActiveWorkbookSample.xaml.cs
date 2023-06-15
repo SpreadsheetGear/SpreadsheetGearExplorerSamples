@@ -5,7 +5,7 @@
         // Most of the relevant SpreadsheetGear code for this sample is in this member's class, located within the
         // SamplesLibrary project.  It is shared sample code that can be run from this WPFExplorer samples app as
         // well as the WindowsFormsExplorer samples app.
-        public SamplesLibrary.Windows.Samples.WorkboookView.ActiveWorkbookSample Sample { get; private set; }
+        public SamplesLibrary.Windows.Samples.WorkbookView.ActiveWorkbookSample Sample { get; private set; }
 
         private void ButtonNewWorkbook_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -131,7 +131,7 @@
 
         private void InitializeSample()
         {
-            Sample = new SamplesLibrary.Windows.Samples.WorkboookView.ActiveWorkbookSample();
+            Sample = new SamplesLibrary.Windows.Samples.WorkbookView.ActiveWorkbookSample();
             DisposalManager.RegisterWorkbookViews(workbookView);
         }
         #endregion
