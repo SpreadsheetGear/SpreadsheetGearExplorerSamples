@@ -10,7 +10,19 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
         private void RadioButton_CheckedChanged(object sender, System.EventArgs e)
         {
             // Get the selected display reference.
-            string selectedItem = ((System.Windows.Forms.RadioButton)sender).Text;
+            string selectedItem = "";
+            if (radioButtonWorkbook.Checked)
+                selectedItem = "Workbook";
+            else if (radioButtonWorksheet.Checked)
+                selectedItem = "Worksheet";
+            else if (radioButtonRange.Checked)
+                selectedItem = "Range";
+            else if (radioButtonDefinedName.Checked)
+                selectedItem = "Defined Name";
+            else if (radioButtonMultipleRanges.Checked)
+                selectedItem = "Multiple Ranges";
+            else if (radioButtonUsedRange.Checked)
+                selectedItem = "Used Ranges";
 
             // Run the sample.
             Sample.UpdateDisplayReference(workbookView, selectedItem);
