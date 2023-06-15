@@ -89,8 +89,8 @@
                             $"to use {maxLicensedRows} rows instead of {workbookSet.MaxRows} so as to not exceed this " +
                             $"limit.  If you are a licensed user of SpreadsheetGear, you can generate a Signed License to " +
                             $"activate the fully-licensed and unlimited mode.  If you are not a license user but would like " +
-                            $"to evaluate unlimited mode of SpreadsheetGear, you can generate a Trial Signed License to " +
-                            $"unlock the unlimited mode free for 30 days.  Links to each page are provided below.";
+                            $"to evaluate the unlimited mode of SpreadsheetGear, you can generate a 30-Day Trial Signed License " +
+                            $"to do so.  Links to each page are provided below.";
                         cells["F3"].WrapText = true;
                         cells["F3"].Font.Bold = true;
                         cells["F3"].Font.Color = SpreadsheetGear.Colors.Crimson;
