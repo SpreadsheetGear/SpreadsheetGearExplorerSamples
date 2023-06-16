@@ -178,7 +178,7 @@ To run applicable samples with Visual Studio Code, please also install the [.NET
 
 ![Visual Studio Code's Run and Debug Side Bar](images/vs-code-run-and-debug.png)
 
-> If you are on MacOS or Linux, the WPF and Windows Forms Explorer samples will not be runnable, nor will the version of the WebExplorer samples that depend on Windows to render images.  The "Web Explorer" samples are runnable from MacOS and Linux.
+> If you are on MacOS or Linux, the WPF and Windows Forms Explorer samples will not be runnable.  The "Web Explorer" samples are runnable from MacOS and Linux, although image rendering (used to show results of many of the samples) is only available on Windows when running the `net6.0-windows` target of this project.
 
 The below individual folders can also be opened in VSCode, and relevant options will be provided to build & run the samples:
   - SpreadsheetGearExplorerSamples/WebExplorer
