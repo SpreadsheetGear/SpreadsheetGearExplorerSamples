@@ -52,6 +52,7 @@ namespace WebExplorer
             services.AddRazorPages()
                 .AddRazorRuntimeCompilation();
             services.AddSingleton<SamplesService>();
+            services.AddSingleton<PlatformDetectionService>();
             services.AddAutoMapper(typeof(AutoMapperProfiler));
         }
 

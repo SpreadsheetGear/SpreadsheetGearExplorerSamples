@@ -4,41 +4,150 @@
   SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 *@
 
+@inject PlatformDetectionService PlatformDetectionSvc
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@ViewData["Title"] - SpreadsheetGear Web Explorer</title>
-  <link rel="stylesheet" href="~/lib/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.2-web/css/all.css" />
-  <link rel="stylesheet" href="~/lib/prism.js/prism.css" />
-  <link rel="stylesheet" href="~/css/site.css" />
-  <link rel="stylesheet" href="~/css/prism-vs.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SpreadsheetGear Web Explorer</title>
+    <link rel="stylesheet" href="~/lib/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.2-web/css/all.css" />
+    <link rel="stylesheet" href="~/lib/prism.js/prism.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/prism-vs.css" />
 </head>
 <body>
-  <div class="h-100">
-    <header>
-      <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-          <a class="navbar-brand" asp-page="/Index">
-            <img src="~/images/logo-txt-wht.svg" class="d-inline-block align-middle" style="height: 40px;" />
-            <span class="pl-3 mt-4">Web Explorer</span>
-          </a>
+    <div class="h-100">
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-page="/Index">
+                        <img src="~/images/logo-txt-wht.svg" class="d-inline-block align-middle" style="height: 40px;" />
+                        <span class="pl-3 mt-4">Web Explorer</span>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div id="page-overlay"></div>
+
+    <div id="non-windows-warning-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header alert-warning">
+                    <h5 class="modal-title">
+                        <span class="text-warning" style="filter:drop-shadow(1px 1px 0px #00000033);"><i class="fas fa-exclamation-triangle"></i></span>
+                        Running <code>net6.0-windows</code> Target Framework on Non-Windows OS
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        We have detected that you are running on a non-Windows machine but you are using the <code>net6.0-windows</code> target framework to run this Web App.  These samples will still run on this target framework; however, any image rendering features will not work because this capability is provided by the <code>SpreadsheetGear.Drawing.Image</code> class, which is not part of the <b>SpreadsheetGear Engine for .NET</b> product or available on non-Windows platforms.  Image rendering, and other UI capabilities, are available for Windows machines and when using the <b>SpreadsheetGear for Windows</b> product.  
+                    </div>
+                    <div class="mt-3">
+                        You can find a full list of differences between <b>SpreadsheetGear Engine for .NET</b> and <b>SpreadsheetGear for Windows</b> from our <b><a href='https://www.spreadsheetgear.com/Products/Compare' target='_blank'>Comparison Page</a></b>.  See <b><a href='https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Imaging' target='_blank'>Razor Page Samples - Excel Chart and Range Imaging</a></b> for more samples demonstrating the SpreadsheetGear.Drawing.Image class.
+                    </div>
+
+                    <div class="mt-3">
+                        See below screenshots for instructions for running on the <code>net6.0</code> target framework:
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-6 mt-3">
+                            <b>Visual Studio for Mac</b>
+                            <img src="~/images/target-net6.0-vs-mac.png" style="width: 100%;" />
+                        </div>
+                        <div class="col-lg-12 col-xl-6 mt-3">
+                            <b>Visual Studio Code</b>
+                            <img src="~/images/target-net6.0-vs-code.png" style="width: 100%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-      </nav>
-    </header>
-    <main role="main">
-      @RenderBody()
-    </main>
-  </div>
+    </div>
 
-  <div id="page-overlay"></div>
+    <div id="use-net6-windows-modal" class="modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header alert-primary">
+                    <h5 class="modal-title">
+                        <span class="text-primary" style="filter:drop-shadow(1px 1px 0px #00000033);"><i class="fas fa-info-circle"></i></span>
+                        Run <code>net6.0-windows</code> Target Framework for Image Rendering
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        We have detected that you are running on a Windows machine but you are using the <code>net6.0</code> target framework to run this Web App.  When running these samples, we recommend using the <code>net6.0-windows</code> target framework, which will enable image rendering for many of the sample results:
+                    </div>
+                    <div class="text-center mt-2">
+                        <img src="~/images/render-image-sample-screenshot.png" style="width: 80%;" />
+                    </div>
+                    <div class="mt-3">
+                        Image rendering is provided by the <code>SpreadsheetGear.Drawing.Image</code> class, which is part of the <b>SpreadsheetGear for Windows</b> product.  You can find a full list of differences between <b>SpreadsheetGear Engine for .NET</b> and <b>SpreadsheetGear for Windows</b> from our <b><a href='https://www.spreadsheetgear.com/Products/Compare' target='_blank'>Comparison Page</a></b>.  See <b><a href='https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Imaging' target='_blank'>Razor Page Samples - Excel Chart and Range Imaging</a></b> for more samples demonstrating the SpreadsheetGear.Drawing.Image class.
+                    </div>
 
-  <script src="~/lib/jquery/dist/jquery.min.js"></script>
-  <script src="~/lib/bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
-  <script src="~/lib/prism.js/prism.js"></script>
-  <script src="~/js/site.js" asp-append-version="true"></script>
-  @await RenderSectionAsync("Scripts", required: false)
+                    <div class="mt-3">
+                        See below screenshots for instructions for running on the <code>net6.0-windows</code> target framework:
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-6 mt-3">
+                            <b>Visual Studio 2022</b>
+                            <img src="~/images/target-net6.0-windows-vs2022.png" style="width: 100%;" />
+                        </div>
+                        <div class="col-lg-12 col-xl-6 mt-3">
+                            <b>Visual Studio Code</b>
+                            <img src="~/images/target-net6.0-windows-vs-code.png" style="width: 100%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
+    <script src="~/lib/prism.js/prism.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        @if (PlatformDetectionSvc.OperatingSystemIsWindows())
+        {
+            // Windows OS / net6.0 (can render images if you switch to net6.0-windows)
+            if (!PlatformDetectionSvc.TargetFrameworkIsWindows())
+            {
+                @: var $modal = $("#use-net6-windows-modal").modal();
+                @: $modal.show();
+            }
+        }
+        else
+        {
+            // Non-Windows OS / net6.0-windows (can't render images)
+            if (PlatformDetectionSvc.TargetFrameworkIsWindows())
+            {
+                @: var $modal = $("#non-windows-warning-modal").modal();
+                @: $modal.show();
+            }
+        }
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
