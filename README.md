@@ -174,7 +174,7 @@ Visual Studio Code (VSCode) is a cross-platform code editor, supported on Window
   - **WPF Explorer Samples** - Windows Only
   - **Windows Forms Explorer Samples** - Windows Only
 
-To run applicable samples with Visual Studio Code, please also install the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [.NET Extension Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscode-dotnet-pack).  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
+To run applicable samples with Visual Studio Code, please also install the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [Microsoft C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
 
 ![Visual Studio Code's Run and Debug Side Bar](images/vs-code-run-and-debug.png)
 
