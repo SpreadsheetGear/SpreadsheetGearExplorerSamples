@@ -148,8 +148,9 @@ namespace SamplesLibrary.Engine
                 }
 
                 categoryShapes.AddEngineSample<PictureSample>("Picture", "Add a picture from an image file to a worksheet.", 10, renderImageRange: "A1:L7");
-                categoryShapes.AddEngineSample<TextBoxSample>("TextBox", "Add a textbox to a worksheet and set the text and font.", 20, renderImageRange: "A1:F12");
-                categoryShapes.AddEngineSample<AutoShapesSample>("Auto Shapes", "Add autoshapes to a worksheet and set the fill and line style.", 30, renderImageRange: "A1:G12");
+                categoryShapes.AddEngineSample<CroppedPictureSample>("Cropped Picture", "Adds a picture consisting of the SpreadsheetGear logo on the left and text \"SpreadsheetGear\" on the right, then crops the \"SpreadsheetGear\" text out of the picture, leaving just the logo.", 20, renderImageRange: "A1:K13");
+                categoryShapes.AddEngineSample<TextBoxSample>("TextBox", "Add a textbox to a worksheet and set the text and font.", 30, renderImageRange: "A1:F12");
+                categoryShapes.AddEngineSample<AutoShapesSample>("Auto Shapes", "Add autoshapes to a worksheet and set the fill and line style.", 40, renderImageRange: "A1:G12");
             }
 
             var categoryReporting = explorerCategory.AddCategory("Reporting", "Reporting", "With the wide adoption of Microsoft Excel, there is no substitute for taking advantage of spreadsheet components in your .NET projects. You can use SpreadsheetGear to deliver spreadsheet reports in a variety of ways. The following samples show some basic ways to create spreadsheet content, which can be saved to Excel files, streamed as downloadable files in a browser, displayed in a SpreadsheetGear WPF or Windows Forms WorkbookView and more.", 80);
