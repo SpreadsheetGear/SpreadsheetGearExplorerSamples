@@ -20,7 +20,7 @@
             SpreadsheetGear.IWorksheet worksheet = Workbook.ActiveWorksheet;
 
             // Get range that Conditional Formatting will be applied to.
-            SpreadsheetGear.IRange dataRange = worksheet.Cells["A2:B25"];
+            SpreadsheetGear.IRange dataRange = worksheet.Cells["A2:B21"];
 
             // Create an Expression-based conditional format that locates any release date
             // in November.  Note the column reference is absolute ('$B') whereas the row column
