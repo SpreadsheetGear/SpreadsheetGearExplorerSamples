@@ -47,7 +47,7 @@ namespace SamplesLibrary.Engine
                     categoryWorksheet.AddEngineSample<WorksheetProtectionSample>("Worksheet Protection", "Demonstrates various options available when enabling and disabling worksheet protection.", 10, false);
                     categoryWorksheet.AddEngineSample<TabColorsSample>("Tab Colors", "Modify various attributes relating to sheet tabs.", 20, false);
                     categoryWorksheet.AddEngineSample<NamedRangeSample>("Named Ranges", "Worksheet-scoped named ranges are managed from the IWorksheet.Names[...] collection.", 30, false);
-                    categoryWorksheet.AddEngineSample<SheetVisibilitySample>("Sheet Visibility", "Sheets can be made visible to the end-user, and can be either 'hidden' or 'very hidden' as described in this sample.", 40, false);
+                    categoryWorksheet.AddEngineSample<SheetVisibilitySample>("Sheet Visibility", "Sheets can be made visible to the end-user and can be either 'hidden' or 'very hidden' as described in this sample.", 40, false);
                     categoryWorksheet.AddEngineSample<MoveAndCopySample>("Move and Copy", "Sheets can be moved and copied with ISheet.MoveAfter(...) / MoveBefore(...) and CopyAfter(...) / CopyBefore(...).", 50, false);
                     categoryWorksheet.AddEngineSample<DisplayOptionsSample>("Display Options", "Modify options such as freeze panes, set gridline visibility and color, show and hide headings, zoom, current range selection and more.", 60, false);
 
@@ -106,7 +106,7 @@ namespace SamplesLibrary.Engine
                 categoryCharting.AddEngineSample<ScatterChartSample>("Scatter Chart", "Demonstrates generating a Scatter Chart where x and y data sets are plotted on a single set of axes.", 20);
                 categoryCharting.AddEngineSample<BubbleChartSample>("Bubble Chart", "Create a bubble chart representing three sets of data values.", 30, renderImageRange: "A1:J14");
                 categoryCharting.AddEngineSample<RadarChartSample>("Radar Chart", "Use a radar chart to plot each category of data on a separate value axis.", 40);
-                categoryCharting.AddEngineSample<GanttChartSample>("Gantt Chart", "Use stacked bars and various formatting to simulate a gantt chart.", 50, renderImageRange: "A1:J14");
+                categoryCharting.AddEngineSample<GanttChartSample>("Gantt Chart", "Use stacked bars and various formatting to simulate a Gantt chart.", 50, renderImageRange: "A1:J14");
                 categoryCharting.AddEngineSample<CombinationChartSample>("Combination Chart", "Create a combination chart by utilizing multiple chart groups and multiple axes groups.", 60, renderImageRange: "A1:K14");
                 categoryCharting.AddEngineSample<EmbeddedPictureInChartSample>("Embedded Picture In Chart", "Demonstrates how to embed a picture into a chart, in this case to act as a replacement for the Chart Title.", 70, renderImageRange: "A1:J16");
                 categoryCharting.AddEngineSample<CreateChartSheetSample>("Create Chart Sheet", "Creates a ChartSheet and populates the chart with some data.", 80, false);
@@ -122,8 +122,8 @@ namespace SamplesLibrary.Engine
                 {
                     categoryChartingStock.AddEngineSample<HLCStockChartSample>("H-L-C Stock Chart", "Demonstrates generating an H-L-C Stock Chart.", 10);
                     categoryChartingStock.AddEngineSample<OHLCStockChartSample>("O-H-L-C Stock Chart", "Demonstrates generating an O-H-L-C Stock Chart.", 20);
-                    categoryChartingStock.AddEngineSample<VHLCStockChartSample>("V-H-L-C Stock Chart", "Demonstrates generating an V-H-L-C Stock Chart.", 30);
-                    categoryChartingStock.AddEngineSample<VOHLCStockChartSample>("V-O-H-L-C Stock Chart", "Demonstrates generating an V-O-H-L-C Stock Chart.", 40);
+                    categoryChartingStock.AddEngineSample<VHLCStockChartSample>("V-H-L-C Stock Chart", "Demonstrates generating a V-H-L-C Stock Chart.", 30);
+                    categoryChartingStock.AddEngineSample<VOHLCStockChartSample>("V-O-H-L-C Stock Chart", "Demonstrates generating a V-O-H-L-C Stock Chart.", 40);
                 }
             }
 
@@ -132,12 +132,12 @@ namespace SamplesLibrary.Engine
                 var categoryFormControls = categoryShapes.AddCategory("Form Controls", "FormControls", "", 10);
                 {
                     categoryFormControls.AddEngineSample<ButtonSample>("Button", "Add a button to a worksheet. When attached to a WorkbookView, use the WorkbookView.ShapeAction(...) event to handle clicks on a button.", 10, false);
-                    categoryFormControls.AddEngineSample<CheckBoxSample>("CheckBox", "Add a checkbox to a worksheet and link its state to a cell.", 20, false);
+                    categoryFormControls.AddEngineSample<CheckBoxSample>("CheckBox", "Add a CheckBox to a worksheet and link its state to a cell.", 20, false);
                     categoryFormControls.AddEngineSample<ComboBoxSample>("ComboBox", "Add a ComboBox to a worksheet, fill it with a range of values, and link it to a cell.", 30, false);
                     categoryFormControls.AddEngineSample<ListBoxSample>("ListBox", "Add a ListBox to a worksheet, fill it with a range of values, and link it to a cell.", 40, false);
-                    categoryFormControls.AddEngineSample<SpinnerSample>("Spinner", "Add a checkbox to a worksheet and link its state to a cell.", 50, false);
+                    categoryFormControls.AddEngineSample<SpinnerSample>("Spinner", "Add a CheckBox to a worksheet and link its state to a cell.", 50, false);
                     categoryFormControls.AddEngineSample<ScrollBarSample>("ScrollBar", "Demonstrates adding a ScrollBar control to a worksheet, linking its value to a cell, then setting its various options such as the amount to change the value when the up/down arrows are clicked or when the main scroll area is clicked. The linked cell is also linked to a chart series whose line will change in reaction to changes in the ScrollBar value.", 60, false);
-                    categoryFormControls.AddEngineSample<GroupBoxAndOptionButtonsSample>("GroupBox And OptionButtons", "Creates a GroupBox and series of OptionButtons that are linked to a cell. Also demonstrates adding these control relative to a range of cells--adding an OptionButton within each row of the provided range and surrounding all OptionButtons within a GroupBox.", 70, false);
+                    categoryFormControls.AddEngineSample<GroupBoxAndOptionButtonsSample>("GroupBox And OptionButtons", "Creates a GroupBox and series of OptionButtons that are linked to a cell. Also demonstrates adding these controls relative to a range of cells--adding an OptionButton within each row of the provided range and surrounding all OptionButtons within a GroupBox.", 70, false);
                 }
 
                 var categoryLines = categoryShapes.AddCategory("Lines", "Lines", "", 20);
@@ -150,7 +150,7 @@ namespace SamplesLibrary.Engine
                 categoryShapes.AddEngineSample<PictureSample>("Picture", "Add a picture from an image file to a worksheet.", 10, renderImageRange: "A1:L7");
                 categoryShapes.AddEngineSample<CroppedPictureSample>("Cropped Picture", "Adds a picture consisting of the SpreadsheetGear logo on the left and text \"SpreadsheetGear\" on the right, then crops the \"SpreadsheetGear\" text out of the picture, leaving just the logo.", 20, renderImageRange: "A1:K13");
                 categoryShapes.AddEngineSample<TextBoxSample>("TextBox", "Add a textbox to a worksheet and set the text and font.", 30, renderImageRange: "A1:F12");
-                categoryShapes.AddEngineSample<AutoShapesSample>("Auto Shapes", "Add autoshapes to a worksheet and set the fill and line style.", 40, renderImageRange: "A1:G12");
+                categoryShapes.AddEngineSample<AutoShapesSample>("Auto Shapes", "Add AutoShapes to a worksheet and set the fill and line style.", 40, renderImageRange: "A1:G12");
             }
 
             var categoryReporting = explorerCategory.AddCategory("Reporting", "Reporting", "With the wide adoption of Microsoft Excel, there is no substitute for taking advantage of spreadsheet components in your .NET projects. You can use SpreadsheetGear to deliver spreadsheet reports in a variety of ways. The following samples show some basic ways to create spreadsheet content, which can be saved to Excel files, streamed as downloadable files in a browser, displayed in a SpreadsheetGear WPF or Windows Forms WorkbookView and more.", 80);
