@@ -36,7 +36,7 @@ namespace SamplesLibrary.Engine.Samples.Shapes
 
             // Create an IShape[] array and add all 4 rectangles to the array.
             var shapesArray = new SpreadsheetGear.Shapes.IShape[] { rectTopLeft, rectTopRight,
-    rectBottomLeft, rectBottomRight };
+                rectBottomLeft, rectBottomRight };
 
             // Create an IShapeRange with the above array.
             SpreadsheetGear.Shapes.IShapeRange shapeRange = shapes.GetShapeRange(shapesArray);
@@ -60,7 +60,7 @@ namespace SamplesLibrary.Engine.Samples.Shapes
             SpreadsheetGear.Shapes.IShape arrowUp = shapes["Arrow Up"];
             // ...create an IShapeRange from an array of the arrow shapes...
             shapesArray = new SpreadsheetGear.Shapes.IShape[] { arrowRight, arrowDown,
-    arrowLeft, arrowUp };
+                arrowLeft, arrowUp };
             shapeRange = shapes.GetShapeRange(shapesArray);
             // ...group them...
             SpreadsheetGear.Shapes.IShape arrowGroup = shapeRange.Group();
