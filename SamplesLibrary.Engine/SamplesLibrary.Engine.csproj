@@ -76,6 +76,9 @@
     <Compile Update="Samples\Shapes\CroppedPictureSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Samples\Shapes\GroupingShapesSample.code.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Samples\Workbook\Worksheet\Range\ConditionalFormats\AboveAverageSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
@@ -248,6 +251,9 @@
 
   <ItemGroup>
     <None Update="Files\Engine\SG-Logo-Text.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Files\Engine\ShapesToGroup.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Files\Syntax-Highlight-Def-CSharp-HCW.xshd">
