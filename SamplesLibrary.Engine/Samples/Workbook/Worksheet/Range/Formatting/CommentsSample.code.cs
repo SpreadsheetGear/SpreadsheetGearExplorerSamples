@@ -23,6 +23,11 @@
             // Add a comment that is visible by default.
             SpreadsheetGear.IComment comment = cells["A6"].AddComment("This comment is visible by default.");
             comment.Visible = true;
+
+            // Add a visible comment whose contents auto-sizes.
+            comment = cells["A12"].AddComment("This is an\nauto-sized\ncomment.");
+            comment.Shape.TextFrame.AutoSize = true;
+            comment.Visible = true;
         }
     }
 }
