@@ -42,11 +42,20 @@
                 "list boxes, spinners, scrollbars, buttons, lines, " +
                 "many AutoShapes and more...";
 
-            // Set various font options.
+            // Set various font options to all text in the TextBox.
             SpreadsheetGear.IFont font = characters.Font;
             font.Italic = true;
             font.Name = "Times New Roman";
             font.Size = 12;
+
+            // Demonstrating specifying rich text by applying various formatting
+            // options to only the first line.
+            characters = textFrame.GetCharacters(0, "SpreadsheetGear...".Length);
+            characters.Font.Name = "Calibri";
+            characters.Font.Italic = false;
+            characters.Font.Bold = true;
+            characters.Font.Size = 16;
+            characters.Font.Color = SpreadsheetGear.Color.FromArgb(255, 233, 14, 14);
 
             // Select the textbox.
             shape.Select(true);
