@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
-    <PackageReference Include="MdXaml" Version="1.21.0" />
+    <PackageReference Include="MdXaml" Version="1.27.0" />
   </ItemGroup>
 
   <ItemGroup>
