@@ -87,8 +87,7 @@ namespace WindowsFormsExplorer
                 {
                     sampleUserControl = FindSampleUserControlSample(sampleInfo.SampleType);
                 }
-                // SampleUserControls here are used for purely WPF-centric samples whose code cannot be shared (for instance,
-                // samples that demonstrate XAML Control Templates which obviously don't exist in WinForms).
+                // SampleUserControls here are used for purely WinForms-centric samples whose code cannot be shared.
                 else if (typeof(SampleUserControl).IsAssignableFrom(sampleInfo.SampleType))
                 {
                     sampleUserControl = sampleInfo.CreateInstance<SampleUserControl>();

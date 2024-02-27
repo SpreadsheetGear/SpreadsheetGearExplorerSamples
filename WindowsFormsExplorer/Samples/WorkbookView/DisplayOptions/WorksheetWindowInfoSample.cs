@@ -42,6 +42,8 @@ namespace WindowsFormsExplorer.Samples.WorkbookView.DisplayOptions
             workbookView.GetLock();
             try
             {
+                var headerCells = workbookView.ActiveWorksheet.Cells["A1:C2,A3:A5"];
+                headerCells.Value = "Header";
                 SpreadsheetGear.IRange cell = workbookView.ActiveWorksheet.Cells["B3"];
                 SpreadsheetGear.IWorksheetWindowInfo windowInfo = workbookView.ActiveWorksheetWindowInfo;
                 cell.Value = "SpreadsheetGear";

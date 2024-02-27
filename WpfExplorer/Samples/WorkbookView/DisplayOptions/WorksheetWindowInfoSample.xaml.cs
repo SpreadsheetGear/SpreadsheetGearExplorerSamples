@@ -44,6 +44,8 @@
             workbookView.GetLock();
             try
             {
+                var headerCells = workbookView.ActiveWorksheet.Cells["A1:C2,A3:A5"];
+                headerCells.Value = "Header";
                 var cell = workbookView.ActiveWorksheet.Cells["B3"];
                 var windowInfo = workbookView.ActiveWorksheetWindowInfo;
                 cell.Value = "SpreadsheetGear";
