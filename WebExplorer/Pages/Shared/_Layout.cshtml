@@ -1,6 +1,5 @@
 ﻿@*
   Copyright © SpreadsheetGear LLC. All Rights Reserved.
-
   SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 *@
 
@@ -11,7 +10,13 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SpreadsheetGear Web Explorer</title>
+    <title>
+        @{
+            var title = ViewData["Title"] as string;
+            title = $"{title}{(string.IsNullOrWhiteSpace(title) ? "" : " - ")}SpreadsheetGear Web Explorer";
+        }
+        @title
+    </title>
     <link rel="stylesheet" href="~/lib/bootstrap-4.6.0-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.2-web/css/all.css" />
     <link rel="stylesheet" href="~/lib/prism.js/prism.css" />

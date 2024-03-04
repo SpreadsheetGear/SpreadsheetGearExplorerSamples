@@ -104,7 +104,7 @@
       url: url,
       success: function (sampleInfo) {
         currentSampleInfo = sampleInfo;
-        document.title = "SpreadsheetGear Web Explorer - " + currentSampleInfo.name;
+        document.title = currentSampleInfo.name + " - SpreadsheetGear Web Explorer";
         $("#sample-name").html(sampleInfo.name);
         $("#sample-description").html(sampleInfo.description);
         $(".can-download-file").toggle(sampleInfo.canDownloadFile);
@@ -121,6 +121,7 @@
         $("#sample-container").addClass("d-flex");
       },
       error: function (data) {
+        document.title = "SpreadsheetGear Web Explorer";
         window.alert("Error loading sample. ('" + data.responseText + "')");
       }
     });
@@ -170,6 +171,9 @@
       },
       error: function (data) {
         window.alert("Error loading category summary. ('" + data.responseText + "')");
+      },
+      complete: function () {
+        document.title = "SpreadsheetGear Web Explorer";
       }
     });
   }
