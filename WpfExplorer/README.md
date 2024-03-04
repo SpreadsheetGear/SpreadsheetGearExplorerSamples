@@ -3,7 +3,8 @@
 
 The WPF Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a WPF Desktop App, where the WPF WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
 
-These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
+> [!NOTE]
+> These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
 
 
 ## Running the Samples

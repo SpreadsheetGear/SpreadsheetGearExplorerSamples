@@ -1,5 +1,5 @@
 # <img src="../images/sg-logo-shadow-white.svg" style="width: 70px; vertical-align: middle;" alt="SpreadsheetGear Logo"> Web Explorer Samples
-![Screenshot of the WPF Explorer](screenshot.png)
+![Screenshot of the Web Explorer](screenshot.png)
 
 The Web Explorer presents *SpreadsheetGear Engine for .NET* samples using an ASP.NET Core Web App.  Note this VS Project targets both `net6.0` and `net6.0-windows`:
   - `net6.0`: Use this target framework to run the samples on a wide variety of platforms such as Windows, MacOS and Linux. Most samples provide an option to download an Excel workbook file with the results of the sample.

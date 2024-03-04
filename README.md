@@ -10,87 +10,97 @@ Product features demonstrated include:
   <li>
     Cell Formatting
     <ul style="columns: 3;">
-      <li>Fonts</li>
-      <li>Borders</li>
-      <li>Interior</li>
-      <li>Orientation</li>
-      <li>Hyperlinks</li>
-      <li>Validation</li>
-      <li>Cell Comments</li>
-      <li>Number Formats</li>
-      <li>Conditional Formatting</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/FontSample.code.cs">Fonts</a> (including <a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/RichTextSample.code.cs">Rich Text</a>)</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/BordersSample.code.cs">Borders</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/InteriorSample.code.cs">Interior</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/OrientationSample.code.cs">Orientation</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/HyperlinksSample.code.cs">Hyperlinks</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/ValidationSample.code.cs">Validation</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/CommentsSample.code.cs">Cell Comments</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/NumberFormatsSample.code.cs">Number Formats</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ConditionalFormats/">Conditional Formatting</a></li>
     </ul>
   </li>
   <li>
     Range Operations
     <ul style="columns: 3;">
-      <li>Auto-Filters</li>
-      <li>Cell Protection</li>
-      <li>Group and Outline</li>
-      <li>Sorting</li>
-      <li>Merge Cells</li>
-      <li>Fill Data Series</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/AutoFilterSample.code.cs">Auto-Filters</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/LockAndProtectCellsSample.code.cs">Cell Protection</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/GroupAndOutlineSample.code.cs">Group and Outline</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/SortingSample.code.cs">Sorting</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/MergeCellsSample.code.cs">Merge Cells</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/FillDataSeriesSample.code.cs">Fill Data Series</a></li>
     </ul>
   </li>
-  <li>Cell Formulas, Calculations and Values</li>
+  <li>
+    Cell Formulas, Calculations and Values
+    <ul style="columns: 3;">
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ValuesAndFormulas/ArrayFormulaSample.code.cs">Array Formulas</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ValuesAndFormulas/CreateFormulaSample.code.cs">Create Formulas</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ValuesAndFormulas/ValuesFromArraySample.code.cs">Values From Array</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ValuesAndFormulas/GoalSeekSample.code.cs">Goal Seek</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/ValuesAndFormulas/WhatIfDataTableSample.code.cs">What If Data Table</a></li>
+    </ul>
+  </li>
   <li>
     Worksheet features
     <ul style="columns: 3;">
-      <li>Evaluating Ranges and Values from Formulas</li>
-      <li>Sheet Tab Colors</li>
-      <li>Named Ranges</li>
-      <li>Sheet Visibility</li>
-      <li>Move and Copy Sheets</li>
-      <li>Display Options</li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Calculations/FormulaEvaluationSample.code.cs">Evaluating Values from Formulas</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/TabColorsSample.code.cs">Sheet Tab Colors</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/NamedRangeSample.code.cs">Named Ranges (Defined Names)</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/SheetVisibilitySample.code.cs">Sheet Visibility</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/MoveAndCopySample.code.cs">Move and Copy Sheets</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/DisplayOptionsSample.code.cs">Display Options</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/WorksheetProtectionSample.code.cs">Worksheet Protection Options</a></li>
     </ul>
   </li>
   <li>Workbook features
     <ul style="columns: 2;">
-      <li>Reading and Writing Workbook Files from Disk, Stream or Byte Array</li>
-      <li>Workbook Encryption</li>
-      <li>Cell Styles</li>
-      <li>Protecting Workbook Structures and Windows</li>
-      <li>Sheet Management (Add, Move, Copy, Delete Sheets)</li>
-      <li>Workbook and Worksheet "Window Info"</li>
-      <li>Built-In and Custom Document Properties</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/SavingAndOpeningSample.code.cs">Reading and Writing Workbook Files from Disk, Stream or Byte Array</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/SavingAndOpeningEncryptedSample.code.cs">Workbook Encryption</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/CellStylesSample.code.cs">Cell Styles</a></li>
+      <li><a href="./SamplesLibrary.Windows/Samples/WorkbookView/DisplayOptions/WorkbookWindowInfoSample.code.cs">Workbook</a> and <a href="./SamplesLibrary.Windows/Samples/WorkbookView/DisplayOptions/WorksheetWindowInfoSample.code.cs">Worksheet</a> "Window Info" Display Options</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/DocumentPropertiesSample.code.cs">Built-In and Custom Document Properties</a></li>
       <li>DateTimes and Serial Numeric Dates</li>
+      <li><a href="./SamplesLibrary.Windows/Samples/WorkbookView/CultureInfoSample.code.cs">Workbook Localization via CultureInfo</a></li>
     </ul>
   </li>
   <li>
     Charting Features
     <ul style="columns: 2;">
-      <li>Chart Types (Column, Line, Pie, Bar, Area, Stock, Scatter, Bubble, Radar, Gantt and Combination)</li>
-      <li>Embedding Pictures in Charts</li>
-      <li>Creating Chart Sheets</li>
+      <li>Chart Types (<a href="./SamplesLibrary.Engine/Samples/Charting/Basic/ColumnChartSample.code.cs">Column</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/Basic/LineChartSample.code.cs">Line</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/Basic/PieChartSample.code.cs">Pie</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/Basic/BarChartSample.code.cs">Bar</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/Basic/AreaChartSample.code.cs">Area</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/Stock/">Stock</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/ScatterChartSample.code.cs">Scatter</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/BubbleChartSample.code.cs">Bubble</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/RadarChartSample.code.cs">Radar</a>, <a href="./SamplesLibrary.Engine/Samples/Charting/GanttChartSample.code.cs">Gantt</a> and <a href="./SamplesLibrary.Engine/Samples/Charting/CombinationChartSample.code.cs">Combination</a>)</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Charting/EmbeddedPictureInChartSample.code.cs">Embedding Pictures in Charts</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Charting/CreateChartSheetSample.code.cs">Creating Chart Sheets</a></li>
     </ul>
   </li>
   <li>
     Shape Features
     <ul style="columns: 3;">
-      <li>Form Controls (Button, CheckBox, ComboBox, ListBox, Spinner, ScrollBar, GroupBox and OptionButton)</li>
-      <li>Lines (with Weight, Dash Style and Arrowhead options)</li>
-      <li>Pictures</li>
-      <li>TextBoxes</li>
-      <li>AutoShapes</li>
+      <li>Form Controls (<a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/ButtonSample.code.cs">Button</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/CheckBoxSample.code.cs">CheckBox</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/ComboBoxSample.code.cs">ComboBox</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/ListBoxSample.code.cs">ListBox</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/SpinnerSample.code.cs">Spinner</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/ScrollBarSample.code.cs">ScrollBar</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/FormControls/GroupBoxAndOptionButtonsSample.code.cs">GroupBox and OptionButton</a>)</li>
+      <li>Lines (with <a href="./SamplesLibrary.Engine/Samples/Shapes/Lines/LineWeightSample.code.cs">Weight</a>, <a href="./SamplesLibrary.Engine/Samples/Shapes/Lines/LineDashStyleSample.code.cs">Dash Style</a> and <a href="./SamplesLibrary.Engine/Samples/Shapes/Lines/ArrowheadsSample.code.cs">Arrowhead</a> options)</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Shapes/PictureSample.code.cs">Pictures</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Shapes/TextBoxSample.code.cs">TextBoxes</a></li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Shapes/AutoShapesSample.code.cs">AutoShapes</a></li>
     </ul>
   </li>
   <li>
     Printing Features
     <ul style="columns: 3;">
-      <li>Headers and Footers</li>
-      <li>Zoom and FitToPages</li>
-      <li>PrintArea</li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/BasicPrintingSample.code.cs">Print and Print Preview</a></li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Headers and Footers</a></li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Zoom and FitToPages</a></li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">PrintArea</a></li>
       <li>PrintTitles</li>
-      <li>Orientation</li>
-      <li>Manual Page Breaks</li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Orientation</a></li>
+      <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageBreaksSample.code.cs">Manual Page Breaks</a></li>
     </ul>
   </li>
   <li>
     Image Rendering and WPF & WinForms Controls (<b>Windows Only</b>)
     <ul style="columns: 2;">
-      <li>Interactive WorkbookView and FormulaBar controls for Windows Forms and WPF</li>
-      <li>High DPI image rendering of Ranges, Charts and other Shapes</li>
-      <li>WorkbookDesigner dialog and "Explorer" dialogs to modify various aspects of a workbook such as worksheets, ranges, charts, shapes, etc.</li>
+      <li>Interactive <a href="./SamplesLibrary.Windows/Samples/WorkbookView/">WorkbookView and FormulaBar</a> controls for Windows Forms and WPF</li>
+      <li><a href="./WindowsFormsExplorer/Samples/Charting/ChartGallerySample.cs">High DPI image rendering</a> of Ranges, Charts and other Shapes</li>
+      <li><a href="./SamplesLibrary.Windows/Samples/WorkbookView/DesignerAndExplorerDialogsSample.code.cs">WorkbookDesigner dialog and "Explorer" dialogs</a> to modify various aspects of a workbook such as worksheets, ranges, charts, shapes, etc.</li>
     </ul>
   </li>
 </ul>
@@ -114,7 +124,11 @@ This product targets both .NET 6 (`net6.0`) and .NET Standard 2.0 (`netstandard2
 ### <img src="images/logo-windows-11.svg" style="width: 25px; vertical-align: middle;" alt="Logo for Windows 11"> SpreadsheetGear for Windows
 Builds on the capabilities of *SpreadsheetGear Engine for .NET* to add powerful Excel-compatible image rendering, viewing, editing, formatting, calculating, filtering, sorting, charting, printing and more to your Windows Forms and WPF applications with the easy-to-use WorkbookView and FormulaBar controls.  
 
-*SpreadsheetGear for Windows* targets .NET 6 for Windows (`net6.0-windows`).  This product includes a license to also use *SpreadsheetGear Engine for .NET*.
+> [!NOTE]
+> *SpreadsheetGear for Windows* targets .NET 6 for Windows (`net6.0-windows`).
+
+> [!NOTE]
+> *SpreadsheetGear for Windows* includes a license to also use *SpreadsheetGear Engine for .NET*.
 
 Learn more about these products on our [Features Page](https://www.spreadsheetgear.com/Products/Features) and more details on their differences on our [Comparison Page](https://www.spreadsheetgear.com/Products/Compare).
 
@@ -136,48 +150,60 @@ The Web Explorer presents *SpreadsheetGear Engine for .NET* samples using an ASP
 
 The WPF Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a WPF Desktop App, where the WPF WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
 
-These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
+> [!NOTE]
+> These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
 
 ### Windows Forms Explorer Samples
 ![Screenshot of the WPF Explorer](WindowsFormsExplorer/screenshot.png)
 The Windows Forms Explorer presents samples applicable to both the *SpreadsheetGear Engine for .NET* and *SpreadsheetGear for Windows* products in the context of a Windows Forms Desktop App, where the Windows Forms WorkbookView and FormulaBar controls are utilized to provide an interactive Excel-like experience when presenting the results of a given sample.  
 
-These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
+> [!NOTE]
+> These samples target `net6.0-windows` and so require running on Windows with the *SpreadsheetGear for Windows* product.
 
 
 <a name="section-running-the-samples"></a>
 ## Running the Samples
-Depending on your development environment, you can access the samples in a variety of ways using Visual Studio 2022, Visual Studio Code (VSCode) and Visual Studio for Mac.
+
+The samples can be accessed and run in a variety of ways:
+
+  * [GitHub Codespaces](#github-codespaces) *(`WebExplorer` samples project only)*
+  * [Visual Studio 2022](#visual-studio-2022) *(all samples projects)*
+  * [Visual Studio for Mac](#visual-studio-for-mac) *(`WebExplorer` samples project only)*
+  * [Visual Studio Code](#visual-studio-code) *(runnable projects depend on OS)*
+
+### GitHub Codespaces
+The `WebExplorer` samples can be run right here in the browser using GitHub Codespaces.  Ensure you are logged into your GitHub account and click on the "Code" dropdown button at the top of this page to launch a new codespace and start the samples.  More details can be found [here](.devcontainer/README.md).
 
 ### Visual Studio 2022
 Three Visual Studio Solutions (\*.sln) are provided in the repository root folder to use with Visual Studio 2022.  Below is a list of the "Explorer" Visual Studio Projects that are included in each of the Solutions:
 
  - **SpreadsheetGearExplorerSamples.sln** (Requires the "ASP.NET and web development" and ".NET desktop development" workloads)
-   - **Web Explorer Samples**
-   - **WPF Explorer Samples**
-   - **Windows Forms Explorer Samples**
+   - `WebExplorer` samples
+   - `WpfExplorer` samples
+   - `WindowsFormsExplorer` samples
 
  - **SpreadsheetGearExplorerSamples_Windows.sln** (Requires the ".NET desktop development" workload)
-   - **WPF Explorer Samples**
-   - **Windows Forms Explorer Samples**
+   - `WpfExplorer` samples
+   - `WindowsFormsExplorer` samples
 
  - **SpreadsheetGearExplorerSamples_Web.sln** - (Requires the "ASP.NET and web development" workload)
-   - **Web Explorer Samples**
+   - `WebExplorer` samples
 
 
 ### Visual Studio for Mac
-Please use the **SpreadsheetGearExplorerSamples_Web.sln** in the repository root folder to access the **Web Explorer Samples**.  The other 2 Solutions include Windows-only VS Projects that utilize the *SpreadsheetGear for Windows* product, which is not supported on a Mac.
+Please use the **SpreadsheetGearExplorerSamples_Web.sln** in the repository root folder to access the `WebExplorer` Samples.  The other 2 Solutions include Windows-only VS Projects that utilize the *SpreadsheetGear for Windows* product, which is not supported on a Mac.
 
 ### Visual Studio Code
 Visual Studio Code (VSCode) is a cross-platform code editor, supported on Windows, MacOS and Linux; however, keep in mind that some of the SpreadsheetGear Explorer Samples run only on Windows:
-  - **Web Explorer Samples** - Windows, MacOS, Linux
-  - **WPF Explorer Samples** - Windows Only
-  - **Windows Forms Explorer Samples** - Windows Only
+  - `WebExplorer` samples - Windows, MacOS, Linux
+  - `WpfExplorer` samples - Windows Only
+  - `WindowsFormsExplorer` samples - Windows Only
 
-To run applicable samples with Visual Studio Code, please also install the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [Microsoft C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
+To run applicable samples with Visual Studio Code, please also install the [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download) and the [Microsoft C# Dev Kit Extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) for Visual Studio Code.  After cloning the repo, open the root `SpreadsheetGearExplorerSamples` folder in VSCode and build & launch any of the above Explorer sample projects from the *Run and Debug* Side Bar.
 
 ![Visual Studio Code's Run and Debug Side Bar](images/vs-code-run-and-debug.png)
 
+> [!NOTE]
 > If you are on MacOS or Linux, the WPF and Windows Forms Explorer samples will not be runnable.  The "Web Explorer" samples are runnable from MacOS and Linux, although image rendering (used to show results of many of the samples) is only available on Windows when running the `net6.0-windows` target of this project.
 
 The below individual folders can also be opened in VSCode, and relevant options will be provided to build & run the samples:
@@ -186,3 +212,11 @@ The below individual folders can also be opened in VSCode, and relevant options 
   - SpreadsheetGearExplorerSamples/WindowsFormsExplorer
 
 These folders also contain `*.code-workspace` files that you can open in VSCode (instead of opening the folder) if you would like to have all dependent projects included when viewing VSCode's Explorer Side Bar
+
+## Other Samples
+
+Additional samples can be found on the [spreadsheetgear.com](https://www.spreadsheetgear.com) website:
+
+  * [Live SpreadsheetGear API Samples](https://www.spreadsheetgear.com/Support/Samples/API)
+  * [Live Razor Page Samples](https://www.spreadsheetgear.com/Support/Samples/RazorPages)
+  * [Live Blazor Server Sample](https://www.spreadsheetgear.com/Support/Samples/Blazor/Server)

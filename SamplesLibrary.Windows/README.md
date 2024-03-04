@@ -8,4 +8,5 @@ Please see the main [SpreadsheetGearExplorerSamples repository's README](../READ
   - **WPF Explorer Samples**
   - **Windows Forms Explorer Samples**
 
-  Note that the **SpreadsheetGear for Windows** product targets `net6.0-windows` and so is not support in non-Windows environments such as MacOS or Linux.
+> [!NOTE]
+> Note that the **SpreadsheetGear for Windows** product targets `net6.0-windows` and so is not support in non-Windows environments such as MacOS or Linux.
