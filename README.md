@@ -61,7 +61,7 @@ Product features demonstrated include:
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/CellStylesSample.code.cs">Cell Styles</a></li>
       <li><a href="./SamplesLibrary.Windows/Samples/WorkbookView/DisplayOptions/WorkbookWindowInfoSample.code.cs">Workbook</a> and <a href="./SamplesLibrary.Windows/Samples/WorkbookView/DisplayOptions/WorksheetWindowInfoSample.code.cs">Worksheet</a> "Window Info" Display Options</li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/DocumentPropertiesSample.code.cs">Built-In and Custom Document Properties</a></li>
-      <li>DateTimes and Serial Numeric Dates</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/DateTimeSample.code.cs">DateTimes and Serial Numeric Dates</a></li>
       <li><a href="./SamplesLibrary.Windows/Samples/WorkbookView/CultureInfoSample.code.cs">Workbook Localization via CultureInfo</a></li>
     </ul>
   </li>
@@ -90,7 +90,6 @@ Product features demonstrated include:
       <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Headers and Footers</a></li>
       <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Zoom and FitToPages</a></li>
       <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">PrintArea</a></li>
-      <li>PrintTitles</li>
       <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageSetupSample.code.cs">Orientation</a></li>
       <li><a href="./SamplesLibrary.Windows/Samples/Printing/PageBreaksSample.code.cs">Manual Page Breaks</a></li>
     </ul>
