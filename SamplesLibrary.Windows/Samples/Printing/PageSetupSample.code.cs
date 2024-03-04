@@ -1,4 +1,8 @@
-﻿namespace SamplesLibrary.Windows.Samples.Printing
+﻿// NOTE: many of these APIs are also demonstrated in samples on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/PrintHeadersAndFooters
+// https://www.spreadsheetgear.com/Support/Samples/API/PrintZoomAndFitToPages
+// https://www.spreadsheetgear.com/Support/Samples/API/PrintAreaPrintTitlesAndOrientation
+namespace SamplesLibrary.Windows.Samples.Printing
 {
     public class PageSetupSample : ISpreadsheetGearWindowsSample
     {

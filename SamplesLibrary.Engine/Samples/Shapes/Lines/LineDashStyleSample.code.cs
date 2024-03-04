@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 
+// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/ShapesLinesDashStyle
 namespace SamplesLibrary.Engine.Samples.Shapes.Lines
 {
     public class LineDashStyleSample : ISpreadsheetGearEngineSample

@@ -79,6 +79,9 @@
     <Compile Update="Samples\Shapes\GroupingShapesSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Samples\Workbook\DateTimeSample.code.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Samples\Workbook\Worksheet\Range\ConditionalFormats\AboveAverageSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>

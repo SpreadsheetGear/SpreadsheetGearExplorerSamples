@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/WorksheetDefinedNames
+namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
 {
     public class NamedRangeSample : ISpreadsheetGearEngineSample
     {

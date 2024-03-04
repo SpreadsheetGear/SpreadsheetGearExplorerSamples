@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookDocumentProperties
+namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class DocumentPropertiesSample : ISpreadsheetGearEngineSample
     {

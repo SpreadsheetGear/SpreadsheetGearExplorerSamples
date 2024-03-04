@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿// NOTE: a web-based version of this sample is available to run and execute on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/ExcelWorkbookConsolidation
+using System.Windows.Controls;
 
 namespace WPFExplorer.Samples.WorkbookView.Reporting
 {

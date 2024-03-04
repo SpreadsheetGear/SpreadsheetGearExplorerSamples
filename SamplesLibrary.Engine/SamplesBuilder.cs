@@ -41,6 +41,7 @@ namespace SamplesLibrary.Engine
                 categoryWorkbook.AddEngineSample<SavingAndOpeningSample>("Saving and Opening", "Save to and open from a variety of sources using a variety of file formats.  NOTE: running this sample won't make any visible changes.  Browse the 'Temp' directory under the executing directory (typically the 'bin' folder) to view the resultant files saved by this sample.", 20, false);
                 categoryWorkbook.AddEngineSample<SavingAndOpeningEncryptedSample>("Saving and Opening (Encrypted)", "Save to and open from a variety of sources using a variety of file formats.  NOTE: running this sample won't make any visible changes.  Browse the 'Temp' directory under the executing directory (typically the 'bin' folder) to view the resultant files saved by this sample.", 30, false);
                 categoryWorkbook.AddEngineSample<DocumentPropertiesSample>("Document Properties", "Demonstrates setting a variety of Built-In Document Properties as well as creating Custom Properties.", 40, false);
+                categoryWorkbook.AddEngineSample<DateTimeSample>("Date/Time Values", "Demonstrates how dates and date/times are handled in SpreadsheetGear.", 50, false);
 
                 var categoryWorksheet = categoryWorkbook.AddCategory("Worksheet", "Worksheet", "Samples demonstrating IWorksheet API.", 10);
                 {

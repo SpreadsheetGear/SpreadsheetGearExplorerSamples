@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Windows.Samples.WorkbookView.DisplayOptions
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookMiscWindowInfo
+namespace SamplesLibrary.Windows.Samples.WorkbookView.DisplayOptions
 {
     public class WorksheetWindowInfoSample : ISpreadsheetGearWindowsSample
     {

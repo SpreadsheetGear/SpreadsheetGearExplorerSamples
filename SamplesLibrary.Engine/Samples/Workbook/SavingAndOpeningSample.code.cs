@@ -1,4 +1,11 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook
+﻿// NOTE: versions of the below sample code are available on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookOpeningFiles
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookOpeningStreamOrByteArray
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXlsx
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXlsm
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXls
+// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingToStreamOrByteArray
+namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class SavingAndOpeningSample : ISpreadsheetGearEngineSample
     {

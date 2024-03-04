@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting
+﻿// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/RangeFormattingNumberFormats
+namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting
 {
     public class NumberFormatsSample : ISpreadsheetGearEngineSample
     {

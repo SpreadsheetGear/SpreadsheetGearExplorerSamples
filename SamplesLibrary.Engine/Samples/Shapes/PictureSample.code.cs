@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/ShapesPicture
 namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class PictureSample : ISpreadsheetGearEngineSample

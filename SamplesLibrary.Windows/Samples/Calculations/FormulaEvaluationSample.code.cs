@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Windows.Samples.Calculations
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/FormulaEvaluation
+namespace SamplesLibrary.Windows.Samples.Calculations
 {
     public class FormulaEvaluationSample : ISpreadsheetGearWindowsSample
     {

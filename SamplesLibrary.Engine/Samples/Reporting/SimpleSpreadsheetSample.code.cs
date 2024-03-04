@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Reporting
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/SimpleExcelReport
+namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class SimpleSpreadsheetSample : ISpreadsheetGearEngineSample
     {

@@ -1,3 +1,5 @@
+// NOTE: a web-based version of this sample is available to run and execute on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/FormulaEvaluation
 namespace WindowsFormsExplorer.Samples.Calculations
 {
     public partial class FormulaEvaluationSample : SampleUserControl

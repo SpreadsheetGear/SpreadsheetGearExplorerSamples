@@ -1,4 +1,7 @@
-﻿namespace SamplesLibrary.Engine.Samples.Reporting
+﻿// NOTE: versions of this sample are available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/DataTableToExcelWorkbook
+// https://www.spreadsheetgear.com/Support/Samples/RazorPages/DataTableToExcelWorkbookChart
+namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class DataTableToWorkbookSample : ISpreadsheetGearEngineSample
     {

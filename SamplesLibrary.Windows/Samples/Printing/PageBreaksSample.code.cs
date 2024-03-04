@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Windows.Samples.Printing
+﻿// NOTE: a version of this sample is available on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/WorksheetManualPageBreaks
+namespace SamplesLibrary.Windows.Samples.Printing
 {
     public class PageBreaksSample : ISpreadsheetGearWindowsSample
     {

@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/RangeValuesAndFormlasCreateArrayFormula
+namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
     public class ArrayFormulaSample : ISpreadsheetGearEngineSample
     {

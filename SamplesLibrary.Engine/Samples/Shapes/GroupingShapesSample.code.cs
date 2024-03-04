@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/GroupingShapes
 namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class GroupingShapesSample : ISpreadsheetGearEngineSample

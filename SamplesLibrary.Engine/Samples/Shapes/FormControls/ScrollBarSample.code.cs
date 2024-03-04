@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Shapes.FormControls
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/ShapesFormControlsScrollBar
+namespace SamplesLibrary.Engine.Samples.Shapes.FormControls
 {
     public class ScrollBarSample : ISpreadsheetGearEngineSample
     {

@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Charting
+﻿// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/ChartingCombination
+namespace SamplesLibrary.Engine.Samples.Charting
 {
     public class CombinationChartSample : ISpreadsheetGearEngineSample
     {

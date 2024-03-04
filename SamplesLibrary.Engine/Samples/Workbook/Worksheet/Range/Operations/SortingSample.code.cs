@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
+﻿// NOTE: a version of this sample is available to run on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/RangeOperationsSorting
+namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
 {
     public class SortingSample : ISpreadsheetGearEngineSample
     {

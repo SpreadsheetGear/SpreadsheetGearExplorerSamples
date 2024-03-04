@@ -1,4 +1,6 @@
-﻿namespace SamplesLibrary.Engine.Samples.Shapes
+﻿// NOTE: a version of this sample is available to run and render on our website at:
+// https://www.spreadsheetgear.com/Support/Samples/API/ShapesTextBox
+namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class TextBoxSample : ISpreadsheetGearEngineSample
     {
