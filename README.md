@@ -24,6 +24,7 @@ Product features demonstrated include:
   <li>
     Range Operations
     <ul style="columns: 3;">
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/CopySample.code.cs">Copy</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/AutoFilterSample.code.cs">Auto-Filters</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/LockAndProtectCellsSample.code.cs">Cell Protection</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Operations/GroupAndOutlineSample.code.cs">Group and Outline</a></li>

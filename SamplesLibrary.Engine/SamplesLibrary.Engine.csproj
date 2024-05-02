@@ -139,6 +139,9 @@
     <Compile Update="Samples\Workbook\Worksheet\Range\Operations\AutoFilterSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Samples\Workbook\Worksheet\Range\Operations\CopySample.code.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Samples\Workbook\Worksheet\Range\Operations\FillDataSeriesSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
@@ -253,6 +256,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Files\Engine\CopyPasteData.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Files\Engine\SG-Logo-Text.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

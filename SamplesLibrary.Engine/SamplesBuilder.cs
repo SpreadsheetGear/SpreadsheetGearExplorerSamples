@@ -91,12 +91,13 @@ namespace SamplesLibrary.Engine
 
                         var categoryOperations = categoryRange.AddCategory("Operations", "Operations", "Demonstrates various operations that can be performed on ranges, such as AutoFilters, Sorting, Merging and more.", 40);
                         {
-                            categoryOperations.AddEngineSample<AutoFilterSample>("Auto Filter", "Use auto filters to view subsets of data in a worksheet. Ten examples are provided, each one executing a different type of criteria on its own worksheet.", 10, false);
-                            categoryOperations.AddEngineSample<LockAndProtectCellsSample>("Lock And Protect Cells", "Lock and unlock cells and enable worksheet protection on two worksheets, protecting with and without a password.", 20, false);
-                            categoryOperations.AddEngineSample<GroupAndOutlineSample>("Group And Outline", "Group and outline ranges of cells.", 30, false);
-                            categoryOperations.AddEngineSample<SortingSample>("Sorting", "Sort a range of data.", 40);
-                            categoryOperations.AddEngineSample<MergeCellsSample>("Merge Cells", "Merge a range of cells.", 50, renderImageRange: "A1:F6");
-                            categoryOperations.AddEngineSample<FillDataSeriesSample>("Fill Data Series", "Automatically fill cells with data.", 60);
+                            categoryOperations.AddEngineSample<CopySample>("Copy", "Copy range data, formulas and / or formatting from one range to another.", 10);
+                            categoryOperations.AddEngineSample<AutoFilterSample>("Auto Filter", "Use auto filters to view subsets of data in a worksheet. Ten examples are provided, each one executing a different type of criteria on its own worksheet.", 20, false);
+                            categoryOperations.AddEngineSample<LockAndProtectCellsSample>("Lock And Protect Cells", "Lock and unlock cells and enable worksheet protection on two worksheets, protecting with and without a password.", 30, false);
+                            categoryOperations.AddEngineSample<GroupAndOutlineSample>("Group And Outline", "Group and outline ranges of cells.", 40, false);
+                            categoryOperations.AddEngineSample<SortingSample>("Sorting", "Sort a range of data.", 50);
+                            categoryOperations.AddEngineSample<MergeCellsSample>("Merge Cells", "Merge a range of cells.", 60, renderImageRange: "A1:F6");
+                            categoryOperations.AddEngineSample<FillDataSeriesSample>("Fill Data Series", "Automatically fill cells with data.", 70);
                         }
                     }
                 }
