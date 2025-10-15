@@ -4,7 +4,6 @@
 * SpreadsheetGear® is a registered trademark of SpreadsheetGear LLC.
 */
 
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SamplesLibrary.Engine;
@@ -15,12 +14,10 @@ namespace WebExplorer.Pages
     public class IndexModel : PageModel
     {
         private readonly SamplesService _samplesService;
-        private readonly IMapper _mapper;
 
-        public IndexModel(SamplesService samplesService, IMapper mapper)
+        public IndexModel(SamplesService samplesService)
         {
             _samplesService = samplesService;
-            _mapper = mapper;
         }
 
         /// <summary>
@@ -32,7 +29,7 @@ namespace WebExplorer.Pages
         public void OnGet()
         {
             var root = _samplesService.GetRoot();
-            CategoryRoot = _mapper.Map<CategoryDTO>(root);
+            CategoryRoot = CategoryDTO.ToDTO(root);
         }
 
 
@@ -45,7 +42,7 @@ namespace WebExplorer.Pages
             if (sampleInfo == null)
                 return BadRequest($"Sample '{sampleName}' does not exist");
 
-            SampleInfoDTO sampleInfoDto = _mapper.Map<SampleInfoDTO>(sampleInfo);
+            SampleInfoDTO sampleInfoDto = SampleInfoDTO.ToDTO(sampleInfo);
             return new JsonResult(sampleInfoDto);
         }
 

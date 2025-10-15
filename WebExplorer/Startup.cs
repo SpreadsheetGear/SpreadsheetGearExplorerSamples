@@ -53,7 +53,6 @@ namespace WebExplorer
                 .AddRazorRuntimeCompilation();
             services.AddSingleton<SamplesService>();
             services.AddSingleton<PlatformDetectionService>();
-            services.AddAutoMapper(typeof(AutoMapperProfiler));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
