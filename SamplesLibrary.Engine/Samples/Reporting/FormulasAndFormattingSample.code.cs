@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/FormulasAndFormatting
+// https://www.spreadsheetgear.com/support/samples/razor-pages/formulas-and-formatting
 namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class FormulasAndFormattingSample : ISpreadsheetGearEngineSample

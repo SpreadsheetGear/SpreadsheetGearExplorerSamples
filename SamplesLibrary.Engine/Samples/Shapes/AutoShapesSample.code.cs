@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/ShapesAutoShapes
+// https://www.spreadsheetgear.com/support/samples/api/shapes-auto-shapes
 namespace SamplesLibrary.Engine.Samples.Shapes
 {
     public class AutoShapesSample : ISpreadsheetGearEngineSample

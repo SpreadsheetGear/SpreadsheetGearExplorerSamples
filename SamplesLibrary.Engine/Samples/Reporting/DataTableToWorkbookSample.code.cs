@@ -1,6 +1,6 @@
 ﻿// NOTE: versions of this sample are available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/DataTableToExcelWorkbook
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/DataTableToExcelWorkbookChart
+// https://www.spreadsheetgear.com/support/samples/razor-pages/datatable-to-excel-workbook
+// https://www.spreadsheetgear.com/support/samples/razor-pages/datatable-to-excel-workbook-chart
 namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class DataTableToWorkbookSample : ISpreadsheetGearEngineSample

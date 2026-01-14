@@ -33,8 +33,8 @@ namespace SamplesLibrary.Windows.Samples.WorkbookView
             // Specify the URI that will return a workbook as the response.
             // NOTE: the below URL dynamically generates and returns a workbook in the response stream.
             // For samples on how to do this please visit:
-            //     https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Reporting
-            string uri = "https://www.spreadsheetgear.com/Support/Samples/RazorPages/Reporting/ExcelReportWithChart";
+            //     https://www.spreadsheetgear.com/support/samples/razor-pages/category/reporting
+            string uri = "https://www.spreadsheetgear.com/support/samples/razor-pages/excel-report-with-chart";
 
             await this.LoadFromURI(workbookView, uri);
 
@@ -45,7 +45,7 @@ namespace SamplesLibrary.Windows.Samples.WorkbookView
         {
             // Specify the URI that will return a workbook as the response.  ChartGallery.xlsx is an
             // Excel file stored on the SpreadsheetGear web server.
-            string uri = "https://www.spreadsheetgear.com/Support/Samples/Files/ChartGallery.xlsx";
+            string uri = "https://www.spreadsheetgear.com/support/samples/files/ChartGallery.xlsx";
 
             await this.LoadFromURI(workbookView, uri);
 

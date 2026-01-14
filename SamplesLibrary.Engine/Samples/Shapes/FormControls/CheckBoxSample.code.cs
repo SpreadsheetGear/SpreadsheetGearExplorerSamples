@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/ShapesFormControlsCheckBox
+// https://www.spreadsheetgear.com/support/samples/api/shapes-form-controls-check-box
 namespace SamplesLibrary.Engine.Samples.Shapes.FormControls
 {
     public class CheckBoxSample : ISpreadsheetGearEngineSample

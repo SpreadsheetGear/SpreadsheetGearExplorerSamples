@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeOperationsFillDataSeries
+// https://www.spreadsheetgear.com/support/samples/api/range-operations-fill-data-series
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
 {
     public class FillDataSeriesSample : ISpreadsheetGearEngineSample

@@ -1,5 +1,5 @@
 // NOTE: a web-based version of this sample is available to run and execute on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/FormulaEvaluation
+// https://www.spreadsheetgear.com/support/samples/razor-pages/simple-loan-calculator
 namespace WindowsFormsExplorer.Samples.Calculations
 {
     public partial class SimpleLoanCalculatorSample : SampleUserControl

@@ -94,9 +94,9 @@
                         cells["F3"].WrapText = true;
                         cells["F3"].Font.Bold = true;
                         cells["F3"].Font.Color = SpreadsheetGear.Colors.Crimson;
-                        worksheet.Hyperlinks.Add(cells["F10"], "https://www.spreadsheetgear.com/Downloads/Licensed", 
+                        worksheet.Hyperlinks.Add(cells["F10"], "https://www.spreadsheetgear.com/downloads/licensed", 
                             null, null, "Licensed User Downloads");
-                        worksheet.Hyperlinks.Add(cells["F11"], "https://www.spreadsheetgear.com/Downloads/Evaluation",
+                        worksheet.Hyperlinks.Add(cells["F11"], "https://www.spreadsheetgear.com/downloads/evaluation",
                             null, null, "Evaluation User Downloads");
                     }
                 }

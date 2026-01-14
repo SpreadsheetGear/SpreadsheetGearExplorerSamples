@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookDocumentProperties
+// https://www.spreadsheetgear.com/support/samples/api/workbook-document-properties
 namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class DocumentPropertiesSample : ISpreadsheetGearEngineSample

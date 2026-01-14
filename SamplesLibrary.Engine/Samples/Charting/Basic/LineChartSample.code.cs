@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/ChartingBasicLine
+// https://www.spreadsheetgear.com/support/samples/api/charting-basic-line
 namespace SamplesLibrary.Engine.Samples.Charting.Basic
 {
     public class LineChartSample : ISpreadsheetGearEngineSample

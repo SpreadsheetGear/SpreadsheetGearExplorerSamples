@@ -24,13 +24,13 @@ namespace SamplesLibrary.Engine
     /// 
     /// <para>
     /// Licensed users of SpreadsheetGear can generate a Signed License to enable the Licensed (unlimited) mode 
-    /// from https://www.spreadsheetgear.com/Downloads/Licensed.  If you are copying and pasting
+    /// from https://www.spreadsheetgear.com/downloads/licensed.  If you are copying and pasting
     /// code from these samples, any calls to this SGDisposalManager class should be removed.
     /// </para>
     /// 
     /// <para>
     /// Evaluators can enable a 30-day trial that unlocks the Free mode limits by generating a Signed Trial 
-    /// License at https://www.spreadsheetgear.com/Downloads/Evaluation.
+    /// License at https://www.spreadsheetgear.com/downloads/evaluation.
     /// </para>
     /// </summary>
     public class SGDisposalManager : IDisposable

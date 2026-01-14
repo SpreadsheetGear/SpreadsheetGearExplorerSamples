@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeConditionalFormatsCellValue
+// https://www.spreadsheetgear.com/support/samples/api/range-conditional-formats-cell-value
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ConditionalFormats
 {
     public class CellValueSample : ISpreadsheetGearEngineSample

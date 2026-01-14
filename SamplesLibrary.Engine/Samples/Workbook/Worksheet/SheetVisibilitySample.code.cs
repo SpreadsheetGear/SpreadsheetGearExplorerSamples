@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorksheetVisibility
+// https://www.spreadsheetgear.com/support/samples/api/worksheet-visibility
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
 {
     public class SheetVisibilitySample : ISpreadsheetGearEngineSample

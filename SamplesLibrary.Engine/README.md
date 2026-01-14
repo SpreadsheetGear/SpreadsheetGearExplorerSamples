@@ -10,4 +10,4 @@ Please see the main [SpreadsheetGearExplorerSamples repository's README](../READ
 
 > [!NOTE]
 > Many of these **SpreadsheetGear Engine for .NET** samples are also available as runnable samples on our own website at:
-> https://www.spreadsheetgear.com/Support/Samples/API
+> https://www.spreadsheetgear.com/support/samples/api

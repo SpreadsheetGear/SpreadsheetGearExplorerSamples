@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/SimpleExcelReport
+// https://www.spreadsheetgear.com/support/samples/razor-pages/simple-excel-report
 namespace SamplesLibrary.Engine.Samples.Reporting
 {
     public class SimpleSpreadsheetSample : ISpreadsheetGearEngineSample

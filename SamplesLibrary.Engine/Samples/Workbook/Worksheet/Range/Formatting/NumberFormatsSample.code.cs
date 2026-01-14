@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeFormattingNumberFormats
+// https://www.spreadsheetgear.com/support/samples/api/range-formatting-number-formats
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting
 {
     public class NumberFormatsSample : ISpreadsheetGearEngineSample

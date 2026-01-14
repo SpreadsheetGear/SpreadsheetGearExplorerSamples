@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/ChartingRadar
+// https://www.spreadsheetgear.com/support/samples/api/charting-radar
 namespace SamplesLibrary.Engine.Samples.Charting
 {
     public class RadarChartSample : ISpreadsheetGearEngineSample

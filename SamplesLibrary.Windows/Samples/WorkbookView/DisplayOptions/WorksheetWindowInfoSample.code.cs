@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookMiscWindowInfo
+// https://www.spreadsheetgear.com/support/samples/api/workbook-misc-window-info
 namespace SamplesLibrary.Windows.Samples.WorkbookView.DisplayOptions
 {
     public class WorksheetWindowInfoSample : ISpreadsheetGearWindowsSample

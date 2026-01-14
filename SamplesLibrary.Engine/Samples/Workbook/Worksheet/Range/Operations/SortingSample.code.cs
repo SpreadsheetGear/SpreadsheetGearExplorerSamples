@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeOperationsSorting
+// https://www.spreadsheetgear.com/support/samples/api/range-operations-sorting
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
 {
     public class SortingSample : ISpreadsheetGearEngineSample

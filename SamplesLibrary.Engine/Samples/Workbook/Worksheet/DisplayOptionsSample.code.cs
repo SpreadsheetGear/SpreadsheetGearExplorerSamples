@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorksheetDisplayOptions
+// https://www.spreadsheetgear.com/support/samples/api/worksheet-display-options
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
 {
     public class DisplayOptionsSample : ISpreadsheetGearEngineSample

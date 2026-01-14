@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 
 // NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/DateTimesAndExcelSerialNumericDates
+// https://www.spreadsheetgear.com/support/samples/api/date-times-and-excel-serial-numeric-dates
 namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class DateTimeSample : ISpreadsheetGearEngineSample

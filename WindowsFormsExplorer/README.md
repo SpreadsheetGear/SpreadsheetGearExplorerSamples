@@ -7,6 +7,6 @@ The Windows Forms Explorer presents samples applicable to both the *SpreadsheetG
 
 
 ## Running the Samples
-You can access the samples using either Visual Studio 2022 or Visual Studio Code (VSCode) on Windows.
+You can access the samples using Visual Studio 2022, Visual Studio 2026 or Visual Studio Code (VSCode) on Windows.
 
 Please see the <a href="../README.md#section-running-the-samples">Running the Samples</a> section in this GitHub repository's main README.md for instructions on running this sample project.

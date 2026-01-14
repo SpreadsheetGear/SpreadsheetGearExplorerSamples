@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorksheetSheetTabColors
+// https://www.spreadsheetgear.com/support/samples/api/worksheet-sheet-tab-colors
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet
 {
     public class TabColorsSample : ISpreadsheetGearEngineSample

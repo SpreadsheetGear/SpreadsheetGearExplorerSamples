@@ -1,6 +1,6 @@
 ﻿// NOTE: versions of the below sample code are available on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookOpeningEncrypted
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingEncrypted
+// https://www.spreadsheetgear.com/support/samples/api/workbook-opening-encrypted
+// https://www.spreadsheetgear.com/support/samples/api/workbook-saving-encrypted
 namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class SavingAndOpeningEncryptedSample : ISpreadsheetGearEngineSample

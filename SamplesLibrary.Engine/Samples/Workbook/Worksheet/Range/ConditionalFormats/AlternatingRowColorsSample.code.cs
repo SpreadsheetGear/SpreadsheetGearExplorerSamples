@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeConditionalFormatsAlternatingRowColors
+// https://www.spreadsheetgear.com/support/samples/api/range-conditional-formats-alternating-row-colors
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ConditionalFormats
 {
     public class AlternatingRowColorsSample : ISpreadsheetGearEngineSample

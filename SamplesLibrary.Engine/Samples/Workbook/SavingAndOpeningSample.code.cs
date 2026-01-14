@@ -1,10 +1,10 @@
 ﻿// NOTE: versions of the below sample code are available on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookOpeningFiles
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookOpeningStreamOrByteArray
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXlsx
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXlsm
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingXls
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookSavingToStreamOrByteArray
+// https://www.spreadsheetgear.com/support/samples/api/workbook-opening-files
+// https://www.spreadsheetgear.com/support/samples/api/workbook-opening-stream-or-byte-array
+// https://www.spreadsheetgear.com/support/samples/api/workbook-saving-xlsx
+// https://www.spreadsheetgear.com/support/samples/api/workbook-saving-xlsm
+// https://www.spreadsheetgear.com/support/samples/api/workbook-saving-xls
+// https://www.spreadsheetgear.com/support/samples/api/workbook-saving-to-stream-or-byte-array
 namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class SavingAndOpeningSample : ISpreadsheetGearEngineSample

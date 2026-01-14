@@ -130,19 +130,19 @@ Builds on the capabilities of *SpreadsheetGear Engine for .NET* to add powerful 
 > [!NOTE]
 > *SpreadsheetGear for Windows* includes a license to also use *SpreadsheetGear Engine for .NET*.
 
-Learn more about these products on our [Features Page](https://www.spreadsheetgear.com/Products/Features) and more details on their differences on our [Comparison Page](https://www.spreadsheetgear.com/Products/Compare).
+Learn more about these products on our [Features Page](https://www.spreadsheetgear.com/products/features) and more details on their differences on our [Comparison Page](https://www.spreadsheetgear.com/products/compare).
 
 
 ## Sample Projects
 
-There are 3 executable Visual Studio Projects (\*.csproj) in this repository, pictured and described in more detail below.  These projects work with Visual Studio 2022, Visual Studio Code (VSCode) and Visual Studio for Mac.  See the [Running the Samples](#section-running-the-samples) section for more details on running these projects in your preferred IDE.  
+There are 3 executable Visual Studio Projects (\*.csproj) in this repository, pictured and described in more detail below.  These projects work with Visual Studio 2022, Visual Studio 2026, Visual Studio Code (VSCode) and Visual Studio for Mac.  See the [Running the Samples](#section-running-the-samples) section for more details on running these projects in your preferred IDE.  
 
 ### Web Explorer Samples
 ![Screenshot of the WPF Explorer](WebExplorer/screenshot.png)
 
 The Web Explorer presents *SpreadsheetGear Engine for .NET* samples using an ASP.NET Core Web App.  Note this VS Project targets both `net6.0` and `net6.0-windows`:
   - `net6.0`: Use this target framework to run the samples on a wide variety of platforms such as Windows, MacOS and Linux. Most samples provide an option to download an Excel workbook file with the results of the sample.
-  - `net6.0-windows`: Use this target framework when running on Windows to provide an additional option to render an image of many of sample results.  Image rendering is accomplished by utilizing the *SpreadsheetGear for Windows* product, which has a `SpreadsheetGear.Drawing.Image` class that renders images of ranges, charts and other shapes.  For more samples that demonstrate this `Image` class please see our website's [Excel Chart and Range Imaging Razor Pages Samples](https://www.spreadsheetgear.com/Support/Samples/RazorPages/Category/Imaging).
+  - `net6.0-windows`: Use this target framework when running on Windows to provide an additional option to render an image of many of sample results.  Image rendering is accomplished by utilizing the *SpreadsheetGear for Windows* product, which has a `SpreadsheetGear.Drawing.Image` class that renders images of ranges, charts and other shapes.  For more samples that demonstrate this `Image` class please see our website's [Excel Chart and Range Imaging Razor Pages Samples](https://www.spreadsheetgear.com/support/samples/razor-pages/category/imaging).
 
 
 ### WPF Explorer Samples
@@ -167,15 +167,15 @@ The Windows Forms Explorer presents samples applicable to both the *SpreadsheetG
 The samples can be accessed and run in a variety of ways:
 
   * [GitHub Codespaces](#github-codespaces) *(`WebExplorer` samples project only)*
-  * [Visual Studio 2022](#visual-studio-2022) *(all samples projects)*
+  * [Visual Studio 2022 and Visual Studio 2026](#visual-studio-2022-and-visual-studio-2026) *(all samples projects)*
   * [Visual Studio for Mac](#visual-studio-for-mac) *(`WebExplorer` samples project only)*
   * [Visual Studio Code](#visual-studio-code) *(runnable projects depend on OS)*
 
 ### GitHub Codespaces
 The `WebExplorer` samples can be run right here in the browser using GitHub Codespaces.  Ensure you are logged into your GitHub account and click on the "Code" dropdown button at the top of this page to launch a new codespace and start the samples.  More details can be found [here](.devcontainer/README.md).
 
-### Visual Studio 2022
-Three Visual Studio Solutions (\*.sln) are provided in the repository root folder to use with Visual Studio 2022.  Below is a list of the "Explorer" Visual Studio Projects that are included in each of the Solutions:
+### Visual Studio 2022 and Visual Studio 2026
+Three Visual Studio Solutions (\*.sln) are provided in the repository root folder to use with Visual Studio 2022 and Visual Studio 2026.  Below is a list of the "Explorer" Visual Studio Projects that are included in each of the Solutions:
 
  - **SpreadsheetGearExplorerSamples.sln** (Requires the "ASP.NET and web development" and ".NET desktop development" workloads)
    - `WebExplorer` samples
@@ -217,6 +217,6 @@ These folders also contain `*.code-workspace` files that you can open in VSCode 
 
 Additional samples can be found on the [spreadsheetgear.com](https://www.spreadsheetgear.com) website:
 
-  * [Live SpreadsheetGear API Samples](https://www.spreadsheetgear.com/Support/Samples/API)
-  * [Live Razor Page Samples](https://www.spreadsheetgear.com/Support/Samples/RazorPages)
-  * [Live Blazor Server Sample](https://www.spreadsheetgear.com/Support/Samples/Blazor/Server)
+  * [Live SpreadsheetGear API Samples](https://www.spreadsheetgear.com/support/samples/api)
+  * [Live Razor Page Samples](https://www.spreadsheetgear.com/support/samples/razor-pages)
+  * [Live Blazor Server Sample](https://www.spreadsheetgear.com/support/samples/blazor/server)

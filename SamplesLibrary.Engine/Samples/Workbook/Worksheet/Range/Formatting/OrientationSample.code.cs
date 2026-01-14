@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeTextOrientation
+// https://www.spreadsheetgear.com/support/samples/api/range-text-orientation
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Formatting
 {
     public class OrientationSample : ISpreadsheetGearEngineSample

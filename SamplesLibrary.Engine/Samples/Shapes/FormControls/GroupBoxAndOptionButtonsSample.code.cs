@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/ShapesFormControlsGroupBoxAndOptionButton
+// https://www.spreadsheetgear.com/support/samples/api/shapes-form-controls-group-box-and-option-button
 namespace SamplesLibrary.Engine.Samples.Shapes.FormControls
 {
     public class GroupBoxAndOptionButtonsSample : ISpreadsheetGearEngineSample

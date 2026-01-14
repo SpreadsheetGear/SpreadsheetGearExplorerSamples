@@ -1,6 +1,6 @@
 ﻿// NOTE: versions of this sample code are available to run and render on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookStylesCreate
-// https://www.spreadsheetgear.com/Support/Samples/API/WorkbookStylesModify
+// https://www.spreadsheetgear.com/support/samples/api/workbook-styles-create
+// https://www.spreadsheetgear.com/support/samples/api/workbook-styles-modify
 namespace SamplesLibrary.Engine.Samples.Workbook
 {
     public class CellStylesSample : ISpreadsheetGearEngineSample

@@ -1,7 +1,7 @@
 ﻿// NOTE: many of these APIs are also demonstrated in samples on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/PrintHeadersAndFooters
-// https://www.spreadsheetgear.com/Support/Samples/API/PrintZoomAndFitToPages
-// https://www.spreadsheetgear.com/Support/Samples/API/PrintAreaPrintTitlesAndOrientation
+// https://www.spreadsheetgear.com/support/samples/api/print-headers-and-footers
+// https://www.spreadsheetgear.com/support/samples/api/print-zoom-and-fit-to-pages
+// https://www.spreadsheetgear.com/support/samples/api/print-area-print-titles-and-orientation
 namespace SamplesLibrary.Windows.Samples.Printing
 {
     public class PageSetupSample : ISpreadsheetGearWindowsSample

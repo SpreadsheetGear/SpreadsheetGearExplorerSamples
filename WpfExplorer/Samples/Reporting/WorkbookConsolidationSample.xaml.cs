@@ -1,5 +1,5 @@
 ﻿// NOTE: a web-based version of this sample is available to run and execute on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/RazorPages/ExcelWorkbookConsolidation
+// https://www.spreadsheetgear.com/support/samples/razor-pages/excel-workbook-consolidation
 using System.Windows.Controls;
 
 namespace WPFExplorer.Samples.WorkbookView.Reporting

@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeOperationsCopy
+// https://www.spreadsheetgear.com/support/samples/api/range-operations-copy
 
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.Operations
 {

@@ -1,5 +1,5 @@
 ﻿// NOTE: a version of this sample is available to run on our website at:
-// https://www.spreadsheetgear.com/Support/Samples/API/RangeValuesAndFormlasCreateFormula
+// https://www.spreadsheetgear.com/support/samples/api/range-values-and-formlas-create-formula
 namespace SamplesLibrary.Engine.Samples.Workbook.Worksheet.Range.ValuesAndFormulas
 {
     public class CreateFormulaSample : ISpreadsheetGearEngineSample
