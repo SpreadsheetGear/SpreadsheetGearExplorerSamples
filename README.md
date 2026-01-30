@@ -11,6 +11,7 @@ Product features demonstrated include:
     Cell Formatting
     <ul style="columns: 3;">
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/FontSample.code.cs">Fonts</a> (including <a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/RichTextSample.code.cs">Rich Text</a>)</li>
+      <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/RichTextSample.Extensions.code.cs">Rich Text (Advanced)</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/BordersSample.code.cs">Borders</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/InteriorSample.code.cs">Interior</a></li>
       <li><a href="./SamplesLibrary.Engine/Samples/Workbook/Worksheet/Range/Formatting/OrientationSample.code.cs">Orientation</a></li>

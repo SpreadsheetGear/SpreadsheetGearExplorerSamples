@@ -130,6 +130,9 @@
     <Compile Update="Samples\Workbook\Worksheet\Range\Formatting\OrientationSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
+    <Compile Update="Samples\Workbook\Worksheet\Range\Formatting\RichTextSampleAdvanced.code.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Samples\Workbook\Worksheet\Range\Formatting\RichTextSample.code.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>

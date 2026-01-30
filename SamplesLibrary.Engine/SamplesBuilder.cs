@@ -58,6 +58,7 @@ namespace SamplesLibrary.Engine
                         {
                             categoryFormats.AddEngineSample<FontSample>("Font", "Set various font options such as Font Name, Bold and Color.", 10, renderImageRange: "A1:C3");
                             categoryFormats.AddEngineSample<RichTextSample>("Rich-Text Formatting (RTF)", "Demonstrates uniquely formatting specific sub-portions of text in a cell.", 20, renderImageRange: "A1:C3");
+                            categoryFormats.AddEngineSample<RichTextSampleAdvanced>("RTF with Advanced API", "Demonstrates uniquely formatting specific sub-portions of text in a cell.", 20, renderImageRange: "A1:C3");
                             categoryFormats.AddEngineSample<BordersSample>("Borders", "Demonstrates setting various border style options such as LineStyle, Weight and Color; as well as affecting specific border edges or all edges at once.", 30, renderImageRange: "A1:E17");
                             categoryFormats.AddEngineSample<InteriorSample>("Interior", "Demonstrate various interior fills using solid Pre-Defined colors, Theme Colors with TintAndShade, Pattern Fills and Gradient Fills.", 40, renderImageRange: "A1:K18");
                             categoryFormats.AddEngineSample<OrientationSample>("Orientation", "Set text orientation.", 50);
